@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="No Universal Prompt: Unifying Reasoning through Adaptive Prompting for Temporal Table Reasoning">
+  <meta name="keywords" content="Temporal Table Reasoning, Large Language Models, Adaptive Prompting, SEAR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No Universal Prompt: Unifying Reasoning through Adaptive Prompting for Temporal Table Reasoning</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+<style>
+  .carousel-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-item {
+    min-width: 100%;
+    display: none;
+  }
+  .carousel-item.active {
+    display: block;
+  }
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(100, 80, 150, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+
+  <section class="hero custom-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">No Universal Prompt: Unifying Reasoning through Adaptive Prompting for Temporal Table Reasoning
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous ACL Submission</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2506.11246" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.11246" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link (Placeholder) -->
+                <!-- <span class="link-block">
+                  <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- About Section -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">About</h2>
+          <div class="content has-text-justified">
+            <p>
+              <strong>No Universal Prompt: Unifying Reasoning through Adaptive Prompting for Temporal Table Reasoning</strong>
+            </p>
+            <p>
+              Temporal Table Reasoning is a critical challenge for Large Language Models (LLMs), requiring effective reasoning to extract relevant
+              insights. Despite the existence of multiple prompting methods, their impact on table reasoning remains largely unexplored. Furthermore, model
+              performance varies drastically across different table and context structures, making it difficult to determine an optimal approach.
+            </p>
+            <p>
+              This work investigates multiple prompting techniques on diverse table types to determine that performance depends on factors such as
+              <strong>entity type, table structure, requirement of additional context</strong> and <strong>question complexity</strong>, with
+              <strong>NO</strong> single method consistently outperforming others.
+            </p>
+            <p>
+              <strong>TL;DR:</strong> We introduce SEAR, an adaptive prompting framework inspired by human reasoning that dynamically adjusts to context
+              and integrates structured reasoning. Our results demonstrate that SEAR achieves superior performance across all table types compared
+              to baseline prompting techniques. Additionally, we explore the impact of table structure refactoring, finding that a unified representation
+              enhances model reasoning.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Challenge Section -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Why is Temporal Table Reasoning Challenging?</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              Temporal table QA requires models to reason over structured data while accounting for time-dependent relationships.
+              This challenge arises from three key factors:
+            </p>
+          </div>
+
+          <!-- Structural Variability -->
+          <h3 class="title is-4 has-text-left">Structural Variability</h3>
+          <div class="content has-text-justified">
+            <p>
+              Tables range from simple grids to hierarchical or semi-structured layouts with merged cells and implicit links (e.g., HiTab's
+              multi-level indexes, HybridQA's tables mixed with text). They also come in diverse file formats (CSV, HTML, Markdown),
+              so parsing must be flexible. SEAR first flattens and standardizes these varied structures, making them easier for downstream reasoning.
+            </p>
+          </div>
+
+          <!-- Domain-Specific Complexity -->
+          <h3 class="title is-4 has-text-left">Domain-Specific Complexity</h3>
+          <div class="content has-text-justified">
+            <p>
+              Reasoning strategies must adapt to the table's domain. Wikipedia-based datasets like WikiTableQuestions demand general factual
+              reasoning and entity linking. Financial datasets like FinQA or TAT-QA emphasize numerical reasoning, requiring multi-step arithmetic
+              and temporal trend analysis. SEAR dynamically adapts to these needs by identifying relevant entities and values, then applying
+              suitable prompting strategies such as F-CoT or PoT.
+            </p>
+          </div>
+
+          <!-- Question Complexity -->
+          <h3 class="title is-4 has-text-left">Question Complexity</h3>
+          <div class="content has-text-justified">
+            <p>
+              Temporal QA questions range from direct lookups (e.g., "What year did the team win?") to complex reasoning
+              (e.g., "What was the profit two quarters after policy X?"). These often require temporal anchoring, arithmetic, and
+              sequential logic. SEAR addresses this by decomposing questions and tailoring its strategy based on both table and query characteristics.
+            </p>
+          </div>
+
+          <!-- Example Figure -->
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/example4.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/example4.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure 1:</strong> Examples of Different Table and Contextual Structures
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- SEAR Framework Section -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Adaptive Reasoning Framework: SEAR</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              Inspired by human problem-solving, we propose the <strong>SEAR (Select-Elaborate-Answer & Reasoning)</strong>
+              framework designed to dynamically adapt reasoning strategies based on the structure and complexity of the given table.
+            </p>
+          </div>
+
+          <!-- Three-Step SEAR Process -->
+          <h3 class="title is-4 has-text-left">SEAR: Three-Step Process</h3>
+
+          <div class="content has-text-justified">
+            <p><strong>Step 1: Select Crucial Steps</strong></p>
+            <p>
+              Identify key reasoning steps without answering directly, creating an efficient problem-solving path. This includes:
+            </p>
+            <ul>
+              <li><strong>Problem Understanding:</strong> Define the question's objective and analyze table structure</li>
+              <li><strong>Reasoning Process:</strong> Select single or multiple strategies from extracting relevant evidence,
+                  decomposing complex queries, applying logical steps, and generating Python code if needed</li>
+              <li><strong>Optimization tips:</strong> Simplify steps, retrieve direct answers when possible, and use code for numerical operations</li>
+            </ul>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/Step1Sear.drawio.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/Step1Sear.drawio.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure:</strong> SEAR Step 1 - Select Crucial Steps Prompt
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="content has-text-justified">
+            <p><strong>Step 2: Elaborate Crucial Steps</strong></p>
+            <p>
+              Refine and comprehend selected steps for clarity and effectiveness:
+            </p>
+            <ul>
+              <li>Add contextual details, specify exact table elements, and refine decomposition</li>
+              <li>Ensure a structured and logically coherent flow toward the final answer</li>
+            </ul>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/Step2Sear.drawio.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/Step2Sear.drawio.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure:</strong> SEAR Step 2 - Elaborate Crucial Steps Prompt
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="content has-text-justified">
+            <p><strong>Step 3: Answer & Reasoning</strong></p>
+            <p>
+              Execute the structured steps to derive an accurate, well-supported answer:
+            </p>
+            <ul>
+              <li>Follow elaborated steps precisely, referencing extracted evidence</li>
+              <li>Justify answers with logical explanations, when possible directly answer from evidence</li>
+              <li>Integrate Python code for calculations when needed</li>
+            </ul>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/Step3Sear.drawio.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/Step3Sear.drawio.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure:</strong> SEAR Step 3 - Answer & Reasoning Prompt
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- SEAR_Unified -->
+          <h3 class="title is-4 has-text-left">SEAR_Unified: Single-Step Adaptive Prompting</h3>
+
+          <div class="content has-text-justified">
+            <p>
+              Standard SEAR is a three-step process that adds overhead and can impact efficiency. To address this, we propose
+              <strong>SEAR_Unified</strong>, a single-step adaptive prompt that merges SEAR's structured reasoning into a unified framework.
+            </p>
+            <p>
+              It dynamically selects and refines reasoning steps based on the query and table structure, retrieving key information,
+              decomposing complex queries when needed, and selectively using Python for numerical operations. SEAR_Unified validates
+              intermediate steps and performs error checks to ensure accuracy while reducing redundant complexity.
+            </p>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/meta_prompt_new.drawio.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/meta_prompt_new.drawio.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure:</strong> SEAR_Unified Prompt and Reasoning Path
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Table Refactoring -->
+          <h3 class="title is-4 has-text-left">Table Refactoring</h3>
+
+          <div class="content has-text-justified">
+            <p>
+              We introduce table and context refactoring as a preprocessing step that clarifies headers, aligns data, and removes
+              irrelevant context. This improves retrieval precision, reduces reasoning errors, and enhances adaptability across
+              diverse tabular formats.
+            </p>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <iframe src="assets/figures/refactoring_example.pdf#view=FitH" width="100%" height="600px" style="border: none; border-radius: 4px; display: block;"></iframe>
+                  <p style="margin-top: 1rem; font-size: 0.9em;">
+                    <a href="assets/figures/refactoring_example.pdf" target="_blank" style="color: #6b5b95; text-decoration: underline;">Open PDF in new tab</a> if it doesn't display above
+                  </p>
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure:</strong> Table Refactoring Example
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Experimental Setup Section -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Experimental Setup</h2>
+
+          <!-- Datasets -->
+          <h3 class="title is-4 has-text-left">Datasets</h3>
+          <div class="content has-text-justified">
+            <p>
+              We selected <strong>eight diverse tabular datasets</strong> spanning structured, semi-structured, hierarchical,
+              and hybrid tables to ensure a comprehensive evaluation. These datasets present challenges such as entity relations,
+              numerical reasoning, and textual integration:
+            </p>
+            <ul>
+              <li><strong>FeTaQA:</strong> Wikipedia tables; long-form answers from discontinuous facts (1,582 questions)</li>
+              <li><strong>FinQA:</strong> Financial reports; multi-step numerical reasoning (962 questions)</li>
+              <li><strong>HiTab:</strong> Hierarchical tables; fine-grained numeric questions (897 questions)</li>
+              <li><strong>HybridQA:</strong> Wiki tables + linked text; hybrid reasoning (1,528 questions)</li>
+              <li><strong>MultiHierTT:</strong> Finance; multiple hierarchical tables + long text (1,587 questions)</li>
+              <li><strong>Squall:</strong> WikiTableQ + SQL alignments; structured query tasks (774 questions)</li>
+              <li><strong>TAT-QA:</strong> Finance; tables + text with arithmetic/counting (2,244 questions)</li>
+              <li><strong>WikiTableQuestions:</strong> Wikipedia trivia; factual + numeric Q over large tables (1,504 questions)</li>
+            </ul>
+          </div>
+
+          <div class="placeholder-table">
+            <p><em>[Table 1: Comparison of Temporal Table QA Datasets]</em></p>
+          </div>
+
+          <!-- Models -->
+          <h3 class="title is-4 has-text-left">Models</h3>
+          <div class="content has-text-justified">
+            <p>
+              We used 3 state-of-the-art LLM models:
+            </p>
+            <ul>
+              <li><strong>GPT-4o-mini</strong></li>
+              <li><strong>Gemini 1.5 Flash</strong></li>
+              <li><strong>LLaMA 3.1 70B</strong></li>
+            </ul>
+          </div>
+
+          <!-- Prompting Methods -->
+          <h3 class="title is-4 has-text-left">Prompting Methods & Baselines</h3>
+          <div class="content has-text-justified">
+            <p>
+              We evaluated <strong>13 prompting strategies</strong> spanning direct, structured, temporal, and agentic approaches:
+            </p>
+          </div>
+
+          <div class="placeholder-table">
+            <p><em>[Table 4: Prompting Baselines Grouped by Category]</em></p>
+            <p style="font-size: 0.9em; margin-top: 1rem;">
+              Including: Chain-of-Thought (CoT), Evidence Extraction, Decomposed Prompting, Faithful CoT,
+              Program-of-Thought (PoT), Self-Discover, Self-Ask, Plan & Solve, C.L.E.A.R., Narration of Thought (NoT),
+              Self-Consistency Prompting (SCP), Tree of Thought (ToT), Graph of Thought (GoT)
+            </p>
+          </div>
+
+          <!-- Evaluation -->
+          <h3 class="title is-4 has-text-left">Evaluation Metric</h3>
+          <div class="content has-text-justified">
+            <p>
+              We propose the <strong>Hybrid Correctness Score (HCS)</strong>, which balances lexical and semantic accuracy by
+              combining Relaxed Exact Match Score (REMS, F1-based) and Contextual Answer Evaluation (CAE, LLM-based).
+              A response is considered correct if its REMS score exceeds 80% or if CAE deems it correct.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results & Analysis Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Results & Analysis</h2>
+
+          <h3 class="title is-4 has-text-left">Key Findings</h3>
+
+          <div class="results-carousel">
+            <div class="results-card active">
+              <h4>No Universal Prompt: A Key Discovery</h4>
+              <p>Performance varies depending on table structure, domain, and question complexity. As observed in Gemini 1.5 Flash results,
+                CoT performs best on HybridQA, Evidence Extraction excels in HiTab, TATQA, FeTaQA and Squall, while Decomposition is most
+                effective for WikiTabQA and FinQA. PoT shows the highest performance in MultiHierTT, whereas F-CoT does not emerge as
+                the best baseline in any dataset. Thus, <strong>no single prompting method universally outperforms others</strong>.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>SEAR: Adaptive Framework Success</h4>
+              <p>SEAR dynamically selects its reasoning path, primarily leveraging Evidence Extraction, Decomposition, and Logical Steps (CoT)
+                while integrating Python Program for numerical reasoning. By design, it optimally combines dominant reasoning strategies with
+                computation support. SEAR outperforms baseline in 5 datasets for Gemini, 2 datasets for GPT, and 4 datasets for LLaMA.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>SEAR_Unified: Superior Performance</h4>
+              <p>SEAR_Unified optimizes reasoning by merging and refining steps into a single adaptive prompt, reducing overhead while
+                enhancing flexibility. SEAR_Unified outperforms baselines across all datasets for Gemini, while for GPT and LLaMA, it
+                surpasses baselines in 6 datasets, demonstrating its superiority and ability to generalize effectively across diverse
+                datasets and models.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Comparison with Structured Baselines</h4>
+              <p>We compared our methods with recent structured and modular reasoning approaches, including Self-Discover, Self-Ask,
+                and Plan & Solve. Our approach consistently outperforms these baselines, with particularly strong gains on Multi-HierTT,
+                HiTabs, Squall, and HybridQA. Among them, Self-Discover performs the closest, underscoring the value of modular and
+                adaptive reasoning.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Comparison with Temporal & Agentic Methods</h4>
+              <p>We also benchmarked against temporal (NoT, C.L.E.A.R.) and agentic (ToT, GoT, SCP) strategies. Although NoT, C.L.E.A.R.,
+                and GoT perform well on FetaQA, TAT-QA, and HiTabs, they fail to deliver consistent improvements on more complex benchmarks.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Table Refactoring Impact</h4>
+              <p>Refactoring tabular data enhances LLM accuracy by improving clarity, structure, and accessibility. Standardizing tables
+                to Markdown format significantly improves performance. For instance, the Squall dataset, originally in JSON, benefits from
+                this transformation. GPT-4o-mini with SEAR + Refactoring (79.33%) outperforms SEAR (69.64%) by 9.69%.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Error Analysis: Evidence Extraction is the Bottleneck</h4>
+              <p>We conduct fine-grained error analysis across six datasets and find that evidence extraction is the most common failure mode,
+                accounting for the majority of errors in five out of six cases. These errors arise from shallow string matching, ambiguous
+                headers, and missed qualifiers (e.g., years, units, footnotes), leading models to anchor to plausible but incorrect cells.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Reasoning Path Analysis</h4>
+              <p>The Adaptive Framework consistently generalizes across multiple datasets by dynamically selecting appropriate reasoning paths.
+                Evidence Extraction is always included, helping the model focus on relevant information. For lookup-based questions, Evidence
+                Extraction alone suffices, while more complex tasks require a combination of reasoning methods.</p>
+            </div>
+
+            <div class="results-card">
+              <h4>Domain-Specific Patterns</h4>
+              <p>Datasets with long-form answers (FeTaQA) benefit from textual strategies. FinQA, which is heavy on numerical computation,
+                favors symbolic methods (PoT, F-CoT). This pattern extends across datasets, with chosen reasoning paths aligning with their
+                respective strengths, demonstrating SEAR's adaptability.</p>
+            </div>
+
+            <div class="results-controls">
+              <button class="results-control-btn" onclick="moveResultsCard(-1)">&#10094;</button>
+              <button class="results-control-btn" onclick="moveResultsCard(1)">&#10095;</button>
+            </div>
+
+            <div class="results-indicators">
+              <span class="indicator active" onclick="goToCard(0)"></span>
+              <span class="indicator" onclick="goToCard(1)"></span>
+              <span class="indicator" onclick="goToCard(2)"></span>
+              <span class="indicator" onclick="goToCard(3)"></span>
+              <span class="indicator" onclick="goToCard(4)"></span>
+              <span class="indicator" onclick="goToCard(5)"></span>
+              <span class="indicator" onclick="goToCard(6)"></span>
+              <span class="indicator" onclick="goToCard(7)"></span>
+              <span class="indicator" onclick="goToCard(8)"></span>
+            </div>
+          </div>
+
+          <script>
+          let currentResultsCard = 0;
+          const resultsCards = document.querySelectorAll(".results-card");
+          const indicators = document.querySelectorAll(".indicator");
+
+          function moveResultsCard(direction) {
+            resultsCards[currentResultsCard].classList.remove("active");
+            indicators[currentResultsCard].classList.remove("active");
+
+            currentResultsCard = (currentResultsCard + direction + resultsCards.length) % resultsCards.length;
+
+            resultsCards[currentResultsCard].classList.add("active");
+            indicators[currentResultsCard].classList.add("active");
+          }
+
+          function goToCard(index) {
+            resultsCards[currentResultsCard].classList.remove("active");
+            indicators[currentResultsCard].classList.remove("active");
+
+            currentResultsCard = index;
+
+            resultsCards[currentResultsCard].classList.add("active");
+            indicators[currentResultsCard].classList.add("active");
+          }
+          </script>
+
+          <!-- Performance Tables Placeholder -->
+          <h3 class="title is-4 has-text-left">Performance Tables</h3>
+          <div class="placeholder-table">
+            <p><em>[Tables 6, 7, 8: HCS Scores using Gemini 1.5 Flash, GPT-4o mini, and LLaMA 3.1 70B]</em></p>
+          </div>
+
+          <!-- Error Analysis Figure Placeholder -->
+          <h3 class="title is-4 has-text-left">Error Distribution</h3>
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="placeholder-img">
+                <p><em>[Figure 2: Distribution of Error Types Across Datasets]</em></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-left">Conclusion</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper introduces SEAR, an adaptive reasoning strategy for LLMs to tackle Temporal Table QA tasks, along with its
+              consolidated version, SEAR_Unified. Additionally, we take a step toward a unified table representation by incorporating
+              table refactoring as an enhancement.
+            </p>
+            <p>
+              Our study provides a comprehensive analysis of various reasoning strategies across eight diverse datasets, benchmarking
+              SEAR and SEAR_Unified against multiple baselines. Results demonstrate that SEAR, SEAR_Unified and with Table Refactoring
+              significantly outperforms popular LLM reasoning methods, with SEAR_Unified surpassing SEAR itself, showcasing its ability
+              to optimize and streamline reasoning with minimal overhead.
+            </p>
+            <p>
+              This highlights the capability of modern LLMs to dynamically adjust reasoning within a single prompt, reducing the need
+              for explicit multi-step processes. Our findings reinforce the importance of adaptive reasoning and structured table
+              representation, paving the way for further advancements in LLM-based temporal table reasoning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{anonymous2025nouniversal,
+      title={No Universal Prompt: Unifying Reasoning through Adaptive Prompting for Temporal Table Reasoning},
+      author={Anonymous},
+      year={2025},
+      eprint={2506.11246},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.11246},
+}</code></pre>
+</div></div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>,
+              which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
