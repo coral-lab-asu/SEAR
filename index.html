@@ -385,8 +385,160 @@
             </ul>
           </div>
 
-          <div class="placeholder-table">
-            <p><em>[Table 1: Comparison of Temporal Table QA Datasets]</em></p>
+          <div class="content" style="overflow-x: auto; margin: 2rem 0;">
+            <table class="table is-bordered is-striped" style="font-size: 0.85rem; width: 100%; margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th rowspan="2" style="vertical-align: middle; text-align: center;"><strong>Dataset</strong></th>
+                  <th colspan="3" style="text-align: center;"><strong>Structure</strong></th>
+                  <th colspan="2" style="text-align: center;"><strong>Domain</strong></th>
+                  <th colspan="2" style="text-align: center;"><strong>Reasoning</strong></th>
+                  <th colspan="3" style="text-align: center;"><strong>Question Types</strong></th>
+                  <th colspan="2" style="text-align: center;"><strong>Answer Types</strong></th>
+                </tr>
+                <tr>
+                  <th style="text-align: center;">Flat</th>
+                  <th style="text-align: center;">Hierarchical</th>
+                  <th style="text-align: center;">Hybrid</th>
+                  <th style="text-align: center;">Wikipedia</th>
+                  <th style="text-align: center;">Finance</th>
+                  <th style="text-align: center;">Numerical</th>
+                  <th style="text-align: center;">Textual</th>
+                  <th style="text-align: center;">Lookup</th>
+                  <th style="text-align: center;">Multi-step</th>
+                  <th style="text-align: center;">Temporal</th>
+                  <th style="text-align: center;">Long-form</th>
+                  <th style="text-align: center;">SQL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>FeTaQA</strong></td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>FinQA</strong></td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>HiTab<sup>†</sup></strong></td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>HybridQA</strong></td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>MultiHierTT</strong></td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>Squall</strong></td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                </tr>
+                <tr>
+                  <td><strong>TAT-QA</strong></td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+                <tr>
+                  <td><strong>WikiTableQuestions</strong></td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✓</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                  <td style="text-align: center;">✗</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #6b5b95;">
+              <strong>Table 1:</strong> Comparison of Temporal Table QA datasets by structure, domain, reasoning, and question types. 
+              <sup>†</sup>HiTab spans Wikipedia and financial domains. 
+              Binary indicators simplify complex question types (e.g., SQL, long-form).
+            </p>
           </div>
 
           <!-- Models -->
@@ -410,12 +562,85 @@
             </p>
           </div>
 
-          <div class="placeholder-table">
-            <p><em>[Table 4: Prompting Baselines Grouped by Category]</em></p>
-            <p style="font-size: 0.9em; margin-top: 1rem;">
-              Including: Chain-of-Thought (CoT), Evidence Extraction, Decomposed Prompting, Faithful CoT,
-              Program-of-Thought (PoT), Self-Discover, Self-Ask, Plan & Solve, C.L.E.A.R., Narration of Thought (NoT),
-              Self-Consistency Prompting (SCP), Tree of Thought (ToT), Graph of Thought (GoT)
+          <div class="content" style="overflow-x: auto; margin: 2rem 0;">
+            <table class="table is-bordered is-striped" style="font-size: 0.85rem; width: 100%; margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th style="text-align: left;"><strong>Baseline</strong></th>
+                  <th style="text-align: left; width: 50%;"><strong>Brief description</strong></th>
+                  <th style="text-align: left;"><strong>Category</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Chain‑of‑Thought (CoT)</strong> <cite>Wei et al., 2022</cite></td>
+                  <td>Step‑by‑step natural‑language rationale</td>
+                  <td><strong>Direct</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Evidence Extraction (EE)</strong></td>
+                  <td>Extracts supporting cells first, then answers</td>
+                  <td><strong>Direct</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Decomposed Prompting (Decomp)</strong> <cite>Khot et al., 2023</cite></td>
+                  <td>Splits complex queries into simpler sub‑prompts</td>
+                  <td><strong>Direct</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Faithful CoT (F‑CoT)</strong> <cite>Lyu et al., 2023</cite></td>
+                  <td>Adds consistency checks to Chain‑of‑Thought</td>
+                  <td><strong>Direct</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Program‑of‑Thought (PoT)</strong> <cite>Chen et al., 2023</cite></td>
+                  <td>Generates executable code (e.g., Python) for reasoning</td>
+                  <td><strong>Direct</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>Self‑Discover</strong> <cite>Zhou et al., 2024</cite></td>
+                  <td>Model autonomously picks reasoning modules</td>
+                  <td><strong>Structured</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Self‑Ask</strong> <cite>Press et al., 2023</cite></td>
+                  <td>Iteratively asks and answers sub‑questions</td>
+                  <td><strong>Structured</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Plan & Solve</strong> <cite>Wang et al., 2023</cite></td>
+                  <td>Separates plan generation from execution</td>
+                  <td><strong>Structured</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>C.L.E.A.R.</strong> <cite>Deng et al., 2025</cite></td>
+                  <td>Injects temporal cues for semi‑structured tables</td>
+                  <td><strong>Temporal</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Narration of Thought (NoT)</strong> <cite>Zhang et al., 2024</cite></td>
+                  <td>Requires chronological narration to keep temporal order</td>
+                  <td><strong>Temporal</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>Self‑Consistency Prompting (SCP)</strong> <cite>Wang et al., 2023</cite></td>
+                  <td>Samples multiple CoTs and votes</td>
+                  <td><strong>Agentic</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Tree of Thought (ToT)</strong> <cite>Yao et al., 2023</cite></td>
+                  <td>Searches a tree of reasoning states with pruning</td>
+                  <td><strong>Agentic</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Graph of Thought (GoT)</strong> <cite>Besta et al., 2023</cite></td>
+                  <td>Generalises ToT to graph search</td>
+                  <td><strong>Agentic</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #6b5b95;">
+              <strong>Table 4:</strong> Prompting baselines grouped by category.
             </p>
           </div>
 
@@ -553,19 +778,657 @@
           }
           </script>
 
-          <!-- Performance Tables Placeholder -->
+          <!-- Performance Tables -->
           <h3 class="title is-4 has-text-left">Performance Tables</h3>
-          <div class="placeholder-table">
-            <p><em>[Tables 6, 7, 8: HCS Scores using Gemini 1.5 Flash, GPT-4o mini, and LLaMA 3.1 70B]</em></p>
+          
+          <!-- Table 6: Gemini 1.5 Flash -->
+          <div class="content" style="overflow-x: auto; margin: 2rem 0;">
+            <table class="table is-bordered is-striped" style="font-size: 0.8rem; width: 100%; margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th style="text-align: left;"></th>
+                  <th style="text-align: center;">wiki</th>
+                  <th style="text-align: center;">multi</th>
+                  <th style="text-align: center;">hitab</th>
+                  <th style="text-align: center;">finqa</th>
+                  <th style="text-align: center;">tatqa</th>
+                  <th style="text-align: center;">fetaqa</th>
+                  <th style="text-align: center;">squall</th>
+                  <th style="text-align: center;">hybridqa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CoT</strong></td>
+                  <td style="text-align: center;">73.60</td>
+                  <td style="text-align: center;">58.79</td>
+                  <td style="text-align: center;">79.04</td>
+                  <td style="text-align: center;">60.08</td>
+                  <td style="text-align: center;">87.30</td>
+                  <td style="text-align: center;">71.30</td>
+                  <td style="text-align: center;">69.90</td>
+                  <td style="text-align: center;">80.76</td>
+                </tr>
+                <tr>
+                  <td><strong>F‑CoT</strong></td>
+                  <td style="text-align: center;">66.89</td>
+                  <td style="text-align: center;">60.68</td>
+                  <td style="text-align: center;">52.06</td>
+                  <td style="text-align: center;">62.16</td>
+                  <td style="text-align: center;">78.79</td>
+                  <td style="text-align: center;">56.13</td>
+                  <td style="text-align: center;">61.11</td>
+                  <td style="text-align: center;">17.93</td>
+                </tr>
+                <tr>
+                  <td><strong>Decomp</strong></td>
+                  <td style="text-align: center;">78.52</td>
+                  <td style="text-align: center;">61.00</td>
+                  <td style="text-align: center;">75.47</td>
+                  <td style="text-align: center;">62.58</td>
+                  <td style="text-align: center;">91.67</td>
+                  <td style="text-align: center;">67.07</td>
+                  <td style="text-align: center;">67.57</td>
+                  <td style="text-align: center;">74.67</td>
+                </tr>
+                <tr>
+                  <td><strong>EE</strong></td>
+                  <td style="text-align: center;">76.33</td>
+                  <td style="text-align: center;">60.43</td>
+                  <td style="text-align: center;">80.82</td>
+                  <td style="text-align: center;">55.93</td>
+                  <td style="text-align: center;">92.20</td>
+                  <td style="text-align: center;">77.62</td>
+                  <td style="text-align: center;">72.32</td>
+                  <td style="text-align: center;">80.10</td>
+                </tr>
+                <tr>
+                  <td><strong>PoT</strong></td>
+                  <td style="text-align: center;">74.40</td>
+                  <td style="text-align: center;">61.12</td>
+                  <td style="text-align: center;">70.68</td>
+                  <td style="text-align: center;">60.52</td>
+                  <td style="text-align: center;">79.68</td>
+                  <td style="text-align: center;">50.88</td>
+                  <td style="text-align: center;">63.57</td>
+                  <td style="text-align: center;">38.48</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>NoT</strong></td>
+                  <td style="text-align: center;">75.19</td>
+                  <td style="text-align: center;">46.12</td>
+                  <td style="text-align: center;">81.60</td>
+                  <td style="text-align: center;">51.03</td>
+                  <td style="text-align: center;">86.54</td>
+                  <td style="text-align: center;"><strong>87.89</strong></td>
+                  <td style="text-align: center;">69.12</td>
+                  <td style="text-align: center;">79.84</td>
+                </tr>
+                <tr>
+                  <td><strong>ToT</strong></td>
+                  <td style="text-align: center;">81.98</td>
+                  <td style="text-align: center;">58.72</td>
+                  <td style="text-align: center;">77.81</td>
+                  <td style="text-align: center;">51.24</td>
+                  <td style="text-align: center;">91.04</td>
+                  <td style="text-align: center;">79.26</td>
+                  <td style="text-align: center;">75.32</td>
+                  <td style="text-align: center;">82.52</td>
+                </tr>
+                <tr>
+                  <td><strong>GoT</strong></td>
+                  <td style="text-align: center;">74.86</td>
+                  <td style="text-align: center;">56.08</td>
+                  <td style="text-align: center;"><strong>84.05</strong></td>
+                  <td style="text-align: center;">50.83</td>
+                  <td style="text-align: center;">90.95</td>
+                  <td style="text-align: center;"><u>84.57</u></td>
+                  <td style="text-align: center;">66.14</td>
+                  <td style="text-align: center;">81.02</td>
+                </tr>
+                <tr>
+                  <td><strong>SCP</strong></td>
+                  <td style="text-align: center;">81.71</td>
+                  <td style="text-align: center;">60.42</td>
+                  <td style="text-align: center;">80.93</td>
+                  <td style="text-align: center;">52.70</td>
+                  <td style="text-align: center;">91.22</td>
+                  <td style="text-align: center;">84.32</td>
+                  <td style="text-align: center;">72.35</td>
+                  <td style="text-align: center;"><u>84.29</u></td>
+                </tr>
+                <tr>
+                  <td><strong>CLEAR</strong></td>
+                  <td style="text-align: center;">82.71</td>
+                  <td style="text-align: center;">55.57</td>
+                  <td style="text-align: center;">79.71</td>
+                  <td style="text-align: center;">53.95</td>
+                  <td style="text-align: center;"><strong>93.27</strong></td>
+                  <td style="text-align: center;">84.00</td>
+                  <td style="text-align: center;">78.81</td>
+                  <td style="text-align: center;"><strong>84.48</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>Self Ask</strong></td>
+                  <td style="text-align: center;">78.52</td>
+                  <td style="text-align: center;">45.43</td>
+                  <td style="text-align: center;">79.15</td>
+                  <td style="text-align: center;">64.66</td>
+                  <td style="text-align: center;">81.42</td>
+                  <td style="text-align: center;">80.15</td>
+                  <td style="text-align: center;">70.67</td>
+                  <td style="text-align: center;">63.48</td>
+                </tr>
+                <tr>
+                  <td><strong>Plan & Solve</strong></td>
+                  <td style="text-align: center;">81.72</td>
+                  <td style="text-align: center;">39.51</td>
+                  <td style="text-align: center;">67.56</td>
+                  <td style="text-align: center;">66.32</td>
+                  <td style="text-align: center;">90.60</td>
+                  <td style="text-align: center;">81.83</td>
+                  <td style="text-align: center;">77.00</td>
+                  <td style="text-align: center;">62.63</td>
+                </tr>
+                <tr>
+                  <td><strong>Self Discover</strong></td>
+                  <td style="text-align: center;">80.32</td>
+                  <td style="text-align: center;">59.42</td>
+                  <td style="text-align: center;">78.93</td>
+                  <td style="text-align: center;">65.49</td>
+                  <td style="text-align: center;">91.35</td>
+                  <td style="text-align: center;">81.16</td>
+                  <td style="text-align: center;">74.81</td>
+                  <td style="text-align: center;">80.43</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR</strong></td>
+                  <td style="text-align: center;">81.45</td>
+                  <td style="text-align: center;"><u>60.18</u></td>
+                  <td style="text-align: center;">79.71</td>
+                  <td style="text-align: center;">65.90</td>
+                  <td style="text-align: center;">90.02</td>
+                  <td style="text-align: center;">82.87</td>
+                  <td style="text-align: center;"><u>80.23</u></td>
+                  <td style="text-align: center;">81.15</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U</strong></td>
+                  <td style="text-align: center;">82.18</td>
+                  <td style="text-align: center;"><strong>61.75</strong></td>
+                  <td style="text-align: center;">82.61</td>
+                  <td style="text-align: center;"><strong>68.71</strong></td>
+                  <td style="text-align: center;"><u>92.78</u></td>
+                  <td style="text-align: center;">79.84</td>
+                  <td style="text-align: center;"><strong>81.52</strong></td>
+                  <td style="text-align: center;">82.00</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR+R</strong></td>
+                  <td style="text-align: center;"><u>82.71</u></td>
+                  <td style="text-align: center;">58.54</td>
+                  <td style="text-align: center;">81.05</td>
+                  <td style="text-align: center;">65.49</td>
+                  <td style="text-align: center;">89.39</td>
+                  <td style="text-align: center;">84.20</td>
+                  <td style="text-align: center;">78.04</td>
+                  <td style="text-align: center;">65.90</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U+R</strong></td>
+                  <td style="text-align: center;"><strong>83.38</strong></td>
+                  <td style="text-align: center;">56.58</td>
+                  <td style="text-align: center;"><u>82.83</u></td>
+                  <td style="text-align: center;"><u>67.36</u></td>
+                  <td style="text-align: center;">91.53</td>
+                  <td style="text-align: center;">85.52</td>
+                  <td style="text-align: center;">77.91</td>
+                  <td style="text-align: center;">67.08</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #6b5b95;">
+              <strong>Table 6:</strong> HCS scores (in %) using Gemini 1.5 Flash. R stands for "Refactoring" and U stands for "Unified". 
+              <strong>Bold</strong> represents the best performer and <u>underlined</u> represents the second best performer.
+            </p>
           </div>
 
-          <!-- Error Analysis Figure Placeholder -->
+          <!-- Table 7: GPT-4o mini -->
+          <div class="content" style="overflow-x: auto; margin: 2rem 0;">
+            <table class="table is-bordered is-striped" style="font-size: 0.8rem; width: 100%; margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th style="text-align: left;"></th>
+                  <th style="text-align: center;">wiki</th>
+                  <th style="text-align: center;">multi</th>
+                  <th style="text-align: center;">hitab</th>
+                  <th style="text-align: center;">finqa</th>
+                  <th style="text-align: center;">tatqa</th>
+                  <th style="text-align: center;">fetaqa</th>
+                  <th style="text-align: center;">squall</th>
+                  <th style="text-align: center;">hybridqa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CoT</strong></td>
+                  <td style="text-align: center;">78.92</td>
+                  <td style="text-align: center;">57.97</td>
+                  <td style="text-align: center;">77.59</td>
+                  <td style="text-align: center;">64.14</td>
+                  <td style="text-align: center;">92.91</td>
+                  <td style="text-align: center;">84.13</td>
+                  <td style="text-align: center;">67.57</td>
+                  <td style="text-align: center;">78.21</td>
+                </tr>
+                <tr>
+                  <td><strong>F‑CoT</strong></td>
+                  <td style="text-align: center;">71.61</td>
+                  <td style="text-align: center;">55.32</td>
+                  <td style="text-align: center;">71.35</td>
+                  <td style="text-align: center;">64.97</td>
+                  <td style="text-align: center;">91.04</td>
+                  <td style="text-align: center;">77.81</td>
+                  <td style="text-align: center;">56.46</td>
+                  <td style="text-align: center;">34.62</td>
+                </tr>
+                <tr>
+                  <td><strong>Decomp</strong></td>
+                  <td style="text-align: center;">79.79</td>
+                  <td style="text-align: center;">57.03</td>
+                  <td style="text-align: center;">76.14</td>
+                  <td style="text-align: center;">65.18</td>
+                  <td style="text-align: center;">92.65</td>
+                  <td style="text-align: center;">78.45</td>
+                  <td style="text-align: center;">62.40</td>
+                  <td style="text-align: center;">77.68</td>
+                </tr>
+                <tr>
+                  <td><strong>EE</strong></td>
+                  <td style="text-align: center;">80.12</td>
+                  <td style="text-align: center;">56.77</td>
+                  <td style="text-align: center;">79.38</td>
+                  <td style="text-align: center;">56.03</td>
+                  <td style="text-align: center;">92.81</td>
+                  <td style="text-align: center;">83.88</td>
+                  <td style="text-align: center;">66.67</td>
+                  <td style="text-align: center;">79.58</td>
+                </tr>
+                <tr>
+                  <td><strong>PoT</strong></td>
+                  <td style="text-align: center;">79.59</td>
+                  <td style="text-align: center;">57.91</td>
+                  <td style="text-align: center;">76.25</td>
+                  <td style="text-align: center;">56.13</td>
+                  <td style="text-align: center;">90.15</td>
+                  <td style="text-align: center;">72.00</td>
+                  <td style="text-align: center;">72.35</td>
+                  <td style="text-align: center;">61.98</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>NoT</strong></td>
+                  <td style="text-align: center;">65.82</td>
+                  <td style="text-align: center;">44.54</td>
+                  <td style="text-align: center;"><strong>80.82</strong></td>
+                  <td style="text-align: center;">50.41</td>
+                  <td style="text-align: center;">88.01</td>
+                  <td style="text-align: center;"><strong>85.46</strong></td>
+                  <td style="text-align: center;">52.58</td>
+                  <td style="text-align: center;">76.83</td>
+                </tr>
+                <tr>
+                  <td><strong>ToT</strong></td>
+                  <td style="text-align: center;">81.91</td>
+                  <td style="text-align: center;">56.89</td>
+                  <td style="text-align: center;">79.04</td>
+                  <td style="text-align: center;">55.40</td>
+                  <td style="text-align: center;"><strong>96.60</strong></td>
+                  <td style="text-align: center;">82.30</td>
+                  <td style="text-align: center;">66.67</td>
+                  <td style="text-align: center;"><u>80.49</u></td>
+                </tr>
+                <tr>
+                  <td><strong>GoT</strong></td>
+                  <td style="text-align: center;">71.54</td>
+                  <td style="text-align: center;">52.04</td>
+                  <td style="text-align: center;">74.58</td>
+                  <td style="text-align: center;">51.35</td>
+                  <td style="text-align: center;">90.90</td>
+                  <td style="text-align: center;">81.68</td>
+                  <td style="text-align: center;">53.61</td>
+                  <td style="text-align: center;">75.58</td>
+                </tr>
+                <tr>
+                  <td><strong>SCP</strong></td>
+                  <td style="text-align: center;">79.05</td>
+                  <td style="text-align: center;">57.59</td>
+                  <td style="text-align: center;">79.71</td>
+                  <td style="text-align: center;">55.19</td>
+                  <td style="text-align: center;">92.29</td>
+                  <td style="text-align: center;">84.19</td>
+                  <td style="text-align: center;">66.53</td>
+                  <td style="text-align: center;">80.01</td>
+                </tr>
+                <tr>
+                  <td><strong>CLEAR</strong></td>
+                  <td style="text-align: center;"><u>82.84</u></td>
+                  <td style="text-align: center;">58.09</td>
+                  <td style="text-align: center;">78.26</td>
+                  <td style="text-align: center;">55.92</td>
+                  <td style="text-align: center;">85.22</td>
+                  <td style="text-align: center;">84.00</td>
+                  <td style="text-align: center;">68.08</td>
+                  <td style="text-align: center;">82.26</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>Self Ask</strong></td>
+                  <td style="text-align: center;">78.66</td>
+                  <td style="text-align: center;">54.38</td>
+                  <td style="text-align: center;">79.60</td>
+                  <td style="text-align: center;">66.11</td>
+                  <td style="text-align: center;">90.76</td>
+                  <td style="text-align: center;">83.03</td>
+                  <td style="text-align: center;">72.09</td>
+                  <td style="text-align: center;">63.48</td>
+                </tr>
+                <tr>
+                  <td><strong>Plan & Solve</strong></td>
+                  <td style="text-align: center;">82.65</td>
+                  <td style="text-align: center;">56.77</td>
+                  <td style="text-align: center;">78.26</td>
+                  <td style="text-align: center;">64.97</td>
+                  <td style="text-align: center;">90.34</td>
+                  <td style="text-align: center;">83.92</td>
+                  <td style="text-align: center;">77.26</td>
+                  <td style="text-align: center;">62.63</td>
+                </tr>
+                <tr>
+                  <td><strong>Self Discover</strong></td>
+                  <td style="text-align: center;">82.71</td>
+                  <td style="text-align: center;">56.46</td>
+                  <td style="text-align: center;">79.60</td>
+                  <td style="text-align: center;">65.70</td>
+                  <td style="text-align: center;">91.67</td>
+                  <td style="text-align: center;">84.51</td>
+                  <td style="text-align: center;">70.28</td>
+                  <td style="text-align: center;"><strong>80.43</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR</strong></td>
+                  <td style="text-align: center;">80.19</td>
+                  <td style="text-align: center;">57.40</td>
+                  <td style="text-align: center;">77.37</td>
+                  <td style="text-align: center;">67.26</td>
+                  <td style="text-align: center;">92.42</td>
+                  <td style="text-align: center;">83.38</td>
+                  <td style="text-align: center;">69.64</td>
+                  <td style="text-align: center;">75.33</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U</strong></td>
+                  <td style="text-align: center;">79.92</td>
+                  <td style="text-align: center;"><strong>61.00</strong></td>
+                  <td style="text-align: center;">78.93</td>
+                  <td style="text-align: center;"><strong>71.10</strong></td>
+                  <td style="text-align: center;"><u>92.91</u></td>
+                  <td style="text-align: center;"><u>84.89</u></td>
+                  <td style="text-align: center;">76.74</td>
+                  <td style="text-align: center;">78.27</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR + R</strong></td>
+                  <td style="text-align: center;">82.91</td>
+                  <td style="text-align: center;">56.65</td>
+                  <td style="text-align: center;">78.82</td>
+                  <td style="text-align: center;">66.94</td>
+                  <td style="text-align: center;">91.84</td>
+                  <td style="text-align: center;">84.77</td>
+                  <td style="text-align: center;"><strong>79.33</strong></td>
+                  <td style="text-align: center;">68.72</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U + R</strong></td>
+                  <td style="text-align: center;"><strong>84.18</strong></td>
+                  <td style="text-align: center;"><u>59.29</u></td>
+                  <td style="text-align: center;"><u>80.27</u></td>
+                  <td style="text-align: center;"><u>69.75</u></td>
+                  <td style="text-align: center;">91.44</td>
+                  <td style="text-align: center;">84.39</td>
+                  <td style="text-align: center;"><u>79.20</u></td>
+                  <td style="text-align: center;">70.48</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #6b5b95;">
+              <strong>Table 7:</strong> HCS scores (in %) using GPT-4o mini. R stands for "Refactoring" and U stands for "Unified". 
+              <strong>Bold</strong> represents the best performer and <u>underlined</u> represents the second best performer.
+            </p>
+          </div>
+
+          <!-- Table 8: LLaMA 3.1 70B -->
+          <div class="content" style="overflow-x: auto; margin: 2rem 0;">
+            <table class="table is-bordered is-striped" style="font-size: 0.8rem; width: 100%; margin: 0 auto;">
+              <thead>
+                <tr>
+                  <th style="text-align: left;"></th>
+                  <th style="text-align: center;">wiki</th>
+                  <th style="text-align: center;">multi</th>
+                  <th style="text-align: center;">hitab</th>
+                  <th style="text-align: center;">finqa</th>
+                  <th style="text-align: center;">tatqa</th>
+                  <th style="text-align: center;">fetaqa</th>
+                  <th style="text-align: center;">squall</th>
+                  <th style="text-align: center;">hybridqa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CoT</strong></td>
+                  <td style="text-align: center;">81.05</td>
+                  <td style="text-align: center;">57.59</td>
+                  <td style="text-align: center;">82.95</td>
+                  <td style="text-align: center;">66.22</td>
+                  <td style="text-align: center;">91.00</td>
+                  <td style="text-align: center;">86.03</td>
+                  <td style="text-align: center;">75.45</td>
+                  <td style="text-align: center;">81.66</td>
+                </tr>
+                <tr>
+                  <td><strong>F‑CoT</strong></td>
+                  <td style="text-align: center;">66.22</td>
+                  <td style="text-align: center;">39.82</td>
+                  <td style="text-align: center;">64.55</td>
+                  <td style="text-align: center;">51.77</td>
+                  <td style="text-align: center;">45.12</td>
+                  <td style="text-align: center;">52.78</td>
+                  <td style="text-align: center;">61.11</td>
+                  <td style="text-align: center;">33.31</td>
+                </tr>
+                <tr>
+                  <td><strong>Decomp</strong></td>
+                  <td style="text-align: center;">82.85</td>
+                  <td style="text-align: center;">59.29</td>
+                  <td style="text-align: center;">81.84</td>
+                  <td style="text-align: center;">65.28</td>
+                  <td style="text-align: center;">93.18</td>
+                  <td style="text-align: center;">84.51</td>
+                  <td style="text-align: center;">73.51</td>
+                  <td style="text-align: center;">80.53</td>
+                </tr>
+                <tr>
+                  <td><strong>EE</strong></td>
+                  <td style="text-align: center;">81.91</td>
+                  <td style="text-align: center;">58.92</td>
+                  <td style="text-align: center;">82.84</td>
+                  <td style="text-align: center;">61.75</td>
+                  <td style="text-align: center;"><u>92.54</u></td>
+                  <td style="text-align: center;">86.62</td>
+                  <td style="text-align: center;">80.10</td>
+                  <td style="text-align: center;">81.07</td>
+                </tr>
+                <tr>
+                  <td><strong>PoT</strong></td>
+                  <td style="text-align: center;">76.53</td>
+                  <td style="text-align: center;">58.98</td>
+                  <td style="text-align: center;">67.56</td>
+                  <td style="text-align: center;">66.42</td>
+                  <td style="text-align: center;">91.40</td>
+                  <td style="text-align: center;">50.44</td>
+                  <td style="text-align: center;">68.22</td>
+                  <td style="text-align: center;">37.76</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>NoT</strong></td>
+                  <td style="text-align: center;">55.57</td>
+                  <td style="text-align: center;">39.76</td>
+                  <td style="text-align: center;">49.83</td>
+                  <td style="text-align: center;">42.23</td>
+                  <td style="text-align: center;">48.57</td>
+                  <td style="text-align: center;">61.18</td>
+                  <td style="text-align: center;">44.85</td>
+                  <td style="text-align: center;">65.32</td>
+                </tr>
+                <tr>
+                  <td><strong>ToT</strong></td>
+                  <td style="text-align: center;"><u>84.57</u></td>
+                  <td style="text-align: center;">45.35</td>
+                  <td style="text-align: center;">74.99</td>
+                  <td style="text-align: center;">57.58</td>
+                  <td style="text-align: center;">82.67</td>
+                  <td style="text-align: center;">83.50</td>
+                  <td style="text-align: center;">78.29</td>
+                  <td style="text-align: center;"><u>83.18</u></td>
+                </tr>
+                <tr>
+                  <td><strong>GoT</strong></td>
+                  <td style="text-align: center;">71.27</td>
+                  <td style="text-align: center;">52.61</td>
+                  <td style="text-align: center;">68.45</td>
+                  <td style="text-align: center;">40.24</td>
+                  <td style="text-align: center;">72.73</td>
+                  <td style="text-align: center;"><strong>88.49</strong></td>
+                  <td style="text-align: center;">59.19</td>
+                  <td style="text-align: center;">74.80</td>
+                </tr>
+                <tr>
+                  <td><strong>SCP</strong></td>
+                  <td style="text-align: center;">82.96</td>
+                  <td style="text-align: center;">57.80</td>
+                  <td style="text-align: center;">79.38</td>
+                  <td style="text-align: center;">52.52</td>
+                  <td style="text-align: center;">85.22</td>
+                  <td style="text-align: center;">85.46</td>
+                  <td style="text-align: center;">74.96</td>
+                  <td style="text-align: center;">79.75</td>
+                </tr>
+                <tr>
+                  <td><strong>CLEAR</strong></td>
+                  <td style="text-align: center;"><strong>86.23</strong></td>
+                  <td style="text-align: center;">54.93</td>
+                  <td style="text-align: center;">76.39</td>
+                  <td style="text-align: center;">56.23</td>
+                  <td style="text-align: center;">92.15</td>
+                  <td style="text-align: center;">86.97</td>
+                  <td style="text-align: center;">79.84</td>
+                  <td style="text-align: center;">79.71</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>Self Ask</strong></td>
+                  <td style="text-align: center;">81.98</td>
+                  <td style="text-align: center;">56.84</td>
+                  <td style="text-align: center;">82.06</td>
+                  <td style="text-align: center;">67.46</td>
+                  <td style="text-align: center;">91.69</td>
+                  <td style="text-align: center;">85.98</td>
+                  <td style="text-align: center;">76.10</td>
+                  <td style="text-align: center;">72.32</td>
+                </tr>
+                <tr>
+                  <td><strong>Plan & Solve</strong></td>
+                  <td style="text-align: center;">82.65</td>
+                  <td style="text-align: center;">55.95</td>
+                  <td style="text-align: center;">80.39</td>
+                  <td style="text-align: center;">66.57</td>
+                  <td style="text-align: center;">92.51</td>
+                  <td style="text-align: center;">83.96</td>
+                  <td style="text-align: center;">76.23</td>
+                  <td style="text-align: center;">70.55</td>
+                </tr>
+                <tr>
+                  <td><strong>Self Discover</strong></td>
+                  <td style="text-align: center;">85.77</td>
+                  <td style="text-align: center;">57.91</td>
+                  <td style="text-align: center;"><strong>83.95</strong></td>
+                  <td style="text-align: center;">66.11</td>
+                  <td style="text-align: center;">92.87</td>
+                  <td style="text-align: center;">86.09</td>
+                  <td style="text-align: center;">79.33</td>
+                  <td style="text-align: center;"><strong>83.25</strong></td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR</strong></td>
+                  <td style="text-align: center;">82.65</td>
+                  <td style="text-align: center;"><u>59.61</u></td>
+                  <td style="text-align: center;"><u>83.05</u></td>
+                  <td style="text-align: center;">66.63</td>
+                  <td style="text-align: center;">92.34</td>
+                  <td style="text-align: center;">85.52</td>
+                  <td style="text-align: center;">81.40</td>
+                  <td style="text-align: center;">79.78</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U</strong></td>
+                  <td style="text-align: center;">82.05</td>
+                  <td style="text-align: center;"><strong>62.19</strong></td>
+                  <td style="text-align: center;">82.39</td>
+                  <td style="text-align: center;"><strong>70.17</strong></td>
+                  <td style="text-align: center;"><strong>93.27</strong></td>
+                  <td style="text-align: center;">87.04</td>
+                  <td style="text-align: center;"><u>82.04</u></td>
+                  <td style="text-align: center;">80.27</td>
+                </tr>
+                <tr style="border-top: 2px solid #9b87c7;">
+                  <td><strong>SEAR + R</strong></td>
+                  <td style="text-align: center;">82.65</td>
+                  <td style="text-align: center;">57.09</td>
+                  <td style="text-align: center;">82.39</td>
+                  <td style="text-align: center;">67.26</td>
+                  <td style="text-align: center;">91.67</td>
+                  <td style="text-align: center;">86.85</td>
+                  <td style="text-align: center;">76.87</td>
+                  <td style="text-align: center;">67.74</td>
+                </tr>
+                <tr>
+                  <td><strong>SEAR_U + R</strong></td>
+                  <td style="text-align: center;">85.11</td>
+                  <td style="text-align: center;">58.16</td>
+                  <td style="text-align: center;">83.05</td>
+                  <td style="text-align: center;"><u>69.67</u></td>
+                  <td style="text-align: center;">92.89</td>
+                  <td style="text-align: center;"><u>87.23</u></td>
+                  <td style="text-align: center;"><strong>82.49</strong></td>
+                  <td style="text-align: center;">72.16</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #6b5b95;">
+              <strong>Table 8:</strong> HCS scores (in %) using LLaMA 3.1 70B. R stands for "Refactoring" and U stands for "Unified". 
+              <strong>Bold</strong> represents the best performer and <u>underlined</u> represents the second best performer.
+            </p>
+          </div>
+
+          <!-- Error Analysis Figure -->
           <h3 class="title is-4 has-text-left">Error Distribution</h3>
           <div class="columns is-centered">
             <div class="column">
-              <div class="placeholder-img">
-                <p><em>[Figure 2: Distribution of Error Types Across Datasets]</em></p>
-              </div>
+              <figure style="text-align: center; margin: 2rem 0;">
+                <div style="border: 2px solid #9b87c7; border-radius: 8px; padding: 2rem; background: linear-gradient(135deg, #f5f3ff 0%, #e8e4ff 100%); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <img src="assets/figures/Error_Analysis_Fig.jpg" alt="Distribution of Error Types Across Datasets" style="max-width: 100%; height: auto; border-radius: 4px; display: block;">
+                </div>
+                <figcaption style="margin-top: 1rem; font-style: italic; color: #6b5b95;">
+                  <strong>Figure 2:</strong> Distribution of Error Types Across Datasets
+                </figcaption>
+              </figure>
             </div>
           </div>
 
