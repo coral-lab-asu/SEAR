@@ -1,0 +1,20 @@
+index,table_id,question,response,answer
+0,Table_286,what percent of the total increase or decrease would the euro be in 2017?,"Reasoning: To find the percentage of the total increase or decrease that the euro would be in 2017, we can divide the change in revenue from the euro by the total change in revenue for that year and then multiply by 100%. According to the table, the change in revenue from the euro in 2017 was $35 million, and the total change in revenue was $130 million. So, the calculation is ($35 / $130) * 100% = 26.92%.
+
+Answer: The euro would be approximately 26.92% of the total increase or decrease in 2017.",27%
+1,Table_624,what was the percent of the decline in amortization expense for other intangible assets from 2016 to 2017,"Reasoning: The percent of decline in amortization expense for other intangible assets from 2016 to 2017 can be calculated by dividing the difference between the amortization expense in 2016 and 2017 by the 2016 value and then multiplying by 100%.
+
+Answer: (($77 million - $64 million) / $77 million) \* 100% = 16.88%
+
+The percent of decline in amortization expense for other intangible assets from 2016 to 2017 was approximately 16.88%.",-2.6%
+2,Table_6,what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?,"Reasoning: To find the change in unrecognized tax benefits from the end of 2014 to the end of 2015, subtract the balance of unrecognized tax benefits at the end of 2014 from the balance at the end of 2015.
+
+Answer: $1136 (end of 2015) - $1171 (end of 2014) = -$35 million. Therefore, unrecognized tax benefits decreased by $35 million from the end of 2014 to the end of 2015.",-35
+3,Table_856,in 2015 what was the percent of the total operating revenue that was from chemical freight,"Reasoning: To find the percent of the total operating revenue that was from chemical freight in 2015, we divide the freight revenue from chemicals by the total operating revenue in 2015.
+
+Answer:
+reason: 3474 / 21813 = 0.1591
+answer: 15.91%",17.4%
+4,Table_642,what portion of total expected cash outflow for capital leases is due in 2018?,"Reasoning: To find the portion of total expected cash outflow for capital leases due in 2018, we look for the amount in the 'capital leases' row and the column for the year 2018.
+
+Answer: '0' as there is no amount listed for capital leases in the year 2018.",17.4%

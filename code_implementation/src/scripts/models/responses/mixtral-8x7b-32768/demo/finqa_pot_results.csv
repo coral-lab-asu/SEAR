@@ -1,0 +1,84 @@
+index,table_id,question,response,answer
+0,Table_139,what portion of the long-term debt is due in the next 12 months?,"#Python
+long\_term\_debt = 10591
+payments\_due\_in\_less\_than\_1\_year = 332
+portion\_of\_long\_term\_debt\_due\_in\_next\_12\_months = payments\_due\_in\_less\_than\_1\_year / long\_term\_debt \* 100
+ans = portion\_of\_long\_term\_debt\_due\_in\_next\_12\_months
+print(ans)",3.1%
+1,Table_134,what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2015?,"#Python
+
+cable_distribution_system_capital_expenditures_2015 = 2424
+total_cable_communications_segment_capital_expenditures_2015 = 7034
+percentage_cable_distribution_system_capital_expenditures_2015 = cable_distribution_system_capital_expenditures_2015 / total_cable_communications_segment_capital_expenditures_2015 * 100
+ans = percentage_cable_distribution_system_capital_expenditures_2015
+print(ans)",34%
+2,Table_207,what would the cash expense for product warranties be in 2007 if the amounts increased the same percentage as in 2006 ( in millions ) ?,"To answer the question, we first need to find the percentage increase in cash expenses for product warranties from 2005 to 2006. Then, we can apply that percentage increase to the 2006 cash expense for product warranties to find the 2007 cash expense for product warranties.
+
+From the table, we can see that the cash expense for product warranties in 2005 was $116 million and in 2006 was $129 million.
+
+To find the percentage increase, we can use the following formula:
+
+percentage increase = (2006 expense - 2005 expense) / 2005 expense \* 100%
+
+So, the percentage increase in cash expenses for product warranties from 2005 to 2006 is:
+
+percentage increase = ($129 - $116) / $116 \* 100% = 11.21%
+
+Now that we have the percentage increase, we can apply it to the 2006 cash expense for product warranties of $129 million to find the 2007 cash expense for product warranties.
+
+2007 cash expense = 2006 cash expense \* (1 + percentage increase)
+
+= $129 \* (1 + 0.1121)
+
+= $143.6899
+
+Therefore, the cash expense for product warranties would be approximately $143.7 million in 2007 if the amounts increased the same percentage as in 2006 (in millions).
+
+#Python
+
+cash\_expense\_2005 = 116
+cash\_expense\_2006 = 129
+percentage\_increase = (cash\_expense\_2006 - cash\_expense\_2005) / cash\_expense\_2005 \* 100
+cash\_expense\_2007 = cash\_expense\_2006 \* (1 + percentage\_increase / 100)
+ans = round(cash\_expense\_2007, 2)
+print(ans)",6.25
+3,Table_130,"as of december 31 , 2004 , how many shares of common stock were outstanding?","To answer the question, first, we need to find out the number of authorized shares of common stock as of December 31, 2004. From the context, it is given as 110,000,000. Then, we need to subtract the shares of common stock that were issued to employees and not yet converted into common stock. According to the context, the company had 1,939,734 shares of common stock issued to employees as of December 31, 2004.
+
+So the number of shares of common stock that were outstanding as of December 31, 2004, is:
+
+#Python
+
+authorized\_shares\_common\_stock\_dec\_31\_2004 = 110000000
+issued\_but\_unconverted\_common\_stock\_dec\_31\_2004 = 1939734
+outstanding\_common\_stock\_dec\_31\_2004 = authorized\_shares\_common\_stock\_dec\_31\_2004 - issued\_but\_unconverted\_common\_stock\_dec\_31\_2004
+ans = outstanding\_common\_stock\_dec\_31\_2004
+print(ans)
+
+The output will be:
+
+108060266",120000000
+4,Table_711,what percentage of balance of unrecognized tax benefits at the end of 2008 would impact the effective tax rate if recognized?,"To answer the question, we first need to calculate the total increases as a result of tax positions taken during the year 2008 and the decreases as a result of tax positions taken during a prior year. We then subtract the decreases from the increases to find the net impact of tax positions taken during the year 2008 that have not been recognized. Finally, we calculate the percentage of the net impact relative to the balance of unrecognized tax benefits at the end of 2008.
+
+Here's the code:
+
+```
+#Python
+
+increases_2008 = 18.7
+decreases_2008 = -21.3
+balance_end_of_2008 = 148.8
+
+net_impact_2008 = increases_2008 - decreases_2008
+percentage_impact = net_impact_2008 / balance_end_of_2008 * 100
+
+ans = percentage_impact
+print(ans)
+```
+
+Output:
+
+```
+14.426229508196721
+```
+
+So, if all the unrecognized tax benefits at the end of 2008 that resulted from tax positions taken during that year were recognized, it would impact the effective tax rate by about 14.43%.",88.6%

@@ -1,0 +1,167 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+  Model            | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+  Škoda Octavia    | 233322 | 270274 | 309951 | 344857 | 317335 | 349746 | 387200 | 409360 | 359600 |
+  Škoda Fabia      | 236698 | 243982 | 232890 | 246561 | 264173 | 229045 | 266800 | 255025 | 202000 |
+  Škoda Superb     | 22091  | 20989  | 20530  | 25645  | 44548  | 98873  | 116700 | 106847 | 94400  |
+  Škoda Roomster   |       | 14422  | 66661  | 57467  | 47152  | 32332  | 36000  | 39249  | 33300  |
+  Škoda Yeti       |       |       |       |       | 11018  | 52604  | 70300  | 90952  | 82400  |
+  Škoda Rapid      |       |       |       |       |       |       | 1700   | 9292   | 103800 |
+  Škoda Citigo     |       |       |       |       |       |       | 509    | 36687  | 45200  |
+
+Question: How many Skoda cars were sold in 2010?
+
+Detailed Steps:
+Identify Objective: Determine that the goal is to find the total number of Škoda cars sold in 2010.
+Evidence Extraction: Extract the relevant data (the 2010 column) for all models listed in the table.
+Python Code Generation: Generate Python code to sum the extracted values for the year 2010.
+
+Answer and Reasoning:
+Identify Objective: The goal is to find the total number of Škoda cars sold in 2010.
+2. Evidence Extraction: Extract the relevant data (the 2010 column) for all models listed in the table:
+Škoda Octavia: 349746
+Škoda Fabia: 229045
+Škoda Superb: 98873
+Škoda Roomster: 32332
+Škoda Yeti: 52604
+Škoda Rapid: N/A (No data for 2010)
+Škoda Citigo: N/A (No data for 2010)
+3. Python Code Generation: We can now sum the extracted values for the year 2010 using Python code
+``` python ```
+# Data for 2010
+skoda_sales_2010 = [349746, 229045, 98873, 32332, 52604]
+
+# Calculate the total sales for 2010
+total_sales_2010 = sum(skoda_sales_2010)
+print(f”Final Answer: {{total_sales_2010}}”)
+#Done
+```
+4. Answer and Reasoning: Summing these values gives the total number of Škoda cars sold in 2010.
+Final Answer: 762600
+
+Example2:
+Table:
+Title : total domestic business r&d and software r&d expenditures: 2006 and 2016
+|	year and industry	|	total business r&d	|	software r&d	|	
+|	2006	|		|		|	
+|	all industries	|	247669	|	48299	|	
+|	manufacturing	|	171814	|	10720	|	
+|	nonmanufacturing	|	75855	|	37579	|	
+|	2016	|		|		|	
+|	all industries	|	374685	|	120824	|	
+|	manufacturing	|	250553	|	35984	|	
+|	nonmanufacturing	|	124132	|	84840	|	
+|	2006-16 annual growth rate (%)a	|		|		|	
+|	all industries	|	4.2	|	9.6	|	
+|	manufacturing	|	3.8	|	12.9	|	
+|	nonmanufacturing	|	5	|	8.5	|	
+
+Question: how many million dollars did for-profit businesses perform in software r&d in 2016?
+
+Detailed Steps:
+Identify Objective: Understand that the question asks for the amount of money (in million dollars) that for-profit businesses spent on software R&D in 2016.
+Evidence Extraction: Identify the row labeled "2016" and the column labeled "software r&d" in the table. Focus specifically on the "software r&d" value for all industries, as this represents the total amount spent on software R&D by for-profit businesses in 2016.
+Direct Answer Path: Answer directly from the table the extracted value from the intersection of the 2016 row and the software R&D column is the answer to the question. Since the question is about for-profit businesses and the table represents industry expenditures, this value can be directly used as the answer.
+
+Answer and Reasoning:
+Identify Objective: The goal is to find the total amount of money (in million dollars) that for-profit businesses spent on software R&D in 2016.
+Evidence Extraction: From the provided table, focus on the row for "2016" and the column for "software r&d."
+The value at the intersection of the 2016 row and the software R&D column for "all industries" is 120824 million dollars.
+Direct Answer Path: The question asks for the total software R&D performed by for-profit businesses, which is already captured by the value for "all industries" in the table.
+Answer and Reasoning: The amount of money spent by for-profit businesses on software R&D in 2016 is 120824 million dollars. This figure represents the total software R&D expenditure across all industries, as indicated by the table.
+Final Answer: 120824 million dollars.
+
+Example3:
+Tables:
+Table_0
+  Benefit Plan	|	2017	|	2016	|	2015	|	
+  Pension Plan	|	$3,856	|	$3,979	|	$2,732	|	
+  Health Plan	|	11426	|	11530	|	8736	|	
+  Other plans	|	1463	|	1583	|	5716	|	
+  Total plan contributions	|	$16,745	|	$17,092	|	$17,184	|	
+
+ Table_1
+  |		|	2018	|	2019	|	2020	|	2021	|	2022	|	Thereafter	|	Total	|	
+  |	Property mortgages and other loans	|	$153,593	|	$42,289	|	$703,018	|	$11,656	|	$208,003	|	$1,656,623	|	$2,775,182	|	
+  |	MRA facilities	|	90809	|	—	|	—	|	—	|	—	|	—	|	90809	|	
+  |	Revolving credit facility	|	—	|	—	|	—	|	—	|	—	|	40000	|	40000	|	
+  |	Unsecured term loans	|	—	|	—	|	—	|	—	|	—	|	1500000	|	1500000	|	
+  |	Senior unsecured notes	|	250000	|	—	|	250000	|	—	|	800000	|	100000	|	1400000	|	
+  |	Trust preferred securities	|	—	|	—	|	—	|	—	|	—	|	100000	|	100000	|	
+  |	Capital lease	|	2387	|	2411	|	2620	|	2794	|	2794	|	819894	|	832900	|	
+  |	Ground leases	|	31049	|	31066	|	31436	|	31628	|	29472	|	703254	|	857905	|
+
+
+Question: What is the sum of Ground leases of 2020, Health Plan of 2016, and Property mortgages and other loans of Thereafter ?
+
+Detailed Steps:
+Identify Objective: The task is to find the sum of three values: Ground leases from 2020, the Health Plan from 2016, and Property mortgages and other loans from the "Thereafter" column.
+Evidence Extraction: 
+Table 0 Extraction: Locate the row labeled "Health Plan" in Table 0. Extract the value from the 2016 column corresponding to the Health Plan row.
+Table 1 Extraction: Locate the row labeled "Ground leases" in Table 1. Extract the value from the 2020 column corresponding to Ground leases. Locate the row labeled "Property mortgages and other loans" in Table 1. Extract the value from the "Thereafter" column corresponding to Property mortgages and other loans.
+Data Aggregation or Calculation: Since the task involves summing the three extracted values,
+1.  Ground leases value from 2020
+2.  Health Plan value from 2016
+3.  Property mortgages and other loans value from Thereafter
+
+generate a Python code to sum these values, ensure that the extracted values are in a format that allows for numeric summation (removing dollar signs and commas if necessary).
+
+Answer && Reasoning:
+
+Identify Objective:
+The task is to find the sum of three specific values:
+Ground leases for 2020
+Health Plan for 2016
+Property mortgages and other loans for "Thereafter"
+Evidence Extraction:
+
+Ground leases (2020): From Table 1, locate the "Ground leases" row, and extract the value from the 2020 column:
+Value = 31,436
+Health Plan (2016): From Table 0, locate the "Health Plan" row, and extract the value from the 2016 column:
+Value = 11,530
+Property mortgages and other loans (Thereafter): From Table 1, locate the "Property mortgages and other loans" row, and extract the value from the "Thereafter" column:
+Value = 1,656,623
+
+Data Aggregation or Calculation:
+Now, we will sum the three extracted values.
+Python Code to Sum the Values:
+
+```python```
+# Data from the table (remove commas)
+ground_leases_2020 = 31436
+health_plan_2016 = 11530
+property_mortgages_thereafter = 1656623
+
+# Sum the values
+total_sum = ground_leases_2020 + health_plan_2016 + property_mortgages_thereafter
+print(f"Final Answer: {{total_sum}}")
+
+#Done
+```
+
+Answer and Reasoning:
+By summing the values:
+Ground leases (2020): 31,436
+Health Plan (2016): 11,530
+Property mortgages and other loans (Thereafter): 1,656,623
+The total sum is 1,699,589.
+Final Answer:
+The sum of Ground leases from 2020, Health Plan from 2016, and Property mortgages and other loans from the "Thereafter" column is 1,699,589.
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+Tables: 
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

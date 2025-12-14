@@ -1,0 +1,294 @@
+### Meta Reasoning Task Guide
+
+#### Problem Understanding:
+- Objective: Identify the goal or desired outcome.
+- Comprehend the problem's nature and scope.
+
+#### Reasoning Process Options:
+Choose the most relevant approaches based on the problem complexity.
+
+1. **Chain-of-Thought (CoT) Reasoning**:
+   - Break down the problem into intermediate steps.
+   - Example:
+     - Question: What is the gross margin decline percent in fiscal 2004 from 2003?
+     - Steps:
+       1. Extract gross margin for 2003: 27.5%
+       2. Extract gross margin for 2004: 27.3%
+       3. Calculate the difference: 0.2%
+
+2. **Evidence Extraction**:
+   - Extract relevant data and details from the provided context.
+   - Example:
+     - Context: Table showing net sales, cost of sales, and gross margin for 2004-2002.
+     - Extracted Evidence: Gross margin percentages for 2003 and 2004.
+
+3. **Decomposition**:
+   - Break down the problem into sub-problems and solve each part.
+   - Example:
+     - Sub-questions:
+       1. What was the gross margin in 2003?
+       2. What was the gross margin in 2004?
+       3. What is the difference between these values?
+
+4. **Program of Thought (PoT)**:
+   - Write a Python program to solve the problem comprehensively.
+   - Example:
+     - Python Code:
+       ```python
+       gross_margin_2003 = 27.5
+       gross_margin_2004 = 27.3
+       gross_margin_decline = gross_margin_2003 - gross_margin_2004
+       print(gross_margin_decline)  # Output: 0.2
+       ```
+
+5. **Faithful Chain of Thought (F-COT)**:
+   - Write Python code to answer the question line by line with comments explaining each step.
+   - Example:
+     - Question: What is the gross margin decline percent in fiscal 2004 from 2003?
+     - Steps:
+       ```python
+       # Extract gross margin for 2003
+       gross_margin_2003 = 27.5
+       # Extract gross margin for 2004
+       gross_margin_2004 = 27.3
+       # Calculate the difference
+       gross_margin_decline = gross_margin_2003 - gross_margin_2004
+       # Print the result
+       print(gross_margin_decline)  # Output: 0.2
+       ```
+
+#### Final Answer:
+- Summarize findings and present the final answer.
+- If possible, provide answers in both percent and decimal notation.
+- Example: Final Answer: 0.2%, 0.002
+
+### Simplified Example
+
+```
+Context:
+The table shows net sales, cost of sales, and gross margin for 2004-2002.
+
+Question:
+What was the gross margin decline percent in fiscal 2004 from 2003?
+
+Chosen Approach:
+Chain-of-Thought (CoT) Reasoning
+
+Steps:
+1. Gross margin for 2003: 27.5%
+2. Gross margin for 2004: 27.3%
+3. Difference: 0.2%
+
+Final Answer:
+0.2%, 0.002
+```
+
+---
+
+### Example 1
+
+**Context**:
+The table shows the filmography of Aadarsh Balakrishna.
+
+Year | Title                | Role           | Director                | Notes
+---- | -------------------- | -------------- | -----------------------
+2005 | Iqbal                | Kamal          | Nagesh Kukunoor         | Hindi Film
+2007 | Happy Days           | Sanjay         | Sekhar Kammula          | Telugu Film
+2008 | Vinayakudu           | Ananth Naidu   | Sai Kiran Adivi         | Telugu Film
+2009 | Ride                 | Gaja           | Ramesh Varma            | Telugu Film
+2009 | Evaraina Epudaina    | Raja           | Marthand K Shankar      | Telugu Film
+2010 | Maro Charitra        | Maddy          | Ravi Yadav              | Telugu Film
+2010 | Maa Annayya Bangaram | -              | Jonnalagadda Srinivas   | Telugu Film
+2011 | Cricket Girls and Beer | Vijay       | Umesh Shirupalli        | Telugu Film
+2010 | Nooru Janmaku        | Jeevan         | Nagathihalli Chandrasekhar | Kannada Film
+2010 | KSD Appalaraju       | Babu Garu      | Ram Gopal Varma         | Telugu Film
+2012 | Genius               | Nizamuddin     | Ohmkkar                 | Telugu Film
+2012 | Bodyguard            | -              | Gopichand Malineni      | Telugu Film
+2014 | Nee Jathaga Nenundali | -             | Jaya Ravindra           | Telugu Film
+2014 | Govindudu Andarivadele | Baachi       | Krishna Vamsi           | Telugu Film
+2015 | Superstar Kidnap     | Jai            | A. Sushanth Reddy       | Telugu Film
+2016 | Seethamma Andalu Ramayya Sitralu | Seetha's suitor | Srinivas Gavireddy | Telugu Film
+2016 | Sarrainodu           | Paddam Veerendra | Boyapati Srinu       | Telugu Film
+2016 | Jaguar               | Arya           | Mahadev                 | Bilingual Kannada-Telugu Film
+2017 | Babu Baga Busy       | -              | Naveen Medaram          | Telugu Film
+2017 | PSV Garuda Vega      | -              | Praveen Sattaru         | Telugu Film
+2018 | Vijetha              | Kiran          | Rakesh Sashi            | Telugu Film
+2018 | Neevevaro            | Blind sculptor | Hari Nath               | Telugu Film
+2018 | W/O Ram              | Rocky          | Vijay Yelakanti         | Telugu Film
+2018 | Aravinda Sametha Veera Raghava | -   | Trivikram Srinivas      | Telugu Film
+
+**Question**:
+In what films did Aadarsh appear in 2008 and 2009 and who were the directors?
+
+**Chosen Approach**:
+Decomposition
+
+**Sub-questions**:
+1. What films did Aadarsh appear in 2008? (sq1)
+2. What films did Aadarsh appear in 2009? (sq2)
+3. Who were the directors of these films in 2008 and 2009? (sq3)
+
+**Answers**:
+1. "Vinayakudu" (Answer to sq1)
+2. "Ride", "Evaraina Epudaina" (Answer to sq2)
+3. 2008: "Vinayakudu" directed by Sai Kiran Adivi; 2009: "Ride" directed by Ramesh Varma, "Evaraina Epudaina" directed by Marthand K Shankar (Answer to sq3)
+
+**Final Answer**:
+2008: "Vinayakudu" directed by Sai Kiran Adivi; 2009: "Ride" directed by Ramesh Varma, "Evaraina Epudaina" directed by Marthand K Shankar
+
+---
+
+### Example 2
+
+**Context**:
+The table shows the final results for the women's 400 metres hurdles at the 1992 Summer Olympics.
+
+RANK | FINAL | TIME
+- | Sally Gunnell (GBR) | 53.23
+- | Sandra Farmer-Patrick (USA) | 53.69
+- | Janeene Vickers (USA) | 54.31
+4. | Tatyana Ledovskaya (EUN) | 54.31
+5. | Vera Ordina (EUN) | 54.83
+6. | Margarita Ponomaryova (EUN) | 54.83
+7. | Deon Hemmings (JAM) | 55.58
+— | Myrtle Bothma (RSA) | DNF
+
+**Question**:
+Who received the silver and bronze medals for the women's 400 metres hurdles at the 1992 Summer Olympics?
+
+**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+1. Identify the athlete in second place.
+2. Identify the athlete in third place.
+
+**Final Answer**:
+Silver: Sandra Farmer-Patrick (USA), Bronze: Janeene Vickers (USA)
+
+---
+
+### Example 3
+
+**Context**:
+The table shows the web series appearances of Kelsey Sanders.
+
+Year | Title                | Role           | Notes
+---- | -------------------- | -------------- | -----------------------
+2009 | Private              | Reed Brennan   | 20 episodes
+2010 | 10,000 Days          | Kovita Hesse   | 11 episodes
+2010 | Hollywood is Like High School with Money | Taylor Henning | 10 episodes
+
+**Question**:
+Kelsey Sanders appeared in the most episodes of which show in which year?
+
+**Chosen Approach**:
+Decomposition
+
+**Sub-questions**:
+1. How many episodes did "Private" have in 2009? (sq1)
+2. How many episodes did "10,000 Days" have in 2010? (sq2)
+3. How many episodes did "Hollywood is Like High School with Money" have in 2010? (sq3)
+4. Which show had the most episodes? (sq4)
+
+**Answers**:
+1. 20 episodes (Answer to sq1)
+2. 11 episodes (Answer to sq2)
+3. 10 episodes (
+
+Answer to sq3)
+4. "Private" in 2009 with 20 episodes (Answer to sq4)
+
+**Final Answer**:
+"Private" in 2009 with 20 episodes
+
+---
+
+### Example 4
+
+**Context**:
+The table shows the total revenue and net profit for XYZ Corporation for the years 2017, 2018, and 2019.
+
+Year | Total Revenue | Net Profit
+---- | --------------| ----------
+2017 | $500,000      | $50,000
+2018 | $550,000      | $55,000
+2019 | $600,000      | $60,000
+
+**Question**:
+What was the percentage change in total revenue from 2017 to 2018?
+
+**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+1. Total revenue for 2017: $500,000
+2. Total revenue for 2018: $550,000
+3. Difference: $550,000 - $500,000 = $50,000
+4. Percentage change: ($50,000 / $500,000) * 100 = 10%
+
+**Final Answer**:
+10%, 0.1, .1
+
+---
+
+### Example 5
+
+**Context**:
+The table shows the expenses and net income for ABC Corporation for the years 2019 and 2020.
+
+Category | 2019 | 2020
+---- | ---- | ----
+Expenses | $300,000 | $350,000
+Net Income | $200,000 | $250,000
+
+**Question**:
+What was the percentage change in net income from 2019 to 2020?
+
+**Chosen Approach**:
+Decomposition and Program of Thought (PoT)
+
+**Sub-questions**:
+1. What was the net income in 2019? (sq1)
+2. What was the net income in 2020? (sq2)
+3. What is the difference in net income between 2019 and 2020? (sq3)
+4. What is the percentage change in net income from 2019 to 2020? (sq4)
+
+**Answers**:
+1. The net income in 2019 was $200,000. (Answer to sq1)
+2. The net income in 2020 was $250,000. (Answer to sq2)
+3. The difference in net income is $250,000 - $200,000 = $50,000. (Answer to sq3)
+4. The percentage change is ($50,000 / $200,000) * 100 = 25%. (Answer to sq4)
+
+**Python Code for Solution**:
+```python
+# Values
+net_income_2019 = 200000
+net_income_2020 = 250000
+
+# Calculate difference
+difference = net_income_2020 - net_income_2019
+
+# Calculate percentage change
+percentage_change = (difference / net_income_2019) * 100
+
+# Print results
+print("Percentage change:", percentage_change)  # Output: 25.0
+```
+
+**Final Answer**:
+25%, 0.25, .25
+
+---
+
+**Your task:** Answer the question using the optimal approach provided above, referring to the table context given.
+
+**Table:**
+{context}
+
+**Question:**
+{question}
+
+**Optimal Approach:**
+
+---

@@ -1,0 +1,90 @@
+POT:
+  description: |
+    Read the following text and table, and then write code to answer a question, note that python variables do not start with digits.
+    The context is a table where the 1st line is the header and the following lines are the rows.
+    If there is a row such as 'Career Total' or similar that summarizes column values, treat it as a separate sub-table and do not confuse it with the main data rows. 
+    Examine such tables carefully to avoid errors in answering.
+    The 1st line of the table is a list of column headers. 
+    The following lines are the rows, shown as list of cells of the table in that row.
+    A few examples are given below with the python code. Interpret them.
+    Write python code to answer the question.
+
+  examples:
+    - context: |
+        Rank | NPC | Gold | Silver | Bronze | Total
+        1 | China (CHN) | 95 | 71 | 65 | 231
+        2 | Russia (RUS) | 36 | 38 | 28 | 102
+        3 | Great Britain (GBR)* | 34 | 43 | 43 | 120
+        4 | Ukraine (UKR) | 32 | 24 | 28 | 84
+        5 | Australia (AUS) | 32 | 23 | 30 | 85
+        6 | United States (USA) | 31 | 29 | 38 | 98
+        7 | Brazil (BRA) | 21 | 14 | 8 | 43
+        8 | Germany (GER) | 18 | 26 | 22 | 66
+        9 | Poland (POL) | 14 | 13 | 9 | 36
+        10 | Netherlands (NED) | 10 | 10 | 19 | 39
+        Total (75 NPCs) | Total (75 NPCs) | 503 | 503 | 516 | 1522
+
+      question: of the countries that won bronze medals in the 2012 summer paralympics, which countries won fewer than 10?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Rank", "NPC", "Gold", "Silver", "Bronze", "Total"],
+          [1, "China (CHN)", 95, 71, 65, 231],
+          [2, "Russia (RUS)", 36, 38, 28, 102],
+          [3, "Great Britain (GBR)*", 34, 43, 43, 120],
+          [4, "Ukraine (UKR)", 32, 24, 28, 84],
+          [5, "Australia (AUS)", 32, 23, 30, 85],
+          [6, "United States (USA)", 31, 29, 38, 98],
+          [7, "Brazil (BRA)", 21, 14, 8, 43],
+          [8, "Germany (GER)", 18, 26, 22, 66],
+          [9, "Poland (POL)", 14, 13, 9, 36],
+          [10, "Netherlands (NED)", 10, 10, 19, 39],
+          ["Total (75 NPCs)", "Total (75 NPCs)", 503, 503, 516, 1522]
+        ]
+
+        # Filter countries with fewer than 10 bronze medals
+        countries_less_than_10_bronze = [row[1] for row in table[1:-1] if row[4] < 10]
+
+        # Save the result in the ans variable
+        ans = countries_less_than_10_bronze
+
+        # Print the ans
+        print(ans)
+        # Done
+
+    - context: |
+        Name | Fastest average | Competition | Country
+        Yu Da-Hyun | 32.03s | CWR Winter 2018 | South Korea
+        Juan Pablo Huanqui | 32.33s | CubingUSA Nationals 2018 | Peru
+        Amos Nordman | 34.63s | Pikkujoulut 2018 | Finland
+        Nicolas Naing | 35.02s | New Hope Open Spring 2018 | USA
+        Feliks Zemdegs | 36.65s | Weston-super-Mare Open 2018 | Australia
+      question: Who set the fastest average in Megaminx and what was the average time?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Name", "Fastest average", "Competition", "Country"],
+          ["Yu Da-Hyun", "32.03s", "CWR Winter 2018", "South Korea"],
+          ["Juan Pablo Huanqui", "32.33s", "CubingUSA Nationals 2018", "Peru"],
+          ["Amos Nordman", "34.63s", "Pikkujoulut 2018", "Finland"],
+          ["Nicolas Naing", "35.02s", "New Hope Open Spring 2018", "USA"],
+          ["Feliks Zemdegs", "36.65s", "Weston-super-Mare Open 2018", "Australia"]
+        ]
+
+        # Find the row with the fastest average
+        fastest_average = min(table[1:], key=lambda x: float(x[1].replace('s', '')))
+
+        # Save the result in the ans variable
+        ans = (fastest_average[0], fastest_average[1])
+
+        # Print the ans
+        print(ans)
+        # Done
+
+  prompt: |
+    For the following Table and question give the python code and finally print the ans
+    Define the table including the header
+    Table-
+    {context}
+    Question- {question}
+    #Python

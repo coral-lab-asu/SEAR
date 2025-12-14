@@ -1,0 +1,67 @@
+Overall Goal : Accurately answer the given temporal question by exploring, evaluating and refining multiple reasoning paths over the table (and any associated text) using a Graph‑of‑Thoughts search.Each node in the graph is a self‑contained state that records what you know so far, what temporal constraints you have resolved, and what remains to be done.
+
+1  Problem Input
+Table:
+
+
+[If there is additional text context, insert it here. If not applicable, write "No additional text context."]
+
+Question: 
+
+2  Graph‑of‑Thoughts Framework
+|Concept	| Specifications
+Node(State) |	A JSON‑like block containing:• evidence – rows / columns / text snippets you have extracted so far.• focus_time – the explicit or inferred year / period currently under consideration.• hypothesis – the partial answer or numeric value you believe is relevant.• pending_tasks – fine‑grained sub‑questions still unsolved.• score – your numeric confidence (0‑100) that this node can lead to a correct final answer.
+Edge(action)|	A transformation that creates one or more child nodes from a parent node. Allowed actions:1. Direct Lookup – pull a cell or row that exactly matches a required year / entity.2. Temporal Filter – restrict to years before / after / between.3. Arithmetic Calc – compute differences, sums, %‑changes across years.4. Sequence Infer – reason about ordering (earliest, latest, first, last).5. Cross‑Source Merge – join evidence from another table or linked text.
+Expansion Rule|	From every active node, generate k ≤ 3 plausible child thoughts using any mix of the five actions above.
+Evaluation Rule|	For each new node:• Increase score if the evidence directly supports or numerically confirms the hypothesis.• Penalise redundant or conflicting evidence.• If a node answers all pending_tasks, set score = 100.
+Selection Rule|	Keep the top‑b highest‑scoring nodes (beam width b = 5) at every layer of the search graph.
+Termination|	Stop when (a) a node reaches score ≥ 90 and pending_tasks is empty, or (b) the search depth exceeds 4 layers.
+
+3  Output Requirements
+After search termination, output exactly three sections:
+Best Path – list the sequence of node IDs/edges from the root to the chosen winning node.
+
+
+Reasoning Trace – for each node on that path, display its evidence, focus_time, hypothesis and score.
+
+
+Final Answer – a single line beginning with Final Answer: followed by the concise answer to the user’s question.
+
+
+(If the answer is numerical, show units and, where appropriate, the Python expression you evaluated.)
+
+4  Helpful Guidelines for Temporal Tasks
+Explicit time anchoring – always store the year or period you are reasoning about in focus_time.
+
+
+Granularity – respect ranges such as “2017–18” by expanding them into individual years if needed.
+
+
+Zero‑data years – treat missing cells as null and explain how you compensate (e.g., carry‑forward, ignore).
+
+
+Evidence citation – quote exact row/column labels so that another agent could replicate your steps.
+
+
+Confidence calibration – begin with a moderate score (e.g., 50). Raise only when both evidence and temporal consistency improve.
+
+
+
+5  Example Node (illustrative only)
+
+  "node_id": "N2",
+  "evidence": ["Row: 2019 | Laal Ishq | Pernia | &TV"],
+  "focus_time": "2019",
+  "hypothesis": "Shagun Sharma appeared in Laal Ishq in 2019",
+  "pending_tasks": ["Check other 2019 appearances"],
+  "score": 78
+
+
+6  Begin Graph Search Now
+Start by creating the root node (N0) whose pending_tasks contains the entire question.
+Table:
+{table}
+
+[If there is additional text context, insert it here. If not applicable, write "No additional text context."]
+Question: {question}
+– End –

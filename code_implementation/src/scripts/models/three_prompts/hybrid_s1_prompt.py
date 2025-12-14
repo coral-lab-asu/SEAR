@@ -1,0 +1,113 @@
+def get_s1_prompt(table, question, text=None):
+    return f"""
+
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Table Title: Player Statistics  
+Table Subtitle: Career highlights of players
+
+Table:
+No | Player         | Position | Career     | Date honored
+-- | -------------  | -------- | ---------- | -------------
+7  | Keith Tkachuk  | C        | 1992-2001  | December 23, 2011
+19  | Bobby Hull     | LW       | 1972-1980  | February 19, 1989
+19 | Shane Doan     | RW       | 1996-2017  | February 24, 2019
+
+More context:
+- Keith Tkachuk (USA) is an American former professional ice hockey player who played in the NHL in an 18-year career with the Winnipeg Jets, Phoenix Coyotes, St. Louis Blues, and Atlanta Thrashers, retiring in 2010. He is considered one of the greatest U.S.-born players in NHL history.
+- Bobby Hull (CAN) is a Canadian former ice hockey player who is regarded as one of the greatest players of all time, known for his blonde hair and legendary skating speed.
+- Shane Doan (CAN) is a Canadian former professional ice hockey forward who spent the entirety of his NHL career with the Winnipeg Jets/Arizona Coyotes franchise, retiring in 2017. He was the longest-serving NHL captain at the time of his retirement.
+
+Question: Arizona Coyotes player number 19 played in how many NHL seasons?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Example2:
+
+Table Title: Mile Record Progression  
+Table Subtitle: List of athletes and their record-breaking mile times
+
+Table:
+
+Time | Athlete              | Date       | Place
+---- | -------------------- | ---------- | -----------------------------
+3:55.8 | Abel Kiviat (USA)  | 1912-06-08 | Cambridge, Massachusetts, USA
+3:54.7 | John Zander (SWE)  | 1917-08-05 | Stockholm, Sweden
+3:41.8+ | John Landy (AUS)  | 1954-06-21 | Turku, Finland
+
+More context:
+- Paavo Nurmi (FIN) was a Finnish long-distance runner, known as the "Flying Finn," who set 22 official world records.
+- Gunder Hägg (SWE) was a Swedish runner who set multiple world records in the 1940s.
+- Otto Peltzer (GER) was a German middle-distance runner who set world records in the 1920s.
+- John Landy (AUS) was an Australian middle-distance runner and the second man to break the four-minute mile barrier.
+- Luigi Beccali (ITA) was the first Italian to win an Olympic gold medal in running.
+
+Question: Which athlete set the mile record on 1954-06-21, and where did this event take place?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+
+Example3:
+
+Table Title: Ice Cream Sales  
+Table Subtitle: Sales data for different ice cream flavors
+
+Table:
+
+Flavor   | Sales
+-------- | -----
+Vanilla  | 1500
+Chocolate| 1200
+Strawberry | 900
+
+More context:
+- The ice cream sales data was collected over the summer season.
+- Vanilla has been the most popular flavor for several years.
+- Chocolate and Strawberry flavors also have a consistent customer base.
+
+Question: What is the total sales of all ice cream flavors?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text from the table.
+Python Code Generation: Opt to generate a script for summing up the sales values if calculations are required.
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, more context and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:
+
+"""

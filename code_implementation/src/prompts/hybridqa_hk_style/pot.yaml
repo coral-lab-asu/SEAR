@@ -1,0 +1,173 @@
+POT:
+  description: |
+    Read the following text and table, and then write code to answer a question, note that python variables do not start with digits.
+    The context is a table where the 1st line is the header and the following lines are the rows.
+    If there is a row such as 'Career Total' or similar that summarizes column values, treat it as a separate sub-table and do not confuse it with the main data rows. 
+    Examine such tables carefully to avoid errors in answering.
+    The 1st line of the table is a list of column headers. 
+    The following lines are the rows, shown as list of cells of the table in that row.
+    A few examples are given below with the python code. Interpret them.
+    Write python code to answer the question.
+
+  examples:
+    - context: |
+        Time | Athlete | Date | Place
+        3:55.8 | Abel Kiviat (USA) | 1912-06-08 | Cambridge, Massachusetts, United States
+        3:54.7 | John Zander (SWE) | 1917-08-05 | Stockholm, Sweden
+        3:52.6 | Paavo Nurmi (FIN) | 1924-06-19 | Helsinki, Finland
+        3:51.0 | Otto Peltzer (GER) | 1926-09-11 | Berlin, Germany
+      more_context: |
+        Paavo Nurmi was known as the "Flying Finn" for his incredible long-distance running records. 
+        John Zander competed in the 1912 and 1920 Olympics but was interrupted by World War I.
+        Otto Peltzer faced political persecution in Germany despite his athletic achievements.
+      question: Which athlete set the mile record on 1924-06-19, and where did it take place?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Time", "Athlete", "Date", "Place"],
+          ["3:55.8", "Abel Kiviat (USA)", "1912-06-08", "Cambridge, Massachusetts, United States"],
+          ["3:54.7", "John Zander (SWE)", "1917-08-05", "Stockholm, Sweden"],
+          ["3:52.6", "Paavo Nurmi (FIN)", "1924-06-19", "Helsinki, Finland"],
+          ["3:51.0", "Otto Peltzer (GER)", "1926-09-11", "Berlin, Germany"]
+        ]
+
+        # Find the row with the date '1924-06-19'
+        record_row = [row for row in table if row[2] == "1924-06-19"][0]
+
+        # Extract the athlete's name and the place
+        athlete_name = record_row[1]
+        event_place = record_row[3]
+
+        # Save the result in the ans variable
+        ans = (athlete_name, event_place)
+
+        # Print the ans
+        print(ans)
+        # Done
+
+    - context: |
+        No | Player         | Position | Career     | Date honored
+        7  | Keith Tkachuk  | C        | 1992-2001  | December 23, 2011
+        9  | Bobby Hull     | LW       | 1972-1980  | February 19, 1989
+        19 | Shane Doan     | RW       | 1996-2017  | February 24, 2019
+      more_context: |
+        Keith Tkachuk is considered one of the greatest U.S.-born players in NHL history.
+        Bobby Hull, known for his blonde hair and skating speed, is regarded as one of the greatest ice hockey players of all time.
+        Shane Doan spent his entire NHL career with the Winnipeg Jets/Arizona Coyotes franchise.
+      question: Arizona Coyotes player number 19 played in how many NHL seasons?
+      python: |
+        # Define the table including the header
+        table = [
+          ["No", "Player", "Position", "Career", "Date honored"],
+          ["7", "Keith Tkachuk", "C", "1992-2001", "December 23, 2011"],
+          ["9", "Bobby Hull", "LW", "1972-1980", "February 19, 1989"],
+          ["19", "Shane Doan", "RW", "1996-2017", "February 24, 2019"]
+        ]
+
+        # Find the row with the player number 19
+        player_row = [row for row in table if row[0] == "19"][0]
+
+        # Extract the career span and calculate the number of seasons
+        career_span = player_row[3]
+        start_year, end_year = map(int, career_span.split('-'))
+        number_of_seasons = end_year - start_year + 1
+
+        # Save the result in the ans variable
+        ans = number_of_seasons
+
+        # Print the ans
+        print(ans)
+        # Done
+
+    - context: |
+        Flavor   | Sales
+        Vanilla  | 1500
+        Chocolate| 1200
+        Strawberry | 900
+      more_context: |
+        The ice cream sales data was collected over the summer season.
+        Vanilla has consistently been the most popular flavor for several years.
+      question: What is the total sales of all ice cream flavors?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Flavor", "Sales"],
+          ["Vanilla", 1500],
+          ["Chocolate", 1200],
+          ["Strawberry", 900]
+        ]
+
+        # Calculate the total sales
+        total_sales = sum(row[1] for row in table[1:])
+
+        # Save the result in the ans variable
+        ans = total_sales
+
+        # Print the ans
+        print(ans)
+        # Done
+
+    - context: |
+        Student  | Grade
+        Alice    | 85
+        Bob      | 92
+        Charlie  | 78
+      more_context: |
+        The mathematics exam was conducted at the end of the semester.
+        The grades are used to evaluate the overall performance of the students.
+      question: What is the average grade of the students?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Student", "Grade"],
+          ["Alice", 85],
+          ["Bob", 92],
+          ["Charlie", 78]
+        ]
+
+        # Calculate the average grade
+        grades = [row[1] for row in table[1:]]
+        average_grade = sum(grades) / len(grades)
+
+        # Save the result in the ans variable
+        ans = average_grade
+
+        # Print the ans
+        print(ans)
+        # Done
+
+    - context: |
+        Employee | Salary
+        John     | 3000
+        Jane     | 3500
+        Doe      | 4000
+      more_context: |
+        The company conducts an annual salary review for all employees.
+        The total salary expenditure is used for budgeting purposes.
+      question: What is the total salary expenditure for the company?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Employee", "Salary"],
+          ["John", 3000],
+          ["Jane", 3500],
+          ["Doe", 4000]
+        ]
+
+        # Calculate the total salary expenditure
+        total_salary_expenditure = sum(row[1] for row in table[1:])
+
+        # Save the result in the ans variable
+        ans = total_salary_expenditure
+
+        # Print the ans
+        print(ans)
+        # Done
+
+  prompt: |
+    For the following Table and question give the python code and finally print the ans
+    Define the table including the header
+    Table-
+    {context}
+    Question- {question}
+    #Python

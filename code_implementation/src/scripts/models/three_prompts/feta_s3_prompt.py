@@ -1,0 +1,132 @@
+def get_s3_prompt(table, question, detailed_steps, text):
+    return f"""
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, more context, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+
+Context:
+The table shows the filmography of Aadarsh Balakrishna.
+
+Year | Title                | Role           | Director                | Notes
+---- | -------------------- | -------------- | -----------------------
+2007 | Happy Days           | Sanjay         | Sekhar Kammula          | Telugu Film
+2008 | Vinayakudu           | Ananth Naidu   | Sai Kiran Adivi         | Telugu Film
+2009 | Ride                 | Gaja           | Ramesh Varma            | Telugu Film
+2009 | Evaraina Epudaina    | Raja           | Marthand K Shankar      | Telugu Film
+2010 | Maro Charitra        | Maddy          | Ravi Yadav              | Telugu Film
+2010 | Maa Annayya Bangaram | -              | Jonnalagadda Srinivas   | Telugu Film
+2017 | PSV Garuda Vega      | -              | Praveen Sattaru         | Telugu Film
+2018 | Vijetha              | Kiran          | Rakesh Sashi            | Telugu Film
+2018 | Neevevaro            | Blind sculptor | Hari Nath               | Telugu Film
+
+Question:
+In what films did Aadarsh appear in 2008 and 2009 and who were the directors?
+
+Detailed Steps:
+Identify Objective: Define the goal—find films featuring Aadarsh Balakrishna from 2008 and 2009 with their directors.  
+Evidence Extraction: Locate rows where "Year" is 2008 or 2009, then extract "Title" and "Director."  
+Decomposition:  
+- Find rows for 2008, extract "Title" and "Director."  
+- Find rows for 2009, extract "Title" and "Director."  
+Validation: Ensure completeness, verify director-film matches, and cross-check data accuracy.
+
+Answer && Reasoning:
+Identify Objective:  
+Determine the films Aadarsh Balakrishna appeared in during 2008 and 2009 along with their respective directors.  
+
+Evidence Extraction:  
+From the table, the relevant films and their directors are:  
+- 2008: *Vinayakudu* - Directed by Sai Kiran Adivi  
+- 2009: *Ride* - Directed by Ramesh Varma  
+- 2009: *Evaraina Epudaina* - Directed by Marthand K Shankar  
+
+Validation:  
+- Confirmed that the extracted films match the data in the table for 2008 and 2009.  
+- Ensured the correct mapping between Title and Director.  
+- No films from other years were mistakenly included.  
+
+Final Answer:  
+Aadarsh Balakrishna appeared in:  
+- Vinayakudu (2008) - Directed by Sai Kiran Adivi  
+- Ride (2009) - Directed by Ramesh Varma  
+- Evaraina Epudaina (2009) - Directed by Marthand K Shankar
+
+
+Example2:
+
+Context:
+The table shows the total revenue and net profit for XYZ Corporation for the years 2017, 2018, and 2019.
+
+Year | Total Revenue | Net Profit
+---- | --------------| ----------
+2017 | $500,000      | $50,000
+2018 | $550,000      | $55,000
+2019 | $600,000      | $60,000
+
+Question:
+What was the percentage change in total revenue from 2017 to 2018?
+
+Detailed Steps:
+Identify Objective: Determine the percentage change in total revenue from 2017 to 2018.  
+Evidence Extraction: Locate "Total Revenue," extract values for 2017 and 2018, and verify correctness.  
+Decomposition:  
+- Retrieve revenue for 2017 and 2018.  
+- Find the difference between 2018 and 2017 revenue.  
+- Express this difference relative to 2017's revenue.  
+- Convert the relative change into a percentage.  
+Validation: Cross-check extracted values and computed percentage for accuracy.  
+Python Code Generation: Generate a script to compute and validate the percentage change.
+
+Answer && Reasoning: 
+Identify Objective:  
+Determine the percentage change in total revenue from 2017 to 2018.  
+
+Evidence Extraction:  
+From the table:  
+- Total revenue in 2017: $500,000  
+- Total revenue in 2018: $550,000  
+
+Decomposition:  
+- The revenue increased from $500,000 to $550,000.  
+- The difference between the two years is $50,000.  
+- This difference corresponds to one-tenth of the 2017 revenue.  
+- One-tenth is equivalent to 10% of the original amount.  
+
+Validation:  
+- Verified correct revenue values.  
+- Confirmed the computed increase corresponds correctly to a 10% rise.  
+- Ensured no calculation errors.  
+
+Python Code Generation:
+```python
+# Revenue data
+revenue_2017 = 500000
+revenue_2018 = 550000
+
+# Compute percentage change
+percentage_change = (revenue_2018 - revenue_2017) / revenue_2017 * 100
+print(f"Percentage Change in Total Revenue from 2017 to 2018: {{percentage_change:.2f}}%")
+```
+
+Final Answer:  
+The total revenue increased by 10% from 2017 to 2018.  
+.
+
+Your Task:
+Answer the question based on provided tables and more context by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers. Decomposition should be employed only when necessary; if the evidence directly answers the question, further decomposition becomes redundant.
+
+Tables: 
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:
+
+
+"""

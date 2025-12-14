@@ -1,0 +1,123 @@
+index,table_id,question,response,answer
+0,Table_782,what was the average expected volatility of the weighted-average estimated fair value of employee stock options from 2010 to 2012,"Here is the answer with evidence:
+
+`answer`: `[41.7%, 28.8%, 24.0%]`
+
+`evidence`: |
+The weighted-average estimated fair value of employee stock options granted during 2012, 2011, and 2010 is shown in the table:
+```
+  | 2012 | 2011 | 2010
+expected volatility | 24.0% ( 24.0 % ) | 28.8% ( 28.8 % ) | 41.7% ( 41.7 % )
+```
+The average expected volatility from 2010 to 2012 is given by the values in the ""expected volatility"" column.",31.5%
+1,Table_764,what is the net change in the balance of unrecognized tax benefits during 2016?,"Here is the answer:
+
+```
+{
+  ""answer"": 79537,
+  ""evidence"": ""The net change in the balance of unrecognized tax benefits during 2016 can be calculated by subtracting the balance at January 1, 2016 from the balance at December 31, 2016. 
+    See Row 1 for the balance at January 1, 2016: 
+    | 2016 | 2015 | 2014
+    balance at january 1 | $ 28114 | $ 31947 | $ 32545
+    
+    See Row 5 for the balance at December 31, 2016: 
+    | 2016 | 2015 | 2014
+    balance at december 31 | $ 107551 | $ 28114 | $ 31947
+    
+    The net change is $ 107551 - $ 28114 = $ 79537.""
+}
+```",79437
+2,Table_714,what is the net change in the amount spent for research and development in 2015 compare to 2014?,"I apologize, but there is no information about research and development expenses in the provided table. The table only shows the ownership interest in several German Infraserv groups as of December 31, 2016.
+
+Evidence: The table only provides information about ownership interest in Infraserv groups and does not mention research and development expenses.
+
+Answer: Not available ( unable to determine the answer based on the provided table)",33
+3,Table_888,what percentage of total freight revenues was the intermodal commodity group in 2014?,"Here is the answer with evidence:
+
+**Answer:** 19.9%
+
+**Evidence:** 
+
+The total freight revenue in 2014 is found in the row: 
+`total freight revenues | $ 20397 | $ 22560 | $ 20684`
+The value for 2014 is `$ 22560`.
+
+The intermodal commodity group revenue in 2014 is found in the row:
+`intermodal | 4074 | 4489 | 4030`
+The value for 2014 is `$ 4489`.
+
+To find the percentage, divide the intermodal revenue by the total freight revenue and multiply by 100:
+`($ 4489 ÷ $ 22560) x 100 = 19.9%`",20%
+4,Table_776,what is the percentage increase in cash flows from operations from 2015 to 2016?,"Here is the answer with evidence:
+
+**Answer:** 70.2%
+
+**Evidence:**
+
+The cash flows from operations for 2016 and 2015 can be seen in the text:
+""Cash flows from operations were $1925 million, $1131 million and $1165 million in 2016, 2015 and 2014 respectively.""
+
+The percentage increase in cash flows from operations from 2015 to 2016 can be calculated as:
+((1925 - 1131) / 1131) * 100% = 70.2%
+
+Therefore, the answer is 70.2%.",70.2%
+0,Table_90,what was the total after-tax gains in millions for the sale so mastercard shares from 2006 to 2007?,"Here is the answer:
+
+```
+Answer:
+  attribute: answer
+  value: 367
+evidence: |
+  The total after-tax gains in millions for the sale of Mastercard shares can be seen in the following row:
+  in millions of dollars | 2007 pretax total | 2007 after-tax total | 2006 pretax total | 2006 after-tax total
+  total | $ 581 | $ 367 | $ 123 | $ 78
+  The value is inferred from the column ""2007 after-tax total"".
+```
+
+Let me know if you have any further questions or if there's anything else I can help you with!",445
+1,Table_794,"without the loss of in volume/weather , what percent increase would net revenue have experienced between 2016 and 2017?","Here is the answer:
+
+**Answer:** 4.35%
+
+**Evidence:** 
+
+The net revenue for 2016 is $705.4 million. The volume/weather component is -$18.2 million. Without this loss, the net revenue for 2016 would be $705.4 + $18.2 = $723.6 million. The net revenue for 2017 is $703.1 million. To find the percent increase, calculate (703.1 - 723.6) / 723.6 = -2.83%. Since the question asks for the percent increase without the loss of volume/weather, the correct answer is the positive value, which is 4.35% (approximately).",2.25%
+2,Table_496,what is the growth rate in net revenue for entergy wholesale commodities in 2012?,"Here is the answer with evidence and attribute:
+
+**answer:** -9.3%
+
+**evidence:** 
+
+The net revenue for 2011 and 2012 can be seen in the following rows:
+```
+  | amount ( in millions )
+ 2011 net revenue | $ 2045
+  ...
+  2012 net revenue | $ 1854
+```
+The growth rate can be calculated as:
+`((2012 net revenue - 2011 net revenue) / 2011 net revenue) * 100`
+`= (($1854 - $2045) / $2045) * 100`
+`= -9.3%`",-9.3%
+3,Table_884,what is the percentage change in the balance of unrecognized tax benefits from 2007 to 2008?,"Here is the evidence and answer:
+
+**Evidence:**
+The balance of unrecognized tax benefits for 2007 and 2008 can be seen in the following rows:
+balance at april 1 2007 | $ 224
+balance at march 31 2008 | $ 168
+The values are inferred from the columns ""april 1 2007"" and ""march 31 2008"".
+Row 1: $ 224
+Row 3: $ 168
+The percentage change is calculated as ((168-224)/224) * 100 = -25.0%.
+
+**Answer:**
+attribute answer: -25.0%",-25.0%
+4,Table_913,in 2006 what was the ratio of the gross realized gains to the losses,"Here is the answer:
+
+**answer:** 
+The ratio of the gross realized gains to the losses in 2006 is $\frac{4000}{88000}$ = 0.0455 (or 4.55%).
+
+**evidence:**
+The gross realized gains and losses for 2006 can be seen in the text:
+""gross realized gains and losses for 2006 were $4000 and $88000 respectively.""
+The ratio is calculated by dividing the gains by the losses.",0.05

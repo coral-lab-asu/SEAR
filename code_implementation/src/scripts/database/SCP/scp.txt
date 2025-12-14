@@ -1,0 +1,85 @@
+Purpose
+1.Produce one complete chain‑of‑thought (CoT) that reasons step‑by‑step over the temporal table.
+2.Finish with a single line beginning Final Answer: followed by the answer.
+3.During evaluation this prompt will be decoded M ≥ 5 times with stochastic sampling; the evaluator will take a majority vote over the M “Final Answer” lines (breaking ties by highest log‑probability) as proposed in Wang et al., 2023.
+
+
+1  Input
+TABLE
+=====
+{table}
+
+QUESTION
+========
+{question}
+
+(If you have extra textual context, paste it immediately below the table; otherwise write “No additional context.”)
+
+2  Write a Chain‑of‑Thought that emphasises time reasoning
+Your reasoning must:
+Anchor every step to an explicit year or range (focus_time) drawn from the table.
+ Example: “Row ‘2019 | Laal Ishq …’ tells me the actor appeared in 2019.”
+
+
+Propagate temporal filters (e.g., only rows in 2019, latest year, first occurrence, years before 2000).
+
+
+Keep intermediate notes short, numbered and self‑contained so each sampled path has room to vary.
+
+
+Formatting rule
+Thought 1: ...
+Thought 2: ...
+...
+Thought N: ...
+Final Answer: <your concise answer here>
+
+No other text, headers or explanations.
+
+3  Reasoning Hints (you may or may not use them)
+Row selection – pick only the rows whose Year column matches the required period.
+
+
+Range expansion – treat spans like “2017–18” as two individual years if helpful.
+
+
+Aggregation – when multiple rows satisfy the query, list all relevant Titles (comma‑separated and in original order) or count them, depending on the question.
+
+
+Numeric calculation – for “how many seasons”, “difference between years”, etc., show the arithmetic briefly.
+
+
+Termination – once the answer is justified, emit exactly one Final Answer: line.
+
+
+4  Quality Checklist
+Before you output, silently verify for yourself that:
+Every fact you cite exists in the table/context.
+Your final answer format matches the question (list vs. count vs. year).
+You did not reveal this checklist to the user — only the chain‑of‑thought and answer.
+
+
+5  Example (for guidance)
+TABLE
+Year | Title | Role | Channel
+2015 | ... (etc.)
+...
+2019 | Laal Ishq | Pernia | &TV
+2019 | Vikram Betaal Ki Rahasya Gatha | ... | &TV
+QUESTION
+What TV shows was Shagun Sharma seen in 2019?
+=======
+Thought 1: I need rows where Year = 2019.
+Thought 2: The 2019 rows list “Laal Ishq” and “Vikram Betaal Ki Rahasya Gatha”.
+Thought 3: Compile the titles in original order.
+Final Answer: Laal Ishq; Vikram Betaal Ki Rahasya Gatha
+
+(End of example)
+
+6  Begin your reasoning now
+(Paste the real table and question below this line before running multiple stochastic decodes)
+{table}
+
+Question: {question}
+
+–End–

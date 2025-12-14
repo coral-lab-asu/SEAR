@@ -1,0 +1,108 @@
+index,table_id,question,response,answer
+0,table_csv/203_659.csv,['what driver came in first place at the 2003 grand prix of monterey?'],"sq1. Identify the row that has the Position '1'. (independent)
+sq2. Extract the 'Driver' column for this row. (depends on sq1)
+sq3. The answer to sq2 is the driver who came in first place at the 2003 grand prix of monterey. (depends on sq2)
+
+answers:
+Answer to sq1: The row for the driver who came in first place at the 2003 grand prix of monterey is:
+1 | 32 | Patrick Carpentier | Team Player's | 87 | 1:48:11.023 | 1 | 22
+Answer to sq2: The driver who came in first place at the 2003 grand prix of monterey is: Patrick Carpentier
+
+final\_answer: Patrick Carpentier","[""['Patrick Carpentier']""]"
+1,table_csv/204_591.csv,"['which matchups did the atlanta falcons play in the 1988 season?', 'what was the highest attendance recorded during the season?', 'which were in october?']","Sure, I can break down the question into subquestions, answer each subquestion with supporting reasoning, and then provide a final answer.
+
+Question: ['which matchups did the atlanta falcons play in the 1988 season?', 'what was the highest attendance recorded during the season?', 'which were in october?']
+
+Subquestions:
+1. Which rows in the context correspond to matchups played by the Atlanta Falcons?
+2. What is the 'Attendance' value for the row with the highest attendance?
+3. Which rows in the context correspond to matchups played in October?
+
+Answers:
+1. The relevant rows for matchups played by the Atlanta Falcons are:
+   - Week 1: at Detroit Lions
+   - Week 3: at San Francisco 49ers
+   - Week 4: at Dallas Cowboys
+   - Week 11: San Diego Chargers
+   - Week 12: at Los Angeles Raiders
+   - Week 15: at Los Angeles Rams
+2. The highest attendance recorded during the season was 75,287, for the matchup in Week 7: at Denver Broncos.
+3. The relevant rows for matchups played in October are:
+   - Week 5: Seattle Seahawks
+   - Week 6: Los Angeles Rams
+   - Week 8: New York Giants
+   - Week 9: at Philadelphia Eagles
+   - Week 10: Green Bay Packers
+
+Final answer:
+1. The Atlanta Falcons played the following matchups in the 1988 season: at Detroit Lions, at San Francisco 49ers, at Dallas Cowboys, San Diego Chargers, at Los Angeles Raiders, and at Los Angeles Rams.
+2. The highest attendance recorded during the season was 75,287.
+3. The following matchups were played in October: Seattle Seahawks, Los Angeles Rams, New York Giants, at Philadelphia Eagles, and Green Bay Packers.","[""['at Detroit Lions', 'New Orleans Saints', 'at San Francisco 49ers', 'at Dallas Cowboys', 'Seattle Seahawks', 'Los Angeles Rams', 'at Denver Broncos', 'New York Giants', 'at Philadelphia Eagles', 'Green Bay Packers', 'San Diego Chargers', 'at Los Angeles Raiders', 'Tampa Bay Buccaneers', 'San Francisco 49ers', 'at Los Angeles Rams', 'at New Orleans Saints']"", ""['75,287']"", ""['October 2, 1988', 'October 9, 1988', 'October 16, 1988', 'October 23, 1988']""]"
+2,table_csv/203_373.csv,"[""who were the top five divers at the 1984 summer olympics women's 2 metre springboard?""]","sq1. Identify the rows that have the top five preliminary ranks. (independent)
+sq2. Extract the 'Diver' column for these rows. (depends on sq1)
+sq3. Compile the extracted 'Diver' values into a list. (depends on sq2)
+
+answers:
+Answer to sq1: The relevant rows for the top five preliminary ranks are:
+| Sylvie Bernier (CAN) | 489.51 | 3 | 530.70
+| Kelly McCormick (USA) | 516.75 | 2 | 527.46
+| Christina Seufert (USA) | 481.41 | 5 | 517.62
+| Li Yihua (CHN) | 517.92 | 1 | 506.52
+| Li Qiaoxian (CHN) | 466.83 | 6 | 487.68
+Answer to sq2: The 'Diver' values for the top five preliminary ranks are: Sylvie Bernier (CAN), Kelly McCormick (USA), Christina Seufert (USA), Li Yihua (CHN), Li Qiaoxian (CHN)
+Answer to sq3: The top five divers at the 1984 summer olympics women's 2 metre springboard are: [""Sylvie Bernier (CAN)"", ""Kelly McCormick (USA)"", ""Christina Seufert (USA)"", ""Li Yihua (CHN)"", ""Li Qiaoxian (CHN)""]
+
+final_answer: [""Sylvie Bernier (CAN)"", ""Kelly McCormick (USA)"", ""Christina Seufert (USA)"", ""Li Yihua (CHN)"", ""Li Qiaoxian (CHN)""]","[""['Sylvie Bernier (CAN)', 'Kelly McCormick (USA)', 'Christina Seufert (USA)', 'Li Yihua (CHN)', 'Li Qiaoxian (CHN)']""]"
+3,table_csv/203_360.csv,['who had the fastest time?'],"sq1. Identify the row with the fastest time. (independent)
+sq2. Extract the 'Boat' column for this row. (depends on sq1)
+sq3. Extract the 'Nation' column for this row. (depends on sq1)
+
+answers:
+Answer to sq1: The relevant row for the fastest time is:
+M8+ Eight | 5:19.35 | Gabriel Bergen Douglas Csima Robert Gibson Conlin McCabe Malcolm Howard Andrew Byrnes Jeremiah Brown Will Crothers Brian Price (coxswain) | Canada | 2012 | | Lucerne, Switzerland
+
+Answer to sq2: The 'Boat' for the fastest time is: M8+ Eight
+
+Answer to sq3: The 'Nation' for the fastest time is: Canada
+
+final\_answer: The boat with the fastest time is 'M8+' and the nation is 'Canada'.","[""['M8+ Eight']""]"
+4,table_csv/204_76.csv,"['what are the countries of the taekwondo at the 2010 south american games?', 'which country placed second with a total of 13 medals?']","decompositon:
+
+sq1. Identify the rows that have a gold, silver, or bronze medal from the 2010 South American Games. (independent)
+
+sq2. Extract the 'Nation' column for these rows. (depends on sq1)
+
+sq3. Compile the extracted 'Nation' values into a list. (depends on sq2)
+
+sq4. Identify the row with the second highest total medal count. (independent)
+
+sq5. Extract the 'Nation' column for the identified row. (depends on sq4)
+
+answers:
+
+Answer to sq1: The relevant rows for the 2010 South American Games are:
+
+1 | Brazil | 7 | 5 | 3 | 15
+2 | Venezuela | 3 | 2 | 8 | 13
+3 | Colombia | 2 | 3 | 4 | 9
+4 | Chile | 2 | 0 | 2 | 4
+5 | Argentina | 1 | 2 | 5 | 8
+6 | Peru | 1 | 1 | 2 | 4
+7 | Ecuador | 0 | 2 | 2 | 4
+8 | Guyana | 0 | 1 | 0 | 1
+9 | Aruba | 0 | 0 | 1 | 1
+9 | Netherlands Antilles | 0 | 0 | 1 | 1
+9 | Panama | 0 | 0 | 1 | 1
+9 | Uruguay | 0 | 0 | 1 | 1
+
+Answer to sq2: The 'Nation' values for the 2010 South American Games are: Brazil, Venezuela, Colombia, Chile, Argentina, Peru, Ecuador, Guyana, Aruba, Netherlands Antilles, Panama, Uruguay
+
+Answer to sq3: The countries of the taekwondo at the 2010 South American Games are: [""Brazil"", ""Venezuela"", ""Colombia"", ""Chile"", ""Argentina"", ""Peru"", ""Ecuador"", ""Guyana"", ""Aruba"", ""Netherlands Antilles"", ""Panama"", ""Uruguay""]
+
+Answer to sq4: The row with the second highest total medal count is:
+
+2 | Venezuela | 3 | 2 | 8 | 13
+
+Answer to sq5: The nation that placed second with a total of 13 medals is: Venezuela
+
+final\_answer: [""Brazil"", ""Venezuela"", ""Colombia"", ""Chile"", ""Argentina"", ""Peru"", ""Ecuador"", ""Guyana"", ""Aruba"", ""Netherlands Antilles"", ""Panama"", ""Uruguay""], Venezuela","[""['Brazil', 'Venezuela', 'Colombia', 'Chile', 'Argentina', 'Peru', 'Ecuador', 'Guyana', 'Aruba', 'Netherlands Antilles', 'Panama', 'Uruguay']"", ""['Venezuela']""]"

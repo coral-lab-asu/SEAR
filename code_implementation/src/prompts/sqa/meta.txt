@@ -1,0 +1,209 @@
+#### Context/Background:
+
+Steps for Meta Reasoning:
+Each section has multiple approaches, you do not have to use all the approaches. 
+Understand their use-cases and then pick minimal relevant steps to create your own optimal approach to answer the question.  
+
+Problem Understanding:
+- Determine the objective: Identify the goal or desired outcome of the reasoning process.
+- Understand the problem: Comprehend the nature and scope of the problem.
+
+Reasoning Process:
+- Step-by-step reasoning: Approach the problem logically, ensuring clarity at each step or stage.
+- Extract relevant information: Gather all necessary data and details pertinent to the problem, by extracting relevant rows, columns and textual information.
+- Decomposition of problem into sub-problems: Break down the main question into smaller and more manageable sub questions.
+- Individually answer each sub-problem with reasoning: Apply logical steps to solve each sub question separately.
+- Write a single Python program for solving the problem: Create a detailed unified Python script with comments describing the steps and stages.
+- Individually write a Python program for each sub-problem: Develop separate Python scripts for each sub-problem, ensuring modularity and clarity.
+
+Answer:
+- Summarize findings: Combine the results from each step or sub question to give the final answer as Final Answer: [Answer].
+- Combine Python code: If necessary, integrate the individual Python scripts into a cohesive program at the end. Print the final answer as Final Answer: [Answer], end your code with a comment "#Done".
+
+If the problem is simple enough, use approaches like chain of thought to solve the problem, especially when it is just a simple look up.
+
+#### Goals / Desired Outcome:
+
+The goal is to accurately answer the question using a logical and optimal reasoning process. The desired output should be a well-explained paragraph summarizing the findings, along with any necessary Python code blocks to perform calculations or data extraction.
+
+#### Specific Requirements:
+
+1. The response must include a step-by-step reasoning process.
+2. Extract relevant information from the given table.
+3. If needed, provide Python code for calculations.
+4. Summarize findings clearly and concisely in a paragraph.
+5. Final answer should be presented in a specific format: "Final Answer: [Answer]".
+
+#### Tone / Style:
+
+The tone should be formal and instructional, aiming to provide clear and logical explanations.
+
+#### Example:
+
+**Table Title:** Aadarsh Balakrishna  
+**Table Subtitle:** Filmography
+
+**Table:**
+
+Year | Title                | Role           | Director                | Notes
+---- | -------------------- | -------------- | -----------------------
+2005 | Iqbal                | Kamal          | Nagesh Kukunoor         | Hindi Film
+2007 | Happy Days           | Sanjay         | Sekhar Kammula          | Telugu Film
+2008 | Vinayakudu           | Ananth Naidu   | Sai Kiran Adivi         | Telugu Film
+2009 | Ride                 | Gaja           | Ramesh Varma            | Telugu Film
+2009 | Evaraina Epudaina    | Raja           | Marthand K Shankar      | Telugu Film
+2010 | Maro Charitra        | Maddy          | Ravi Yadav              | Telugu Film
+2010 | Maa Annayya Bangaram | -              | Jonnalagadda Srinivas   | Telugu Film
+2011 | Cricket Girls and Beer | Vijay       | Umesh Shirupalli        | Telugu Film
+2010 | Nooru Janmaku        | Jeevan         | Nagathihalli Chandrasekhar | Kannada Film
+2010 | KSD Appalaraju       | Babu Garu      | Ram Gopal Varma         | Telugu Film
+2012 | Genius               | Nizamuddin     | Ohmkkar                 | Telugu Film
+2012 | Bodyguard            | -              | Gopichand Malineni      | Telugu Film
+2014 | Nee Jathaga Nenundali | -             | Jaya Ravindra           | Telugu Film
+2014 | Govindudu Andarivadele | Baachi       | Krishna Vamsi           | Telugu Film
+2015 | Superstar Kidnap     | Jai            | A. Sushanth Reddy       | Telugu Film
+2016 | Seethamma Andalu Ramayya Sitralu | Seetha's suitor | Srinivas Gavireddy | Telugu Film
+2016 | Sarrainodu           | Paddam Veerendra | Boyapati Srinu       | Telugu Film
+2016 | Jaguar               | Arya           | Mahadev                 | Bilingual Kannada-Telugu Film
+2017 | Babu Baga Busy       | -              | Naveen Medaram          | Telugu Film
+2017 | PSV Garuda Vega      | -              | Praveen Sattaru         | Telugu Film
+2018 | Vijetha              | Kiran          | Rakesh Sashi            | Telugu Film
+2018 | Neevevaro            | Blind sculptor | Hari Nath               | Telugu Film
+2018 | W/O Ram              | Rocky          | Vijay Yelakanti         | Telugu Film
+2018 | Aravinda Sametha Veera Raghava | -   | Trivikram Srinivas      | Telugu Film
+
+Questions:
+
+[Who are the drivers of the 1971 Monaco Grand Prix?,
+What was the difference in time between Jackie Stewart and Jacky Ickx?,
+What was their time/retired?,
+What is the time difference between these two drivers?]
+
+Optimal Approach:
+
+Problem Understanding:
+
+Determine the Objective: Identify the films Aadarsh Balakrishna appeared in during the years 2008 and 2009, along with the directors of these films.
+Understand the Problem: This requires extracting relevant information from the table for the years 2008 and 2009.
+Reasoning Process:
+3. Extract Relevant Information:
+
+Films in 2008:
+"Vinayakudu" directed by Sai Kiran Adivi
+Films in 2009:
+"Ride" directed by Ramesh Varma
+"Evaraina Epudaina" directed by Marthand K Shankar
+Decompose the Problem into Sub-Problems:
+
+Identify the films for each year.
+Identify the directors for each film.
+Individually Answer Each Sub-Problems with Reasoning:
+
+In 2008, Aadarsh appeared in "Vinayakudu" directed by Sai Kiran Adivi.
+In 2009, Aadarsh appeared in "Ride" directed by Ramesh Varma and "Evaraina Epudaina" directed by Marthand K Shankar.
+
+Answers:
+
+[In 2008, Aadarsh Balakrishna appeared in the film "Vinayakudu" directed by Sai Kiran Adivi. In 2009, he appeared in "Ride" directed by Ramesh Varma and "Evaraina Epudaina" directed by Marthand K Shankar.,
+The film "Vinayakudu" was directed by Sai Kiran Adivi.,
+In the film "Ride", Aadarsh played the role of Gaja.,
+Aadarsh appeared in 2 films in 2009: "Ride" and "Evaraina Epudaina".]
+---
+
+**Table Title:** Athletics at the 1992 Summer Olympics – Women's 400 metres hurdles  
+**Table Subtitle:** Final
+
+**Table:**
+
+RANK | FINAL | TIME
+- | Sally Gunnell (GBR) | 53.23
+- | Sandra Farmer-Patrick (USA) | 53.69
+- | Janeene Vickers (USA) | 54.31
+4. | Tatyana Ledovskaya (EUN) | 54.31
+5. | Vera Ordina (EUN) | 54.83
+6. | Margarita Ponomaryova (EUN) | 54.83
+7. | Deon Hemmings (JAM) | 55.58
+— | Myrtle Bothma (RSA) | DNF
+
+**Question:** Who received the silver and bronze medals for the women's 400 metres hurdles at the 1992 Summer Olympics?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Identify the athletes who received the silver and bronze medals in the women's 400 metres hurdles at the 1992 Summer Olympics.
+
+2. Understand the Problem: This requires extracting relevant information from the table to find the second and third place athletes.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Silver medalist: Sandra Farmer-Patrick (USA) with a time of 53.69.
+   - Bronze medalist: Janeene Vickers (USA) with a time of 54.31.
+
+4. Answer:
+   - The silver medal was awarded to Sandra Farmer-Patrick (USA).
+   - The bronze medal was awarded to Janeene Vickers (USA).
+
+**Final Answer:** The silver medal for the women's 400 metres hurdles at the 1992 Summer Olympics was awarded to Sandra Farmer-Patrick (USA), and the bronze medal was awarded to Janeene Vickers (USA).
+
+---
+
+**Table Title:** Kelsey Sanders  
+**Table Subtitle:** Web
+
+**Table:**
+
+Year | Title                | Role           | Notes
+---- | -------------------- | -------------- | -----------------------
+2009 | Private              | Reed Brennan   | 20 episodes
+2010 | 10,000 Days          | Kovita Hesse   | 11 episodes
+2010 | Hollywood is Like High School with Money | Taylor Henning | 10 episodes
+
+Questions:
+
+[Kelsey Sanders appeared in the most episodes of which show in which year?,
+What role did Kelsey Sanders play in "10,000 Days"?,
+How many episodes did Kelsey Sanders appear in "Hollywood is Like High School with Money"?,
+Which show did Kelsey Sanders appear in the fewest episodes?]
+
+###Optimal Approach:
+
+Problem Understanding:
+
+Determine the Objective: Identify the show in which Kelsey Sanders appeared in the most episodes and the year it aired, along with additional details about her roles and episode counts.
+Understand the Problem: This requires extracting relevant information from the table.
+
+### Reasoning Process:
+Extract Relevant Information:
+
+"Private" in 2009: 20 episodes
+"10,000 Days" in 2010: 11 episodes
+"Hollywood is Like High School with Money" in 2010: 10 episodes
+Decompose the Problem into Sub-Problems:
+
+Identify the number of episodes for each show.
+Determine the role played by Kelsey Sanders in "10,000 Days".
+Identify the number of episodes for "Hollywood is Like High School with Money".
+Determine the show with the fewest episodes.
+Individually Answer Each Sub-Problems with Reasoning:
+
+"Private" in 2009 had the highest number of episodes (20).
+In "10,000 Days", Kelsey Sanders played the role of Kovita Hesse.
+In "Hollywood is Like High School with Money", Kelsey Sanders appeared in 10 episodes.
+The show with the fewest episodes is "Hollywood is Like High School with Money" with 10 episodes.
+
+Answers:
+
+[Kelsey Sanders appeared in the most episodes of "Private" in 2009 with 20 episodes.,
+In "10,000 Days", Kelsey Sanders played the role of Kovita Hesse.,
+Kelsey Sanders appeared in 10 episodes of "Hollywood is Like High School with Money".,
+Kelsey Sanders appeared in the fewest episodes of "Hollywood is Like High School with Money" with 10 episodes.]
+
+Your task: Answer the question(s) using the optimal approach provided above, referring to the table context given. 
+If there are multiple questions, answer each of them in the order of the questions asked.
+
+Table:
+{context}
+
+Question(s): {question}
+
+Optimal Approach:

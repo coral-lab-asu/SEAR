@@ -1,0 +1,89 @@
+Your task is to comprehend the crucial steps for a given table and question, making each step more detailed and ensuring they effectively lead to the correct answer. 
+
+Few Examples are given below with detailed steps by elaborating from the crucial steps. Interpret the examples and understand the task to comprehend the crucial steps according to the specific table, text and question to reach the answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+### Hansen Technologies Ltd - Dividend Payments and Franking Account
+
+| Description                                                  | 2019 ($'000) | 2018 ($'000) |
+|-------------------------------------------------------------|-------------|-------------|
+| **Dividends paid during the year (net of dividend re-investment)** |             |             |
+| 4 cent per share final dividend paid 27 September 2018 – fully franked | 7,319       | -           |
+| 3 cent per share final dividend paid 30 September 2017 – fully franked | -           | 5,175       |
+| 3 cent per share interim dividend paid 29 March 2019 – fully franked | 5,318       | -           |
+| 3 cent per share interim dividend paid 29 March 2018 – fully franked | -           | 5,217       |
+| **Total dividends paid**                                    | 12,637      | 10,392      |
+| **Proposed dividend not recognised at the end of the year** | 5,922       | 7,865       |
+| **Dividends franking account**                              |             |             |
+| 30% franking credits available to shareholders for subsequent financial years | 1,586       | 3,125       |
+
+Question: What was the percentage change in franking credits between 2018 and 2019?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.    
+Python Code Generation: Generate a single Python script to compute the percentage change in franking credits.
+
+Detailed Steps:
+Identify Objective:  
+Determine the percentage change in franking credits between 2018 and 2019.  
+Evidence Extraction:  
+- Extract the franking credits for 2018: **$3,125,000**.  
+- Extract the franking credits for 2019: **$1,586,000**.  
+Step-by-Step Reasoning:  
+- Compute the percentage change using the formula:  
+   ```yaml
+   Percentage Change = ((New Value - Old Value) / Old Value) * 100
+   ```
+- Substitute the extracted values into the formula.  
+- Interpret the result to determine if the franking credits increased or decreased.  
+Python Code Generation:  
+Generate a Python script to:  
+- Extract values for franking credits in 2018 and 2019.  
+- Compute the percentage change using the formula.  
+- Output the computed percentage change.
+
+Example2:
+Table:
+### Unrecognized Income Tax Benefits (Fiscal Years 2017-2019)
+
+| Description                                      | 2019  | 2018  | 2017  |
+|-------------------------------------------------|------|------|------|
+| **Balance at beginning of fiscal year**         | $566  | $501  | $490  |
+| **Additions related to prior years' tax positions** | 13   | 14   | 40   |
+| **Reductions related to prior years' tax positions** | (101) | (11)  | (9)   |
+| **Additions related to current year tax positions** | 98   | 105  | 70   |
+| **Settlements**                                 | (2)   | (7)   | (4)   |
+| **Reductions due to lapse of applicable statute of limitations** | (32)  | (36)  | (86)  |
+
+
+Question: In which years are the total unrecognized income tax benefits calculated for?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Direct Answer Path: Use evidence extraction to identify the years for which the total unrecognized income tax benefits are calculated.
+
+Detailed Steps:
+Identify Objective:  
+Determine the years for which total unrecognized income tax benefits are calculated.  
+Evidence Extraction:  
+Extract the relevant years mentioned in the table, which lists unrecognized income tax benefits for **2017, 2018, and 2019**.  
+Confirm the values under the **Balance at beginning of fiscal year** and **Balance at end of fiscal year** rows to verify these calculations span across multiple years.  
+Direct Answer Path:  
+Use the extracted values to confirm that total unrecognized income tax benefits are calculated for **fiscal years 2017, 2018, and 2019**.
+
+
+YourTask:
+Comprehend the Crucial steps to Detailed Steps that are essential for solving the task for the provided table, text (if available) and question. Important - Do not answer the Question.
+
+{table}
+
+Question: {question}
+
+{crucial_steps}
+
+Detailed Steps:

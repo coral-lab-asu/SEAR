@@ -1,0 +1,75 @@
+POT:
+  description: |
+    Read the following text and table, and then write code to answer a question, note that python variables do not start with digits. Maintain a valid indentation.
+    Provide the output in this format - #Python
+  examples:
+    - context: |
+        Table Pre-text: The following table presents data on various investments, cash, and total cash and investments for the fiscal years ending December 28, 2013, and December 29, 2012, in millions.
+        ( in millions ) | dec 282013 | dec 292012
+        available-for-sale investments | $ 18086 | $ 14001
+        cash | 854 | 593
+        equity method investments | 1038 | 992
+        loans receivable | 1072 | 979
+        non-marketable cost method investments | 1270 | 1202
+        reverse repurchase agreements | 800 | 2850
+        trading assets | 8441 | 5685
+        total cash and investments | $ 31561 | $ 26302
+      question: what percentage of total cash and investments as of dec . 29 2012 was comprised of available-for-sale investments?
+      code: |
+        #Python
+        
+        available_for_sale_investments_dec_29_2012 = 14001
+        total_cash_and_investments_dec_29_2012 = 26302
+        percent_available_for_sale_investments_dec_29_2012 = available_for_sale_investments_dec_29_2012 / total_cash_and_investments_dec_29_2012 * 100
+        ans = percent_available_for_sale_investments_dec_29_2012
+        print(ans)
+
+    - context: |
+        Table Pre-text: The following table shows the aggregate commitment under the liquidity asset purchase agreements and the distribution of total conduit assets across different countries for the years 2008 and 2007, in billions of dollars.
+        the aggregate commitment under the liquidity asset purchase agreements was approximately $ 23.59 billion and $ 28.37 billion at december 31 , 2008 and 2007 , respectively .
+        ( dollars in billions ) | 2008 amount | 2008 percent of total conduit assets | 2007 amount | 2007 percent of total conduit assets
+        united states | $ 11.09 | 46% ( 46 % ) | $ 12.14 | 42% ( 42 % )
+        australia | 4.30 | 17 | 6.10 | 21
+        great britain | 1.97 | 8 | 2.93 | 10
+        spain | 1.71 | 7 | 1.90 | 7
+        italy | 1.66 | 7 | 1.86 | 7
+        portugal | 0.62 | 3 | 0.70 | 2
+        germany | 0.57 | 3 | 0.70 | 2
+        netherlands | 0.40 | 2 | 0.55 | 2
+        belgium | 0.29 | 1 | 0.31 | 1
+        greece | 0.27 | 1 | 0.31 | 1
+        other | 1.01 | 5 | 1.26 | 5
+        total conduit assets | $ 23.89 | 100% ( 100 % ) | $ 28.76 | 100% ( 100 % )
+      question: what is percentage change in total conduit asset from 2007 to 2008?
+      code: |
+        #Python
+        
+        total_conduit_assets_2007 = 28.76
+        total_conduit_assets_2008 = 23.89
+        net_change_in_total_conduit_assets = total_conduit_assets_2008 - total_conduit_assets_2007
+        percent_change_in_total_conduit_assets = (net_change_in_total_conduit_assets / total_conduit_assets_2007) * 100
+        ans = percent_change_in_total_conduit_assets
+        print(ans)
+        
+    - context: |
+        Table Pre-text: The following table presents the net sales, cost of sales, and gross margin for the fiscal years 2004, 2003, and 2002.
+        - | 2004 | 2003 | 2002
+        net sales | $ 8279 | $ 6207 | $ 5742
+        cost of sales | 6020 | 4499 | 4139
+        gross margin | $ 2259 | $ 1708 | $ 1603
+        gross margin percentage | 27.3% ( 27.3 % ) | 27.5% ( 27.5 % ) | 27.9% ( 27.9 % )
+      question: what was the gross margin decline percent in fiscal 2004 from 2003?
+      code: |
+        #Python
+        gross_margin_2003_percent = 27.5  # in percent
+        gross_margin_2004 = 27.3  # in percent
+        gross_margin_decline = gross_margin_2003_percent - gross_margin_2004
+        ans = gross_margin_decline
+        print(ans)
+        
+  prompt: |
+    Read the following text and table, and then write code to answer a question, note that python variables do not start with digits. Provide the output in this format specified below.
+    Context - {context}
+    Question - {question}
+    
+    #Python

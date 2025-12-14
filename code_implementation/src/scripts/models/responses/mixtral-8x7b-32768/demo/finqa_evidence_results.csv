@@ -1,0 +1,74 @@
+index,table_id,question,response,answer
+0,Table_727,what are the payments for the next three years on the entergy new orleans storm recovery bonds ( in millions? ),"answer:
+evidence: |
+The principal payments for the Entergy New Orleans Storm Recovery Bonds over the next three years are as follows:
+- 2018: $11 million (see the row for 2018, the value is inferred from the text)
+- 2019: $11.2 million (see the row for 2019, the value is inferred from the text)
+- 2020: $11.6 million (see the row for 2020, the value is inferred from the text)
+
+To convert these amounts from thousands to millions, divide each amount by 1,000.
+Answer:
+- 2018: $11 million / 1,000 = $11 million
+- 2019: $11.2 million / 1,000 = $11.2 million
+- 2020: $11.6 million / 1,000 = $11.6 million",44.4
+1,Table_10,what was the percentage change in deferred tax assets and regulatory assets from 2013 to 2014,"To answer this question, we first need to find the values of the deferred tax assets and regulatory assets for both years. However, the table provided only shows the balance of unrecognized tax benefits, which includes both deferred tax assets and regulatory assets.
+
+The question asks for the percentage change in deferred tax assets and regulatory assets from 2013 to 2014. To calculate the percentage change, we need to find the difference between the 2014 and 2013 values, divide that by the 2013 value, and then multiply by 100.
+
+Unfortunately, without the separate values for deferred tax assets and regulatory assets, we cannot accurately calculate the percentage change.
+
+Therefore, the answer is:
+
+answer: ""Unable to calculate the percentage change without separate values for deferred tax assets and regulatory assets.""",1.7%
+2,Table_861,what is the percentage change in total financial liabilities at fair value in 2012?,"To answer this question, we first need to find the total financial liabilities at fair value for the year 2011 and 2012. From the table, we can see that the values are:
+
+* As of December 2012: $377,677 million
+* As of December 2011: $388,669 million
+
+To calculate the percentage change, we use the following formula:
+
+Percentage change = ((New value - Old value) / |Old value|) \* 100%
+
+Plugging in the values, we get:
+
+Percentage change = (($377,677 - $388,669) / |$388,669|) \* 100%
+
+Percentage change = -(($10,992) / $388,669) \* 100%
+
+Percentage change ≈ -2.83%
+
+Therefore, the percentage change in total financial liabilities at fair value in 2012 was approximately -2.83%.",-2.8%
+3,Table_98,what is the anualized return for s&p 500 from 2012 to 2017?,"evidence: |
+The cumulative total return for the S&P 500 index from December 31, 2012 to December 31, 2017 can be seen in Row 2, column 2017 of the table:
+comparison of 5 year cumulative total return* among cme group inc. , the s&p 500 index , and a peer group 
+12/12 12/13 12/14 12/15 12/16 cme group inc . s&p 500 peer group 
+* $ 100 invested on 12/31/12 in stock or index , including reinvestment of dividends .
+fiscal year ending december 31 .
+copyright a9 2018 standard & poor 2019s , a division of s&p global . all rights reserved .
+the stock price performance included in this graph is not necessarily indicative of future stock price performance. .
+
+The value is $208.14.
+
+To find the annualized return, we need to use the formula:
+
+((final value / initial value) ^ (1/number of years)) - 1
+
+In this case, the final value is $208.14, the initial value is $100, and the number of years is 5.
+
+answer: 0.1473 or 14.73% (when expressed as a percentage)",2%
+4,Table_556,what is the growth rate in dividends received in 2012 compare to 2011?,"To answer this question, we need to find the dividends received in 2012 and 2011, and then calculate the growth rate.
+
+From the table pretext, we know that the dividends received in 2013, 2012, and 2011 were $92 million, $83 million, and $78 million, respectively.
+
+Evidence:
+
+- Dividends received in 2012: $83 million
+- Dividends received in 2011: $78 million
+
+To calculate the growth rate, we use the following formula:
+
+Growth rate = (Final value - Initial value) / |Initial value| \* 100%
+
+Answer:
+
+Growth rate = ($83 million - $78 million) / |$78 million| \* 100% = 6.41% (approximately)",6.4%

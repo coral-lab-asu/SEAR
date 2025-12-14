@@ -1,0 +1,48 @@
+Evidence:
+  description: |
+    Answer the question based on the context. The context is a table where the 1st line is the header and the following lines are the rows. A few examples are given below along with the reasoning to arrive at this conclusion. 
+    If there are multiple answers, return a list of answers in a list.
+  examples:
+
+    - table: |
+        Table Pre-text: The following table shows the authorized and issued common stock for the years ending December 31, 2017, and December 31, 2016, in thousands.
+        ( in thousands ) | december 31 , 2017 | december 31 , 2016
+        class a common stock authorized | 1000000 | 1000000
+        class a common stock issued and outstanding | 339235 | 338240
+        class b-1 common stock authorized issued and outstanding | 0.6 | 0.6
+        class b-2 common stock authorized issued and outstanding | 0.8 | 0.8
+        class b-3 common stock authorized issued and outstanding | 1.3 | 1.3
+        class b-4 common stock authorized issued and outstanding | 0.4 | 0.4
+      question: what was the increase in class a common stock issued and outstanding between years , in thousands?
+      evidence: |
+        The common stock issued and outstanding for 2017 and 2016 can be seen in the following rows:
+        ( in thousands ) | december 31 , 2017 | december 31 , 2016
+        class a common stock issued and outstanding | 339235 | 338240
+        The values are inferred from the columns "december 31 , 2017" and "december 31 , 2016".
+        Row 2: 339235 | 338240
+        The difference is 339235 - 338240 = 995.
+      answer: 995
+
+    - table: |
+        Table Pre-text: The following table presents financial data, including total capital and other key metrics, for the years ending December 31, 2008, and December 31, 2007, in millions.
+        december 31 ( in millions ) | 2008 | 2007
+        total tier 1capital ( a ) | $ 136104 | $ 88746
+        total tier 2 capital | 48616 | 43496
+        total capital | $ 184720 | $ 132242
+        risk-weighted assets | $ 1244659 | $ 1051879
+        total adjusted average assets | 1966895 | 1473541
+      question: what was the total capital in 2008?
+      evidence: |
+        See Row 3 for total capital:
+        december 31 ( in millions ) | 2008 | 2007
+        total capital | $ 184720 | $ 132242
+        See the "2008" column for the value in 2008:
+        2008 | $ 184720
+      answer: $184720
+
+  prompt: |
+    Your task:
+    For the following table & question give the evidence and the answer in format with attribute answer
+    Table -
+    {context}
+    Question - {question}

@@ -1,0 +1,85 @@
+index,table_id,question,response,answer
+0,table_csv/203_588.csv,"['which periods had exactly 194 000 deaths per year?', 'and the deaths per year?', 'what was the least number of deaths for a time period?', 'which of these had more than 100,000 deaths per year?', 'how many deaths per year are recorded?', 'what year was there 229,000 live births?', 'what were the deaths per year for 1995-2000?', 'of the two periods with the same number of deaths which is closer to present day?', 'how many deaths per year for each period?', 'which period had the fewest deaths per year?', 'which period was the first to have over 100,000 deaths per year?', 'what about just during 1995-2000?']","Question: Which periods had exactly 194,000 deaths per year?
+Reasoning: To find the periods with exactly 194,000 deaths per year, look for the row(s) where the ""Deaths per year"" column shows this value. In the given table, the periods with exactly 194,000 deaths per year are:
+- 2000-2005
+- 2005-2010
+Answer: [""2000-2005"", ""2005-2010""]
+
+Question: And the deaths per year?
+Answer: The ""Deaths per year"" data is already provided in the context. Here is the list organized as an answer:
+[""66,000"", ""76,000"", ""89,000"", ""105,000"", ""121,000"", ""138,000"", ""157,000"", ""179,000"", ""192,000"", ""194,000"", ""194,000"", ""196,000""]
+
+Question: What was the least number of deaths for a time period?
+Answer: The smallest number of deaths for a time period is 66,000 as shown in the ""Deaths per year"" column for the row ""1950-1955"".
+
+Question: Which of these had more than 100,000 deaths per year?
+Answer: Any period where the value in the ""Deaths per year"" is greater than 100,000 counts as an answer. Here are the respective time periods:
+- ""1965-1970""
+- ""1975-1980""
+- ""1980-1985""
+- ""1985-1990""
+- ""1990-1995""
+- ""1995-2000""
+- ""2000-2005""
+- ""2005-2010""
+
+Question: How many deaths per year are recorded?
+Reasoning: To answer this question, it would be helpful to know whether we are looking for the unique total or the cumulative total. Nonetheless, for the purpose of providing a response, we will assume it means the unique total. The unique total of deaths per year is simply the count of rows in the ""Deaths per year"" column which is 12 (including the table header).
+Answer: 12
+
+Question: What year was there 229,000 live births?
+Answer: The ""Live births per year"" column shows the year 1965-1970 had 229,000 live births.
+
+Question: What were the deaths per year for 1995-2000?
+Answer: The ""Deaths per year"" value for the row ""1995-2000"" is 194,000.
+
+Question: Of the two periods with the same number of deaths which is closer to present day?
+Answer: Based on the periods provided in the context, ""2005-2010"" is closer to the present day than ""2000-2005"".
+
+Question: How many deaths per year for each period?
+Answer: The ""Deaths per year"" data is already provided in the context for each period. Here is the list organized as an answer:
+[""66,000"", ""76,000"", ""89,000"", ""105,000"", ""121,000"", ""138,000"", ""157,000"", ""179,000"", ""192,000"", ""194,000"", ""194,000"", ""196,000""]
+
+Question: Which period had the fewest deaths per year?
+Answer: The period with the fewest deaths per year is ""1950-1955"" with 66,000 deaths in that time span.
+
+Question: Which period was the first to have over 100,000 deaths per year?
+Answer: The first period to have over 100,000 deaths per year is ""1965-1970"" with 105,000 deaths.
+
+Question: What about just during 1995-2000?
+Answer: The count of deaths per year during this period was 194,000 as shown in the row ""1995-2000"" under the ""Deaths per year"" column. This specific period did not ask for comparison with other time spans.","[""['1995-2000', '2000-2005']"", ""['66 000', '76 000', '89 000', '105 000', '121 000', '138 000', '157 000', '179 000', '192 000', '194 000', '194 000', '196 000']"", ""['66 000']"", ""['1965-1970', '1970-1975', '1975-1980', '1980-1985', '1985-1990', '1990-1995', '1995-2000', '2000-2005', '2005-2010']"", ""['66 000', '76 000', '89 000', '105 000', '121 000', '138 000', '157 000', '179 000', '192 000', '194 000', '194 000', '196 000']"", ""['1965-1970']"", ""['194 000']"", ""['2000-2005']"", ""['66 000', '76 000', '89 000', '105 000', '121 000', '138 000', '157 000', '179 000', '192 000', '194 000', '194 000', '196 000']"", ""['1950-1955']"", ""['1965-1970']"", ""['194 000']""]"
+1,table_csv/203_360.csv,"['what are all of the times?', 'what is the fastest time for lm2x lightweight double scull boat?', 'what was the time?', 'which time was the shortest?', 'of these, which competed in 2012?', 'what was their rowing time?', 'which had the least amount of time?', 'what was the time?']","Reasoning: To answer this question, we need to look at the ""Time"" column and extract all the times listed there. The fastest time for the LM2x lightweight double scull boat can be found by searching for the minimum time in the rows where the ""Boat"" is LM2x. To answer the questions about which boats competed in 2012, we need to filter the rows based on the ""Date"" column and extract the corresponding times for those rows.
+
+Answer: [""6:33.35"", ""6:08.50"", ""6:42.16"", ""6:03.25"", ""5:37.86"", ""5:58.96"", ""5:33.15"", ""5:19.35"", ""6:46.93"", ""6:26.21"", ""6:10.02"", ""5:45.60"", ""5:45.18"", ""5:30.24""] for all times.
+
+The fastest time for the LM2x lightweight double scull boat is ""6:10.02"".
+
+The rows that competed in 2012 are:
+M2- Coxless pairs | 6:08.50 | Hamish Bond Eric Murray | New Zealand | 2012 | Summer Olympics | Eton Dorney, England
+M2x Double sculls | 6:03.25 | Adrien Hardy Jean-Baptiste Macquet | France | 2006 |  | Poznan, Poland
+M4- Coxless four | 5:37.86 | Andrew Triggs-Hodge Tom James Pete Reed Alex Gregory | Great Britain | 2012 |  | Lucerne, Switzerland
+M4x Quad sculls | 5:33.15 | Vladislav Ryabcev Alexey Svirin Nikita Morgachev Sergei Fedorovtsev | Russia | 2012 |  | Lucerne, Switzerland
+M8+ Eight | 5:19.35 | Gabriel Bergen Douglas Csima Robert Gibson Conlin McCabe Malcolm Howard Andrew Byrnes Jeremiah Brown Will Crothers Brian Price (coxswain) | Canada | 2012 |  | Lucerne, Switzerland
+
+Their rowing times are [""6:08.50"", ""6:03.25"", ""5:37.86"", ""5:33.15"", ""5:19.35""].
+
+The rowing time with the least amount of time is ""5:19.35"".
+
+The time for the rowing with the least amount of time is ""5:19.35"".","[""['6:33.35', '6:08.50', '6:42.16', '6:03.25', '5:37.86', '5:58.96', '5:33.15', '5:19.35', '6:46.93', '6:26.21', '6:10.02', '5:45.60', '5:45.18', '5:30.24']"", ""['6:10.02']"", ""['5:19.35']"", ""['5:19.35']"", ""['New Zealand', 'Great Britain', 'Russia', 'Canada']"", ""['6:10.02']"", ""['Canada']"", ""['5:19.35']""]"
+2,table_csv/202_273.csv,['who were the candidates for the manitoba general election of 2007'],"Reasoning:
+To answer the question, we need to look at the ""Candidate"" column in the table provided. This column lists the names of the candidates for the Manitoba General Election of 2007.
+
+Answer:
+['Daryl Reid', 'Bryan McLeod', 'Gerald Basarab']","[""['Daryl Reid', 'Bryan McLeod', 'Gerald Basarab', 'Total valid votes']""]"
+3,table_csv/203_641.csv,"['which films came out in 2003?', 'now, which film scored 88%?']","Reasoning:
+
+For the first question, ""which films came out in 2003?"", we need to look for the rows in the table where the ""Year"" is 2003. Based on the table, there are two such films: ""The Five Obstructions"" and ""Dogville"".
+
+For the second question, ""now, which film scored 88%?"", we need to look for the rows in the table where the ""Rotten Tomatoes"" score is 88%. Based on the table, there is only one such film: ""The Five Obstructions"".
+
+Answer:
+- For the first question, the answer is [""The Five Obstructions"", ""Dogville""].
+- For the second question, the answer is [""The Five Obstructions""].","[""['2003', '2003']"", ""['The Five Obstructions']""]"
+4,table_csv/203_360.csv,['who had the fastest time?'],"Reasoning: To find who had the fastest time, we need to look at the ""Time"" column and find the smallest value. The smallest value in the ""Time"" column is 5:19.35, which was recorded by the ""M8+ Eight"" crew from Canada.
+
+Answer: [""M8+ Eight"", ""Canada"", ""5:19.35""]","[""['M8+ Eight']""]"

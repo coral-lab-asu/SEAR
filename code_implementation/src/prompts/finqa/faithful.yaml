@@ -1,0 +1,58 @@
+Faithful:
+  description: |
+    Read the following text and table, and then break the question down to subquestions and then give the code line by line with comments to answer a question, note that python variables do not start with digits:
+  examples:
+    - context: |
+        Table Pre-text: The following table shows the aggregate commitment under the liquidity asset purchase agreements and the distribution of total conduit assets across different countries for the years 2008 and 2007, in billions of dollars.
+        the aggregate commitment under the liquidity asset purchase agreements was approximately $ 23.59 billion and $ 28.37 billion at december 31 , 2008 and 2007 , respectively .
+        ( dollars in billions ) | 2008 amount | 2008 percent of total conduit assets | 2007 amount | percent of total conduit assets
+        united states | $ 11.09 | 46% ( 46 % ) | $ 12.14 | 42% ( 42 % )
+        australia | 4.30 | 17 | 6.10 | 21
+        great britain | 1.97 | 8 | 2.93 | 10
+        spain | 1.71 | 7 | 1.90 | 7
+        italy | 1.66 | 7 | 1.86 | 7
+        portugal | 0.62 | 3 | 0.70 | 2
+        germany | 0.57 | 3 | 0.70 | 2
+        netherlands | 0.40 | 2 | 0.55 | 2
+        belgium | 0.29 | 1 | 0.31 | 1
+        greece | 0.27 | 1 | 0.31 | 1
+        other | 1.01 | 5 | 1.26 | 5
+        total conduit assets | $ 23.89 | 100% ( 100 % ) | $ 28.76 | 100% ( 100 % )
+      question: what is percentage change in total conduit asset from 2007 to 2008?
+      python_with_reasoning: |
+        # 1. What is the total conduit assets in 2007? (independent, support=[total conduit assets | $ 23.89 | 100% ( 100 % ) | $ 28.76 | 100% ( 100 % ),( dollars in billions ) | 2007 amount | 2007 percent of total conduit assets | 2008 amount | percent of total conduit assets])
+        total_assets_2007 = 28.76
+        # 2. What is the total conduit assets in 2008? (independent, support=[total conduit assets | $ 23.89 | 100% ( 100 % ) | $ 28.76 | 100% ( 100 % ),( dollars in billions ) | 2007 amount | 2007 percent of total conduit assets | 2008 amount | percent of total conduit assets])
+        total_assets_2008 = 23.89
+        # 3. What is the change from 2007 to 2008? (depends on 1 and 2, support=[])
+        change = (total_assets_2008 - total_assets_2007)
+        # 4. What is the percentage change in total conduit asset from 2007 to 2008? (depends on 1 and 3, support=[])
+        ans = (change / total_assets_2007) * 100
+        print(ans)
+        #DONE
+
+    - context: |
+        Table Pre-text: The following table presents the net sales, cost of sales, and gross margin for the fiscal years 2004, 2003, and 2002.
+        - | 2004 | 2003 | 2002
+        net sales | $ 8279 | $ 6207 | $ 5742
+        cost of sales | 6020 | 4499 | 4139
+        gross margin | $ 2259 | $ 1708 | $ 1603
+        gross margin percentage | 27.3% ( 27.3 % ) | 27.5% ( 27.5 % ) | 27.9% ( 27.9 % )
+      question: what was the gross margin decline percent in fiscal 2004 from 2003?
+      python_with_reasoning: |
+        # 1. What was the gross margin percentage in 2003?
+        gross_margin_2003_percent = 27.5  # in percent (independent, support=[gross margin percentage | 27.3% ( 27.3 % ) | 27.5% ( 27.5 % ) | 27.9% ( 27.9 % ), - | 2004 | 2003 | 2002])
+        # 2. What was the gross margin percentage in 2004?
+        gross_margin_2004 = 27.3  # in percent (independent, support=[gross margin percentage | 27.3% ( 27.3 % ) | 27.5% ( 27.5 % ) | 27.9% ( 27.9 % ), - | 2004 | 2003 | 2002])
+        # 3. What is gross margin decline percent in fiscal 2004 from 2003? (depends on 1 and 2, support=[])
+        gross_margin_decline = gross_margin_2003_percent - gross_margin_2004
+        ans = gross_margin_decline
+        print(ans)
+        #DONE
+        
+  prompt: |
+    Read the following text and table, and then break the question down to subquestions and then give the code line by line with comments to answer a question, note that python variables do not start with digits.
+    Give the response as a Python code block with reasoning.
+    Context: {context}
+    Question: {question}
+    Python with reasoning:

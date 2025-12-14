@@ -1,0 +1,65 @@
+Running: python three_step_gemini.py --model gemini --dataset wiki --reasoning meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['meta_s1', 'meta_s2', 'meta_s3']
+Retrieved 1504 documents
+Sample document: 1504
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+1504
+Obtained Results for  1504
+modified 0
+Running: python three_step_gemini.py --model gemini --dataset wiki --reasoning imp_meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['clean_meta_s1', 'clean_meta_s2', 'clean_meta_s3']
+Retrieved 1504 documents
+Sample document: 1504
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+Error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+1504
+Obtained Results for  1504
+modified 0
+Running: python three_step_gemini.py --model gemini --dataset multi --reasoning meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['meta_s1', 'meta_s2', 'meta_s3']
+Retrieved 1587 documents
+Sample document: 1587
+1587
+Obtained Results for  1587
+modified 0
+Running: python three_step_gemini.py --model gemini --dataset multi --reasoning imp_meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['clean_meta_s1', 'clean_meta_s2', 'clean_meta_s3']
+Retrieved 1587 documents
+Sample document: 1587
+1587
+Obtained Results for  1587
+modified 0
+Running: python three_step_gemini.py --model gemini --dataset hitabs --reasoning meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['meta_s1', 'meta_s2', 'meta_s3']
+Retrieved 897 documents
+Sample document: 897
+897
+Obtained Results for  897
+modified 0
+Running: python three_step_gemini.py --model gemini --dataset hitabs --reasoning imp_meta_3_step --sample_size  --max_workers 10
+gemini
+Connected to MonogoCompass!
+['clean_meta_s1', 'clean_meta_s2', 'clean_meta_s3']
+Retrieved 897 documents
+Sample document: 897
+897
+Obtained Results for  897
+modified 0
+All commands executed.

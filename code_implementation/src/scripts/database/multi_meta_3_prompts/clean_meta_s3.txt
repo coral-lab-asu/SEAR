@@ -1,0 +1,176 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Tables: 
+Table_0
+### Regional Revenue Breakdown (Year Ended December 31)
+
+| Region            | 2014 Revenue ($M) | 2014 % | 2013 Revenue ($M) | 2013 % | 2012 Revenue ($M) | 2012 % |
+|------------------|------------------|-------|------------------|-------|------------------|-------|
+| North America   | 743              | 25%   | 708              | 25%   | 698              | 25%   |
+| Europe & Africa | 905              | 31%   | 894              | 32%   | 1010             | 36%   |
+| Asia-Pacific    | 1210             | 41%   | 1091             | 39%   | 986              | 35%   |
+| South America   | 103              | 3%    | 100              | 4%    | 97               | 4%    |
+| **Total**       | 2961             | 100%  | 2793             | 100%  | 2791             | 100%  |
+
+Table_1
+### Share Repurchase Program (Q4 2014)
+
+| Period              | Shares Purchased | Avg. Price per Share ($) | Shares Purchased (Public Program) | Remaining Purchase Value ($M) |
+|---------------------|-----------------|--------------------------|---------------------------------|-----------------------------|
+| October 1 - 31, 2014  | 192,580         | 58.02                    | 164,800                         | 490                         |
+| November 1 - 30, 2014 | 468,128         | 59.25                    | 468,128                         | 463                         |
+| December 1 - 31, 2014 | 199,796         | 60.78                    | 190,259                         | 451                         |
+| **Total**            | 860,504         | -                        | 823,187                         | -                           |
+
+Table_2
+### Net Sales and Financial Performance (Year Ended December 31)
+
+| Metric                                        | 2014 ($M) | 2013 ($M) | Change ($M) | 2013 ($M) | 2012 ($M) | Change ($M) |
+|----------------------------------------------|----------|----------|------------|----------|----------|------------|
+| Net Sales                                    | 1160     | 1214     | -54        | 1214     | 1186     | 28         |
+| **Net Sales Variance**                        |          |          |            |          |          |            |
+| Volume                                       | -5%      | -        | -          | -4%      | -        | -          |
+| Price                                        | 1%       | -        | -          | 6%       | -        | -          |
+| Currency                                     | 0%       | -        | -          | 0%       | -        | -          |
+| Other                                        | 0%       | -        | -          | 0%       | -        | -          |
+| Other (charges) gains, net                   | 16       | 0        | 16         | 0        | -4       | 4          |
+| Operating Profit (Loss)                      | 388      | 346      | 42         | 346      | 251      | 95         |
+| Operating Margin (%)                         | 33.4%    | 28.5%    | -          | 28.5%    | 21.2%    | -          |
+| Equity in Net Earnings (Loss) of Affiliates  | 9        | 3        | 6          | 3        | 6        | -3         |
+| Dividend Income - Cost Investments           | 115      | 92       | 23         | 92       | 83       | 9          |
+| Depreciation and Amortization                | 43       | 41       | 2          | 41       | 45       | -4         |	
+
+
+Question: What's the growth rate of net sales in 2014? (in %)
+
+Detailed Steps:
+Identify Objective: Determine that the goal is to calculate the growth rate of net sales in 2014 compared to 2013.  
+Evidence Extraction:  
+- Locate the "Net sales" row in Table_2.  
+- Extract the 2014 net sales value (1160) and 2013 net sales value (1214).  
+- Identify the change in net sales (-54), which is already provided in the table.  
+Python Code Generation:  
+- Compute the growth rate using the formula:  
+  ```
+  Growth Rate (%) = ((2014 Net Sales - 2013 Net Sales) / 2013 Net Sales) * 100
+  ```
+- Convert extracted values to numerical format if necessary.  
+- Output the computed percentage growth rate for net sales in 2014.
+
+Answer && Reasoning:
+Step 1: Identify Objective  
+The task is to calculate the growth rate of net sales in 2014 compared to 2013 using:  
+*Growth Rate (%) = ((Net Sales in 2014 - Net Sales in 2013) / Net Sales in 2013) × 100*  
+Step 2: Extract Evidence  
+From Table_2:  
+- Net Sales (2014): 1160  
+- Net Sales (2013): 1214  
+- Change in Net Sales: -54  
+Step 3: Compute Growth Rate  
+Python code for calculation:  
+```python
+net_sales_2014 = 1160
+net_sales_2013 = 1214
+growth_rate = ((net_sales_2014 - net_sales_2013) / net_sales_2013) * 100
+print(f"Final Answer: {growth_rate:.2f}%")
+```
+Step 4: Compute & Conclude  
+Applying the formula: ((1160 - 1214) / 1214) × 100 = **-4.45%**  
+
+Final Answer: **The net sales growth rate in 2014 was -4.45%.**
+
+Example2:
+Tables:
+Table_0
+### Benefit Plan Contributions (2015-2017)
+
+| Benefit Plan  | 2017   | 2016   | 2015   |
+|--------------|--------|--------|--------|
+| Pension Plan | $3,856 | $3,979 | $2,732 |
+| Health Plan  | 11,426 | 11,530 | 8,736  |
+| Other Plans  | 1,463  | 1,583  | 5,716  |
+| **Total Plan Contributions** | $16,745 | $17,092 | $17,184 |	
+
+Table_1
+### Debt and Lease Obligations (2018 and Beyond)
+
+| Category                          | 2018     | 2019   | 2020   | 2021   | 2022   | Thereafter  | Total      |
+|----------------------------------|----------|--------|--------|--------|--------|------------|------------|
+| Property Mortgages & Other Loans | $153,593 | $42,289 | $703,018 | $11,656 | $208,003 | $1,656,623 | $2,775,182 |
+| MRA Facilities                   | 90,809   | —      | —      | —      | —      | —          | 90,809      |
+| Revolving Credit Facility        | —        | —      | —      | —      | —      | 40,000     | 40,000      |
+| Unsecured Term Loans             | —        | —      | —      | —      | —      | 1,500,000  | 1,500,000   |
+| Senior Unsecured Notes           | 250,000  | —      | 250,000 | —      | 800,000 | 100,000    | 1,400,000   |
+| Trust Preferred Securities       | —        | —      | —      | —      | —      | 100,000    | 100,000     |
+| Capital Lease                    | 2,387    | 2,411  | 2,620  | 2,794  | 2,794  | 819,894    | 832,900     |
+| Ground Leases                    | 31,049   | 31,066 | 31,436 | 31,628 | 29,472 | 703,254    | 857,905     |
+
+
+Question: What is the sum of Ground leases of 2020, Health Plan of 2016, and Property mortgages and other loans of Thereafter ?
+
+Detailed Steps:
+Identify Objective: The task is to find the sum of three values: Ground leases from 2020, the Health Plan from 2016, and Property mortgages and other loans from the "Thereafter" column.
+Evidence Extraction: 
+Table 0 Extraction: Locate the row labeled "Health Plan" in Table 0. Extract the value from the 2016 column corresponding to the Health Plan row.
+Table 1 Extraction: Locate the row labeled "Ground leases" in Table 1. Extract the value from the 2020 column corresponding to Ground leases. Locate the row labeled "Property mortgages and other loans" in Table 1. Extract the value from the "Thereafter" column corresponding to Property mortgages and other loans.
+Data Aggregation or Calculation: Since the task involves summing the three extracted values,
+1.  Ground leases value from 2020
+2.  Health Plan value from 2016
+3.  Property mortgages and other loans value from Thereafter
+
+generate a Python code to sum these values, ensure that the extracted values are in a format that allows for numeric summation (removing dollar signs and commas if necessary).
+
+Answer && Reasoning:
+
+Identify Objective:
+The task is to find the sum of three specific values: Ground leases for 2020, Health Plan for 2016 and Property mortgages and other loans for "Thereafter"
+Evidence Extraction:
+Ground leases (2020): From Table 1, locate the "Ground leases" row, and extract the value from the 2020 column:
+Value = 31,436
+Health Plan (2016): From Table 0, locate the "Health Plan" row, and extract the value from the 2016 column:
+Value = 11,530
+Property mortgages and other loans (Thereafter): From Table 1, locate the "Property mortgages and other loans" row, and extract the value from the "Thereafter" column:
+Value = 1,656,623
+
+Data Aggregation or Calculation:
+Now, we will sum the three extracted values.
+Python Code to Sum the Values:
+
+```python```
+# Data from the table (remove commas)
+ground_leases_2020 = 31436
+health_plan_2016 = 11530
+property_mortgages_thereafter = 1656623
+
+# Sum the values
+total_sum = ground_leases_2020 + health_plan_2016 + property_mortgages_thereafter
+print(f"Final Answer: {{total_sum}}")
+
+#Done
+```
+
+Answer and Reasoning:
+By summing the values:
+Ground leases (2020): 31,436
+Health Plan (2016): 11,530
+Property mortgages and other loans (Thereafter): 1,656,623
+The total sum is 1,699,589.
+Final Answer:
+The sum of Ground leases from 2020, Health Plan from 2016, and Property mortgages and other loans from the "Thereafter" column is 1,699,589.
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+Tables: 
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

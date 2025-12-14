@@ -1,0 +1,112 @@
+
+================================================================================
+META PROMPTING ERROR ANALYSIS REPORT
+================================================================================
+
+Dataset: FETAQA
+Analysis Date: 2025-07-27 19:56:00
+Total Error Cases Analyzed: 2
+Average Analysis Confidence: 0.95
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+This report analyzes 2 cases where meta prompting failed to extract 
+proper answers (gem_eval_extracted_response = No) and achieved F1 scores below 80.
+
+These failures indicate issues with:
+- Answer format compliance (not using "Final Answer: [Answer]" format)
+- Meta-reasoning structure violations
+- Response parsing and extraction problems
+- Incomplete reasoning processes
+
+ERROR CATEGORY DISTRIBUTION:
+----------------------------------------
+EXTRACTION PARSING ERROR: 1 cases (50.0%)
+CONTENT ACCURACY LOW: 1 cases (50.0%)
+
+================================================================================
+DETAILED CASE ANALYSIS
+================================================================================
+
+
+------------------------------------------------------------
+CATEGORY: EXTRACTION PARSING ERROR
+------------------------------------------------------------
+Cases in this category: 1
+
+
+Case #1 (ID: 81e72eeb):
+FAILURE REASON: The extraction system failed to identify the final answer due to variations in formatting and the presence of extra text around the answer.
+
+DETAILED ANALYSIS:
+The model's reasoning process and the generated Python code are correct, successfully identifying the three competitions. However, the final answer presentation is inconsistent across different sections of the response.  The "Answer" section includes additional context ("Fabrizio Donato won gold medals in the following competitions:"), while the "Final Answer" section provides the desired concise format but lacks year information. This inconsistency confused the extraction system, leading to it marking gem_eval_extracted_response as "No". The "Extracted Response" seems to prioritize content from the "Reasoning Process" section rather than the designated "Final Answer" section.
+
+SUGGESTED IMPROVEMENT:
+Enforce stricter adherence to the "Final Answer: [Answer]" format. The prompt should explicitly state that ONLY the content following "Final Answer:" will be considered for evaluation and extraction. Add a validation step within the meta-reasoning framework to ensure the "Final Answer" section matches the code's output and is free of extraneous text.  Consider using a more robust extraction method that can handle minor variations in formatting, potentially using regular expressions to isolate the answer following "Final Answer:".  Instruct the model to include year information within the "Final Answer".
+
+CONFIDENCE: 0.95
+----------------------------------------
+
+------------------------------------------------------------
+CATEGORY: CONTENT ACCURACY LOW
+------------------------------------------------------------
+Cases in this category: 1
+
+
+Case #1 (ID: 81e72eef):
+FAILURE REASON: The model's reasoning process was incomplete, leading to an inaccurate final answer despite adhering to the "Final Answer" format.
+
+DETAILED ANALYSIS:
+While the model followed the meta-reasoning structure and provided a "Final Answer", its reasoning process was flawed. Specifically, step 5 of the reasoning process incorrectly states that the table shows only two seasons when Wayne Kerrins played for Fulham in the Third Division.  The correct answer includes three seasons. This inaccurate information propagated to the final answer, resulting in a low F1 score. The extraction itself was successful, but the extracted answer was incorrect due to the faulty reasoning.  The gem_eval system likely marked this as "No" due to the low F1 score, indirectly indicating that the extracted answer was not considered a correct match to the gold standard answer.
+
+SUGGESTED IMPROVEMENT:
+Improve the model's ability to accurately extract and process information from tables. This could involve: 1) Prompt engineering that explicitly instructs the model to verify extracted data, double-check for completeness, and cross-reference information. 2) Fine-tuning the model on datasets specifically designed for table reasoning and information extraction. 3) Implementing validation mechanisms within the reasoning process that check for consistency and completeness of the extracted information before generating the final answer.
+
+CONFIDENCE: 0.95
+----------------------------------------
+
+================================================================================
+RECOMMENDATIONS FOR IMPROVEMENT
+================================================================================
+
+Based on the analysis of 2 error cases, here are the key recommendations:
+
+1. **FORMAT ENFORCEMENT IMPROVEMENTS:**
+   - Add explicit validation for "Final Answer: [Answer]" format
+   - Implement post-processing to detect and fix format violations
+   - Include format examples in few-shot prompting for fetaqa dataset
+
+2. **META-REASONING STRUCTURE ENHANCEMENTS:**
+   - Strengthen the meta-reasoning prompt structure
+   - Add validation checkpoints at each reasoning stage
+   - Implement automatic structure compliance checking
+
+3. **ANSWER EXTRACTION ROBUSTNESS:**
+   - Improve regex patterns for answer extraction
+   - Add fallback extraction methods for edge cases
+   - Implement semantic similarity matching for partial answers
+
+4. **RESPONSE COMPLETION SAFEGUARDS:**
+   - Add response length validation
+   - Implement continuation prompts for truncated responses
+   - Monitor for incomplete reasoning chains
+
+5. **DATASET-SPECIFIC OPTIMIZATIONS:**
+   - Develop specialized extraction patterns for fetaqa
+   - Create validation rules based on expected answer formats
+   - Implement domain-specific post-processing steps
+
+================================================================================
+TECHNICAL DETAILS
+================================================================================
+
+Analysis performed using: ErrorAnalysis
+Focus: gem_eval_extracted_response = "No" cases with F1 < 80
+Report generated: 2025-07-27T19:56:00.496287
+Output directory: analysis_results
+
+================================================================================
+END OF REPORT
+================================================================================

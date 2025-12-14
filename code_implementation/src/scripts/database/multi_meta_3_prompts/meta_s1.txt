@@ -1,0 +1,106 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text from respective tables.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+Tables: 
+Table_0
+|		|	Year Ended December 31,	|	Year Ended December 31,	|	Year Ended December 31,	|	Year Ended December 31,	|	Year Ended December 31,	|	Year Ended December 31,	|	
+|		|	2014	|	2014	|	2013	|	2013	|	2012	|	2012	|	
+|		|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	
+|	North America	|	743	|	25%	|	708	|	25%	|	698	|	25%	|	
+|	Europe and Africa	|	905	|	31%	|	894	|	32%	|	1010	|	36%	|	
+|	Asia-Pacific	|	1210	|	41%	|	1091	|	39%	|	986	|	35%	|	
+|	South America	|	103	|	3%	|	100	|	4%	|	97	|	4%	|	
+|	Total-1	|	2961	|	100%	|	2793	|	100%	|	2791	|	100%	|	
+
+Table_1
+|	Period	|	TotalNumberof SharesPurchased-1	|	AveragePrice Paidper Share	|	Total Numberof SharesPurchased asPart of PubliclyAnnounced Program	|	ApproximateDollarValue of SharesRemaining thatmay bePurchased Underthe Program-2	|	
+|	October 1 - 31, 2014	|	192580	|	$58.02	|	164800	|	$490,000,000	|	
+|	November 1 - 30, 2014	|	468128	|	$59.25	|	468128	|	$463,000,000	|	
+|	December 1 - 31, 2014	|	199796	|	$60.78	|	190259	|	$451,000,000	|	
+|	Total	|	860504	|		|	823187	|		|	
+
+Table_2
+|		|	Year Ended December 31,	|	Year Ended December 31,	|		|	Year Ended December 31,	|	Year Ended December 31,	|		|	
+|		|	2014	|	2013	|	Change	|	2013	|	2012	|	Change	|	
+|		|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	(In $ millions, except percentages)	|	
+|	Net sales	|	1160	|	1214	|	-54	|	1214	|	1186	|	28	|	
+|	Net Sales Variance	|		|		|		|		|		|		|	
+|	Volume	|	-5%	|		|		|	-4%	|		|		|	
+|	Price	|	1%	|		|		|	6%	|		|		|	
+|	Currency	|	—%	|		|		|	—%	|		|		|	
+|	Other	|	—%	|		|		|	—%	|		|		|	
+|	Other (charges) gains, net	|	16	|	—	|	16	|	—	|	-4	|	4	|	
+|	Operating profit (loss)	|	388	|	346	|	42	|	346	|	251	|	95	|	
+|	Operating margin	|	33.4%	|	28.5%	|		|	28.5%	|	21.2%	|		|	
+|	Equity in net earnings (loss) of affiliates	|	9	|	3	|	6	|	3	|	6	|	-3	|	
+|	Dividend income - cost investments	|	115	|	92	|	23	|	92	|	83	|	9	|	
+|	Depreciation and amortization	|	43	|	41	|	2	|	41	|	45	|	-4	|	
+
+
+Question: What's the growth rate of net sales in 2014? (in %)
+
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text from respective tables.  
+Python Code Generation: Generate a single Python script to calculate the growth rate of net sales in 2014.
+
+Example2:
+
+Tables:
+ Table_0
+ Benefit Plan	|	2017	|	2016	|	2015	|	
+ Pension Plan	|	$3,856	|	$3,979	|	$2,732	|	
+ Health Plan	|	11426	|	11530	|	8736	|	
+ Other plans	|	1463	|	1583	|	5716	|	
+ Total plan contributions	|	$16,745	|	$17,092	|	$17,184	|	
+
+
+ Table_1
+ |		|	2018	|	2019	|	2020	|	2021	|	2022	|	Thereafter	|	Total	|	
+ |	Property mortgages and other loans	|	$153,593	|	$42,289	|	$703,018	|	$11,656	|	$208,003	|	$1,656,623	|	$2,775,182	|	
+ |	MRA facilities	|	90809	|	—	|	—	|	—	|	—	|	—	|	90809	|	
+ |	Revolving credit facility	|	—	|	—	|	—	|	—	|	—	|	40000	|	40000	|	
+ |	Unsecured term loans	|	—	|	—	|	—	|	—	|	—	|	1500000	|	1500000	|	
+ |	Senior unsecured notes	|	250000	|	—	|	250000	|	—	|	800000	|	100000	|	1400000	|	
+ |	Trust preferred securities	|	—	|	—	|	—	|	—	|	—	|	100000	|	100000	|	
+ |	Capital lease	|	2387	|	2411	|	2620	|	2794	|	2794	|	819894	|	832900	|	
+ |	Ground leases	|	31049	|	31066	|	31436	|	31628	|	29472	|	703254	|	857905	|
+
+
+Question: What is the sum of Ground leases of 2020, Health Plan of 2016, and Property mortgages and other loans of Thereafter ?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text from both tables.
+Python Code Generation: Generate a single Python script to sum the extracted values.
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided tables, text (if available) and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+Tables: 
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:

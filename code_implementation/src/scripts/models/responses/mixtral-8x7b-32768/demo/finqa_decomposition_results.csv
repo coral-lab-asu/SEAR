@@ -1,0 +1,63 @@
+index,table_id,question,response,answer
+0,Table_273,what is the ratio of the respirator mask/asbestos receivables to respirator mask/asbestos liabilities in 2007,"Decomposition:
+- sq1. What was the value of Respirator Mask/Asbestos receivables for the year 2007? (independent)
+- sq2. What was the value of Respirator Mask/Asbestos liabilities for the year 2007? (independent)
+- sq3. How do we express the ratio of receivables to liabilities? (depends on sq1, sq2)
+
+Answers:
+- Answer to sq1: The value of Respirator Mask/Asbestos receivables for the year 2007 is $332 million.
+- Answer to sq2: The value of Respirator Mask/Asbestos liabilities for the year 2007 is $121 million.
+- Answer to sq3: To express the ratio, we divide the receivables by the liabilities. Therefore, the ratio of Respirator Mask/Asbestos receivables to Respirator Mask/Asbestos liabilities for the year 2007 is 332/121 ≈ 2.74.
+
+Final answer: 2.74",2.74
+1,Table_371,what is the minimum yearly depreciation rate that can be used for land improvements?,"Decomposition:
+- What is the estimated useful life for land improvements? (independent)
+- How is the depreciation rate calculated based on the useful life? (dependent on the previous question)
+- What is the minimum yearly depreciation rate that can be used for land improvements? (dependent on the previous question)
+
+Answers:
+- The estimated useful life for land improvements is 3 years.
+- The depreciation rate is calculated by dividing 1 by the useful life. So, for land improvements, the depreciation rate would be 1/3 or approximately 0.3333.
+- The minimum yearly depreciation rate that can be used for land improvements is 0.33 (rounded to two decimal places).
+
+Final answer: 0.33",2.5%
+2,Table_74,what is the rate of return in cadence design systems inc . of an investment from 2010 to 2011?,"Decomposition:
+sq1. What was the value of the investment in Cadence Design Systems Inc. on January 2, 2010?
+sq2. What was the value of the investment in Cadence Design Systems Inc. on January 1, 2011?
+sq3. What is the difference between the values for January 1, 2011, and January 2, 2010, for Cadence Design Systems Inc.?
+sq4. How do we express the difference as a rate of return? (depends on sq1, sq3)
+
+Answers:
+Answer to sq1: The value of the investment in Cadence Design Systems Inc. on January 2, 2010 was $100.00.
+Answer to sq2: The value of the investment in Cadence Design Systems Inc. on January 1, 2011 was $137.90.
+Answer to sq3: The difference between the values for January 1, 2011, and January 2, 2010, for Cadence Design Systems Inc. is $37.90.
+Answer to sq4: We express the difference as a rate of return by dividing the difference by the initial investment and multiplying by 100 to get a percentage. In this case, the rate of return would be (37.90/100)*100 = 37.9%.
+
+Final answer: 37.9%",37.9%
+3,Table_941,what was the difference in millions of capital spending related to business acquisitions from 2011 to 2012?,"Decomposition:
+
+sq1. What was the value of total capital spending related to business acquisitions in 2012? (independent)
+sq2. What was the value of total capital spending related to business acquisitions in 2011? (independent)
+sq3. What is the difference between the values for 2012 and 2011 for total capital spending related to business acquisitions? (depends on sq1, sq2)
+
+Answers:
+Answer to sq1: The context does not provide information on total capital spending related to business acquisitions in 2012.
+Answer to sq2: The context does not provide information on total capital spending related to business acquisitions in 2011.
+Answer to sq3: Cannot be determined, as the values for total capital spending related to business acquisitions in both years are not provided in the context.
+
+The final answer cannot be determined because the necessary data is not provided in the context.",22
+4,Table_841,what is the total research and development for the year 2014 through 2016 in millions,"Decomposition:
+sq1. Convert the percentage ownership of Infraserv GmbH & Co. Gendorf KG, Infraserv GmbH & Co. Hoechst KG, and Infraserv GmbH & Co. Knapsack KG into decimal format for each year (independent).
+sq2. Obtain the total R&D expenses for the year 2014 through 2016 from the financial statements or other relevant sources (independent).
+sq3. Calculate the R&D expenses attributable to the Infraserv investments by multiplying the total R&D expenses by the decimal ownership percentage for each entity in each year (depends on sq1 and sq2).
+sq4. Sum up the R&D expenses attributable to the Infraserv investments from sq3 for the years 2014 to 2016 to get the total R&D expenses over the period (depends on sq3).
+sq5. Express the total R&D expenses in millions (depends on sq4).
+
+Answers:
+Answer to sq1: The ownership percentages for Infraserv GmbH & Co. Gendorf KG, Infraserv GmbH & Co. Hoechst KG, and Infraserv GmbH & Co. Knapsack KG for the year 2016 in decimal format are 0.39, 0.32, and 0.27, respectively.
+Answer to sq2: The total R&D expenses for the years 2014 through 2016 are assumed to be sourced but not provided in the context.
+Answer to sq3: The R&D expenses attributable to the Infraserv investments for 2016 are calculated by multiplying the total R&D expenses by the decimal ownership percentages for each entity, but the total R&D expenses are unknown.
+Answer to sq4: The total R&D expenses attributable to the Infraserv investments from 2014 to 2016 cannot be calculated without knowing the total R&D expenses for each year.
+Answer to sq5: The total R&D expenses over the period of 2014 through 2016 cannot be expressed in millions without knowing the total R&D expenses for each year.
+
+Since the total R&D expenses for the years 2014 through 2016 are not provided in the context, a final answer cannot be determined. Therefore, it is requested that the total R&D expenses for the years 2014 through 2016 be provided so that the final answer can be calculated.",283

@@ -1,0 +1,93 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+  Model            | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+  Škoda Octavia    | 233322 | 270274 | 309951 | 344857 | 317335 | 349746 | 387200 | 409360 | 359600 |
+  Škoda Fabia      | 236698 | 243982 | 232890 | 246561 | 264173 | 229045 | 266800 | 255025 | 202000 |
+  Škoda Superb     | 22091  | 20989  | 20530  | 25645  | 44548  | 98873  | 116700 | 106847 | 94400  |
+  Škoda Roomster   |       | 14422  | 66661  | 57467  | 47152  | 32332  | 36000  | 39249  | 33300  |
+  Škoda Yeti       |       |       |       |       | 11018  | 52604  | 70300  | 90952  | 82400  |
+  Škoda Rapid      |       |       |       |       |       |       | 1700   | 9292   | 103800 |
+  Škoda Citigo     |       |       |       |       |       |       | 509    | 36687  | 45200  |
+
+Question: How many Skoda cars were sold in 2010?
+
+Detailed Steps:
+Identify Objective: Determine that the goal is to find the total number of Škoda cars sold in 2010.
+Evidence Extraction: Extract the relevant data (the 2010 column) for all models listed in the table.
+Python Code Generation: Generate Python code to sum the extracted values for the year 2010.
+
+Answer && Reasoning:
+Identify Objective: The goal is to find the total number of Škoda cars sold in 2010.
+2. Evidence Extraction: Extract the relevant data (the 2010 column) for all models listed in the table:
+Škoda Octavia: 349746
+Škoda Fabia: 229045
+Škoda Superb: 98873
+Škoda Roomster: 32332
+Škoda Yeti: 52604
+Škoda Rapid: N/A (No data for 2010)
+Škoda Citigo: N/A (No data for 2010)
+3. Python Code Generation: We can now sum the extracted values for the year 2010 using Python code
+``` python ```
+# Data for 2010
+skoda_sales_2010 = [349746, 229045, 98873, 32332, 52604]
+
+# Calculate the total sales for 2010
+total_sales_2010 = sum(skoda_sales_2010)
+print(f”Final Answer: {{total_sales_2010}}”)
+#Done
+```
+4. Answer and Reasoning: Summing these values gives the total number of Škoda cars sold in 2010.
+Final Answer: 762600
+
+Example2:
+Table: 
+Year | Competition | Venue | Position | Event | Notes
+2001 | World Youth Championships | Debrecen |  Hungary | 2nd | 400 m | 47.12
+2001 | European Junior Championships | Grosseto |  Italy | 1st | 4x400 m relay | 3:06.12
+2005 | European U23 Championships | Erfurt |  Germany | 11th (sf) | 400 m | 46.62
+2005 | European U23 Championships | Erfurt |  Germany | 1st | 4x400 m relay | 3:04.41
+2005 | Universiade | Izmir |  Turkey | 7th | 400 m | 46.89
+2005 | Universiade | Izmir |  Turkey | 1st | 4x400 m relay | 3:02.57
+2006 | World Indoor Championships | Moscow |  Russia | 2nd (h) | 4x400 m relay | 3:06.10
+2007 | Universiade | Bangkok |  Thailand | 1st | 4x400 m relay | 3:02.05
+2008 | World Indoor Championships | Valencia |  Spain | 4th | 4x400 m relay | 3:08.76
+
+Question: How long did it take the competition to finish the 4x400 meter relay at universiade in 2005?
+
+Detailed Steps:
+Identify Objective: Find the completion time for the 4x400 meter relay at the Universiade in 2005.
+Evidence Extraction:
+Locate the row where "Year" is 2005 and "Competition" is Universiade.
+Find the event "4x400 m relay" in the "Event" column.
+Extract the time from the "Notes" column.
+Direct Answer Path: Use the extracted time as the answer.
+
+Answer && Reasoning:
+Identify Objective: Find the completion time for the 4x400 meter relay event at the Universiade in 2005.  
+Evidence Extraction:  
+1. Locate the row where Year = 2005 and Competition = Universiade.  
+2. Find the event labeled 4x400 m relay in the Event column.  
+3. Extract the corresponding time from the Notes column.  
+From the table: Year = 2005, Competition = Universiade, Event = 4x400 m relay, Notes (Time) = 3:02.57.  
+Direct Answer Path: The extracted time 3:02.57 represents the completion time for the 4x400 meter relay event at the 2005 Universiade. 
+Answer and Reasoning: The final time recorded for the 4x400 meter relay at the 2005 Universiade is 3:02.57. This value is directly taken from the Notes column corresponding to the 4x400 meter relay event in the 2005 Universiade row.  
+Final Answer: 3:02.57
+
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+Tables: 
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

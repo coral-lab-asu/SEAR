@@ -1,0 +1,27 @@
+index,table_id,question,response,answer
+0,Phoenix_Coyotes_0,Arizona Coyotes player number 19 played in how many NHL seasons ?,"Here's the answer with reasoning:
+
+Reasoning:
+To determine the number of NHL seasons played by the Arizona Coyotes player number 19, we need to find the player with the number 19 in the table. The relevant row is: 19 | Shane Doan | RW | 1996-2017 | February 24, 2019. According to the table, Shane Doan played for the Arizona Coyotes (formerly Winnipeg Jets) from 1996 to 2017. To find the number of NHL seasons played, we need to calculate the difference between the start and end years. Since the seasons are not explicitly stated, we can assume that the seasons are consecutive. Therefore, the number of NHL seasons played by Shane Doan is 21 (2017 - 1996 + 1).
+
+Answer: 21",21
+1,List_of_Washington_Redskins_players_12,What was the post-secondary school attended by Charley Malone titled at its founding ?,"Here's the answer with reasoning:
+
+Reasoning:
+To determine the number of NHL seasons played by the Arizona Coyotes player number 19, we need to find the player with the number 19 in the table. The relevant row is: 19 | Shane Doan | RW | 1996-2017 | February 24, 2019. According to the table, Shane Doan played for the Arizona Coyotes (formerly Winnipeg Jets) from 1996 to 2017. To find the number of NHL seasons played, we need to calculate the difference between the start and end years. Since the seasons are not explicitly stated, we can assume that the seasons are consecutive. Therefore, the number of NHL seasons played by Shane Doan is 21 (2017 - 1996 + 1).
+
+Answer: 21",Agricultural and Mechanical College of Texas
+0,Phoenix_Coyotes_0,Arizona Coyotes player number 19 played in how many NHL seasons ?,"Here is the answer and reasoning:
+
+Question: Arizona Coyotes player number 19 played in how many NHL seasons?
+
+Reasoning: To determine the number of NHL seasons played by the Arizona Coyotes player number 19, we need to find the row with the player number 19 and extract the relevant information. The relevant row is: 19 | Shane Doan | RW | 1996-2017 | February 24, 2019. According to the provided text, Shane Doan played 21 seasons in the NHL. Therefore, the answer is 21 seasons.
+
+Answer: [""21 seasons""]",21
+1,List_of_Washington_Redskins_players_12,What was the post-secondary school attended by Charley Malone titled at its founding ?,"Here is the answer and reasoning:
+
+Question: Arizona Coyotes player number 19 played in how many NHL seasons?
+
+Reasoning: To determine the number of NHL seasons played by the Arizona Coyotes player number 19, we need to find the row with the player number 19 and extract the relevant information. The relevant row is: 19 | Shane Doan | RW | 1996-2017 | February 24, 2019. According to the provided text, Shane Doan played 21 seasons in the NHL. Therefore, the answer is 21 seasons.
+
+Answer: [""21 seasons""]",Agricultural and Mechanical College of Texas

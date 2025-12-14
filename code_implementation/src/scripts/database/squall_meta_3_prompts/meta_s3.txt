@@ -1,0 +1,105 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+{{"headers": ["id", "agg", "year of election", "candidates elected", "# of seats available", "# of votes", "% of popular vote"], "types": ["id", "agg", "number", "number", "number", "number", "percentage"], "contents": [[{{"col": "id", "type": "INTEGER", "data": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}}], [{{"col": "agg", "type": "INTEGER", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}], [{{"col": "c1", "type": "TEXT", "data": ["1963", "1967", "1971", "1975", "1977", "1981", "1985", "1987", "1990", "1995", "1999", "2003", "2007", "2011"]}}, {{"col": "c1_number", "type": "INTEGER", "data": [1963, 1967, 1971, 1975, 1977, 1981, 1985, 1987, 1990, 1995, 1999, 2003, 2007, 2011]}}], [{{"col": "c2", "type": "TEXT", "data": ["7", "20", "19", "38", "33", "21", "25", "19", "74", "17", "9", "7", "10", "17"]}}, {{"col": "c2_number", "type": "REAL", "data": [7.0, 20.0, 19.0, 38.0, 33.0, 21.0, 25.0, 19.0, 74.0, 17.0, 9.0, 7.0, 10.0, 17.0]}}], [{{"col": "c3", "type": "TEXT", "data": ["108", "117", "117", "125", "125", "125", "125", "130", "130", "129", "103", "103", "107", "107"]}}, {{"col": "c3_number", "type": "REAL", "data": [108.0, 117.0, 117.0, 125.0, 125.0, 125.0, 125.0, 130.0, 130.0, 129.0, 103.0, 103.0, 107.0, 107.0]}}], [{{"col": "c4", "type": "TEXT", "data": [null, null, null, null, null, null, "865507", "970813", "1509506", "854163", "551009", "660730", "741043", "980204"]}}, {{"col": "c4_number", "type": "REAL", "data": [null, null, null, null, null, null, 865507.0, 970813.0, 1509506.0, 854163.0, 551009.0, 660730.0, 741043.0, 980204.0]}}], [{{"col": "c5", "type": "TEXT", "data": ["15.5%", "25.9%", "27.1%", "28.9%", "28.0%", "21.2%", "23.8%", "25.7%", "37.6%", "20.6%", "12.6%", "14.7%", "16.8%", "22.73%"]}}, {{"col": "c5_number", "type": "REAL", "data": [15.5, 25.9, 27.1, 28.9, 28.0, 21.2, 23.8, 25.7, 37.6, 20.6, 12.6, 14.7, 16.8, 22.73]}}]], "is_list": {{"id": False, "agg": False, "c1": False, "c1_number": False, "c2": False, "c2_number": False, "c3": False, "c3_number": False, "c4": False, "c4_number": False, "c5": False, "c5_number": False}}}}
+
+Question: what was the smallest number of votes before 2003 ?
+
+Detailed Steps:
+Identify Objective:  
+- Determine the smallest number of votes cast before the year 2003.
+Evidence Extraction:  
+- Extract relevant years before 2003: 1963, 1967, 1971, 1975, 1977, 1981, 1985, 1987, 1990, 1995, 1999.  
+- Extract corresponding vote counts from the **# of votes** column.  
+Step-by-Step Reasoning:  
+- Filter out years **before 2003**.  
+- Collect the non-null vote counts from these years. 
+- Find the **minimum vote count** among the extracted values.
+Python Code Generation: Generate a Python script to  
+- Extract vote counts for years before 2003.  
+- Identify the smallest value from the extracted data.  
+- Output the smallest vote count.
+
+Answer && Reasoning:
+Identify Objective:  
+- Determine the smallest number of votes before the year 2003.  
+Evidence Extraction:  
+- Extract the "year of election" and "# of votes" columns.  
+- Filter only years before 2003 while ignoring null values.  
+Python Code Generation:  
+```python
+data = [(1963, None), (1967, None), (1971, None), (1975, None), (1977, None), 
+        (1981, None), (1985, 865507), (1987, 970813), (1990, 1509506), 
+        (1995, 854163), (1999, 551009)]
+
+min_votes = float('inf')
+
+for year, votes in data:
+    if year < 2003 and votes is not None:
+        min_votes = min(min_votes, votes)
+
+print(min_votes)
+```
+
+Example2:
+Table:
+{{"headers": ["id", "agg", "rank", "nation", "gold", "silver", "bronze", "total"], "types": ["id", "agg", "number", "text(text)", "number", "number", "number", "number"], "contents": [[{{"col": "id", "type": "INTEGER", "data": [1, 2, 3, 4, 5, 6, 7]}}], [{{"col": "agg", "type": "INTEGER", "data": ["0", "0", "0", "0", "0", "0", "1"]}}], [{{"col": "c1", "type": "TEXT", "data": ["1", "2", "3", "4", "5", "6", null]}}, {{"col": "c1_number", "type": "REAL", "data": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, null]}}], [{{"col": "c2", "type": "TEXT", "data": ["russia (rus)", "canada (can)", "germany (ger)", "france (fra)", "belarus (blr)", "ukraine (ukr)", "total"]}}, {{"col": "c2_first", "type": "TEXT", "data": ["russia", "canada", "germany", "france", "belarus", "ukraine", "total"]}}, {{"col": "c2_second", "type": "TEXT", "data": ["rus", "can", "ger", "fra", "blr", "ukr", null]}}], [{{"col": "c3", "type": "TEXT", "data": ["3", "2", "1", "0", "0", "0", "6"]}}, {{"col": "c3_number", "type": "REAL", "data": [3.0, 2.0, 1.0, 0.0, 0.0, 0.0, 6.0]}}], [{{"col": "c4", "type": "TEXT", "data": ["1", "0", "3", "1", "1", "0", "6"]}}, {{"col": "c4_number", "type": "REAL", "data": [1.0, 0.0, 3.0, 1.0, 1.0, 0.0, 6.0]}}], [{{"col": "c5", "type": "TEXT", "data": ["1", "0", "2", "2", "0", "1", "6"]}}, {{"col": "c5_number", "type": "REAL", "data": [1.0, 0.0, 2.0, 2.0, 0.0, 1.0, 6.0]}}], [{{"col": "c6", "type": "TEXT", "data": ["5", "2", "6", "3", "1", "1", "18"]}}, {{"col": "c6_number", "type": "REAL", "data": [5.0, 2.0, 6.0, 3.0, 1.0, 1.0, 18.0]}}]], "is_list": {{"id": False, "agg": False, "c1": False, "c1_number": False, "c2": False, "c2_first": False, "c2_second": False, "c3": False, "c3_number": False, "c4": False, "c4_number": False, "c5": False, "c5_number": False, "c6": False, "c6_number": False}}}}
+
+Question: which country won more total medals than tue french , but less than the germans in the 1994 winter olympic biathlon ?
+
+Detailed Steps:
+Identify Objective:  
+- Find the country that won more total medals than France but fewer than Germany in the 1994 Winter Olympic Biathlon.  
+Evidence Extraction:  
+- Extract total medals for France and Germany.  
+- Extract total medals for all other countries.  
+- Identify the country with medals between France's (3) and Germany's (6).  
+Step-by-Step Reasoning:  
+- Locate France and Germany in the table and note their total medals.  
+- Filter other countries with medals in the range (3,6).  
+- Extract the country that fits this condition.  
+Python Code Generation:  
+- Generate a script to extract total medals for France and Germany.  
+- Filter other countries with medals in range.  
+- Output the country name.
+
+Answer && Reasoning:
+Identify Objective:  
+- Determine the country that won more total medals than France but fewer than Germany in the 1994 Winter Olympic biathlon.  
+Evidence Extraction:  
+- Extract the "nation" and "total" medal columns.  
+- Identify the total medals won by France and Germany.  
+- Find the country whose total medal count is greater than France's but less than Germany's.  
+Step-by-Step Reasoning:  
+- Locate the row for **France (FRA)** and note its total medal count.  
+- Locate the row for **Germany (GER)** and note its total medal count.  
+- Iterate through the remaining countries to find the one with a total medal count that falls between these two values.  
+Python Code Generation:  
+```python
+data = [("russia", 5), ("canada", 2), ("germany", 6), ("france", 3), 
+        ("belarus", 1), ("ukraine", 1)]
+
+france_medals = next(total for country, total in data if country == "france")
+germany_medals = next(total for country, total in data if country == "germany")
+
+result = [country for country, total in data if france_medals < total < germany_medals]
+
+print(result)
+```
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+Table:
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

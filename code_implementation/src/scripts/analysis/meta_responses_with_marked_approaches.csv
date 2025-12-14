@@ -1,0 +1,2063 @@
+question,response_meta,f1_score_meta,response_decomposition,f1_score_decomposition,response_cot,f1_score_cot,Chain_of_Thought,Decomposition,Evidence_Extraction,Python,Other
+what was the percentage change in deferred tax assets and regulatory assets from 2013 to 2014,"The table does not contain the necessary information to calculate the percentage change in deferred tax assets and regulatory assets from 2013 to 2014. It only provides information on the changes in the company's gross liability for unrecognized tax benefits during those years. Therefore, it's impossible to determine the percentage change in deferred tax assets and regulatory assets.
+
+**Final Answer:** Not enough information to answer the question. 
+",0.0,"```
+decomposition:
+  sq1. What was the value of deferred tax assets and regulatory assets at December 31, 2013? (independent)
+  sq2. What was the value of deferred tax assets and regulatory assets at December 31, 2014? (independent)
+  sq3. What is the difference between the values for December 31, 2014, and December 31, 2013, for deferred tax assets and regulatory assets? (depends on sq1, sq2)
+  sq4. What is the percentage change in deferred tax assets and regulatory assets from 2013 to 2014? (depends on sq1, sq3)
+answers:
+  Answer to sq1: The value of deferred tax assets and regulatory assets at December 31, 2013, was $6241.
+  Answer to sq2: The value of deferred tax assets and regulatory assets at December 31, 2014, was $6348.
+  Answer to sq3: The difference between the values for December 31, 2014, and December 31, 2013, for deferred tax assets and regulatory assets is $107.
+  Answer to sq4: The percentage change in deferred tax assets and regulatory assets from 2013 to 2014 is 1.71%.
+final_answer: 1.71
+```",100.0,"reason: The percentage change in deferred tax assets and regulatory assets from 2013 to 2014 is calculated by subtracting the 2013 value from the 2014 value, dividing the difference by the 2013 value, and multiplying by 100%.
+The 2013 value is $6,241 and the 2014 value is $6,348. 
+Therefore, the percentage change is calculated as follows:
+((6,348 - 6,241) / 6,241) * 100% = 1.71%
+answer: 1.7% 
+",100.0,False,False,False,False,True
+what portion of the total noncancelable future lease commitments are due in fiscal year of 2019?,"**Chosen Approach**: Evidence Extraction
+
+**Steps**:
+
+1. **Identify the relevant data**: The table shows the total noncancelable future lease commitments by fiscal year.  We need to find the value for fiscal year 2019.
+2. **Locate the value for fiscal 2019**:  The table shows that the total noncancelable future lease commitments for fiscal year 2019 are $137.4 million.
+
+**Final Answer**:  
+$137.4 million 
+",0.0,"## Decomposition:
+
+**sq1.** What is the value of total noncancelable future lease commitments due in fiscal year 2019? (independent)
+**sq2.** What is the total value of noncancelable future lease commitments? (independent)
+**sq3.** Calculate the portion of total noncancelable future lease commitments due in fiscal year 2019. (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The value of total noncancelable future lease commitments due in fiscal year 2019 is $137.4 million.
+**Answer to sq2:** The total value of noncancelable future lease commitments is $559.3 million. 
+**Answer to sq3:** The portion of total noncancelable future lease commitments due in fiscal year 2019 is calculated by dividing the value of commitments due in fiscal year 2019 by the total value of commitments: $137.4 million / $559.3 million = 0.2455.
+
+## final_answer: 0.2455 
+",100.0,"reason: The total noncancelable future lease commitments are $559.3 million, of which $137.4 million are due in fiscal year 2019. To find the portion, we divide the fiscal year 2019 commitment by the total commitment: $137.4 million / $559.3 million = 0.2455. 
+answer: 24.6% 
+",100.0,False,False,True,False,False
+"in 2004 and 2003 , what were the total shares of common stock that were issued to employees?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. The table contains information about the total shares of common stock issued to employees in 2004 and 2003. 
+2. We can directly extract this information from the table.
+
+**Final Answer:**
+
+In 2004, the company issued 1,939,734 shares of common stock to employees.  In 2003, the company issued 1,937,141 shares of common stock to employees. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What was the number of shares of common stock issued to employees in 2004? (independent)"",
+  ""sq2. What was the number of shares of common stock issued to employees in 2003? (independent)"",
+  ""sq3. What is the sum of the number of shares issued in 2004 and 2003? (depends on sq1, sq2)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The number of shares of common stock issued to employees in 2004 was 1,939,734."",
+  ""Answer to sq2: The number of shares of common stock issued to employees in 2003 was 1,937,141."",
+  ""Answer to sq3: The sum of the number of shares issued in 2004 and 2003 is 3,876,875.""
+ ],
+ ""final_answer"": ""3,876,875""
+}
+```",100.0,"reasoning: The table shows the number of shares of common stock issued to employees in 2004 and 2003. In 2004, the company issued 1,939,734 shares and in 2003, the company issued 1,937,141 shares. To find the total number of shares issued to employees in both years, we add the number of shares issued in each year.
+answer: 3,876,875",100.0,False,False,True,False,False
+what was the percentage change in the commercial mortgage loans designated for sale at fair value from 2008 to 2009,"The provided table and text do not contain information about commercial mortgage loans designated for sale at fair value for the years 2008 and 2009. The table only provides data for 2011 and 2012. 
+
+Therefore, it is impossible to calculate the percentage change in commercial mortgage loans designated for sale at fair value from 2008 to 2009 using the given information.
+
+**Final Answer:** Insufficient information to answer the question. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What was the value of commercial mortgage loans designated for sale at fair value in 2012?"",
+  ""sq2. What was the value of commercial mortgage loans designated for sale at fair value in 2011?"",
+  ""sq3. Calculate the difference between the value in 2012 and the value in 2011."",
+  ""sq4. Divide the difference by the value in 2011."",
+  ""sq5. Multiply the result by 100 to express the change as a percentage.""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The value of commercial mortgage loans designated for sale at fair value in 2012 was $772 million."",
+  ""Answer to sq2: The value of commercial mortgage loans designated for sale at fair value in 2011 was $843 million."",
+  ""Answer to sq3: The difference between the value in 2012 and the value in 2011 is -$71 million."",
+  ""Answer to sq4: Dividing the difference by the value in 2011 gives -0.084."",
+  ""Answer to sq5: Multiplying the result by 100 gives -8.4%""
+ ],
+ ""final_answer"": ""-8.4""
+}
+```",100.0,"reason: The provided table shows the value of commercial mortgages at fair value in 2011 and 2012. However, it does not include data for 2008 and 2009. Therefore, it is impossible to calculate the percentage change in commercial mortgage loans designated for sale at fair value from 2008 to 2009.
+answer: Cannot be determined from the provided table. 
+",0.0,False,False,False,False,True
+as of december 2007 what was the percent of the square footage in alpharetta georgia not yet leased,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the total square footage in Alpharetta, Georgia:** The table shows 219,000 square feet in Alpharetta, Georgia.
+2. **Identify the square footage owned by the company:** The table pretext states that 166,000 square feet of the Alpharetta, Georgia office is owned.
+3. **Calculate the square footage not yet leased:**  219,000 (total) - 166,000 (owned) = 53,000 square feet.
+4. **Calculate the percentage of square footage not yet leased:** (53,000 / 219,000) * 100 = 24.20%
+
+**Final Answer:** 24.20%, 0.242, .242 
+",0.0,"## Decomposition:
+
+**sq1.** What is the total square footage of the office in Alpharetta, Georgia? (independent)
+**sq2.** What is the square footage of the office in Alpharetta, Georgia, that is not yet leased? (independent)
+**sq3.** What is the percentage of the office in Alpharetta, Georgia, that is not yet leased? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total square footage of the office in Alpharetta, Georgia, is 219,000 square feet.
+**Answer to sq2:** The square footage of the office in Alpharetta, Georgia, that is not yet leased is 166,000 square feet.
+**Answer to sq3:** The percentage of the office in Alpharetta, Georgia, that is not yet leased is 75.8% (calculated as 166,000 / 219,000 * 100).
+
+## Final Answer: 75.8% 
+",100.0,"reason: 'The table states that all facilities are leased except for 166,000 square feet in Alpharetta, Georgia. The total square footage in Alpharetta is 219,000. To find the percentage not leased, we subtract the leased space from the total and divide by the total, then multiply by 100%: (219,000 - 166,000) / 219,000 * 100 = 24.2%.'
+answer: '24.2%' 
+",0.0,True,False,False,False,False
+what is the percentage change in revenue generated from non-us currencies from 2015 to 2016?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant data:** We need the total revenue generated from non-US currencies in 2015 and 2016.
+2. **Extract the data:**
+    - Total revenue generated from non-US currencies in 2015: $106 million 
+    - Total revenue generated from non-US currencies in 2016: $129 million
+3. **Calculate the difference:** $129 million - $106 million = $23 million
+4. **Calculate the percentage change:** ($23 million / $106 million) * 100 = 21.7%
+
+**Final Answer:** The percentage change in revenue generated from non-US currencies from 2015 to 2016 is approximately 21.7% (0.217 or .217). 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What is the revenue generated from non-US currencies in 2015?"",
+  ""sq2. What is the revenue generated from non-US currencies in 2016?"",
+  ""sq3. What is the difference in revenue generated from non-US currencies between 2016 and 2015?"",
+  ""sq4. What is the percentage change in revenue generated from non-US currencies from 2015 to 2016?""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The revenue generated from non-US currencies in 2015 is $1336 million."",
+  ""Answer to sq2: The revenue generated from non-US currencies in 2016 is $1909 million."",
+  ""Answer to sq3: The difference in revenue generated from non-US currencies between 2016 and 2015 is $573 million."",
+  ""Answer to sq4: The percentage change in revenue generated from non-US currencies from 2015 to 2016 is 42.87%.""
+ ],
+ ""final_answer"": ""42.87""
+}
+```",100.0,"reason: The revenue generated from non-US currencies in 2015 is $1,336 million, and in 2016 it is $1,909 million. To calculate the percentage change, we use the formula: (New Value - Old Value) / Old Value * 100%. Therefore, the percentage change is ((1909 - 1336) / 1336) * 100% = 42.87%.
+answer: 42.9% 
+",100.0,True,False,False,False,False
+"what was the difference in percentage cumulative 5-year total shareholder return on common stock fidelity national information services , inc . compared to the s&p 500 for the period ending 12/16?","**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Extract Fidelity National Information Services Inc. (FNIS) cumulative return for 12/16:**  311.81
+2. **Extract S&P 500 cumulative return for 12/16:** 198.18
+3. **Calculate the difference in cumulative returns:** 311.81 - 198.18 = 113.63
+4. **Calculate the percentage difference:** (113.63 / 198.18) * 100 = 57.31% 
+
+**Final Answer:**
+The difference in percentage cumulative 5-year total shareholder return on common stock for Fidelity National Information Services Inc. compared to the S&P 500 for the period ending 12/16 is 57.31% (0.5731 or .573). 
+",0.0,"## Decomposition:
+
+**sq1.** What was the cumulative 5-year total shareholder return on common stock for Fidelity National Information Services, Inc. at the end of 12/16? (independent)
+**sq2.** What was the cumulative 5-year total shareholder return for the S&P 500 at the end of 12/16? (independent)
+**sq3.** What is the difference in percentage between the cumulative 5-year total shareholder return for Fidelity National Information Services, Inc. and the S&P 500 at the end of 12/16? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The cumulative 5-year total shareholder return on common stock for Fidelity National Information Services, Inc. at the end of 12/16 was 311.81%.
+**Answer to sq2:** The cumulative 5-year total shareholder return for the S&P 500 at the end of 12/16 was 198.18%.
+**Answer to sq3:** The difference in percentage between the cumulative 5-year total shareholder return for Fidelity National Information Services, Inc. and the S&P 500 at the end of 12/16 is 113.63%.
+
+## Final Answer:
+
+113.63
+",100.0,"reason: 'To find the difference in percentage cumulative 5-year total shareholder return on common stock Fidelity National Information Services, Inc. compared to the S&P 500 for the period ending 12/16, we need to calculate the percentage change for each and then find the difference.
+    Fidelity National Information Services, Inc: (311.81 - 100) / 100 = 211.81%
+    S&P 500: (198.18 - 100) / 100 = 98.18%
+    The difference is: 211.81% - 98.18% = 113.63%'
+answer: 113.63% 
+",100.0,True,False,False,False,False
+"in millions for the fourth quarters of 2017 and 2016 , what was the total tier 1 capital?","The provided table only contains data for the three months ended or as of December 2017 and 2016.  It does not include data for the fourth quarter of either year.
+
+**Final Answer:** The data provided does not contain information on the total tier 1 capital for the fourth quarters of 2017 and 2016.
+",0.0,"## Decomposition:
+
+**sq1.** What was the total tier 1 capital for the fourth quarter of 2017 in millions? (independent)
+**sq2.** What was the total tier 1 capital for the fourth quarter of 2016 in millions? (independent)
+
+## Answers:
+
+**Answer to sq1:** The total tier 1 capital for the fourth quarter of 2017 was $78,227 million. 
+**Answer to sq2:** The total tier 1 capital for the fourth quarter of 2016 was $81,808 million. 
+
+## Final_answer:
+78227, 81808 
+",0.0,"reason: The question asks for the total Tier 1 Capital for the fourth quarters of 2017 and 2016. The table provides the Tier 1 Capital figures for the three months ended December 2017 and December 2016, which are $78,227 million and $81,808 million, respectively.
+answer: $160,035 million 
+",100.0,False,False,False,False,True
+"what was the average net annual change in discounted future net cash flows ( in millions ) for the years 2011 , 2010 , and 2009?","**Chosen Approach:**
+
+Decomposition and Chain-of-Thought (CoT) Reasoning
+
+**Sub-questions:**
+
+1. What is the net change in discounted future net cash flows for 2011? (sq1)
+2. What is the net change in discounted future net cash flows for 2010? (sq2)
+3. What is the net change in discounted future net cash flows for 2009? (sq3)
+4. What is the sum of the net changes in discounted future net cash flows for these years? (sq4)
+5. What is the average net annual change in discounted future net cash flows? (sq5)
+
+**Answers:**
+
+1. The net change in discounted future net cash flows for 2011 is $4,648 million. (Answer to sq1)
+2. The net change in discounted future net cash flows for 2010 is $3,625 million. (Answer to sq2)
+3. The net change in discounted future net cash flows for 2009 is $1,620 million. (Answer to sq3)
+4. The sum of the net changes is $4,648 million + $3,625 million + $1,620 million = $9,893 million. (Answer to sq4)
+5. The average net annual change is $9,893 million / 3 = $3,297.67 million. (Answer to sq5)
+
+**Final Answer:**
+The average net annual change in discounted future net cash flows (in millions) for the years 2011, 2010, and 2009 is $3,297.67 million. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the net change in discounted future net cash flows for 2011? (independent)
+**sq2.** What is the net change in discounted future net cash flows for 2010? (independent)
+**sq3.** What is the net change in discounted future net cash flows for 2009? (independent)
+**sq4.** What is the sum of the net changes for 2011, 2010, and 2009? (depends on sq1, sq2, sq3)
+**sq5.** What is the average of the sum of net changes for 2011, 2010, and 2009? (depends on sq4)
+
+
+## Answers:
+
+**Answer to sq1:** The net change in discounted future net cash flows for 2011 is 4648 (in millions).
+**Answer to sq2:** The net change in discounted future net cash flows for 2010 is 3625 (in millions).
+**Answer to sq3:** The net change in discounted future net cash flows for 2009 is 1620 (in millions).
+**Answer to sq4:** The sum of the net changes for 2011, 2010, and 2009 is 9893 (in millions).
+**Answer to sq5:** The average of the sum of net changes for 2011, 2010, and 2009 is 3298 (in millions).
+
+## Final Answer:
+
+3298",100.0,"reason: 'To find the average net annual change in discounted future net cash flows,
+we sum the net change for each year and divide by the number of years.
+ 2011: $4,648 million
+ 2010: $3,625 million
+ 2009: $1,620 million
+ Total: $9,893 million
+ Average: $9,893 million / 3 years = $3,297.67 million'
+answer: 3298",100.0,True,True,False,False,False
+"what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant information:** The question asks for the total expected cash outflow to satisfy contractual obligations and commitments as of December 31, 2007. This information is directly provided in the table as the ""Total"" row.
+2. **Extract the total expected cash outflow:** The ""Total"" row sums up the expected cash outflow for each category across all years.
+3. **Read the value from the table:** The table shows that the total expected cash outflow is **$29,362 million**.
+
+**Final Answer:** $29,362 million 
+",0.0,"## Decomposition:
+
+**sq1.** What is the value of the ""Total"" row for each column in the table? (Independent)
+**sq2.** What is the sum of the ""Total"" values for each column? (Dependent on sq1) 
+**sq3.** How do we express the sum in millions? (Dependent on sq2)
+
+## Answers:
+
+**Answer to sq1:** 
+The total values for each column are as follows: 
+- Capital Leases: $619 million
+- Operating Leases: $1782 million
+- Debt Principal: $10527 million
+- Debt Interest: $8026 million
+- Purchase Commitments: $3828 million
+- Pension Fundings: $3465 million
+- Other Liabilities: $562 million
+
+**Answer to sq2:** The sum of the ""Total"" values for each column is $28,809 million.
+
+**Answer to sq3:**  We express the sum in millions by stating the value followed by ""million"". In this case, the value is $28,809 million.
+
+## Final_answer: 28809 
+",100.0,"reasoning: The total expected cash outflow is the sum of all the expected cash outflows for each category in the table.  Therefore, we add the total for each column. 
+answer: $27,119 million 
+",0.0,False,False,True,False,False
+what is the percentage decrease in receivables from the money pool from 2010 to 2011?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Extract Receivables for 2010:** $63,003,000 (in thousands)
+2. **Extract Receivables for 2011:** $23,596,000 (in thousands)
+3. **Calculate the Difference:** $63,003,000 - $23,596,000 = $39,407,000
+4. **Calculate the Percentage Decrease:** ($39,407,000 / $63,003,000) * 100 = 62.55% (rounded to two decimal places)
+
+**Final Answer:** The percentage decrease in receivables from the money pool from 2010 to 2011 is approximately 62.55%, 0.6255, or .625. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the value of receivables from the money pool in 2010? (independent)
+**sq2.** What was the value of receivables from the money pool in 2011? (independent)
+**sq3.** What is the difference in receivables from the money pool between 2010 and 2011? (depends on sq1, sq2)
+**sq4.** What is the percentage decrease from 2010 to 2011? (depends on sq1, sq3)
+
+
+## Answers:
+
+**Answer to sq1:** The value of receivables from the money pool in 2010 was $63,003 thousand.
+**Answer to sq2:** The value of receivables from the money pool in 2011 was $23,596 thousand.
+**Answer to sq3:** The difference in receivables from the money pool between 2010 and 2011 is $39,407 thousand.
+**Answer to sq4:** The percentage decrease from 2010 to 2011 is 62.55%. 
+
+The calculation is:
+(Difference in receivables / Value in 2010) * 100 = (($63,003 - $23,596) / $63,003) * 100 = 62.55%
+
+
+## Final_answer: 62.55 
+",0.0,"reason: 'To calculate the percentage decrease in receivables from the money pool from 2010 to 2011, we first find the difference between the two years' receivables: $63,003 (2010) - $23,596 (2011) = $39,407. Then, we divide this difference by the 2010 receivables and multiply by 100% to get the percentage decrease: ($39,407 / $63,003) * 100% = 62.5%.'
+answer: '62.5%' 
+",100.0,True,False,False,False,False
+what was the ratio of the tons hedged in 2017 to 2018,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. **Identify Relevant Data:** The question asks for the ratio of tons hedged in 2017 to 2018. We need to extract the ""tons hedged"" values for both years from the table.
+2. **Extract Data:**
+    - Tons hedged in 2017: 120,000
+    - Tons hedged in 2018: 120,000
+3. **Calculate the Ratio:**  Divide the tons hedged in 2017 by the tons hedged in 2018: 120,000 / 120,000 = 1
+
+**Final Answer:** The ratio of tons hedged in 2017 to 2018 is 1:1. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the number of tons hedged in 2017? (independent)
+**sq2.** What was the number of tons hedged in 2018? (independent)
+**sq3.** What is the ratio of tons hedged in 2017 to tons hedged in 2018? (depends on sq1, sq2)
+
+
+## Answers:
+
+**Answer to sq1:** The number of tons hedged in 2017 was 120,000.
+**Answer to sq2:** The number of tons hedged in 2018 was 120,000.
+**Answer to sq3:** The ratio of tons hedged in 2017 to tons hedged in 2018 is 120,000 / 120,000 = 1. 
+
+
+## Final_answer: 1 
+",100.0,"reason: The ratio of tons hedged in 2017 to 2018 is found by dividing the tons hedged in 2017 by the tons hedged in 2018: 120,000 / 120,000 = 1.
+answer: 1.00 
+",100.0,False,False,True,False,False
+what is the percent change in general and administrative expense from 2000 to 2001?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Extract General and Administrative Expense for 2000:**  The text states that general and administrative expense in 2000 was $21.1 million.
+2. **Extract General and Administrative Expense for 2001:** The text states that general and administrative expense in 2001 was $15.6 million.
+3. **Calculate the Difference:** $21.1 million - $15.6 million = $5.5 million
+4. **Calculate the Percentage Change:** ($5.5 million / $21.1 million) * 100 = 26.07% (rounded to two decimal places)
+
+**Final Answer:** The percentage change in general and administrative expense from 2000 to 2001 is **26.07%**. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What was the general and administrative expense in 2000? (independent)"",
+  ""sq2. What was the general and administrative expense in 2001? (independent)"",
+  ""sq3. What is the difference between the general and administrative expense in 2001 and 2000? (depends on sq1, sq2)"",
+  ""sq4. What is the percent change from 2000 to 2001? (depends on sq1, sq3)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The general and administrative expense in 2000 was $21.1 million."",
+  ""Answer to sq2: The general and administrative expense in 2001 was $15.6 million."",
+  ""Answer to sq3: The difference between the general and administrative expense in 2001 and 2000 was -$5.5 million."",
+  ""Answer to sq4: The percent change from 2000 to 2001 is -26.07%.""
+ ],
+ ""final_answer"": ""-26.07""
+}
+```",100.0,"reason: The general and administrative expense decreased from $21.1 million in 2000 to $15.6 million in 2001. To find the percentage change, we subtract the 2000 expense from the 2001 expense, divide by the 2000 expense, and multiply by 100%. 
+answer: -26% 
+",100.0,True,False,False,False,False
+what portion of the long-term debt is due in the next 12 months?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. **Locate the relevant data:** The question asks about the portion of long-term debt due in the next 12 months. This information is located in the table under the ""payments due in less than 1 year"" column for long-term debt.
+2. **Extract the value:** The value in the table is $332 million.
+
+**Final Answer:** 
+$332 million 
+",0.0,"## Decomposition:
+
+**sq1:** What is the total value of long-term debt? (independent)
+**sq2:** What is the amount of long-term debt payments due in less than 1 year? (independent)
+**sq3:** What is the proportion of long-term debt payments due in less than 1 year, compared to the total long-term debt? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total value of long-term debt is $10,591 million.
+**Answer to sq2:** The amount of long-term debt payments due in less than 1 year is $332 million.
+**Answer to sq3:** The proportion of long-term debt payments due in less than 1 year, compared to the total long-term debt, is 3.14%.  (Calculated as ($332 million / $10,591 million) * 100).
+
+## Final_answer: 3.14% 
+",100.0,"reasoning: The table shows that the total long-term debt is $10,591 million and the portion due in the next 12 months is $332 million. To find the portion of the long-term debt due in the next 12 months, we can divide the payments due in less than one year by the total long-term debt and multiply by 100%. 
+answer: 3.1% 
+",100.0,False,False,True,False,False
+what is the net income per common share in 2007?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1.  The table provides data for basic net income available for common shareholders, diluted net income available for common shareholders, weighted average number of common shares outstanding, weighted average partnership units outstanding, and dilutive shares for stock-based compensation plans. 
+2.  The question asks for the net income per common share in 2007. This is not explicitly provided. We have information for basic and diluted net income per common shareholder. We could use the diluted net income per common shareholder as a proxy for the net income per common share.  
+3.  The diluted net income available for common shareholders for 2007 is $232,091 (in thousands).
+4.  The weighted average number of common shares outstanding for 2007 is 139,255 (in thousands).
+5.  To calculate net income per common share, we divide the diluted net income available for common shareholders by the weighted average number of common shares outstanding. 
+
+**Calculation:**
+Net Income per Common Share (2007) = $232,091 (in thousands) / 139,255 (in thousands) = $1.6663
+
+**Final Answer:**
+The net income per common share in 2007 is $1.6663 (in thousands). 
+",0.0,"## Decomposition:
+  sq1. What is the value of diluted net income available for common shareholders in 2007? (independent)
+  sq2. What is the value of the weighted average number of common shares and potential dilutive securities in 2007? (independent)
+  sq3. How do we calculate the net income per common share in 2007? (depends on sq1, sq2)
+
+## Answers:
+  Answer to sq1: The value of diluted net income available for common shareholders in 2007 is $232,091 thousand. 
+  Answer to sq2: The value of the weighted average number of common shares and potential dilutive securities in 2007 is 149,614 thousand.
+  Answer to sq3: We calculate the net income per common share by dividing the diluted net income available for common shareholders by the weighted average number of common shares and potential dilutive securities.  
+  
+## Final_answer:
+1.55 
+",100.0,"reasoning: The table shows basic and diluted net income per common share for each year.  To find the net income per common share in 2007, we need to look at the ""basic net income available for common shareholders"" row and the ""weighted average number of common shares outstanding"" row. In 2007, the basic net income is $217,692,000 and the weighted average number of common shares outstanding is 139,255. We divide the net income by the number of shares to get the net income per share.
+answer: $1.56",100.0,False,False,True,False,False
+what was the percentage change in non-interest revenue from 2007 to 2008?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Extract non-interest revenue for 2007:**  -291 (in millions of dollars). 
+2. **Extract non-interest revenue for 2008:** 438 (in millions of dollars).
+3. **Calculate the difference:** 438 - (-291) = 729 (in millions of dollars).
+4. **Calculate the percentage change:** (729 / -291) * 100 = -250.52% (approximately).
+
+**Final Answer:** The percentage change in non-interest revenue from 2007 to 2008 is approximately -250.52%. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the value of non-interest revenue in 2007? (independent)
+**sq2.** What was the value of non-interest revenue in 2008? (independent)
+**sq3.** Calculate the difference between the non-interest revenue values from 2008 and 2007. (depends on sq1 and sq2)
+**sq4.** Divide the difference in non-interest revenue by the value of non-interest revenue in 2007. (depends on sq1 and sq3)
+**sq5.** Multiply the result from sq4 by 100 to express the percentage change. (depends on sq4)
+
+## Answers:
+
+**Answer to sq1:** The value of non-interest revenue in 2007 was -$291 million.
+**Answer to sq2:** The value of non-interest revenue in 2008 was $438 million.
+**Answer to sq3:** The difference between the non-interest revenue values from 2008 and 2007 is $729 million.
+**Answer to sq4:** Dividing the difference in non-interest revenue by the value of non-interest revenue in 2007 results in -2.5068.
+**Answer to sq5:** Multiplying the result from sq4 by 100 gives us -250.68%.
+
+## Final_answer: -250.68 
+",0.0,"reasoning: 'The percentage change in non-interest revenue from 2007 to 2008 is calculated by subtracting the 2007 revenue from the 2008 revenue, dividing by the 2007 revenue, and then multiplying by 100%. This gives a percentage change of (438 - (-291)) / -291 * 100% = 251.2%.'
+answer: '251.2%' 
+",100.0,True,False,False,False,False
+"as of december 31 , 2005 , what was the before tax charge related to adopting fin no . 47 in millions?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. The question asks for the before-tax charge related to adopting FIN No. 47 as of December 31, 2005.
+2. We need to extract relevant information from the provided context.
+3. The context mentions that ""a charge of $19 million, net of taxes of $12 million, related to adopting FIN No. 47 was recognized as a cumulative effect of a change in accounting principle in 2005.""
+4. This information directly answers the question.
+
+**Final Answer:**
+The before-tax charge related to adopting FIN No. 47 as of December 31, 2005, was $19 million. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the charge related to adopting FIN No. 47 as of December 31, 2005, in millions? (independent)
+**sq2.** How do we express the charge in millions? (depends on sq1)
+
+## Answers:
+
+**Answer to sq1:** The charge related to adopting FIN No. 47 as of December 31, 2005, was $19 million.
+**Answer to sq2:**  We express the charge in millions by stating the value followed by ""million"". In this case, the value is $19 million.
+
+## Final_answer: 19 
+",0.0,"reasoning: 'The text states that a charge of $19 million, net of taxes of $12 million, related to adopting FIN No. 47 was recognized as a cumulative effect of a change in accounting principle in 2005.  To find the before-tax charge, we add the net charge and the tax amount: $19 million + $12 million = $31 million.'
+answer: 31",100.0,False,False,True,False,False
+"what was the sum of the annual long-term debt maturities outstanding as of december 31 , 2017 , for the next five years","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify Relevant Data:** The table provides the annual long-term debt maturities for the next five years, starting from 2018.
+2. **Extract Data:** We need to extract the debt maturities for the years 2018, 2019, 2020, 2021, and 2022.
+3. **Calculate the Sum:** We will add the amounts for each year to find the total.
+
+**Calculations:**
+
+```python
+total_debt_maturity = 760000 + 857679 + 898500 + 960764 + 1304431
+```
+
+**Final Answer:** 
+The sum of the annual long-term debt maturities outstanding as of December 31, 2017, for the next five years is $4,781,374,000. 
+",0.0,"## Decomposition:
+  sq1. What was the annual long-term debt maturity outstanding in 2018? (independent)
+  sq2. What was the annual long-term debt maturity outstanding in 2019? (independent)
+  sq3. What was the annual long-term debt maturity outstanding in 2020? (independent)
+  sq4. What was the annual long-term debt maturity outstanding in 2021? (independent)
+  sq5. What was the annual long-term debt maturity outstanding in 2022? (independent)
+  sq6. What is the sum of the annual long-term debt maturities from 2018 through 2022? (depends on sq1, sq2, sq3, sq4, sq5)
+
+## Answers:
+  Answer to sq1: The annual long-term debt maturity outstanding in 2018 was $760,000 thousand.
+  Answer to sq2: The annual long-term debt maturity outstanding in 2019 was $857,679 thousand.
+  Answer to sq3: The annual long-term debt maturity outstanding in 2020 was $898,500 thousand.
+  Answer to sq4: The annual long-term debt maturity outstanding in 2021 was $960,764 thousand.
+  Answer to sq5: The annual long-term debt maturity outstanding in 2022 was $1,304,431 thousand.
+  Answer to sq6: The sum of the annual long-term debt maturities from 2018 through 2022 is $4,781,374 thousand.
+
+## Final Answer: 4781374 
+",0.0,"reasoning: 'To find the sum of the annual long-term debt maturities outstanding as of December 31, 2017, for the next five years, we simply add up the amounts for each year: 2018: $760,000 2019: $857,679 2020: $898,500 2021: $960,764 2022: $1,304,431 Sum = $760,000 + $857,679 + $898,500 + $960,764 + $1,304,431 = $4,781,374'
+answer: '$4,781,374' 
+",100.0,False,False,True,True,False
+what is the total expected payments on the bonds for the next 5 years for entergy louisiana investment recovery funding?,"**Chosen Approach:** Evidence Extraction 
+
+**Steps:**
+
+1. **Identify relevant information:** We need to find the expected payments for Entergy Louisiana Investment Recovery Funding for the next five years. This information is provided in the table pretext.
+2. **Extract the data:** The table pretext states the following expected payments:
+    - 2017: $21.7 million
+    - 2018: $22.3 million
+    - 2019: $22.7 million
+    - 2020: $23.2 million
+    - 2021: $11 million
+
+**Final Answer:** 
+The total expected payments on the bonds for the next 5 years for Entergy Louisiana Investment Recovery Funding is $90.9 million. 
+",0.0,"## Decomposition:
+- **sq1**: What is the expected principal payment on the bonds for 2017? (independent)
+- **sq2**: What is the expected principal payment on the bonds for 2018? (independent)
+- **sq3**: What is the expected principal payment on the bonds for 2019? (independent)
+- **sq4**: What is the expected principal payment on the bonds for 2020? (independent)
+- **sq5**: What is the expected principal payment on the bonds for 2021? (independent)
+- **sq6**: What is the total of the expected payments for the next 5 years? (depends on sq1, sq2, sq3, sq4, sq5)
+
+## Answers:
+- **Answer to sq1**: The expected principal payment on the bonds for 2017 is $21.7 million. 
+- **Answer to sq2**: The expected principal payment on the bonds for 2018 is $22.3 million. 
+- **Answer to sq3**: The expected principal payment on the bonds for 2019 is $22.7 million. 
+- **Answer to sq4**: The expected principal payment on the bonds for 2020 is $23.2 million. 
+- **Answer to sq5**: The expected principal payment on the bonds for 2021 is $11 million. 
+- **Answer to sq6**: The total of the expected payments for the next 5 years is $100.9 million.  ($21.7 + $22.3 + $22.7 + $23.2 + $11)
+
+## Final_answer: 100.9 
+",100.0,"reasoning: To find the total expected payments on the bonds for the next 5 years for Entergy Louisiana Investment Recovery Funding, we sum the principal payments for each year: 2017: $21.7 million, 2018: $22.3 million, 2019: $22.7 million, 2020: $23.2 million, and 2021: $11 million.  Total = $21.7 + $22.3 + $22.7 + $23.2 + $11 = $100.9 million
+answer: $100.9 million 
+",100.0,False,False,True,False,False
+as a result of the sales of certain non-core towers and other assets what was the percent of the change in the recorded net losses from 2007 to 2008,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Extract relevant data:** 
+   - Net losses from asset sales and other impairments in 2007: $7.8 million
+   - Net losses from asset sales and other impairments in 2008: $10.7 million
+2. **Calculate the difference:** $10.7 million - $7.8 million = $2.9 million
+3. **Calculate the percentage change:** ($2.9 million / $7.8 million) * 100 = 37.18% (approximately)
+
+**Final Answer:** 37.18%, 0.3718, .372 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What is the recorded net loss associated with the sales of non-core towers and other assets for 2008? (independent)"",
+  ""sq2. What is the recorded net loss associated with the sales of non-core towers and other assets for 2007? (independent)"",
+  ""sq3. What is the difference between the recorded net losses for 2008 and 2007? (depends on sq1, sq2)"",
+  ""sq4. What is the percentage change between the recorded net losses for 2008 and 2007? (depends on sq2, sq3)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The recorded net loss for 2008 was $10.5 million."",
+  ""Answer to sq2: The recorded net loss for 2007 was $7.1 million."",
+  ""Answer to sq3: The difference between the recorded net losses for 2008 and 2007 is $3.4 million."",
+  ""Answer to sq4: The percentage change between the recorded net losses for 2008 and 2007 is 47.89%.""
+ ],
+ ""final_answer"": ""47.89""
+}
+```",100.0,"reasoning: 'The net loss for the year ended December 31, 2008, is comprised of net losses from asset sales and other impairments of $10.7 million, offset by gains from asset sales of $0.2 million. The net loss for the year ended December 31, 2007, is comprised of net losses from asset sales and other impairments of $7.8 million, offset by gains from asset sales of $0.7 million. The percent change in recorded net losses from 2007 to 2008 is calculated as: (net loss 2008 - net loss 2007) / net loss 2007 = ((10.7 - 0.2) - (7.8 - 0.7)) / (7.8 - 0.7) = 38.04%'
+answer: '38%' 
+",0.0,True,False,False,False,False
+"as of december 2012 what is the ratio of the square footage in alpharetta , georgia to jersey city new jersey","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. Locate the row corresponding to ""Alpharetta, Georgia"" in the table.
+2. Extract the square footage for ""Alpharetta, Georgia"": 254,000
+3. Locate the row corresponding to ""Jersey City, New Jersey"" in the table.
+4. Extract the square footage for ""Jersey City, New Jersey"": 107,000
+5. Calculate the ratio of square footage in Alpharetta, Georgia to Jersey City, New Jersey: 254,000 / 107,000
+
+**Final Answer:** 2.37, 2.37:1 
+",0.0,"## Decomposition:
+
+**sq1. What is the square footage in Alpharetta, Georgia?** (independent)
+**sq2. What is the square footage in Jersey City, New Jersey?** (independent)
+**sq3. What is the ratio of the square footage in Alpharetta, Georgia to Jersey City, New Jersey?** (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The square footage in Alpharetta, Georgia is 254,000.
+**Answer to sq2:** The square footage in Jersey City, New Jersey is 107,000.
+**Answer to sq3:** The ratio of the square footage in Alpharetta, Georgia to Jersey City, New Jersey is 254,000 / 107,000.
+
+## final_answer: 2.37 
+",100.0,"reasoning: To find the ratio of square footage in Alpharetta, Georgia to Jersey City, New Jersey, we need to divide the square footage of Alpharetta by the square footage of Jersey City. Alpharetta has 254,000 square feet and Jersey City has 107,000 square feet. The ratio is 254,000 / 107,000 = 2.38.
+answer: 2.38",100.0,False,False,True,False,False
+what is the average size ( in square feet ) of call centers in 2017?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. Identify the relevant data: The table provides the approximate size of call centers in square feet, which is 1,400,000.
+
+**Final Answer:**
+The average size of call centers in 2017 was 1,400,000 square feet. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the total size of all call centers in square feet? (independent)
+**sq2.** How many call centers are there? (independent)
+**sq3.** What is the average size of a call center in square feet? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total size of all call centers is 1,400,000 square feet.
+**Answer to sq2:** There are 17 call centers.
+**Answer to sq3:** The average size of a call center is 82,353 square feet (1,400,000 square feet / 17 call centers).
+
+## final_answer: 82353 
+",100.0,"reasoning: The table provides the approximate size of call centers in square feet, which is 1,400,000.  Since there is only one value provided for the approximate size of call centers, this value represents the average size. 
+answer: 1,400,000 
+",0.0,False,False,True,False,False
+what is the five year total return on the goldman sachs group inc.?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. Identify the relevant data: The table shows the cumulative total returns for Goldman Sachs Group, Inc. over the last five fiscal year ends. 
+2. Extract the total return for December 31, 2013: The total return is $248.36.
+
+**Final Answer:** The five-year total return on the Goldman Sachs Group, Inc. is $248.36. 
+",0.0,"## Decomposition:
+  sq1. What is the value of Goldman Sachs Group Inc. on 12/31/13? (independent)
+  sq2. What is the value of Goldman Sachs Group Inc. on 12/26/08? (independent)
+  sq3. What is the difference between the values on 12/31/13 and 12/26/08 for Goldman Sachs Group Inc.? (depends on sq1, sq2)
+  sq4. How do we express the total return as a percentage? (depends on sq3)
+
+## Answers:
+  Answer to sq1: The value of Goldman Sachs Group Inc. on 12/31/13 is $248.36.
+  Answer to sq2: The value of Goldman Sachs Group Inc. on 12/26/08 is $100.00.
+  Answer to sq3: The difference between the values on 12/31/13 and 12/26/08 for Goldman Sachs Group Inc. is $148.36.
+  Answer to sq4: We express the total return as a percentage by dividing the difference by the initial value and multiplying by 100. In this case, the total return is (148.36/100) * 100 = 148.36%.
+
+## Final_answer: 148.36 
+",100.0,"reasoning: The five-year total return for Goldman Sachs Group Inc. is calculated by comparing the investment value at the end of 2013 with the initial investment value in 2008. This represents the cumulative total return for the entire period. 
+answer: 248.36%",0.0,False,False,True,False,False
+"for 2011 and 2012 , what were average commercial mortgage recourse obligations in millions?","**Chosen Approach**: Evidence Extraction and Calculation
+
+**Steps:**
+
+1. **Extract Relevant Data**:  We need the commercial mortgage recourse obligations for both 2011 and 2012. From the table, we see:
+    - 2012: $47 million (December 31st)
+    - 2011: $54 million (January 1st)
+
+2. **Calculate the Average:** To find the average, we sum the values and divide by 2:
+    - Average = ($47 million + $54 million) / 2
+
+3. **Compute the Final Value:**
+    - Average = $101 million / 2 = $50.5 million
+
+**Final Answer**: The average commercial mortgage recourse obligations for 2011 and 2012 was $50.5 million. 
+",0.0,"## Decomposition:
+  sq1. What were the commercial mortgage recourse obligations in millions for 2011? (independent)
+  sq2. What were the commercial mortgage recourse obligations in millions for 2012? (independent)
+  sq3. What is the average of the commercial mortgage recourse obligations for 2011 and 2012? (depends on sq1, sq2)
+
+## Answers:
+  Answer to sq1: The commercial mortgage recourse obligations in millions for 2011 were $54.
+  Answer to sq2: The commercial mortgage recourse obligations in millions for 2012 were $43.
+  Answer to sq3: The average of the commercial mortgage recourse obligations for 2011 and 2012 is (54 + 43) / 2 = $48.5 million.
+
+## Final_answer: 48.5 
+",0.0,"reasoning: 'The average commercial mortgage recourse obligations for 2011 and 2012 can be calculated by averaging the January 1 and December 31 balances for each year. For 2011, the average is (54 + 47) / 2 = 50.5. For 2012, the average is (47 + 43) / 2 = 45.'
+answer: '2011: $50.5 million, 2012: $45 million' 
+",100.0,False,False,True,False,False
+what is the total net revenues in the consolidated statements of earnings in 2016?,"The provided table does not contain information about the total net revenues in the consolidated statements of earnings for 2016.
+
+**Final Answer:**  We cannot answer the question with the given information. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the net revenue in the consolidated statements of earnings in 2017? (independent)
+**sq2.** What is the percentage increase in net revenues from 2016 to 2017? (independent)
+**sq3.** Calculate the net revenues in 2016 based on the net revenue in 2017 and the percentage increase. (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The net revenue in the consolidated statements of earnings in 2017 was $32.73 billion.
+**Answer to sq2:** The percentage increase in net revenues from 2016 to 2017 was 6%.
+**Answer to sq3:** To calculate the net revenues in 2016, we can use the formula:
+Net revenue in 2016 = Net revenue in 2017 / (1 + Percentage increase) 
+Net revenue in 2016 = $32.73 billion / (1 + 0.06) = $30.87 billion.
+
+## Final_answer: 30.87 
+",100.0,"reasoning:  We need to find the total net revenues for 2016, and we are given that the total net revenues for 2017 were $32.73 billion, and that this amount was 6% higher than 2016.  Therefore, to find the total net revenue for 2016, we need to reduce the 2017 revenue by 6%.  This is done by dividing the 2017 revenue by 1.06, which results in approximately $30.90 billion.
+answer: 30.90 billion 
+",100.0,False,False,False,False,True
+what was the ratio of the increase in cash in 2009 due to the insurance of debt compared to the reduction of debt instruments,"The provided table does not contain information on the increase in cash in 2009 due to the issuance of debt and the reduction of debt instruments.  Therefore, it is impossible to calculate the ratio requested. 
+
+**Final Answer:** Insufficient data. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the value of the increase in cash in 2009 due to the issuance of debt? (independent)
+**sq2.** What was the value of the reduction of debt instruments in 2009? (independent)
+**sq3.** What is the ratio of the increase in cash due to debt issuance to the reduction of debt instruments? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The increase in cash in 2009 due to the issuance of debt was $2,900 million. 
+**Answer to sq2:** The reduction of debt instruments in 2009 was $900.1 million.
+**Answer to sq3:** The ratio of the increase in cash due to debt issuance to the reduction of debt instruments is 2,900 / 900.1 = **3.22**.
+
+## final_answer: 3.22 
+",100.0,"Reasoning: The context states that in 2008 there was a new issuance of debt of $2.9 billion and in 2009 there was a net reduction of debt instruments of $900.1 million. To find the ratio of the increase in cash in 2009 due to the issuance of debt compared to the reduction of debt instruments, we divide the issuance amount by the reduction amount.
+
+Answer: 3.22 
+",100.0,False,False,False,False,True
+what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . and the nasdaq copmosite for the period ended 1/3/2015?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. Identify the cumulative 5-year total stockholder return for Cadence Design Systems Inc. on 1/3/2015: 314.36
+2. Identify the cumulative 5-year total stockholder return for Nasdaq Composite on 1/3/2015: 223.74
+3. Calculate the difference: 314.36 - 223.74 = 90.62
+4. Calculate the percentage difference: (90.62 / 223.74) * 100 = 40.54%
+
+**Final Answer:** The difference in percentage cumulative 5-year total stockholder return for Cadence Design Systems Inc. and the Nasdaq Composite for the period ended 1/3/2015 is 40.54%. 
+",0.0,"## Decomposition:
+
+**sq1:** What was the cumulative 5-year total stockholder return for Cadence Design Systems Inc. on 1/3/2015? (independent)
+**sq2:** What was the cumulative 5-year total stockholder return for the Nasdaq Composite on 1/3/2015? (independent)
+**sq3:** What is the difference between the cumulative 5-year total stockholder return for Cadence Design Systems Inc. and the Nasdaq Composite on 1/3/2015? (depends on sq1, sq2)
+**sq4:** How do we express the difference in percentage? (depends on sq3)
+
+## Answers:
+
+**Answer to sq1:** The cumulative 5-year total stockholder return for Cadence Design Systems Inc. on 1/3/2015 was 314.36%. 
+**Answer to sq2:** The cumulative 5-year total stockholder return for the Nasdaq Composite on 1/3/2015 was 223.74%.
+**Answer to sq3:** The difference between the cumulative 5-year total stockholder return for Cadence Design Systems Inc. and the Nasdaq Composite on 1/3/2015 is 90.62%.
+**Answer to sq4:** We express the difference in percentage by simply stating the difference value followed by ""%"". In this case, the difference is 90.62%.
+
+## Final_answer: 90.62 
+",100.0,"reasoning: 'To find the difference in percentage cumulative 5-year total stockholder return for Cadence Design Systems Inc. and the Nasdaq Composite for the period ended 1/3/2015, we first find their respective values on that date: Cadence Design Systems Inc.: 314.36 Nasdaq Composite: 223.74 The difference in percentage is calculated as (Cadence Design Systems Inc. - Nasdaq Composite) / Nasdaq Composite * 100%: (314.36 - 223.74) / 223.74 * 100% = 40.44%'
+answer: '40%' 
+",0.0,True,False,False,False,False
+"in millions for 2013 and 2012 , what was the minimum collateral posted?","## Chosen Approach: Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant data:** The question asks for the minimum collateral posted in millions for both 2013 and 2012. This data is directly present in the table.
+
+2. **Extract the data:** From the table, we see the collateral posted in millions for 2013 is $18,178 and for 2012 is $24,296.
+
+**Final Answer:** The minimum collateral posted in millions for 2013 was **$18,178** and for 2012 was **$24,296**. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the collateral posted as of December 2013? (independent)
+**sq2.** What was the collateral posted as of December 2012? (independent)
+**sq3.** Which of the values from sq1 and sq2 is the minimum? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The collateral posted as of December 2013 was $18,178 million.
+**Answer to sq2:** The collateral posted as of December 2012 was $24,296 million.
+**Answer to sq3:**  The minimum collateral posted is $18,178 million.
+
+## final_answer: 18178 
+",100.0,"reason: 'The minimum collateral posted in millions for 2013 and 2012 is the amount listed in the ""Collateral Posted"" row of the table. Therefore, the minimum collateral posted for 2013 is $18,178 million and the minimum collateral posted for 2012 is $24,296 million.'
+answer: '2013 - $18,178 million, 2012 - $24,296 million' 
+",0.0,False,False,True,False,False
+what is the he company 2019s gross liability at the end of 2013 if including interest and penalties?,"The provided table and context do not contain information about the company's gross liability including interest and penalties for 2019. The table only shows the changes in the company's gross liability excluding interest and penalties for 2012 and 2013. 
+
+Therefore, I cannot answer the question about the company's gross liability including interest and penalties at the end of 2013. 
+
+**Final Answer:** Insufficient data to answer the question. 
+",0.0,"## Decomposition:
+ 
+ **sq1.** What is the company's gross liability at the end of 2013, excluding interest and penalties? (independent)
+ **sq2.** Is there any information about the interest and penalties included in the context? (independent) 
+
+ ## Answers:
+
+ **Answer to sq1.** The company's gross liability at the end of 2013, excluding interest and penalties, is $177,947.
+
+ **Answer to sq2.** The context mentions ""gross liability, excluding interest and penalties"", meaning the provided information does not include interest and penalties. 
+
+ ## final_answer: 
+  177947 
+",100.0,"reason: The table only shows the company's gross liability for unrecognized tax benefits, excluding interest and penalties.  The question asks for the gross liability including interest and penalties, but this information is not provided in the context.
+answer: This information is not available in the context. 
+",0.0,False,False,False,False,True
+what was the percentage cumulative 5-year total stockholder return for cadence design systems inc . for the period ended 1/3/2015?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant data:** We need to find the cumulative 5-year total stockholder return for Cadence Design Systems Inc. on 1/3/2015.
+2. **Locate the data in the table:** In the table, the column ""1/3/2015"" represents the 5-year cumulative total stockholder return for each entity. The row for Cadence Design Systems Inc. shows a value of 314.36.
+
+**Final Answer:** The percentage cumulative 5-year total stockholder return for Cadence Design Systems Inc. for the period ended 1/3/2015 was 314.36%. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the value of Cadence Design Systems Inc. on 1/2/2010? (independent)
+**sq2.** What was the value of Cadence Design Systems Inc. on 1/3/2015? (independent)
+**sq3.** What is the difference between the value on 1/3/2015 and 1/2/2010? (depends on sq1, sq2)
+**sq4.** What is the percentage increase from the value on 1/2/2010 to 1/3/2015? (depends on sq1, sq3)
+
+## Answers:
+
+**Answer to sq1:** The value of Cadence Design Systems Inc. on 1/2/2010 was 100.00.
+**Answer to sq2:** The value of Cadence Design Systems Inc. on 1/3/2015 was 314.36.
+**Answer to sq3:** The difference between the value on 1/3/2015 and 1/2/2010 is 214.36.
+**Answer to sq4:** The percentage increase from the value on 1/2/2010 to 1/3/2015 is 214.36%.
+
+## Final_answer: 214.36 
+",100.0,"reason: The cumulative 5-year total stockholder return for Cadence Design Systems Inc. for the period ended 1/3/2015 is found in the table, under the 1/3/2015 column and Cadence Design Systems Inc. row.  The value is 314.36, which represents a 314.36% return.
+answer: 314.36% 
+",0.0,False,False,True,False,False
+what is the percent change in gain on land sales from 2000 to 2001?,"**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+
+1. **Identify the relevant data:** We need the gain on land sales for both 2000 and 2001. From the table, we find:
+    - Gain on land sales in 2000: $9165
+    - Gain on land sales in 2001: $5080
+2. **Calculate the difference:** The difference in gain on land sales is $9165 - $5080 = $4085.
+3. **Calculate the percentage change:** The percentage change is calculated as (difference / original value) * 100. In this case, it's ($4085 / $9165) * 100 = 44.64%.
+
+**Final Answer**:
+The percent change in gain on land sales from 2000 to 2001 is approximately 44.64%, 0.4464 or .446. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1: What is the value of gain on land sales in 2001?"",
+  ""sq2: What is the value of gain on land sales in 2000?"",
+  ""sq3: What is the difference between the values for 2001 and 2000 for gain on land sales?"",
+  ""sq4: What is the percentage change in gain on land sales from 2000 to 2001?""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The value of gain on land sales in 2001 is $5,080."",
+  ""Answer to sq2: The value of gain on land sales in 2000 is $9,165."",
+  ""Answer to sq3: The difference between the values for 2001 and 2000 for gain on land sales is -$4,085."",
+  ""Answer to sq4: The percentage change in gain on land sales from 2000 to 2001 is -44.6%.""
+ ],
+ ""final_answer"": ""-44.6""
+}
+```",100.0,"reasoning: The percent change in gain on land sales from 2000 to 2001 is calculated by dividing the difference in gain by the original gain and multiplying by 100%.  The gain on land sales in 2000 was $9,165 and in 2001 it was $5,080.  The difference is $9,165 - $5,080 = $4,085.  The percent change is $4,085 / $9,165 * 100% = 44.6%.
+answer: 44.6%",100.0,True,False,False,False,False
+"in 2006 , what percent of unrealized loss did foreign currency translation offset?","**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant values:** 
+    * Foreign currency translation in 2006: $197 million
+    * Total unrealized loss in 2006: $224 million (calculated as the absolute value of total accumulated other comprehensive (loss) income)
+2. **Calculate the percentage offset:**
+    * Divide the foreign currency translation by the total unrealized loss: $197 million / $224 million = 0.8795
+    * Convert the result to a percentage by multiplying by 100: 0.8795 * 100 = 87.95%
+
+**Final Answer:** In 2006, foreign currency translation offset 87.95% of the unrealized loss. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1: What was the total unrealized loss in 2006? (independent)"",
+  ""sq2: What was the amount of foreign currency translation in 2006? (independent)"",
+  ""sq3: What is the ratio of the amount of foreign currency translation to the total unrealized loss in 2006? (depends on sq1, sq2)"",
+  ""sq4: How do we express the ratio as a percentage? (depends on sq3)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The total unrealized loss in 2006 was $224 million."",
+  ""Answer to sq2: The amount of foreign currency translation in 2006 was $197 million."",
+  ""Answer to sq3: The ratio of the amount of foreign currency translation to the total unrealized loss in 2006 is 0.879."",
+  ""Answer to sq4: We express the ratio as a percentage by multiplying it by 100%. In this case, the percentage is 87.9%.""
+ ],
+ ""final_answer"": ""87.9""
+}
+```",0.0,"reason: 'To find the percentage of the unrealized loss that foreign currency translation offset, we first need to find the total unrealized loss for 2006. This includes the unrealized loss on available-for-sale securities and the unrealized loss on cash flow hedges, which are $227 million and $1 million, respectively. The total unrealized loss is $228 million. The foreign currency translation gain is $197 million. The percentage offset is calculated by dividing the foreign currency translation gain by the total unrealized loss and multiplying by 100%. 
+
+Percentage offset = (Foreign currency translation gain / Total unrealized loss) * 100% = ($197 million / $228 million) * 100% = 86.4%.'
+answer: '86.4%' 
+",100.0,True,False,False,False,False
+what are the deferred fuel cost revisions as a percentage of 2004 net revenue?,"##  Chosen Approach: Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the deferred fuel cost revisions:**  From the table, the deferred fuel cost revisions for 2004 are -29.4 million dollars.
+2. **Identify the 2004 net revenue:** From the table, the 2004 net revenue is $931.3 million.
+3. **Calculate the percentage:** Divide the deferred fuel cost revisions by the 2004 net revenue and multiply by 100: (-29.4 million / $931.3 million) * 100 = -3.15%
+
+**Final Answer:**
+
+The deferred fuel cost revisions are approximately -3.15% of the 2004 net revenue. 
+",0.0,"## Decomposition:
+
+**sq1. What are the deferred fuel cost revisions in millions?** (independent)
+**sq2. What is the 2004 net revenue in millions?** (independent)
+**sq3. What is the deferred fuel cost revisions as a percentage of 2004 net revenue?** (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The deferred fuel cost revisions are $29.4 million.
+**Answer to sq2:** The 2004 net revenue is $931.3 million.
+**Answer to sq3:** The deferred fuel cost revisions as a percentage of 2004 net revenue are (29.4 / 931.3) * 100 = 3.16%.
+
+## final_answer: 3.16",100.0,"reasoning: 'To calculate the deferred fuel cost revisions as a percentage of 2004 net revenue, we divide the deferred fuel cost revisions by the 2004 net revenue: $29.4 million / $931.3 million = 0.0316, which translates to approximately 3.16%.'
+answer: '3.16%' 
+",100.0,True,False,False,False,False
+in millions for 2012 2011 what was the maximum net derivative liabilities under bilateral agreements?,"## Reasoning Process:
+
+**Objective:** Determine the maximum potential net derivative liabilities under bilateral agreements in 2012 and 2011.
+
+**Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify Relevant Data:** The table provides information on ""net derivative liabilities under bilateral agreements"" and ""additional collateral or termination payments"" for both 2012 and 2011.
+
+2. **Understand Maximum Potential:**  The maximum potential net derivative liability would occur if the firm faced a two-notch downgrade and all counterparties called for additional collateral or termination payments.
+
+3. **Calculate Maximum Liabilities:**
+    * **2012:** Net derivative liabilities ($27,885 million) + Additional collateral or termination payments for a two-notch downgrade ($2,500 million) = **$30,385 million**
+    * **2011:** Net derivative liabilities ($35,066 million) + Additional collateral or termination payments for a two-notch downgrade ($2,183 million) = **$37,249 million**
+
+**Final Answer:**
+
+In millions, the maximum net derivative liabilities under bilateral agreements were **$30,385** in 2012 and **$37,249** in 2011. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the net derivative liabilities under bilateral agreements for 2012? (independent)
+**sq2.** What was the net derivative liabilities under bilateral agreements for 2011? (independent)
+**sq3.** Which year had the higher value of net derivative liabilities under bilateral agreements? (depends on sq1, sq2)
+**sq4.** How do we express the value in millions? (depends on sq3)
+
+## Answers:
+
+**Answer to sq1:** The net derivative liabilities under bilateral agreements for 2012 were $27,885 million.
+**Answer to sq2:** The net derivative liabilities under bilateral agreements for 2011 were $35,066 million.
+**Answer to sq3:** The year with the higher value of net derivative liabilities under bilateral agreements was 2011.
+**Answer to sq4:** We express the value in millions by stating the value followed by ""million"". In this case, the value is $35,066 million.
+
+## Final_answer: 35066 
+",100.0,"reasoning: The maximum net derivative liabilities under bilateral agreements can be calculated by adding the net derivative liabilities and the additional collateral or termination payments for a two-notch downgrade. For 2012, this would be $27885 + $2500 = $30385 million. For 2011, it would be $35066 + $2183 = $37249 million. 
+answer: 2012: $30,385 million; 2011: $37,249 million. 
+",0.0,False,False,True,False,False
+for the quarter ended december 312010 what was percent of the total number of shares attested to upc by employees to pay stock option exercise prices,"The provided table does not contain information about stock options or employee stock purchase plans. Therefore, we cannot determine the percentage of shares attested to by employees to pay stock option exercise prices.
+
+**Final Answer:**  This information is not available in the provided table. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the total number of shares purchased during the fourth quarter of 2010? (independent)
+**sq2.** What is the number of shares purchased as part of a publicly announced plan or program during the fourth quarter of 2010? (independent)
+**sq3.** What is the difference between the total number of shares purchased and the number of shares purchased as part of a publicly announced plan or program? (depends on sq1, sq2)
+**sq4.** What percentage of the total number of shares purchased does the difference represent? (depends on sq1, sq3)
+
+## Answers:
+
+**Answer to sq1:** The total number of shares purchased during the fourth quarter of 2010 was 3,063,816.
+**Answer to sq2:** The number of shares purchased as part of a publicly announced plan or program during the fourth quarter of 2010 was 2,500,596.
+**Answer to sq3:** The difference between the total number of shares purchased and the number of shares purchased as part of a publicly announced plan or program is 563,220.
+**Answer to sq4:** The percentage of the total number of shares purchased that the difference represents is approximately 18.38%. (Calculated as (563,220 / 3,063,816) * 100).
+
+## final_answer: 18.38 
+",100.0,"reason: The table shows the total number of shares purchased by Union Pacific Corporation (UPC) in the fourth quarter of 2010. It does not provide information on the percentage of shares attested to UPC by employees to pay stock option exercise prices. Therefore, the question cannot be answered from the given table.
+answer: The answer cannot be determined from the table provided. 
+",0.0,False,False,False,False,True
+what percent of contracts for long-term purchases of capacity are due currently?,"## Reasoning Process:
+
+**1. Identify Relevant Data:** 
+   - We need to find the total commitment capacity and the commitment capacity due currently. 
+   - From the table, the total commitment capacity is 8369 million. 
+   - We need to sum the commitment capacity for 2003-2007 to find the capacity due currently.
+
+**2. Calculate Commitment Capacity Due Currently:**
+   - Sum the commitment capacity for years 2003-2007: $643 + 635 + 629 + 614 + 589 = 3110 million.
+
+**3. Calculate Percentage:**
+   - Divide the commitment capacity due currently by the total commitment capacity: 3110 / 8369 ≈ 0.3718
+   - Multiply by 100 to express as a percentage: 0.3718 * 100 ≈ 37.18%
+
+**Final Answer:** Approximately 37.18% of contracts for long-term purchases of capacity are due currently. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the total commitment capacity for contracts due currently? (independent)
+**sq2.** What is the total commitment capacity for all contracts? (independent)
+**sq3.** What is the percentage of the total commitment capacity for contracts due currently? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total commitment capacity for contracts due currently is $8,369 million.
+**Answer to sq2:** The total commitment capacity for all contracts is $8,369 million. 
+**Answer to sq3:** The percentage of the total commitment capacity for contracts due currently is 100%. This is calculated by dividing the total commitment capacity for contracts due currently ($8,369 million) by the total commitment capacity for all contracts ($8,369 million) and multiplying by 100%. 
+
+## Final_answer: 100% 
+",0.0,"reason: 'To determine the percentage of contracts for long-term purchases of capacity due currently, we need to consider the ""Commitment Capacity"" column for the year 2003, which is $643 million. Then, we divide this amount by the total ""Commitment Capacity"" of $8369 million and multiply by 100%.'
+answer: '7.67%' 
+",100.0,False,False,False,False,True
+"what was the difference in millions of deferral of revenue and recognition of deferred revenue for the fiscal year ended june 30 , 2019?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify relevant data**: The question asks for the difference between ""deferral of revenue"" and ""recognition of deferred revenue"" for the fiscal year ended June 30, 2019. 
+2. **Extract data**: From the table, we find:
+    - Deferral of revenue: $3,008 million
+    - Recognition of deferred revenue: -$3,084 million (note the negative sign)
+3. **Calculate the difference**: $3,008 million - (-$3,084 million) = $6,092 million
+
+**Final Answer:** The difference between deferral of revenue and recognition of deferred revenue for the fiscal year ended June 30, 2019 was $6,092 million. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the amount of deferral of revenue for the fiscal year ended June 30, 2019? (independent)
+**sq2.** What was the amount of recognition of deferred revenue for the fiscal year ended June 30, 2019? (independent)
+**sq3.** What is the difference between the deferral of revenue and recognition of deferred revenue for the fiscal year ended June 30, 2019? (depends on sq1, sq2)
+**sq4.** How do we express the difference in millions? (depends on sq3)
+
+## Answers:
+
+**Answer to sq1:** The amount of deferral of revenue for the fiscal year ended June 30, 2019 was $3,008 million.
+**Answer to sq2:** The amount of recognition of deferred revenue for the fiscal year ended June 30, 2019 was $3,084 million.
+**Answer to sq3:** The difference between the deferral of revenue and recognition of deferred revenue for the fiscal year ended June 30, 2019 is $76 million.
+**Answer to sq4:** We express the difference in millions by stating the value followed by ""million"". In this case, the value is $76 million.
+
+## Final_answer: 76 
+",100.0,"reason: To find the difference between deferral of revenue and recognition of deferred revenue, we subtract the recognition of deferred revenue from the deferral of revenue. This gives us: $3008 - $3084 = -$76. 
+answer: -$76 million 
+",100.0,False,False,True,False,False
+what is the average repurchase price per share paid during 2006?,"The provided text doesn't contain the average repurchase price per share paid during 2006. We can calculate the average repurchase price by dividing the total cash spent on repurchases by the number of shares repurchased.  
+
+**However, the text only states that ""snap-on repurchased 2616618 shares of common stock for $ 109.8 million in 2006"".  We do not have the average price per share.**
+
+**Final Answer:** The information required to calculate the average repurchase price per share in 2006 is not available in the provided text. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What was the total amount of money Snap-on spent repurchasing shares in 2006?"",
+  ""sq2. How many shares did Snap-on repurchase in 2006?"",
+  ""sq3. What is the average repurchase price per share in 2006, calculated by dividing the total amount spent by the number of shares repurchased?""
+ ],
+ ""answers"": [
+  ""Answer to sq1: Snap-on spent $109.8 million repurchasing shares in 2006."",
+  ""Answer to sq2: Snap-on repurchased 2,616,618 shares in 2006."",
+  ""Answer to sq3: The average repurchase price per share in 2006 is $109,800,000 / 2,616,618 shares = $41.94.""
+ ],
+ ""final_answer"": ""41.94""
+}
+```",100.0,"reasoning: 'To calculate the average repurchase price per share in 2006, we divide the total amount spent on share repurchases by the number of shares repurchased:  Total amount spent: $109.8 million Number of shares repurchased: 2,616,618 shares Average repurchase price per share = Total amount spent / Number of shares repurchased = $109,800,000 / 2,616,618 = $41.95'
+answer: $41.95 
+",100.0,False,False,False,False,True
+by how much did the receivables from the money pool differ from 2009 to 2010?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the values for 2009 and 2010:**
+    - Receivables from the money pool in 2009: $50,131,000 (as the values are in thousands)
+    - Receivables from the money pool in 2010: $63,003,000
+
+2. **Calculate the difference:**
+    - $63,003,000 - $50,131,000 = $12,872,000
+
+**Final Answer:** The receivables from the money pool differed by $12,872,000 from 2009 to 2010. 
+",0.0,"## Decomposition:
+
+sq1. What was the value of receivables from the money pool in 2010? (independent)
+sq2. What was the value of receivables from the money pool in 2009? (independent)
+sq3. What is the difference between the receivables from the money pool in 2010 and 2009? (depends on sq1, sq2)
+sq4. How do we express the difference in thousands? (depends on sq3)
+
+## Answers:
+
+Answer to sq1: The value of receivables from the money pool in 2010 was $63,003 thousand.
+Answer to sq2: The value of receivables from the money pool in 2009 was $50,131 thousand.
+Answer to sq3: The difference between the receivables from the money pool in 2010 and 2009 is $12,872 thousand.
+Answer to sq4: We express the difference in thousands by simply stating the difference value followed by ""thousand"". In this case, the difference is $12,872 thousand.
+
+## final_answer: 12872 
+",0.0,"reason: 'To determine the difference in receivables from the money pool between 2009 and 2010, we subtract the 2009 value from the 2010 value: $63,003 (2010) - $50,131 (2009) = $12,872.'
+answer: '$12,872' 
+",100.0,True,False,False,False,False
+"what was the percentage decline in recorded international slot and route authorities to $ 708 million from $ 736 million as of december 31 , 2010 and 2009 , respectively .","The question asks for the percentage decline in recorded international slot and route authorities. However, the provided table does not contain information about international slot and route authorities. Therefore, I cannot answer the question with the given data. 
+
+**Final Answer:** Insufficient data to answer the question. 
+",0.0,"## Decomposition:
+
+**sq1. What was the difference in the recorded international slot and route authorities between December 31, 2010, and December 31, 2009? (independent)**
+**sq2. What was the original value of the recorded international slot and route authorities as of December 31, 2009? (independent)**
+**sq3. Calculate the percentage decline from the original value to the final value. (depends on sq1, sq2)**
+
+## Answers:
+
+**Answer to sq1:** The difference in recorded international slot and route authorities between December 31, 2010, and December 31, 2009, is $736 million - $708 million = $28 million.
+
+**Answer to sq2:** The original value of the recorded international slot and route authorities as of December 31, 2009, was $736 million.
+
+**Answer to sq3:** The percentage decline from the original value of $736 million to the final value of $708 million is (28 million / 736 million) * 100% = 3.8%.
+
+## final_answer: 3.8 
+",100.0,"reason: The question is asking for the percentage decline in recorded international slot and route authorities, but the table only contains data on pension, retiree medical and other. This information is not relevant to the question. Therefore, the answer cannot be determined from the provided context.
+answer: Unable to answer. 
+",0.0,False,False,False,False,True
+what is the percent change in number of shares purchased by employees between 2013 and 2014?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the number of shares purchased in 2013:** The table states that employees purchased 1.5 million shares in 2013.
+2. **Identify the number of shares purchased in 2014:** The table states that employees purchased 1.4 million shares in 2014.
+3. **Calculate the difference:** 1.5 million - 1.4 million = 0.1 million shares
+4. **Calculate the percentage change:** (0.1 million / 1.5 million) * 100 = 6.67%
+
+**Final Answer:** 6.67%, 0.0667, .0667 
+",0.0,"## Decomposition:
+
+**sq1.** What is the number of shares purchased by employees in 2014? (independent)
+**sq2.** What is the number of shares purchased by employees in 2013? (independent)
+**sq3.** What is the difference in the number of shares purchased between 2014 and 2013? (depends on sq1, sq2)
+**sq4.** What is the percentage change in the number of shares purchased between 2013 and 2014? (depends on sq2, sq3)
+
+## Answers:
+
+**Answer to sq1:** The number of shares purchased by employees in 2014 was 1.4 million.
+**Answer to sq2:** The number of shares purchased by employees in 2013 was 1.5 million.
+**Answer to sq3:** The difference in the number of shares purchased between 2014 and 2013 is -0.1 million.
+**Answer to sq4:** The percentage change in the number of shares purchased between 2013 and 2014 is -6.67%.
+
+## Final_answer: 
+-6.67 
+",100.0,"reason: 'The number of shares purchased by employees in 2013 was 1.5 million and in 2014 it was 1.4 million. The change in number of shares is 1.4 million - 1.5 million = -0.1 million. The percent change is (-0.1 million / 1.5 million) * 100% = -6.67%. '
+answer: '-6.7%' 
+",100.0,True,False,False,False,False
+what is the average size ( in square feet ) of switching centers in 2017?,"**Chosen Approach:**  Evidence Extraction
+
+**Steps:**
+
+1. **Identify Relevant Data:** The table provides the approximate size in square feet for switching centers in 2017: 1,300,000 square feet.
+
+**Final Answer:** The average size of switching centers in 2017 was 1,300,000 square feet. 
+",0.0,"## Decomposition:
+
+**sq1. What is the total size (in square feet) of all switching centers? (independent)**
+
+**sq2. How many switching centers are there? (independent)**
+
+**sq3. What is the average size of a switching center (in square feet)? (depends on sq1, sq2)** 
+
+## Answers:
+
+**Answer to sq1:** The total size of all switching centers is 1,300,000 square feet.
+
+**Answer to sq2:** There are 61 switching centers.
+
+**Answer to sq3:** The average size of a switching center is calculated by dividing the total size by the number of switching centers: 1,300,000 square feet / 61 switching centers = 21,311.48 square feet per switching center.
+
+## Final_answer: 21311.48 
+",100.0,"reasoning: 'To find the average size of switching centers in 2017, we need to divide the total square footage of switching centers by the number of switching centers. Total square footage is 1,300,000 square feet and the number of switching centers is 61.  Therefore, the average size is 1,300,000 / 61 = 21,311.48 square feet.'
+answer: '21,311.48' 
+",50.0,False,False,True,False,False
+at the average grant date fair value per share what is the value in thousands of the shares outstanding but not yet earned under incentive shares at the end of the year ? \\n,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify Relevant Information:** The question asks for the value of shares outstanding but not yet earned at the end of the year, using the average grant date fair value per share. We need to locate the row in the table that represents the ""end of year"" and extract the corresponding values for shares and average grant date fair value per share.
+
+2. **Extract Values:** From the table, the ""end of year"" row shows:
+   - Shares: 4999 (in thousands)
+   - Average grant date fair value per share: $50.33
+
+3. **Calculate Total Value:** Multiply the number of shares by the average grant date fair value per share: 4999 * $50.33 = $251,636.67
+
+**Final Answer:** The value of shares outstanding but not yet earned under incentive shares at the end of the year is $251,636.67 thousand (or approximately $251,637 thousand). 
+",0.0,"## Decomposition:
+
+**sq1.** What is the average grant date fair value per share at the end of the year? (independent)
+**sq2.** What is the number of shares outstanding but not yet earned under incentive shares at the end of the year? (independent)
+**sq3.** What is the value of the shares outstanding but not yet earned under incentive shares at the end of the year, calculated by multiplying the average grant date fair value per share and the number of shares outstanding but not yet earned? (depends on sq1, sq2)
+**sq4.** How do we express the value in thousands? (depends on sq3)
+
+## Answers:
+
+**Answer to sq1:** The average grant date fair value per share at the end of the year is $50.33.
+**Answer to sq2:** The number of shares outstanding but not yet earned under incentive shares at the end of the year is 4,999 (in thousands).
+**Answer to sq3:** The value of the shares outstanding but not yet earned under incentive shares at the end of the year is 4,999 * $50.33 = $251,594.67 (in thousands).
+**Answer to sq4:** We express the value in thousands by dividing the value by 1,000. In this case, the value is $251,594.67 / 1,000 = $251.59.
+
+## final_answer: 251.59 
+",0.0,"reasoning: 'To find the value of the shares outstanding but not yet earned at the end of the year, we multiply the end of year shares by the average grant date fair value per share: 4,999,000 shares * $50.33/share = $251,594,670. Then we convert this value to thousands: $251,594,670 / 1000 = $251,595 (rounded to the nearest thousand)'
+answer: '251,595' 
+",100.0,False,False,True,False,False
+"what was the value in thousands of unvested restricted stock and performance awards at the weighted-averagegrant-datefair value as of december 31 , 2018?\\n","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. The question asks for the value of unvested restricted stock and performance awards at December 31, 2018.
+2. The table provides data for unvested restricted stock and performance awards at December 31, 2018, with the weighted-average grant-date fair value.
+3. The value for the weighted-average grant-date fair value for unvested restricted stock and performance awards at December 31, 2018 is $108.51.
+
+**Final Answer:**
+$108.51 thousand 
+",0.0,"## Decomposition:
+
+**sq1. What was the total number of unvested restricted stock and performance awards at December 31, 2018?** (independent)
+**sq2. What was the weighted-average grant-date fair value per share for unvested restricted stock and performance awards at December 31, 2018?** (independent)
+**sq3. What is the total value of the unvested restricted stock and performance awards at December 31, 2018, in thousands?** (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total number of unvested restricted stock and performance awards at December 31, 2018, was 1,084 thousand shares.
+**Answer to sq2:** The weighted-average grant-date fair value per share for unvested restricted stock and performance awards at December 31, 2018, was $108.51.
+**Answer to sq3:** The total value of the unvested restricted stock and performance awards at December 31, 2018, in thousands, is the product of the total number of unvested shares and the weighted-average grant-date fair value per share, which is (1084 thousand shares) * ($108.51/share) = $117,584.44 thousand.
+
+## Final_answer: 117584.44 
+",100.0,"reasoning: The value of unvested restricted stock and performance awards at the weighted-average grant-date fair value as of December 31, 2018 is obtained by multiplying the shares (in thousands) unvested at December 31, 2018 by the weighted-average grant-date fair value. The table shows that the shares unvested at December 31, 2018 were 1084 thousand and the weighted-average grant-date fair value was $108.51.  Therefore, the value is calculated as 1084 * 108.51 = 117,666.84.
+answer: 117,666.84",100.0,False,False,True,False,False
+total purchase commitments over the next two years are what ( in thousands ) ?\\n\\n\\n,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. We need to find the total purchase commitments for the next two years. 
+2. The table provides the commitments for 2006 and 2007, which are the next two years.
+3. The table shows a total of $3,772,000 (in thousands) for these two years.
+
+**Final Answer:** The total purchase commitments over the next two years are $3,772,000 (in thousands). 
+",0.0,"## Decomposition:
+
+**sq1. What is the value of total purchase commitments for 2006? (independent)**
+**sq2. What is the value of total purchase commitments for 2007? (independent)**
+**sq3. What is the total of purchase commitments for 2006 and 2007? (depends on sq1 and sq2)**
+**sq4. How do we express the total purchase commitments in thousands? (depends on sq3)**
+
+## Answers:
+
+**Answer to sq1:** The value of total purchase commitments for 2006 is $2,408 thousand.
+**Answer to sq2:** The value of total purchase commitments for 2007 is $1,364 thousand.
+**Answer to sq3:** The total of purchase commitments for 2006 and 2007 is $3,772 thousand.
+**Answer to sq4:** We express the total purchase commitments in thousands by stating the value followed by ""thousand"". In this case, the value is $3,772 thousand.
+
+## final_answer: 3772 
+",100.0,"reasoning: The table clearly shows the total purchase commitments for 2006 and 2007, which are $2,408,000 and $1,364,000 respectively.  The total purchase commitments over the next two years are simply the sum of these two figures.
+answer: $3,772,000. 
+",0.0,False,False,True,False,False
+what was the cumulative total stockholder return percentage for illumina inc . common stock for the four years end 2003?,"**Chosen Approach:**  Evidence Extraction 
+
+**Steps:**
+1.  **Identify relevant data:** The question asks for the cumulative total stockholder return percentage for Illumina Inc. common stock for the four years ending in 2003. This information is located in the table, specifically in the ""Illumina Inc."" row and the ""December 26, 2003"" column.
+2.  **Extract the data:**  The table shows that Illumina Inc. had a cumulative total stockholder return of 43.81% at the end of 2003.
+
+**Final Answer:**
+The cumulative total stockholder return percentage for Illumina Inc. common stock for the four years ending 2003 was 43.81%. 
+",0.0,"## Decomposition:
+
+**sq1. What was the cumulative total stockholder return percentage for Illumina, Inc. common stock on December 26, 2003?** (independent)
+**sq2. What was the cumulative total stockholder return percentage for Illumina, Inc. common stock on July 27, 2000?** (independent)
+**sq3. What is the difference between the values for December 26, 2003, and July 27, 2000, for Illumina, Inc. common stock?** (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The cumulative total stockholder return percentage for Illumina, Inc. common stock on December 26, 2003, was 43.81%.
+**Answer to sq2:** The cumulative total stockholder return percentage for Illumina, Inc. common stock on July 27, 2000, was 100.00%.
+**Answer to sq3:** The difference between the values for December 26, 2003, and July 27, 2000, for Illumina, Inc. common stock is -56.19%.
+
+## Final_answer: -56.19 
+",100.0,"reasoning: To find the cumulative total stockholder return percentage for Illumina, Inc. common stock for the four years ending 2003, we need to look at the value on December 26, 2003, which is $43.81, and compare it to the initial investment on July 27, 2000, which is $100.00. The percentage change is calculated as: (Final Value - Initial Value) / Initial Value * 100%. 
+answer: -56.19% 
+",100.0,False,False,True,False,False
+what is the yearly interest payment related to the $ 375 million notional amount included in the swap terms?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. The question asks for the yearly interest payment related to the $375 million notional amount included in the swap terms. 
+2. The table provides details about the swap terms. 
+3.  The table states that the company receives a 5.0% annual interest payment on the $375 million notional amount.
+
+**Final Answer:**
+The yearly interest payment related to the $375 million notional amount included in the swap terms is $18,750,000. This is calculated as 5% of $375,000,000. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What is the annual interest payment on the $375 million notional amount the company receives?"",
+  ""sq2. How do we express the annual interest payment in millions?""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The company receives an annual interest payment of 5.0% on the $375 million notional amount, which is calculated as 0.05 * $375 million = $18.75 million."",
+  ""Answer to sq2: We express the annual interest payment in millions by stating the value followed by 'million'. In this case, the value is $18.75 million.""
+ ],
+ ""final_answer"": ""18.75""
+}
+```",100.0,"reasoning: The yearly interest payment related to the $375 million notional amount included in the swap terms is 5.0% of the notional amount. 
+answer: $18,750,000 
+",0.0,False,False,True,False,False
+what is the net change in the balance of unrecognized tax benefits during 2015?,"**Chosen Approach:**  Evidence Extraction
+
+**Steps:**
+1. **Identify Relevant Data:** The question asks for the net change in unrecognized tax benefits during 2015. We need to find the balance at December 31, 2015, and the balance at January 1, 2015.
+2. **Extract Data:**  From the table:
+    * Balance at December 31, 2015: $28,114 (in thousands)
+    * Balance at January 1, 2015: $31,947 (in thousands)
+3. **Calculate Net Change:** Subtract the balance at January 1 from the balance at December 31: $28,114 - $31,947 = -$3,833 (in thousands)
+
+**Final Answer:**
+The net change in the balance of unrecognized tax benefits during 2015 was -$3,833 thousand. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the balance of unrecognized tax benefits at December 31, 2015? (independent)
+**sq2.** What is the balance of unrecognized tax benefits at January 1, 2015? (independent)
+**sq3.** What is the difference between the balance at December 31, 2015, and the balance at January 1, 2015? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The balance of unrecognized tax benefits at December 31, 2015, is $28,114 thousand.
+**Answer to sq2:** The balance of unrecognized tax benefits at January 1, 2015, is $31,947 thousand.
+**Answer to sq3:** The difference between the balance at December 31, 2015, and the balance at January 1, 2015, is -$3,833 thousand.
+
+## Final_answer: -3833 
+",100.0,"reasoning: The net change in the balance of unrecognized tax benefits during 2015 is calculated by subtracting the balance at January 1, 2015 from the balance at December 31, 2015.  
+The balance at January 1, 2015 is $31,947 thousand, and the balance at December 31, 2015 is $28,114 thousand.  
+Therefore, the net change is $28,114 - $31,947 = -$3,833 thousand.
+answer: -$3,833 thousand 
+",0.0,False,False,True,False,False
+in 2011 what was the total operating costs in millions,"## Reasoning Process:
+
+**Chosen Approach:** Evidence Extraction 
+
+**Steps:**
+
+1.  **Identify the relevant column:** The table contains information on ""percent of total operating expenses,"" which is the relevant data for this question.
+2.  **Locate the data for 2011:**  The row corresponding to the year 2011 shows the percent of total operating expenses to be 33.2%.
+3.  **Understand the meaning of the data:** The percentage represents the proportion of total operating costs attributed to fuel expenses.
+4.  **Analyze the question:** The question asks for the total operating costs in millions, not just the fuel costs. We cannot directly determine the total operating costs from the provided data as we only have the percentage of operating costs attributed to fuel.
+
+**Final Answer:**  We can't determine the total operating costs in millions for 2011 based on the provided table. The table only provides the percentage of total operating expenses attributed to fuel, not the actual total operating cost figures. 
+",0.0,"## Decomposition:
+
+**sq1. What is the total cost of fuel for 2011? (independent)**
+**sq2. What is the percentage of total operating expenses represented by fuel costs for 2011? (independent)**
+**sq3. What is the total operating cost for 2011? (depends on sq1, sq2)** 
+
+## Answers:
+
+**Answer to sq1:**  The total cost of fuel for 2011 was $8,304 million.
+**Answer to sq2:** The percentage of total operating expenses represented by fuel costs in 2011 was 33.2%.
+**Answer to sq3:** To find the total operating costs for 2011, we need to find the total cost based on the fuel cost representing 33.2% of the operating costs. We can set up a proportion:
+ * $8,304 million / 33.2% = x / 100% 
+ * Solving for x, we get:  x = $24,982 million.
+
+## Final_answer: 24982 
+",100.0,"reasoning: 'To find the total operating costs in 2011, we need to determine the percentage of operating expenses represented by fuel costs and use it to calculate the total operating costs. The table shows fuel costs represented 33.2% of total operating expenses in 2011. We can set up a proportion to find the total operating costs: 33.2% / $8304 million = 100% / x. Solving for x, we get x = $8304 million * 100% / 33.2% = $25,012 million.'
+answer: 25,012 million 
+",100.0,False,False,True,False,False
+what is the net change in aon 2019s unpaid restructuring liabilities during 2007?,"The provided table represents the activity related to restructuring plan liabilities for the years 2005, 2006, and 2007, not for 2019. Therefore, we cannot answer the question about AON's unpaid restructuring liabilities in 2019. 
+
+**Final Answer:** Insufficient data to answer the question. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the balance of Aon's unpaid restructuring liabilities at December 31, 2006? (independent)
+**sq2.** What was the balance of Aon's unpaid restructuring liabilities at December 31, 2007? (independent)
+**sq3.** What is the difference between the balances at December 31, 2007, and December 31, 2006? (depends on sq1, sq2)
+
+
+## Answers:
+
+**Answer to sq1:** The balance of Aon's unpaid restructuring liabilities at December 31, 2006 was $134 million.
+**Answer to sq2:** The balance of Aon's unpaid restructuring liabilities at December 31, 2007 was $63 million.
+**Answer to sq3:** The difference between the balances at December 31, 2007, and December 31, 2006, is -$71 million.
+
+
+## final_answer: -71 
+",100.0,"reason: The question asks for the net change in unpaid restructuring liabilities during 2007. This can be calculated by subtracting the balance at December 31, 2006, from the balance at December 31, 2007. The table shows the balance at December 31, 2006, to be $134 million and the balance at December 31, 2007, to be $63 million. The difference between these two balances is -$71 million. This represents a decrease in the unpaid restructuring liabilities during 2007.
+answer: -$71 million 
+",100.0,False,False,False,False,True
+what was the difference in percentage five-year cumulative return for intel versus the s&p 500 index for the five years ended 2013?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant values:**
+   - Intel's five-year cumulative return in 2013: $214
+   - S&P 500 index's five-year cumulative return in 2013: $236
+
+2. **Calculate the difference in cumulative return:**
+   - $236 - $214 = $22
+
+3. **Calculate the percentage difference:**
+   - ($22 / $214) * 100 = 10.28% (approximately)
+
+**Final Answer:** The difference in percentage five-year cumulative return for Intel versus the S&P 500 index for the five years ended 2013 is approximately 10.28%. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the five-year cumulative return for Intel in 2013? (independent)
+**sq2.** What was the five-year cumulative return for the S&P 500 index in 2013? (independent)
+**sq3.** Calculate the difference in five-year cumulative return between Intel and the S&P 500 index. (depends on sq1, sq2)
+**sq4.** Calculate the percentage difference between Intel's five-year cumulative return and the S&P 500 index. (depends on sq3, sq2)
+
+## Answers:
+
+**Answer to sq1:** The five-year cumulative return for Intel in 2013 was $214. 
+**Answer to sq2:** The five-year cumulative return for the S&P 500 index in 2013 was $236.
+**Answer to sq3:** The difference in five-year cumulative return between Intel and the S&P 500 index is $22 (236 - 214).
+**Answer to sq4:** The percentage difference is 9.32% (22/236 * 100).
+
+## final_answer: 9.32 
+",0.0,"reasoning: 'The five-year cumulative return for Intel is 214% and for the S&P 500 index is 236%. The difference in percentage is 236% - 214% = 22%.'
+answer: '22%'
+",100.0,True,False,False,False,False
+what was the percentage change in the excess of current cost over lifo cost was approximately between 2006 and 2005 .,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant information:** The table states that the excess of current cost over LIFO cost was approximately $5.8 million at February 3, 2006, and $6.3 million at January 28, 2005.
+
+2. **Calculate the difference:** The difference is $6.3 million - $5.8 million = $0.5 million.
+
+3. **Calculate the percentage change:** The percentage change is ($0.5 million / $6.3 million) * 100 = 7.94%.
+
+**Final Answer:** The percentage change in the excess of current cost over LIFO cost between 2006 and 2005 is approximately 7.94%. 
+",0.0,"## Decomposition:
+
+**sq1. What was the excess of current cost over LIFO cost in 2006? (independent)**
+**sq2. What was the excess of current cost over LIFO cost in 2005? (independent)**
+**sq3. Calculate the difference between the excess of current cost over LIFO cost in 2006 and 2005. (depends on sq1, sq2)**
+**sq4. Divide the difference by the excess of current cost over LIFO cost in 2005. (depends on sq3, sq2)**
+**sq5. Multiply the result by 100 to express the change as a percentage. (depends on sq4)**
+
+## Answers:
+
+**Answer to sq1:** The excess of current cost over LIFO cost in 2006 was $5.8 million.
+**Answer to sq2:** The excess of current cost over LIFO cost in 2005 was $6.3 million.
+**Answer to sq3:** The difference between the excess of current cost over LIFO cost in 2006 and 2005 is -$0.5 million.
+**Answer to sq4:** Dividing the difference (-$0.5 million) by the excess of current cost over LIFO cost in 2005 ($6.3 million) gives us approximately -0.079.
+**Answer to sq5:** Multiplying the result by 100 gives us -7.9%.
+
+## Final_answer: -7.9 
+",100.0,"reasoning: The excess of current cost over LIFO cost was approximately $5.8 million at February 3, 2006, and $6.3 million at January 28, 2005. To calculate the percentage change, we first find the difference between the two values: $6.3 million - $5.8 million = $0.5 million. Then, we divide this difference by the initial value (2005 value) and multiply by 100%: ($0.5 million / $6.3 million) * 100% = 7.94%.
+answer: 7.9% 
+",100.0,True,False,False,False,False
+what is the percentage change in revenue generated from non-us currencies from 2016 to 2017?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant information:** We need the revenue generated from non-US currencies for 2016 and 2017.
+2. **Extract the data:** From the table, the total increase or decrease in revenue from non-US currencies for 2016 is $129 million and for 2017 is $130 million. 
+3. **Calculate the percentage change:** 
+   * Percentage change = [(Revenue in 2017 - Revenue in 2016) / Revenue in 2016] * 100
+   * Percentage change = [($130 million - $129 million) / $129 million] * 100 
+   * Percentage change = ( $1 million / $129 million) * 100
+   * Percentage change = approximately 0.775%
+
+**Final Answer:** The percentage change in revenue generated from non-US currencies from 2016 to 2017 is approximately 0.775%. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What was the total revenue generated from non-US currencies in 2016? (independent)"",
+  ""sq2. What was the total revenue generated from non-US currencies in 2017? (independent)"",
+  ""sq3. What is the difference between the revenue generated from non-US currencies in 2017 and 2016? (depends on sq1, sq2)"",
+  ""sq4. What is the percentage change in revenue from 2016 to 2017? (depends on sq1, sq3)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The total revenue generated from non-US currencies in 2016 was $1,909 million."",
+  ""Answer to sq2: The total revenue generated from non-US currencies in 2017 was $1,830 million."",
+  ""Answer to sq3: The difference between the revenue generated from non-US currencies in 2017 and 2016 is -$79 million."",
+  ""Answer to sq4: The percentage change in revenue from 2016 to 2017 is -4.13%.""
+ ],
+ ""final_answer"": ""-4.13""
+}
+```",100.0,"reasoning: 'The percentage change in revenue generated from non-US currencies from 2016 to 2017 is calculated by dividing the difference in revenue between the two years by the revenue in 2016 and multiplying by 100%. The revenue in 2016 is $1909 million and the revenue in 2017 is $1830 million. The difference is $1909 - $1830 = $79 million. The percentage change is ($79 / $1909) * 100% = 4.14%. Therefore, the percentage change in revenue generated from non-US currencies from 2016 to 2017 is approximately 4.14%.'
+answer: '4.1%' 
+",100.0,True,False,False,False,False
+what is the percentage in total assets in 2014?,"**Chosen Approach:**
+
+Evidence Extraction
+
+**Steps:**
+
+1. **Identify relevant data:** We need to find the total assets for 2014.
+2. **Extract the data:** The table shows total assets as of December 2014 to be $856,240 million.
+
+**Final Answer:**
+
+The percentage change in total assets in 2014 is not provided in the table. The table only shows the total assets in 2014 and 2013. To calculate the percentage change, we would need the total assets for a previous year. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1: What is the value of total assets in 2014? (independent)"",
+  ""sq2: What is the value of total assets in 2013? (independent)"",
+  ""sq3: What is the difference in total assets between 2014 and 2013? (depends on sq1, sq2)"",
+  ""sq4: What is the percentage change in total assets between 2014 and 2013? (depends on sq2, sq3)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The value of total assets in 2014 is $856,240 million."",
+  ""Answer to sq2: The value of total assets in 2013 is $911,507 million."",
+  ""Answer to sq3: The difference in total assets between 2014 and 2013 is -$55,267 million."",
+  ""Answer to sq4: The percentage change in total assets between 2014 and 2013 is -6.06%.""
+ ],
+ ""final_answer"": ""-6.06""
+}
+```",100.0,"reasoning: 'To determine the percentage of total assets in 2014, we need to find the ratio of total assets in 2014 to total assets in 2013 and multiply by 100%. The total assets in 2014 is $856,240 million and in 2013 is $911,507 million. Therefore, the percentage is calculated as: (856240 / 911507) * 100% = 93.93%'
+answer: '93.9%'",0.0,False,False,True,False,False
+what was the average basic net income available for common shareholders from 2005 to 2007,"**Chosen Approach:** Decomposition
+
+**Sub-questions:**
+1. What was the basic net income available for common shareholders in 2005? (sq1)
+2. What was the basic net income available for common shareholders in 2006? (sq2)
+3. What was the basic net income available for common shareholders in 2007? (sq3)
+4. What is the sum of the basic net income available for common shareholders from 2005 to 2007? (sq4)
+5. What is the average basic net income available for common shareholders from 2005 to 2007? (sq5)
+
+**Answers:**
+1. The basic net income available for common shareholders in 2005 was $309,183,000. (Answer to sq1)
+2. The basic net income available for common shareholders in 2006 was $145,095,000. (Answer to sq2)
+3. The basic net income available for common shareholders in 2007 was $217,692,000. (Answer to sq3)
+4. The sum of the basic net income available for common shareholders from 2005 to 2007 is $309,183,000 + $145,095,000 + $217,692,000 = $671,970,000 (Answer to sq4)
+5. The average basic net income available for common shareholders from 2005 to 2007 is $671,970,000 / 3 = $223,990,000 (Answer to sq5)
+
+**Final Answer:**
+The average basic net income available for common shareholders from 2005 to 2007 was $223,990,000. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the basic net income available for common shareholders in 2005? (independent)
+**sq2.** What was the basic net income available for common shareholders in 2006? (independent)
+**sq3.** What was the basic net income available for common shareholders in 2007? (independent)
+**sq4.** What is the sum of the basic net income available for common shareholders for 2005, 2006, and 2007? (depends on sq1, sq2, sq3)
+**sq5.** What is the average basic net income available for common shareholders over the three years? (depends on sq4)
+
+## Answers:
+
+**Answer to sq1:** The basic net income available for common shareholders in 2005 was $309,183 thousand.
+**Answer to sq2:** The basic net income available for common shareholders in 2006 was $145,095 thousand.
+**Answer to sq3:** The basic net income available for common shareholders in 2007 was $217,692 thousand.
+**Answer to sq4:** The sum of the basic net income available for common shareholders for 2005, 2006, and 2007 is $671,970 thousand.
+**Answer to sq5:** The average basic net income available for common shareholders over the three years is $223,990 thousand.
+
+## Final_answer: 223990 
+",0.0,"reasoning: To calculate the average basic net income available for common shareholders from 2005 to 2007, we sum the values for each year and divide by 3. 
+  - 2005: $309,183
+  - 2006: $145,095
+  - 2007: $217,692
+  - Total: $671,970
+  - Average: $671,970 / 3 = $223,990
+answer: $223,990 
+",100.0,False,True,False,False,False
+did the b series stock outperform the a series based on 5 year total return?,"The question asks to compare the total return of the B series stock to the A series stock over a five-year period. However, the table only provides data for the years 2008 through 2011, covering a four-year period. 
+
+**Final Answer**: We cannot definitively answer the question about the five-year total return because the table only provides data for a four-year period. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the total return for Series B common stock on December 31, 2011? (independent)
+**sq2.** What was the total return for Series A common stock on December 31, 2011? (independent)
+**sq3.** Did the Series B total return exceed the Series A total return? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total return for Series B common stock on December 31, 2011 was $217.56.
+**Answer to sq2:** The total return for Series A common stock on December 31, 2011 was $296.67.
+**Answer to sq3:** No, the Series B total return did not exceed the Series A total return.
+
+## Final Answer:
+
+No 
+",100.0,"reasoning: To determine if the B series stock outperformed the A series, we need to compare their total returns on December 31, 2011, as that represents the end of the 5-year period.  The A series stock ended at $296.67, while the B series stock ended at $217.56. Since the A series stock had a higher value, it outperformed the B series.
+answer: no 
+",100.0,False,False,False,False,True
+what was the percentage decline in the weighted- average estimated fair values of stock options from 2007 to 2008,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant values:** 
+   - The weighted-average estimated fair values of stock options in 2007: $6.49 per option
+   - The weighted-average estimated fair values of stock options in 2008: $4.36 per option
+2. **Calculate the difference:** $6.49 - $4.36 = $2.13
+3. **Calculate the percentage decline:** ($2.13 / $6.49) * 100 = 32.82% (rounded to two decimal places)
+
+**Final Answer:** 32.82%, 0.3282, .3282 
+",0.0,"## Decomposition:
+
+**sq1. What was the weighted-average estimated fair value of stock options in 2007?** (independent)
+**sq2. What was the weighted-average estimated fair value of stock options in 2008?** (independent)
+**sq3. What is the difference between the fair values for 2007 and 2008?** (depends on sq1, sq2)
+**sq4. What is the percentage decline from the fair value in 2007 to the fair value in 2008?** (depends on sq1, sq3)
+
+## Answers:
+
+**Answer to sq1:** The weighted-average estimated fair value of stock options in 2007 was $6.49 per option.
+**Answer to sq2:** The weighted-average estimated fair value of stock options in 2008 was $4.36 per option.
+**Answer to sq3:** The difference between the fair values for 2007 and 2008 is $2.13 per option ($6.49 - $4.36 = $2.13).
+**Answer to sq4:** The percentage decline from the fair value in 2007 to the fair value in 2008 is 32.8% ( ($2.13 / $6.49) * 100 = 32.8%). 
+
+## Final_answer: 32.8 
+",100.0,"reasoning: The weighted-average estimated fair values of stock options in 2007 was $6.49 per option, and in 2008 it was $4.36 per option. The percentage decline is calculated as: (change in value / original value) * 100%. In this case, the change in value is $6.49 - $4.36 = $2.13. Therefore, the percentage decline is ($2.13 / $6.49) * 100% = 32.8%.
+answer: 32.8% 
+",100.0,True,False,False,False,False
+"as of december 31 , 2004 , what percentage of common stock outstanding were non-voting shares?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Extract relevant information**:  The table indicates that as of December 31, 2004, there were 1,100,000,000 authorized shares of common stock and 10,000,000 authorized shares of non-voting common stock.
+
+2. **Calculate the percentage**: Divide the number of authorized non-voting common stock shares by the total number of authorized common stock shares and multiply by 100. 
+
+   (10,000,000 / 1,100,000,000) * 100 = 0.91%
+
+**Final Answer:** 0.91%, 0.0091, .0091 
+",0.0,"## Decomposition:
+
+**sq1.**  What was the number of authorized shares of common stock as of December 31, 2004? (independent)
+**sq2.** What was the number of authorized shares of non-voting common stock as of December 31, 2004? (independent)
+**sq3.** Calculate the total number of authorized shares of both common and non-voting common stock as of December 31, 2004. (depends on sq1, sq2)
+**sq4.** Calculate the percentage of non-voting common stock out of the total authorized shares. (depends on sq2, sq3)
+
+## Answers:
+
+**Answer to sq1:** As of December 31, 2004, the company had 110,000,000 authorized shares of common stock.
+**Answer to sq2:** As of December 31, 2004, the company had 10,000,000 authorized shares of non-voting common stock.
+**Answer to sq3:** The total number of authorized shares of both common and non-voting common stock as of December 31, 2004, is 110,000,000 + 10,000,000 = 120,000,000.
+**Answer to sq4:** The percentage of non-voting common stock out of the total authorized shares is (10,000,000 / 120,000,000) * 100 = 8.33%.
+
+## Final_answer: 8.33% 
+",100.0,"reasoning: 'The table provides information on common stock and non-voting common stock.
+  As of December 31, 2004, the company had 110,000,000 authorized shares of common
+  stock and 10,000,000 authorized shares of non-voting common stock. To calculate the
+  percentage of non-voting shares, we divide the number of non-voting shares by the
+  total number of authorized shares and multiply by 100%: (10,000,000 /
+  120,000,000) * 100% = 8.33%'
+answer: '8.33%'",100.0,False,False,True,False,False
+what is the five year total return on the s&p 500 index?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. Identify the relevant data point in the table:  The table shows the cumulative total returns for the S&P 500 index for each year, assuming a $100 investment on December 26, 2008. 
+2. Locate the cumulative total return on December 31, 2013: This value represents the five-year total return.
+
+**Final Answer:**
+The five-year total return on the S&P 500 index, assuming a $100 investment on December 26, 2008, was $236.20. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What is the value of the S&P 500 index on 12/31/13?"",
+  ""sq2. What is the value of the S&P 500 index on 12/26/08?"",
+  ""sq3. What is the difference between the values of the S&P 500 index on 12/31/13 and 12/26/08?""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The value of the S&P 500 index on 12/31/13 is $236.20."",
+  ""Answer to sq2: The value of the S&P 500 index on 12/26/08 is $100.00."",
+  ""Answer to sq3: The difference between the values of the S&P 500 index on 12/31/13 and 12/26/08 is $136.20.""
+ ],
+ ""final_answer"": ""136.20""
+}
+```",100.0,"reason: To find the five-year total return on the S&P 500 index, we look at the value on 12/31/13 and compare it to the initial value on 12/26/08. The value on 12/31/13 is $236.20, while the initial value is $100.00. The total return is calculated as: (Final Value - Initial Value) / Initial Value = (236.20 - 100.00) / 100.00 = 1.362.
+answer: 136.2% 
+",100.0,False,False,True,False,False
+"for a 2% ( 2 % ) increase in interest rates , what would have been the total impact to earnings for 2005 and 2004 ( in millions ) ?","**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. The table provides information about earnings sensitivity to interest rate changes.
+2. We need to find the impact for a 2% increase in interest rates, which corresponds to +200bp (basis points).
+3.  The table shows the earnings impact for +200bp in interest rate changes for both 2005 and 2004.
+
+**Final Answer:**
+
+- For 2005, the total impact to earnings for a 2% increase in interest rates would be **$265 million**.
+- For 2004, the total impact to earnings for a 2% increase in interest rates would be **-$557 million**.  (Note: The negative sign indicates a loss.) 
+",0.0,"## Decomposition:
+
+**sq1.** What is the immediate change in earnings for a 200 bp increase in interest rates for 2005 (in millions)? (independent)
+**sq2.** What is the immediate change in earnings for a 200 bp increase in interest rates for 2004 (in millions)? (independent)
+**sq3.** What is the total impact to earnings for 2005 and 2004, for a 200 bp increase in interest rates? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The immediate change in earnings for a 200 bp increase in interest rates for 2005 is $265 million.
+**Answer to sq2:** The immediate change in earnings for a 200 bp increase in interest rates for 2004 is -$557 million.
+**Answer to sq3:** The total impact to earnings for 2005 and 2004, for a 200 bp increase in interest rates is -$292 million. 
+
+## Final Answer: 
+-292 
+",100.0,"reason: To find the total impact on earnings for 2005 and 2004 due to a 2% increase in interest rates, we need to interpolate the values given in the table. A 2% increase is equivalent to a 200 basis point (bp) increase. We see that for a 200bp increase, the earnings impact for 2005 is $265 million.  For 2004, a 200bp increase results in a negative impact of $557 million. The total impact is found by adding these figures: $265 million - $557 million = -$292 million. 
+answer: -$292 million 
+",100.0,False,False,True,False,False
+what was the value of the shares exercised in 2011,"The provided table does not contain information on the value of shares exercised in 2011. Therefore, I cannot answer your question. The table only provides information on the number of shares, exercise price, and expiration date for warrants outstanding as of December 28, 2008. 
+
+**Final Answer:**  I cannot answer the question. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the exercise price for the warrants exercised in 2011? (independent)
+**sq2.** What was the number of warrants exercised in 2011? (independent)
+**sq3.** Calculate the total value of the shares exercised in 2011 by multiplying the exercise price and number of warrants exercised. (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The exercise price for the warrants exercised in 2011 is $10.91.
+**Answer to sq2:**  The number of warrants exercised in 2011 is 1,125,734.
+**Answer to sq3:** The total value of the shares exercised in 2011 is $10.91 * 1,125,734 = $12,294,969.24.
+
+## final_answer: 12294969.24 
+",100.0,"reasoning: 'The table shows the number of shares, exercise price, and expiration date for each warrant. There is no information regarding the number of shares exercised in 2011. While the table shows a total of 1,125,734 warrants with an exercise price of $10.91 and an expiration date of 1/19/2011, we don't know how many of these were actually exercised. Therefore, we cannot determine the value of the shares exercised in 2011.'
+answer: 'The information to answer this question is not provided in the table.' 
+",0.0,False,False,False,False,True
+in 2007 what was the percent of the total net of cash collateral from credit derivatives,"The provided table does not include data for the year 2007. Therefore, it's impossible to determine the percentage of the total net of cash collateral from credit derivatives in 2007. 
+
+**Final Answer:**  Insufficient data to answer the question. 
+",0.0,"## Decomposition:
+sq1. What was the total net of cash collateral for credit derivatives in 2015? (independent)
+sq2. What was the total net of cash collateral in 2015? (independent)
+sq3. Calculate the percentage of the total net of cash collateral from credit derivatives in 2015. (depends on sq1, sq2)
+
+## Answers:
+Answer to sq1: The total net of cash collateral for credit derivatives in 2015 was $1,423 million.
+Answer to sq2: The total net of cash collateral in 2015 was $59,677 million.
+Answer to sq3: The percentage of the total net of cash collateral from credit derivatives in 2015 is (1423 / 59677) * 100 = 2.38%.
+
+## Final_answer: 2.38 
+",100.0,"reasoning: The table shows the total net of cash collateral for credit derivatives in 2014, which was $1,838 million. The question asks for the percentage of this amount in 2007, which is not available in the table. Therefore, we cannot provide an answer.
+answer: Not enough information provided. 
+",0.0,False,False,False,False,True
+"without the loss of in volume/weather , what percent increase would net revenue have experienced between 2016 and 2017?","**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify 2016 Net Revenue:** The table shows 2016 net revenue as $705.4 million.
+2. **Calculate 2016 Net Revenue without Volume/Weather Loss:**  Add the volume/weather loss back to the 2016 net revenue: $705.4 million + $18.2 million = $723.6 million.
+3. **Calculate the Difference in Net Revenue:** Subtract the adjusted 2016 net revenue from the 2017 net revenue: $703.1 million - $723.6 million = -$20.5 million.
+4. **Calculate the Percentage Change:** Divide the difference by the adjusted 2016 net revenue and multiply by 100: (-$20.5 million / $723.6 million) * 100 = -2.83%.
+
+**Final Answer:** Without the loss in volume/weather, net revenue would have experienced a decrease of approximately 2.83% (or -0.0283) between 2016 and 2017. 
+",0.0,"## Decomposition:
+
+**sq1. What was the net revenue in 2016? (independent)**
+
+**sq2. What was the net revenue in 2017? (independent)**
+
+**sq3. What is the difference between the net revenues in 2017 and 2016? (depends on sq1, sq2)**
+
+**sq4. What is the net revenue increase without the loss in volume/weather? (depends on sq1, sq3)**
+
+**sq5. What is the percent increase in net revenue without the loss in volume/weather? (depends on sq1, sq4)**
+
+## Answers:
+
+**Answer to sq1:** The net revenue in 2016 was $705.4 million.
+
+**Answer to sq2:** The net revenue in 2017 was $703.1 million.
+
+**Answer to sq3:** The difference between the net revenues in 2017 and 2016 is -$2.3 million ($703.1 - $705.4).
+
+**Answer to sq4:** The net revenue increase without the loss in volume/weather is $15.3 million (-$2.3 + $18.2).
+
+**Answer to sq5:** The percent increase in net revenue without the loss in volume/weather is 2.17% ($15.3 million / $705.4 million * 100).
+
+## final_answer: 2.17
+",100.0,"reasoning: 'To calculate the percentage increase in net revenue without the loss in volume/weather, we need to add back the volume/weather loss to the 2017 net revenue. Then we can calculate the percentage increase from the 2016 net revenue.
+2017 Net Revenue (Adjusted) = 2017 Net Revenue + Volume/Weather Loss = $703.1 million + $18.2 million = $721.3 million
+Percentage Increase = [(2017 Net Revenue (Adjusted) - 2016 Net Revenue) / 2016 Net Revenue] * 100%
+Percentage Increase = [($721.3 million - $705.4 million) / $705.4 million] * 100% 
+Percentage Increase = 2.26% (approximately)'
+answer: '2.3%' 
+",100.0,True,False,False,False,False
+"in millions for 2012 2011 , what was maximum collateral posted?","## Reasoning Process:
+
+**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant information:** The question asks for the maximum collateral posted in millions for both 2012 and 2011.
+2. **Locate the data:** The table provides the ""collateral posted"" values for both years.
+3. **Extract the maximum values:** 
+    - For 2012: $24,296 million
+    - For 2011: $29,002 million
+
+**Final Answer:** 
+
+The maximum collateral posted in millions for 2012 was $24,296 and for 2011 was $29,002. 
+",0.0,"## Decomposition:
+
+sq1. What was the collateral posted as of December 2012? (independent)
+sq2. What was the collateral posted as of December 2011? (independent)
+sq3. What is the maximum of the collateral posted in 2012 and 2011? (depends on sq1, sq2)
+sq4. How do we express the maximum collateral posted in millions? (depends on sq3)
+
+## Answers:
+
+Answer to sq1: The collateral posted as of December 2012 was $24,296 million.
+Answer to sq2: The collateral posted as of December 2011 was $29,002 million.
+Answer to sq3: The maximum collateral posted in 2012 and 2011 is $29,002 million.
+Answer to sq4: We express the maximum collateral posted in millions by simply stating the value followed by ""million"". In this case, the value is $29,002 million.
+
+## final_answer: 29002 
+",100.0,"reasoning: The maximum collateral posted would be the sum of the collateral posted and the additional collateral or termination payments for a two-notch downgrade.  For 2012, this is $24,296 + $2,500 = $26,796. For 2011, this is $29,002 + $2,183 = $31,185.
+answer: 26,796, 31,185",0.0,False,False,True,False,False
+what was the percentage reduction second generation tenant improvements,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the relevant data:**  We need the second generation tenant improvement costs for 2011 and 2012. 
+2. **Extract the data:**  
+    * 2011: $50,079
+    * 2012: $26,643
+3. **Calculate the difference:** $50,079 - $26,643 = $23,436
+4. **Calculate the percentage reduction:** ($23,436 / $50,079) * 100 = 46.81%
+
+**Final Answer:** The percentage reduction in second-generation tenant improvements from 2011 to 2012 was approximately 46.81% (0.4681 or .468). 
+",0.0,"## Decomposition:
+
+**sq1. What was the value of second generation tenant improvements in 2012?** (independent)
+**sq2. What was the value of second generation tenant improvements in 2011?** (independent)
+**sq3. What is the difference between the values for 2012 and 2011 for second generation tenant improvements?** (depends on sq1, sq2)
+**sq4. What is the percentage reduction based on the difference and the value for 2011?** (depends on sq3, sq2)
+
+## Answers:
+
+**Answer to sq1:** The value for 2012 for second generation tenant improvements was $26,643.
+**Answer to sq2:** The value for 2011 for second generation tenant improvements was $50,079.
+**Answer to sq3:** The difference between the values for 2012 and 2011 for second generation tenant improvements is $23,436.
+**Answer to sq4:** The percentage reduction is calculated as (difference / value in 2011) * 100 = ($23,436 / $50,079) * 100 = 46.8%.
+
+## final_answer: 46.8% 
+",100.0,"reason: To calculate the percentage reduction in second generation tenant improvements from 2011 to 2012, we subtract the 2012 value from the 2011 value, divide by the 2011 value, and multiply by 100%. This gives us: ((50079-26643)/50079) * 100% = 46.79%
+answer: 46.8% 
+",100.0,True,False,False,False,False
+what is the net change in the balance of employee separations liability during 2005?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the starting liability balance:** The balance of employee separations liability as of January 1, 2005, was $665,000.
+2. **Identify the ending liability balance:** The balance of employee separations liability as of December 31, 2005, was $301,000.
+3. **Calculate the net change:**  Subtract the ending balance from the starting balance: $665,000 - $301,000 = $364,000
+
+**Final Answer:** The net change in the balance of employee separations liability during 2005 is $364,000. 
+",0.0,"```json
+{
+ ""decomposition"": [
+  ""sq1. What is the balance of employee separations liability as of December 31, 2004? (independent)"",
+  ""sq2. What is the balance of employee separations liability as of December 31, 2005? (independent)"",
+  ""sq3. What is the difference between the balances for December 31, 2005, and December 31, 2004, for employee separations liability? (depends on sq1, sq2)""
+ ],
+ ""answers"": [
+  ""Answer to sq1: The balance of employee separations liability as of December 31, 2004, is $665 thousand."",
+  ""Answer to sq2: The balance of employee separations liability as of December 31, 2005, is $301 thousand."",
+  ""Answer to sq3: The difference between the balances for December 31, 2005, and December 31, 2004, for employee separations liability is -$364 thousand.""
+ ],
+ ""final_answer"": -364
+}
+```",100.0,"reasoning: To find the net change in the balance of employee separations liability during 2005, we need to subtract the liability at the beginning of 2005 from the liability at the end of 2005. The liability at the beginning of 2005 is given as $665,000, and the liability at the end of 2005 is given as $301,000.  The net change is:  $301,000 - $665,000 = -$364,000. 
+answer: -$364,000. 
+",100.0,True,False,False,False,False
+what was the 5 year total return for jkhy?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+1. **Identify the relevant column:** The question asks for the 5-year total return for JKHY. This information is located in the ""2019"" column of the table.
+2. **Locate the value for JKHY in the ""2019"" column:** The value for JKHY in the ""2019"" column is 240.29.
+
+**Final Answer:**
+The 5-year total return for JKHY was 240.29. 
+",0.0,"## Decomposition:
+
+sq1. What was the value of JKHY in 2014? (independent)
+sq2. What was the value of JKHY in 2019? (independent)
+sq3. What is the difference between the values for 2019 and 2014? (depends on sq1, sq2)
+sq4. How do we express the total return as a percentage? (depends on sq3)
+
+## Answers:
+
+Answer to sq1: The value of JKHY in 2014 was 100.00.
+Answer to sq2: The value of JKHY in 2019 was 240.29.
+Answer to sq3: The difference between the values for 2019 and 2014 for JKHY is 140.29.
+Answer to sq4: We express the total return as a percentage by dividing the difference by the initial value and multiplying by 100. In this case, the total return is (140.29/100) * 100 = 140.29%.
+
+## final_answer: 140.29 
+",100.0,"reasoning: The 5-year total return for JKHY is represented by the value in the '2019' column for JKHY, which is 240.29. This signifies a total return of 240.29% over the five-year period.
+answer: 240.29% 
+",0.0,False,False,True,False,False
+what is the difference of between the carrying amount and the fair value of long-term debt and other long-term liabilities in 2014?,"## Reasoning Process:
+
+**Chosen Approach:**  Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant data:** We need to find the carrying amount and fair value of ""long-term debt and other long-term liabilities"" in 2014. 
+2. **Extract the data:** From the table, the carrying amount for 2014 is $1373 million and the fair value is $1487 million.
+3. **Calculate the difference:** $1487 million - $1373 million = $114 million
+
+**Final Answer:** The difference between the carrying amount and fair value of long-term debt and other long-term liabilities in 2014 is $114 million. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the carrying amount of long-term debt and other long-term liabilities in 2014? (independent)
+**sq2.** What is the fair value of long-term debt and other long-term liabilities in 2014? (independent)
+**sq3.** What is the difference between the carrying amount and the fair value of long-term debt and other long-term liabilities in 2014? (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The carrying amount of long-term debt and other long-term liabilities in 2014 is $1,373 million.
+**Answer to sq2:** The fair value of long-term debt and other long-term liabilities in 2014 is $1,487 million.
+**Answer to sq3:** The difference between the carrying amount and the fair value of long-term debt and other long-term liabilities in 2014 is $114 million.
+
+## final_answer: 114 
+",0.0,"reason: The difference between the carrying amount and fair value of long-term debt and other long-term liabilities in 2014 is found by subtracting the carrying amount from the fair value. This is represented by 875 - 848 = 27.
+answer: 27",100.0,False,False,True,False,False
+what was the percent of the share under this new share repurchase program as of december 312015,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the total shares purchased as of December 31, 2015:**  This is the ""total number of shares purchased"" in the year 2015 from the table, which is 26,751.0 thousand shares.
+2. **Identify the total shares repurchased under the new program:** This is stated in the context as $8.6 billion.
+3. **Convert the total shares repurchased to thousands:** Since the table data is in thousands, we need to convert $8.6 billion to thousands: $8.6 billion * 1000 = 8,600,000 thousand shares.
+4. **Calculate the percentage of shares repurchased:**  Divide the shares purchased in 2015 by the total shares repurchased under the program and multiply by 100: (26,751.0 / 8,600,000) * 100 = 0.31%.
+
+**Final Answer:** The percentage of shares repurchased under the new share repurchase program as of December 31, 2015 was 0.31%. 
+",0.0,"## Decomposition:
+
+**sq1. What was the total amount of shares repurchased under the new share repurchase program as of December 31, 2015?** (independent)
+**sq2. What was the total amount of the new share repurchase program?** (independent)
+**sq3. What is the percentage of the shares repurchased as of December 31, 2015, compared to the total amount of the new share repurchase program?** (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The total amount of shares repurchased under the new share repurchase program as of December 31, 2015, was $8.6 billion. 
+**Answer to sq2:** The total amount of the new share repurchase program was $10 billion. 
+**Answer to sq3:** The percentage of shares repurchased as of December 31, 2015, is calculated by dividing the amount of shares repurchased by the total amount of the program and multiplying by 100%.  (8.6 billion / 10 billion) * 100% = 86%.
+
+## Final_answer: 86
+",100.0,"reason: The total amount of shares repurchased under the new share repurchase program as of December 31, 2015 was $8.6 billion, and the total cost of shares purchased in 2015 was $2,182,180,000. Dividing the amount of shares repurchased in 2015 by the total amount repurchased as of December 31, 2015 gives us the percentage of the shares repurchased in 2015 under this program: ($2,182,180,000 / $8,600,000,000) = 0.2537 or 25.37%. 
+answer: 25.37% 
+",0.0,True,False,False,False,False
+what portion of the total future minimum commitments under operating leases is due in the next 36 months?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1.  **Identify relevant information:** We need to find the total amount of future minimum commitments under operating leases due in the next 36 months. 
+2.  **Extract the data:**  The table shows future minimum commitments for each year starting from 2016. We need to extract data for the next 3 years, covering 2016, 2017, and 2018.
+3.  **Sum the amounts:** Add the amounts for 2016, 2017, and 2018: $134 million + $133 million + $131 million = $398 million.
+
+**Final Answer:** $398 million 
+",0.0,"## Decomposition:
+
+**sq1.** What are the future minimum commitments under operating leases for the year 2016? (independent)
+**sq2.** What are the future minimum commitments under operating leases for the year 2017? (independent)
+**sq3.** What are the future minimum commitments under operating leases for the year 2018? (independent)
+**sq4.**  What is the total of future minimum commitments under operating leases for years 2016, 2017, and 2018? (depends on sq1, sq2, sq3)
+**sq5.** What is the total of future minimum commitments under operating leases for the next 36 months, expressed as a percentage of total future minimum commitments? (depends on sq4)
+
+## Answers:
+
+**Answer to sq1:** The future minimum commitments under operating leases for the year 2016 are $134 million.
+**Answer to sq2:** The future minimum commitments under operating leases for the year 2017 are $133 million.
+**Answer to sq3:** The future minimum commitments under operating leases for the year 2018 are $131 million.
+**Answer to sq4:** The total of future minimum commitments under operating leases for years 2016, 2017, and 2018 is $398 million.
+**Answer to sq5:** The total of future minimum commitments under operating leases for the next 36 months is 33% of total future minimum commitments.
+
+## Final_answer: 33% 
+",100.0,"reasoning: 'To find the portion of total future minimum commitments due in the next 36 months, we sum the commitments for years 2016, 2017, and 2018. The total commitment for those years is $134 + $133 + $131 = $398 million. Then we divide this by the total commitments to get the portion: $398 / $1203 = 0.331'
+answer: 33.1% 
+",100.0,False,False,True,False,False
+what is the percentage change in the risk-free rate from 2003 to 2004?,"**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+
+1. **Identify the risk-free rate for 2003:** 2.92%
+2. **Identify the risk-free rate for 2004:** 2.56%
+3. **Calculate the difference:** 2.92% - 2.56% = 0.36%
+4. **Calculate the percentage change:** (0.36% / 2.92%) * 100 = 12.33% (approximately)
+
+**Final Answer:** The percentage change in the risk-free rate from 2003 to 2004 is approximately 12.33%. 
+",0.0,"## Decomposition:
+
+**sq1.** What was the risk-free interest rate in 2003? (independent)
+**sq2.** What was the risk-free interest rate in 2004? (independent)
+**sq3.** What is the difference between the risk-free interest rates in 2004 and 2003? (depends on sq1, sq2)
+**sq4.** What is the percentage change in the risk-free interest rate from 2003 to 2004? (depends on sq1, sq2, sq3)
+
+## Answers:
+
+**Answer to sq1:** The risk-free interest rate in 2003 was 2.92%.
+**Answer to sq2:** The risk-free interest rate in 2004 was 2.56%.
+**Answer to sq3:** The difference between the risk-free interest rates in 2004 and 2003 is -0.36%. (2.56% - 2.92%)
+**Answer to sq4:** The percentage change in the risk-free interest rate from 2003 to 2004 is -12.33%. (-0.36% / 2.92% * 100%)
+
+## Final_answer: -12.33% 
+",100.0,"reasoning: 'The risk-free rate in 2003 was 2.92% and in 2004 it was 2.56%. The percentage change is calculated as (2.56% - 2.92%) / 2.92% * 100% = -12.3%.'
+answer: '-12.3%' 
+",100.0,True,False,False,False,False
+in 2005 what was the percent of the total capital spending from continuing operations by each of our business segments for printing papers,"**Chosen Approach:** Evidence Extraction and Calculation
+
+**Steps:**
+
+1. **Locate relevant data:** Identify the total capital spending from continuing operations for 2005 in the table. This value is $973 million.
+2. **Identify the capital spending for printing papers in 2005:**  The table shows this as $592 million.
+3. **Calculate the percentage:** Divide the capital spending for printing papers in 2005 ($592 million) by the total capital spending from continuing operations for 2005 ($973 million) and multiply by 100%.
+
+**Calculation:** ($592 million / $973 million) * 100% = 60.87% (approximately)
+
+**Final Answer:** In 2005, printing papers accounted for approximately 60.87% of the total capital spending from continuing operations by all business segments. 
+",0.0,"## Decomposition:
+
+**sq1:** What was the capital spending from continuing operations for printing papers in 2005? (independent)
+**sq2:** What was the total capital spending from continuing operations in 2005? (independent)
+**sq3:** Calculate the percentage of printing papers' capital spending out of the total capital spending in 2005. (depends on sq1, sq2)
+
+## Answers:
+
+**Answer to sq1:** The capital spending from continuing operations for printing papers in 2005 was $592 million.
+**Answer to sq2:** The total capital spending from continuing operations in 2005 was $992 million.
+**Answer to sq3:** The percentage of printing papers' capital spending out of the total capital spending in 2005 is calculated as (592 / 992) * 100 = 59.68%.
+
+## final_answer: 59.68% 
+",100.0,"reasoning: 'To determine the percentage of total capital spending from continuing operations attributed to printing papers in 2005, we divide the printing papers spending by the total spending and multiply by 100%. Printing papers spending in 2005 was $592 million. The total capital spending from continuing operations was $992 million. Therefore, the percentage is: ($592 / $992) * 100% = 59.68%.'
+answer: '59.7%' 
+",100.0,False,False,True,False,False
+"had all four quarters of 2010 had the same number of total shares purchased , how many total shares were purchased in 2010?","**Chosen Approach:** Chain-of-Thought (CoT) Reasoning
+
+**Steps:**
+1. Identify the total number of shares purchased in the fourth quarter of 2010: 3,063,816 shares.
+2. To find the total shares purchased if all quarters had the same amount, multiply the fourth quarter total by four: 3,063,816 * 4 = 12,255,264 shares.
+
+**Final Answer:** 12,255,264 shares. 
+",0.0,"## Decomposition:
+
+**sq1.** What is the total number of shares purchased in the fourth quarter of 2010? (independent)
+
+**sq2.** How many total shares would have been purchased in 2010 if each quarter had the same number of shares purchased as the fourth quarter? (depends on sq1) 
+
+## Answers:
+
+**Answer to sq1:** The total number of shares purchased in the fourth quarter of 2010 was 3,063,816 shares.
+
+**Answer to sq2:** If each quarter had the same number of shares purchased as the fourth quarter, the total number of shares purchased in 2010 would be 3,063,816 shares/quarter * 4 quarters = 12,255,264 shares. 
+
+## final_answer: 12255264 
+",100.0,"reason: 'To find the total number of shares purchased in 2010 if all four quarters had the same number of shares, we need to average the total number of shares purchased across the four quarters. The total number of shares purchased in the table is 3,063,816. Dividing this by 4 (for the four quarters) gives us an average of 765,954 shares purchased per quarter.  To get the total shares purchased over the entire year, we multiply this average by 4, resulting in 3,063,816.'
+answer: 3,063,816 
+",0.0,True,False,False,False,False
+what would the total restructuring charges be without including prior years of 2014?,"**Chosen Approach:** Evidence Extraction
+
+**Steps:**
+
+1. **Identify the relevant data:** We need to find the total restructuring charges excluding those from prior years (2014).
+2. **Locate the relevant row:** In the table, we need to focus on the ""Total restructuring charges"" row.
+3. **Exclude the prior year charges:** The ""Other restructuring programs - prior years (1)"" row represents the charges we need to exclude.
+4. **Calculate the total restructuring charges without prior years:** Sum the charges for the ""2015 restructuring programs"" and ""2014 manufacturing footprint realignment plan"" rows.
+
+**Calculations:**
+
+Total restructuring charges (excluding prior years) = 2015 restructuring programs + 2014 manufacturing footprint realignment plan = $6,304 + $1,685 = $7,989
+
+**Final Answer:** $7,989,000 (in thousands) 
+",0.0,"## Decomposition:
+
+**sq1.** What were the total restructuring charges related to the 2015 Restructuring Programs? (independent)
+**sq2.** What were the total restructuring charges related to the 2014 Manufacturing Footprint Realignment Plan? (independent)
+**sq3.** What is the sum of the total restructuring charges for 2015 Restructuring Programs and 2014 Manufacturing Footprint Realignment Plan? (depends on sq1, sq2) 
+
+## Answers:
+
+**Answer to sq1:** The total restructuring charges related to the 2015 Restructuring Programs were $6,304 thousand. 
+**Answer to sq2:** The total restructuring charges related to the 2014 Manufacturing Footprint Realignment Plan were $1,685 thousand.
+**Answer to sq3:** The sum of the total restructuring charges for 2015 Restructuring Programs and 2014 Manufacturing Footprint Realignment Plan is $7,989 thousand.
+
+## Final_answer: 7989 
+",66.66666666666666,"reasoning: To determine the total restructuring charges excluding prior years of 2014, we need to sum the charges for ""2015 restructuring programs"" and ""2014 manufacturing footprint realignment plan"".  This is because ""other restructuring programs - prior years"" represent costs incurred in previous years and are not relevant to the current question.
+
+answer: $7,999 thousand 
+",50.0,False,False,True,False,False

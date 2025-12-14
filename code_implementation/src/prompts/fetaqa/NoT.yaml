@@ -1,0 +1,77 @@
+prompt: |
+  Your task is to analyze table-derived events, construct a coherent temporal narrative, and then use that narrative to answer a specific temporal question.
+  The table events are provided as methods within a Python class.
+  You need to implement the get_narrative() function to generate a clear, concise, and temporally accurate story based on the events.
+  Then, implement the get_answer() function by extracting the final temporal answer directly from your generated narrative.
+  Crucially, the 'get_narrative()' should help you explicitly understand the temporal sequence before formulating the final answer.
+  Ensure your narrative and final answer are strictly grounded in the provided event descriptions.
+  ONLY generate the content for the get_narrative() and get_answer() methods within the class.
+  Do NOT generate anything else (no additional class definitions, comments outside the methods, or introductory/concluding remarks).
+  Your response MUST end with 'END'.
+
+  --- Few-Shot Demonstration (Example 1: FETAQA-like, pre-solved) ---
+  class PlayerRolesTimeline:
+  """
+  Analyzes a player's career timeline to identify roles played in specific years.
+  Query: What roles did Christian Cooke play in 2007?
+  """
+  title = "Christian Cooke's Television Roles"
+  query = "What roles did Christian Cooke play in 2007?"
+  player = "Christian Cooke"
+  target_year = "2007"
+  def event_inspector_george_gently_2007(self):
+    return "Christian Cooke played Billy Lister in Inspector George Gently in 2007."
+  def event_the_chase_2007(self):
+    return "Christian Cooke played Liam Higgins in The Chase in 2007."
+  def event_the_royal_2007(self):
+    return "Christian Cooke played Bobby Horrocks in The Royal in 2007."
+  def event_robin_hood_2007(self):
+    return "Christian Cooke played Luke Scarlett in Robin Hood in 2007."
+  #------------------------Narrative-------------------------------------------------------
+  Let's think of a narrative to link aforementioned events in the correct temporal order.
+  def get_narrative(self):
+    return "In 2007, Christian Cooke took on several television roles. He played Billy Lister in Inspector George Gently. Concurrently, he was Liam Higgins in The Chase, Bobby Horrocks in The Royal, and Luke Scarlett in Robin Hood."
+  #----------------------Answer Generation from Narrative-----------------------------------
+  def get_answer(self):
+    return ["Billy Lister in Inspector George Gently", "Liam Higgins in The Chase", "Bobby Horrocks in The Royal", "Luke Scarlett in Robin Hood"]
+  END
+
+  --- Problem Instance to Solve (Abdoulaye Faye) ---
+  class PlayerClubTimeline:
+  """
+  Analyzes a player's career timeline to identify the seasons played for a specific club.
+  Query: What seasons did Faye appear for Hull City?
+  """
+  title = "Abdoulaye Faye's Club History"
+  query = "What seasons did Faye appear for Hull City?"
+  player = "Abdoulaye Faye"
+  target_club = "Hull City"
+  def event_asec_ndiambour_1999_2001(self):
+    return "From 1999 to 2001, Abdoulaye Faye played for ASEC Ndiambour."
+  def event_jeanne_darc_2001_2002(self):
+    return "In the 2001-02 season, Faye played for Jeanne d'Arc."
+  def event_rc_lens_2002_2004(self):
+    return "Between 2002 and 2004, Faye was with RC Lens."
+  def event_istres_2004_2005(self):
+    return "For the 2004-05 season, Faye was on loan at Istres."
+  def event_bolton_wanderers_2005_2008(self):
+    return "From 2005 to early 2008, Faye played for Bolton Wanderers."
+  def event_newcastle_united_2007_2008(self):
+    return "In the 2007-08 season, Faye also played for Newcastle United."
+  def event_stoke_city_2008_2011(self):
+    return "From 2008 to 2011, Faye played for Stoke City."
+  def event_west_ham_united_2011_2012(self):
+    return "In the 2011-12 season, he played for West Ham United."
+  def event_hull_city_2012_2014(self):
+    return "Abdoulaye Faye played for Hull City during the 2012-13 and 2013-14 seasons."
+  # --- Narrative-of-Thought Generation ---
+  Let's think of a narrative to link the aforementioned events in the correct temporal order,
+  specifically focusing on Abdoulaye Faye's time at Hull City.
+  The narrative should be simple, concise, and factual.
+  def get_narrative(self):
+    return "Abdoulaye Faye's career included a period at Hull City. He joined the club for the 2012-13 season and continued to play for them during the 2013-14 season."
+  # --- Answer Generation (derived from Narrative) ---
+  Based on the recounted narrative and the query: "What seasons did Faye appear for Hull City?”
+  def get_answer(self):
+    return ["2012–13", "2013–14"]
+  END

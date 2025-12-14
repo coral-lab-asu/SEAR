@@ -1,0 +1,58 @@
+POT:
+  description: |
+    Read the following text and table, and then write code to answer a question, note that python variables do not start with digits.
+    
+    The 1st line of the table is a list of column headers. The following lines are the rows, shown as list of cells of the table in that row.
+    Include the table header in the table.
+    A few examples are given below with the python code. Interpret them.
+
+  examples:
+    - context: |
+        Rank | NPC | Gold | Silver | Bronze | Total
+        1 | China (CHN) | 95 | 71 | 65 | 231
+        2 | Russia (RUS) | 36 | 38 | 28 | 102
+        3 | Great Britain (GBR)* | 34 | 43 | 43 | 120
+        4 | Ukraine (UKR) | 32 | 24 | 28 | 84
+        5 | Australia (AUS) | 32 | 23 | 30 | 85
+        6 | United States (USA) | 31 | 29 | 38 | 98
+        7 | Brazil (BRA) | 21 | 14 | 8 | 43
+        8 | Germany (GER) | 18 | 26 | 22 | 66
+        9 | Poland (POL) | 14 | 13 | 9 | 36
+        10 | Netherlands (NED) | 10 | 10 | 19 | 39
+        Total (75 NPCs) | Total (75 NPCs) | 503 | 503 | 516 | 1522
+
+      question: of the countries that won bronze medals in the 2012 summer paralympics, which countries won fewer than 10?
+      python: |
+        # Define the table including the header
+        table = [
+          ["Rank", "NPC", "Gold", "Silver", "Bronze", "Total"],
+          [1, "China (CHN)", 95, 71, 65, 231],
+          [2, "Russia (RUS)", 36, 38, 28, 102],
+          [3, "Great Britain (GBR)*", 34, 43, 43, 120],
+          [4, "Ukraine (UKR)", 32, 24, 28, 84],
+          [5, "Australia (AUS)", 32, 23, 30, 85],
+          [6, "United States (USA)", 31, 29, 38, 98],
+          [7, "Brazil (BRA)", 21, 14, 8, 43],
+          [8, "Germany (GER)", 18, 26, 22, 66],
+          [9, "Poland (POL)", 14, 13, 9, 36],
+          [10, "Netherlands (NED)", 10, 10, 19, 39],
+          ["Total (75 NPCs)", "Total (75 NPCs)", 503, 503, 516, 1522]
+        ]
+
+        # Filter countries with fewer than 10 bronze medals
+        countries_less_than_10_bronze = [row[1] for row in table[1:-1] if row[4] < 10]
+
+        # Save the result in the ans variable
+        ans = countries_less_than_10_bronze
+
+        # Print the ans
+        print(ans)
+        # Done
+
+  prompt: |
+    For the following Table and question give the python code and finally print the ans
+    Define the table including the header
+    Table-
+    {context}
+    Question- {question}
+    #Python

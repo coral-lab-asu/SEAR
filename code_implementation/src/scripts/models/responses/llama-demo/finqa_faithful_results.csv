@@ -1,0 +1,230 @@
+index,table_id,question,response,answer
+0,Table_75,what is the return on investment for s&p500 from 2004 to 2006?,"Here is the Python code to answer the question:
+
+```
+# 1. What was the initial investment in S&P 500 index in 2004?
+initial_investment = 100.00  # in dollars (independent, support=[| 2004 | 2005 | 2006 | 2007 | 2008 | 2009, s&p 500 index | 100.00 | 104.91 | 121.48 | 128.16 | 80.74 | 102.11])
+
+# 2. What was the value of S&P 500 index in 2006?
+value_in_2006 = 121.48  # in dollars (independent, support=[| 2004 | 2005 | 2006 | 2007 | 2008 | 2009, s&p 500 index | 100.00 | 104.91 | 121.48 | 128.16 | 80.74 | 102.11])
+
+# 3. What is the return on investment for S&P 500 from 2004 to 2006? (depends on 1 and 2, support=[])
+return_on_investment = (value_in_2006 - initial_investment) / initial_investment * 100
+print(return_on_investment)
+#DONE
+```
+
+This code calculates the return on investment for S&P 500 from 2004 to 2006 by first identifying the initial investment and the value of the investment in 2006, and then calculating the return as a percentage of the initial investment.",21.5%
+1,Table_412,in 2014 what percentage of gcla is in non-u.s . dollar denominated assets?,"Here is the Python code to answer the question:
+
+```
+# 1. What is the total GCLA in 2014?
+total_gcla_2014 = 179633  # in millions (independent, support=[Table - $ in millions | average for theyear ended december 2014 | average for theyear ended december 2013])
+
+# 2. What is the non-u.s. dollar denominated GCLA in 2014?
+non_us_gcla_2014 = 45410  # in millions (independent, support=[Table - $ in millions | average for theyear ended december 2014 | average for theyear ended december 2013])
+
+# 3. What is the percentage of non-u.s. dollar denominated GCLA in 2014? (depends on 1 and 2, support=[])
+percentage_non_us_gcla_2014 = (non_us_gcla_2014 / total_gcla_2014) * 100
+
+print(percentage_non_us_gcla_2014)
+```
+
+This code first extracts the total GCLA and non-u.s. dollar denominated GCLA in 2014 from the table. Then, it calculates the percentage of non-u.s. dollar denominated GCLA in 2014 by dividing the non-u.s. dollar denominated GCLA by the total GCLA and multiplying by 100. Finally, it prints the result.",25%
+2,Table_508,"how much did the company spent to repurchase shares of common stock in 2008 , in millions?","There is no information about the company spending to repurchase shares of common stock in the provided table. The table only shows the components of accumulated other comprehensive loss as of December 31 for the years 2009, 2008, and 2007.
+
+If you meant to ask a different question, please provide the correct question, and I'll be happy to help.
+
+For example, if you wanted to ask ""What was the total accumulated other comprehensive loss in 2008?"", here's the Python code to answer that question:
+
+```
+# 1. What was the total accumulated other comprehensive loss in 2008? (independent, support=[total | $ -2238 ( 2238 ) | $ -5650 ( 5650 ) | $ -575 ( 575 ),( in millions ) | 2009 | 2008 | 2007])
+total_loss_2008 = -5650
+print(total_loss_2008)
+#DONE
+```
+
+Please note that this code simply retrieves the value from the table and prints it, as there's no calculation required to answer this question.",300
+3,Table_711,what percentage of balance of unrecognized tax benefits at the end of 2008 would impact the effective tax rate if recognized?,"Here is the breakdown of the question into subquestions and the Python code to answer the question:
+
+**Subquestions:**
+
+1. What is the balance of unrecognized tax benefits at the end of 2008?
+2. What is the impact on the effective tax rate if the unrecognized tax benefits are recognized?
+3. What percentage of the balance of unrecognized tax benefits at the end of 2008 would impact the effective tax rate if recognized?
+
+**Python Code:**
+
+```
+# 1. What is the balance of unrecognized tax benefits at the end of 2008? (independent, support=[balance at end of period | $ 148.8 | $ 134.8])
+unrecognized_tax_benefits_2008 = 148.8
+
+# 2. What is the impact on the effective tax rate if the unrecognized tax benefits are recognized? (assumption: 100% impact)
+impact_on_effective_tax_rate = unrecognized_tax_benefits_2008
+
+# 3. What percentage of the balance of unrecognized tax benefits at the end of 2008 would impact the effective tax rate if recognized? (depends on 1 and 2, support=[])
+percentage_impact = (impact_on_effective_tax_rate / unrecognized_tax_benefits_2008) * 100
+
+print(percentage_impact)
+```
+
+**Note:** The assumption in step 2 is that 100% of the unrecognized tax benefits would impact the effective tax rate if recognized. This may not be the actual case, and the impact percentage may vary depending on the company's tax situation.",88.6%
+4,Table_46,what was the percentage change in receivables from brokers with in other current assets from 2009 to 2010?,"Here is the Python code to answer the question:
+
+```
+# 1. What are the receivables from brokers in 2009? (independent, support=[receivables from brokers | 11.2 | 8.8])
+receivables_2009 = 8.8
+
+# 2. What are the receivables from brokers in 2010? (independent, support=[receivables from brokers | 11.2 | 8.8])
+receivables_2010 = 11.2
+
+# 3. What is the change in receivables from brokers from 2009 to 2010? (depends on 1 and 2, support=[])
+change = receivables_2010 - receivables_2009
+
+# 4. What is the percentage change in receivables from brokers from 2009 to 2010? (depends on 1 and 3, support=[])
+percentage_change = (change / receivables_2009) * 100
+
+print(percentage_change)
+```
+
+This code breaks down the question into four sub-questions:
+
+1. What are the receivables from brokers in 2009?
+2. What are the receivables from brokers in 2010?
+3. What is the change in receivables from brokers from 2009 to 2010?
+4. What is the percentage change in receivables from brokers from 2009 to 2010?
+
+The code then calculates the percentage change using the formula `(change / initial_value) * 100`.",29%
+0,Table_21,what was the total impairment costs recorded from 2003 to 2005 in millions,"Here is the breakdown of the question into subquestions and the Python code to answer the question:
+
+**Subquestions:**
+
+1. What is the impairment cost recorded in 2003?
+2. What is the impairment cost recorded in 2004?
+3. What is the impairment cost recorded in 2005?
+4. What is the total impairment cost recorded from 2003 to 2005?
+
+**Python code:**
+
+```
+# 1. What is the impairment cost recorded in 2003?
+impairment_cost_2003 = 0.7  # in millions (independent, support=[lifo reserves increased $ 0.7 million in 2003])
+
+# 2. What is the impairment cost recorded in 2004?
+impairment_cost_2004 = 0.2  # in millions (independent, support=[lifo reserves decreased $ 0.2 million in 2004])
+
+# 3. What is the impairment cost recorded in 2005?
+impairment_cost_2005 = 0.5  # in millions (independent, support=[lifo reserves decreased $ 0.5 million in 2005])
+
+# 4. What is the total impairment cost recorded from 2003 to 2005?
+total_impairment_cost = impairment_cost_2003 + impairment_cost_2004 + impairment_cost_2005
+ans = total_impairment_cost
+print(ans)
+```
+
+**Output:**
+The total impairment cost recorded from 2003 to 2005 is 1.4 million.",5.8
+1,Table_526,what are cumulative three year dividends in millions?,"Here is the broken-down question and the Python code to answer it:
+
+**Subquestions:**
+
+1. What is the operating working capital in 2012?
+2. What is the operating working capital in 2011?
+3. What is the change in operating working capital from 2011 to 2012?
+4. What are the cumulative three year dividends in millions? (Note: This question seems out of place, as the table and text do not mention dividends. I will assume it is a mistake and provide an answer based on the available information)
+
+**Python code:**
+
+```
+# 1. What is the operating working capital in 2012?
+op_working_capital_2012 = 2878  # in millions (independent, support=[operating working capital | $ 2878 | $ 2739])
+
+# 2. What is the operating working capital in 2011?
+op_working_capital_2011 = 2739  # in millions (independent, support=[operating working capital | $ 2878 | $ 2739])
+
+# 3. What is the change in operating working capital from 2011 to 2012?
+change_op_working_capital = op_working_capital_2012 - op_working_capital_2011
+
+# 4. What are the cumulative three year dividends in millions? (Assuming it's a mistake, I'll provide an answer based on the available information)
+# Since there is no dividend information available, I'll provide a placeholder answer.
+cumulative_three_year_dividends = 0  # in millions (dependent on non-existent data)
+
+print(""Operating working capital in 2012:"", op_working_capital_2012)
+print(""Operating working capital in 2011:"", op_working_capital_2011)
+print(""Change in operating working capital from 2011 to 2012:"", change_op_working_capital)
+print(""Cumulative three year dividends (assuming 0, as there is no available data):"", cumulative_three_year_dividends)
+```
+
+Please note that the last part of the code assumes there is no dividend information available, which seems to be the case based on the provided context and table.",1073
+2,Table_343,what was the percent of the change in the compensation expense in connection with connection with the 2005 outperformance plan.during from 2009 to 2010,"Here is the broken down question and the Python code to answer it:
+
+**Question:** What was the percent of the change in the compensation expense in connection with the 2005 outperformance plan during from 2009 to 2010?
+
+**Subquestions:**
+
+1. What is the compensation expense in 2009?
+2. What is the compensation expense in 2010?
+3. What is the change in compensation expense from 2009 to 2010?
+4. What is the percent change in compensation expense from 2009 to 2010?
+
+**Python Code:**
+```
+# 1. What is the compensation expense in 2009?
+comp_exp_2009 = 23301744  # in dollars (independent, support=[compensation expense recorded | $ 17365401 | $ 15327206 | $ 23301744])
+
+# 2. What is the compensation expense in 2010?
+comp_exp_2010 = 15327206  # in dollars (independent, support=[compensation expense recorded | $ 17365401 | $ 15327206 | $ 23301744])
+
+# 3. What is the change in compensation expense from 2009 to 2010?
+change = comp_exp_2010 - comp_exp_2009  # in dollars (depends on 1 and 2, support=[])
+
+# 4. What is the percent change in compensation expense from 2009 to 2010?
+percent_change = (change / comp_exp_2009) * 100  # in percent (depends on 1 and 3, support=[])
+
+print(percent_change)
+```
+Note: The question asks about the 2005 outperformance plan, but the table only provides data for 2009, 2010, and 2011. Since there is no data for 2005, we can only calculate the percent change in compensation expense from 2009 to 2010.",30.4%
+3,Table_731,what is the percentage change in impairment charges and net losses from 2004 to 2005?,"Here is the breakdown of the question into subquestions and the Python code to answer the question:
+
+**Breakdown of the question:**
+
+1. What was the impairment charge and net loss in 2004?
+2. What was the impairment charge and net loss in 2005?
+3. What is the change in impairment charge and net loss from 2004 to 2005?
+4. What is the percentage change in impairment charge and net loss from 2004 to 2005?
+
+**Python code:**
+```
+# 1. What was the impairment charge and net loss in 2004?
+impairment_charge_2004 = 2266 + 469 + 422 = 3157  # in thousands (independent, support=[Table, text])
+
+# 2. What was the impairment charge and net loss in 2005?
+impairment_charge_2005 = 1682 + 233 + 219 = 2084  # in thousands (independent, support=[Table, text])
+
+# 3. What is the change in impairment charge and net loss from 2004 to 2005?
+change = impairment_charge_2005 - impairment_charge_2004
+
+# 4. What is the percentage change in impairment charge and net loss from 2004 to 2005?
+ans = (change / impairment_charge_2004) * 100
+print(ans)
+```
+Note: The values for impairment charges and net losses are calculated based on the text and table provided. The exact values may vary depending on the specific numbers mentioned in the text and table.",-5.1%
+4,Table_743,did the b series stock outperform the a series based on 5 year total return?,"Here is the Python code with reasoning:
+
+```
+# 1. What is the total return of Series A common stock as of December 31, 2011?
+total_return_series_a = 296.67  # in dollar terms (independent, support=[| december 31 2008 | december 31 2009 | december 31 2010 | december 31 2011, disca | $ 102.53 | $ 222.09 | $ 301.96 | $ 296.67])
+
+# 2. What is the total return of Series B common stock as of December 31, 2011?
+total_return_series_b = 217.56  # in dollar terms (independent, support=[| december 31 2008 | december 31 2009 | december 31 2010 | december 31 2011, discb | $ 78.53 | $ 162.82 | $ 225.95 | $ 217.56])
+
+# 3. Did the Series B stock outperform the Series A stock based on 5-year total return? (depends on 1 and 2, support=[])
+if total_return_series_b > total_return_series_a:
+    ans = True
+else:
+    ans = False
+
+print(ans)
+```
+
+This code first extracts the total returns of Series A and Series B common stocks as of December 31, 2011, from the table. Then, it compares the two returns and prints `True` if Series B outperforms Series A, and `False` otherwise.",no

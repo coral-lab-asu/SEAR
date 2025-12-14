@@ -1,0 +1,115 @@
+Your task is to comprehend the crucial steps for a given table and question, making each step more detailed and ensuring they effectively lead to the correct answer. Do not answer, only elaborate the crucial steps and add more steps as per requirements.
+
+Few Examples are given below with detailed steps by elaborating from the crucial steps. Interpret the examples and understand the task to comprehend the crucial steps according to the specific table, text and question to reach the answer efficiently.
+
+Examples:
+
+Example1:
+
+Context:
+The table shows the filmography of Aadarsh Balakrishna.
+
+Year | Title                | Role           | Director                | Notes
+---- | -------------------- | -------------- | -----------------------
+2007 | Happy Days           | Sanjay         | Sekhar Kammula          | Telugu Film
+2008 | Vinayakudu           | Ananth Naidu   | Sai Kiran Adivi         | Telugu Film
+2009 | Ride                 | Gaja           | Ramesh Varma            | Telugu Film
+2009 | Evaraina Epudaina    | Raja           | Marthand K Shankar      | Telugu Film
+2010 | Maro Charitra        | Maddy          | Ravi Yadav              | Telugu Film
+2010 | Maa Annayya Bangaram | -              | Jonnalagadda Srinivas   | Telugu Film
+2017 | PSV Garuda Vega      | -              | Praveen Sattaru         | Telugu Film
+2018 | Vijetha              | Kiran          | Rakesh Sashi            | Telugu Film
+2018 | Neevevaro            | Blind sculptor | Hari Nath               | Telugu Film
+
+Question:
+In what films did Aadarsh appear in 2008 and 2009 and who were the directors?
+
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text .
+Decomposition: Break down the question into sub-questions (identify films for each year separately, then retrieve directors).
+
+
+Detailed Steps:
+Identify Objective: Define the goal—find films featuring Aadarsh Balakrishna from 2008 and 2009 with their directors.  
+Evidence Extraction: Locate rows where "Year" is 2008 or 2009, then extract "Title" and "Director."  
+Decomposition:  
+- Find rows for 2008, extract "Title" and "Director."  
+- Find rows for 2009, extract "Title" and "Director."  
+Validation: Ensure completeness, verify director-film matches, and cross-check data accuracy.
+
+Example2:
+
+Context:
+### Final Results – Women's 400 Metres Hurdles  
+#### 1992 Summer Olympics  
+
+| Rank | Athlete                   | Country | Time  |
+|------|---------------------------|---------|-------|
+| 1    | Sally Gunnell             | GBR     | 53.23 |
+| 2    | Sandra Farmer-Patrick     | USA     | 53.69 |
+| 3    | Janeene Vickers           | USA     | 54.31 |
+| 4    | Tatyana Ledovskaya        | EUN     | 54.31 |
+| 5    | Vera Ordina               | EUN     | 54.83 |
+| 6    | Margarita Ponomaryova     | EUN     | 54.83 |
+| 7    | Deon Hemmings             | JAM     | 55.58 |
+| —    | Myrtle Bothma             | RSA     | DNF   |
+
+Question:
+Who received the silver and bronze medals for the women's 400 metres hurdles at the 1992 Summer Olympics?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text from the table.
+Decomposition: Break down the question into sub-questions (identify the silver medalist, then the bronze medalist).
+
+
+Detailed Steps:
+Identify Objective: Find the silver and bronze medalists in the women's 400m hurdles at the 1992 Olympics.  
+Evidence Extraction: Locate "RANK," "FINAL," and "TIME" columns, then identify athletes ranked 2nd and 3rd.  
+Decomposition:  
+- Extract the name of the 2nd-ranked athlete (silver medalist).  
+- Extract the name of the 3rd-ranked athlete (bronze medalist).  
+- Ensure correct ranking, names, and countries.  
+Validation: Verify medal assignments align with rankings and cross-check for inconsistencies.
+
+Example 3:
+
+Context:
+### XYZ Corporation - Total Revenue and Net Profit  
+
+| Year | Total Revenue ($) | Net Profit ($) |
+|------|------------------|---------------|
+| 2017 | 500,000         | 50,000        |
+| 2018 | 550,000         | 55,000        |
+| 2019 | 600,000         | 60,000        |
+Question:
+What was the percentage change in total revenue from 2017 to 2018?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text from the table.
+Python Code Generation: Opt to generate a script for calculating the percentage change in total revenue.
+
+Detailed Steps:
+Identify Objective: Determine the percentage change in total revenue from 2017 to 2018.  
+Evidence Extraction: Locate "Total Revenue," extract values for 2017 and 2018, and verify correctness.  
+Decomposition:  
+- Retrieve revenue for 2017 and 2018.  
+- Find the difference between 2018 and 2017 revenue.  
+- Express this difference relative to 2017’s revenue.  
+- Convert the relative change into a percentage.  
+Validation: Cross-check extracted values and computed percentage for accuracy.  
+Python Code Generation: Generate a script to compute and validate the percentage change.
+
+YourTask:
+Comprehend the Crucial steps to Detailed Steps that are essential for solving the task for the provided context, table and question. Important - Do not answer the Question.
+
+{table}
+
+Question: {question}
+
+{crucial_steps}
+
+Detailed Steps:

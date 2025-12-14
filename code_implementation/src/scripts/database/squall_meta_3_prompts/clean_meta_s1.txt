@@ -1,0 +1,108 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Table: 
+### Election Results Summary
+
+| Year | Candidates Elected | Seats Available | Votes Received | Popular Vote (%) |
+|------|--------------------|----------------|---------------|------------------|
+| 1963 | 7                 | 108            | -             | 15.5%            |
+| 1967 | 20                | 117            | -             | 25.9%            |
+| 1971 | 19                | 117            | -             | 27.1%            |
+| 1975 | 38                | 125            | -             | 28.9%            |
+| 1977 | 33                | 125            | -             | 28.0%            |
+| 1981 | 21                | 125            | -             | 21.2%            |
+| 1985 | 25                | 125            | 865,507       | 23.8%            |
+| 1987 | 19                | 130            | 970,813       | 25.7%            |
+| 1990 | 74                | 130            | 1,509,506     | 37.6%            |
+| 1995 | 17                | 129            | 854,163       | 20.6%            |
+| 1999 | 9                 | 103            | 551,009       | 12.6%            |
+| 2003 | 7                 | 103            | 660,730       | 14.7%            |
+| 2007 | 10                | 107            | 741,043       | 16.8%            |
+| 2011 | 17                | 107            | 980,204       | 22.73%           |
+
+Question: what was the smallest number of votes before 2003 ?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.
+Evidence Extraction: Extract relevant rows and columns for the number of votes before 2003.
+Python Code Generation: Generate a single Python script to find the smallest number of votes before 2003
+
+Example2:
+
+Table:
+### Medal Table Summary
+
+| Rank | Nation         | Gold | Silver | Bronze | Total |
+|------|--------------|------|--------|--------|-------|
+| 1    | Russia (RUS) | 3    | 1      | 1      | 5     |
+| 2    | Canada (CAN) | 2    | 0      | 0      | 2     |
+| 3    | Germany (GER) | 1    | 3      | 2      | 6     |
+| 4    | France (FRA) | 0    | 1      | 2      | 3     |
+| 5    | Belarus (BLR) | 0    | 1      | 0      | 1     |
+| 6    | Ukraine (UKR) | 0    | 0      | 1      | 1     |
+| -    | **Total**    | 6    | 6      | 6      | 18    |
+
+Question: which country won more total medals than tue french , but less than the germans in the 1994 winter olympic biathlon ?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows and columns for total medals, including France and Germany.  
+Step-by-Step Reasoning: Compare total medals of France, Germany, and other countries to find the one that falls within the given range.
+
+Example3:
+
+Table:
+### Sidecar Motocross Championship Standings
+
+| Position | Driver / Passenger                | Equipment  | Points | Wins | Second | Third |
+|----------|----------------------------------|------------|--------|------|--------|-------|
+| 1        | Daniel Willemsen / Reto Grutter  | Zabel-VMC  | 375    | 15   | -      | -     |
+| 2        | Jan Hendrickx / Tim Smeuninx     | Zabel-VMC  | 286    | -    | 2      | 7     |
+| 3        | Kristers Sergis / Kaspars Stupelis | KTM-Mefo  | 242    | 1    | 8      | 1     |
+| 4        | Andy Burgler / Martin Betschart  | KTM-VMC    | 196    | -    | -      | 2     |
+| 5        | Vaclav Rozehnal / Marek Rozehnal | Zabel-VMC  | 191    | -    | -      | -     |
+| 6        | Maris Rupeiks / Haralds Kurpnieks | KTM-Ayr   | 184    | -    | 4      | 1     |
+| 7        | Marco Happich / Meinrad Schelbert | Zabel-VMC  | 180    | -    | 1      | 1     |
+| 8        | Joris Hendrickx / Eli Piccart    | KTM-Ayr    | 177    | -    | -      | 1     |
+| 9        | Tomas Cermak / Ondrej Cermak     | Jawa-Mefo  | 153    | -    | -      | -     |
+| 10       | Janis Daiders / Lauris Daiders   | KTM-Ayr    | 148    | -    | -      | -     |
+
+Question:how many more points did jan hendrickx have than marco happich during the 2007 season ?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows and columns for points associated with Jan Hendrickx and Marco Happich.  
+Python Code Generation: Generate a single Python script to compute the point difference between Jan Hendrickx and Marco Happich
+
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, text (if available) and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+Tables: 
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:

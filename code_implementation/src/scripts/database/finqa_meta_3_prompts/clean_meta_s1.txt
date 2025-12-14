@@ -1,0 +1,106 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Table:
+### Comparison of 5-Year Cumulative Total Return  
+#### Jack Henry & Associates, Inc., S&P 500 Index, and Peer Groups (2014-2019)  
+
+| Year          | 2014   | 2015   | 2016   | 2017   | 2018   | 2019   |
+|--------------|--------|--------|--------|--------|--------|--------|
+| JKHY        | 100.00 | 110.51 | 151.12 | 182.15 | 231.36 | 240.29 |
+| 2019 Peer Group | 100.00 | 126.23 | 142.94 | 166.15 | 224.73 | 281.09 |
+| 2018 Peer Group | 100.00 | 127.40 | 151.16 | 177.26 | 228.97 | 286.22 |
+| S&P 500     | 100.00 | 107.42 | 111.71 | 131.70 | 150.64 | 166.33 |
+
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Step-by-Step Reasoning: Apply logical steps to compute the five-year total return for both peer groups.  
+Python Code Generation: Generate a single Python script to compute and compare the five-year total return of the 2019 and 2018 peer groups.
+
+Example2:
+
+Table:
+### Noncancelable Future Lease Commitments  
+#### (In Millions)  
+
+| Fiscal Year            | Operating Leases ($M) | Capital Leases ($M) |
+|------------------------|----------------------|----------------------|
+| Fiscal 2019           | 137.4                | 0.3                  |
+| Fiscal 2020           | 115.7                | 0.2                  |
+| Fiscal 2021           | 92.3                 | -                    |
+| Fiscal 2022           | 70.9                 | -                    |
+| Fiscal 2023           | 51.8                 | -                    |
+| After Fiscal 2023     | 91.2                 | -                    |
+| **Total Noncancelable Future Lease Commitments** | **559.3** | **0.5** |
+| Less: Interest        | -                    | -0.2 (0.2)           |
+| Present Value of Obligations Under Capital Leases | -        | 0.3                  |
+
+Question: what portion of the total noncancelable future lease commitments are due in fiscal year 2019?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.  
+Python Code Generation: Generate a single Python script to compute the portion of total noncancelable future lease commitments due in fiscal year 2019.
+
+Example3:
+
+Table:
+### Changes in the Standardized Measure of Discounted Future Net Cash Flows  
+#### (In Millions)  
+
+| Category                                                   | 2011   | 2010   | 2009   |
+|----------------------------------------------------------|--------|--------|--------|
+| Sales and Transfers of Oil and Gas Produced (Net of Production and Administrative Costs) | -7922  | -6330  | -4876  |
+| Net Changes in Prices and Production and Administrative Costs Related to Future Production | 12313  | 9843   | 4840   |
+| Extensions, Discoveries, and Improved Recovery (Less Related Costs) | 1454   | 1268   | 1399   |
+| Development Costs Incurred During the Period             | 1899   | 2546   | 2786   |
+| Changes in Estimated Future Development Costs            | -1349  | -2153  | -3773  |
+| Revisions of Previous Quantity Estimates                 | 2526   | 1117   | 5110   |
+| Net Changes in Purchases and Sales of Minerals in Place  | 233    | -20    | -159   |
+| Accretion of Discount                                    | 2040   | 1335   | 787    |
+| Net Change in Income Taxes                               | -6676  | -4231  | -4345  |
+| Timing and Other                                         | 130    | 250    | -149   |
+| **Net Change for the Year**                              | **4648** | **3625** | **1620** |
+| **Beginning of the Year**                                | **9280** | **5655** | **4035** |
+| **End of Year**                                          | **13928** | **9280** | **5655** |
+
+Question: what was the average net annual change in discounted future net cash flows ( in millions ) for the years 2011 , 2010 , and 2009?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Step-by-Step Reasoning: Apply logical steps to compute the average net annual change in discounted future net cash flows over the given years.  
+Python Code Generation: Generate a single Python script to calculate the average net annual change.
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, text (if available) and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+{table}
+
+Question: {question}
+
+Crucial Steps Selected

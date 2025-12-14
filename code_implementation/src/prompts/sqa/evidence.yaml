@@ -1,0 +1,84 @@
+Evidence:
+  description: |
+    Your task is to answer the question based on the table. The 1st line of the table is a list of column headers.
+    The following lines are the rows, shown as list of cells of the table in that row.
+    First extract the relevant rows.
+    Then answer the question with reasoning separated by &&.
+    A few examples are given below along with the reasoning to arrive at the answer. Interpret them, then answer the question based on the table below the examples, and give reasoning for your answer in the same format as the examples.
+    As there can be multiple answers, they are to be returned as a list, as shown in the examples.
+
+  examples:
+    - context: |
+        Rank | Country | Box Office | Year | Box office from national films
+        1 | Canada/United States | $10.8 billion | 2012 | -
+        2 | China | $3.6 billion | 2013 | 59% (2013)
+        3 | Japan | $1.88 billion | 2013 | 61% (2013)
+        4 | United Kingdom | $1.7 billion | 2012 | 36.1% (2011)
+        5 | France | $1.7 billion | 2012 | 33.3% (2013)
+        6 | South Korea | $1.47 billion | 2013 | 59.7% (2013)
+        7 | India | $1.4 billion | 2012 | -
+        8 | Germany | $1.3 billion | 2012 | -
+        9 | Russia | $1.2 billion | 2012 | -
+        10 | Australia | $1.2 billion | 2012 | 4.1% (2011)
+        11 | Italy | $0.84 billion | 2013 | 30% (2013)
+        12 | Brazil | $0.72 billion | 2013 | 17% (2013)
+        - | World | $34.7 billion | 2012 | -
+
+      question: what were the revenues in 2013?
+
+      evidence: |
+        The rows containing information about the revenues in 2013.
+        Here are the relevant rows:
+        2 | China | $3.6 billion | 2013 | 59% (2013)
+        3 | Japan | $1.88 billion | 2013 | 61% (2013)
+        6 | South Korea | $1.47 billion | 2013 | 59.7% (2013)
+        11 | Italy | $0.84 billion | 2013 | 30% (2013)
+        12 | Brazil | $0.72 billion | 2013 | 17% (2013)
+
+      reasoning: |
+        The revenues in 2013 are extracted from the rows with the corresponding year '2013'. The relevant information is in the 'Box Office' column for each country in those rows. The extracted revenues are:
+        China: $3.6 billion
+        Japan: $1.88 billion
+        South Korea: $1.47 billion
+        Italy: $0.84 billion
+        Brazil: $0.72 billion
+
+      answer: |
+        ['$3.6 billion', '$1.88 billion', '$1.47 billion', '$0.84 billion', '$0.72 billion']
+
+    - context: |
+        Rank | NPC | Gold | Silver | Bronze | Total
+        1 | China (CHN) | 95 | 71 | 65 | 231
+        2 | Russia (RUS) | 36 | 38 | 28 | 102
+        3 | Great Britain (GBR)* | 34 | 43 | 43 | 120
+        4 | Ukraine (UKR) | 32 | 24 | 28 | 84
+        5 | Australia (AUS) | 32 | 23 | 30 | 85
+        6 | United States (USA) | 31 | 29 | 38 | 98
+        7 | Brazil (BRA) | 21 | 14 | 8 | 43
+        8 | Germany (GER) | 18 | 26 | 22 | 66
+        9 | Poland (POL) | 14 | 13 | 9 | 36
+        10 | Netherlands (NED) | 10 | 10 | 19 | 39
+        Total (75 NPCs) | Total (75 NPCs) | 503 | 503 | 516 | 1522
+
+      question: of the countries that won bronze medals in the 2012 summer paralympics, which countries won fewer than 10?
+
+      evidence: |
+        7 | Brazil (BRA) | 21 | 14 | 8 | 43
+        9 | Poland (POL) | 14 | 13 | 9 | 36
+
+      reasoning: |
+        To find the countries that won fewer than 10 bronze medals in the 2012 Summer Paralympics, we can look at the "Bronze" column and filter out the countries with a count of bronze medals less than 10. In this case, the relevant rows are:
+        Brazil (BRA) - 8 bronze medals
+        Poland (POL) - 9 bronze medals
+        So, the countries that won fewer than 10 bronze medals are Brazil (BRA), Poland (POL).
+
+      answer: |
+        ["Brazil (BRA)", "Poland (POL)"]
+
+  prompt: |
+    For the following Table and question, extract the relevant rows and then give the answer and reasoning separated by &&
+    Table-
+    {context}
+    Question-
+    {question}
+    Evidence:

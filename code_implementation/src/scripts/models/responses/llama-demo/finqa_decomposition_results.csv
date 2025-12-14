@@ -1,0 +1,187 @@
+index,table_id,question,response,answer
+0,Table_393,"what is total intangible asset amortization expense ( millions ) for the years ended december 31 , 2018 , 2017 and 2016?","Here is the decomposition and answer:
+
+**Decomposition**
+
+sq1. What was the intangible asset amortization expense for the year ended December 31, 2018? (independent)
+sq2. What was the intangible asset amortization expense for the year ended December 31, 2017? (independent)
+sq3. What was the intangible asset amortization expense for the year ended December 31, 2016? (independent)
+sq4. What is the total intangible asset amortization expense for the years ended December 31, 2018, 2017, and 2016? (depends on sq1, sq2, sq3)
+
+**Answers**
+
+Answer to sq1: The intangible asset amortization expense for the year ended December 31, 2018 was $12 million.
+Answer to sq2: The intangible asset amortization expense for the year ended December 31, 2017 was $4 million.
+Answer to sq3: The intangible asset amortization expense for the year ended December 31, 2016 was $4 million.
+Answer to sq4: The total intangible asset amortization expense for the years ended December 31, 2018, 2017, and 2016 is $12 million + $4 million + $4 million = $20 million.
+
+**Final Answer**
+
+20",20
+1,Table_933,what was the cumulative rental expense from 2014 to 2016 in millions,"Here is the decomposition and answer:
+
+**Decomposition:**
+1. What is the cumulative future minimum lease commitment from 2017 to 2021? (independent)
+2. What is the total future minimum lease commitment? (independent)
+3. What is the cumulative rental expense from 2014 to 2016? (depends on sq1 and sq2)
+
+**Answers:**
+Answer to sq1: The cumulative future minimum lease commitment from 2017 to 2021 is $738,915 (in thousands).
+Answer to sq2: The total future minimum lease commitment is $1,184,594 (in thousands).
+Answer to sq3: Since there is no information about the rental expense from 2014 to 2016, we cannot calculate the cumulative rental expense from 2014 to 2016. The table only provides the future minimum lease commitments, not the past expenses.
+
+**Final Answer:** N/A (unable to calculate)",528.4
+2,Table_389,what is the total amount of variance that favorably affected net revenue in 2011?,"Here is the decomposition of the question, answers, and final answer:
+
+**Decomposition:**
+
+1. What are the factors that favorably affected net revenue in 2011? (independent)
+2. What are the amounts of each factor that favorably affected net revenue in 2011? (independent)
+3. What is the total amount of variance that favorably affected net revenue in 2011? (depends on sq2)
+
+**Answers:**
+
+1. The factors that favorably affected net revenue in 2011 are:
+   - volume/weather
+   - ano decommissioning trust
+   - retail electric price
+2. The amounts of each factor that favorably affected net revenue in 2011 are:
+   - volume/weather: 13
+   - ano decommissioning trust: 24
+   - retail electric price: 49
+3. The total amount of variance that favorably affected net revenue in 2011 is:
+   13 + 24 + 49 = 86
+
+**Final Answer:**
+
+86",86
+3,Table_413,in 2018 what was the percent of the decline in the uncertain tax positions,"Here is the decomposition, answers, and final answer:
+
+**Decomposition:**
+
+sq1. What was the balance of uncertain tax positions at January 1, 2018? (independent)
+sq2. What was the balance of uncertain tax positions at December 31, 2018? (independent)
+sq3. What was the decrease in uncertain tax positions from January 1, 2018, to December 31, 2018? (depends on sq1 and sq2)
+sq4. What was the initial balance of uncertain tax positions at January 1, 2018, as a percentage? (depends on sq1)
+sq5. What is the percentage decline in uncertain tax positions from January 1, 2018, to December 31, 2018? (depends on sq3 and sq4)
+
+**Answers:**
+
+Answer to sq1: The balance of uncertain tax positions at January 1, 2018, was $280 million.
+Answer to sq2: The balance of uncertain tax positions at December 31, 2018, was $279 million.
+Answer to sq3: The decrease in uncertain tax positions from January 1, 2018, to December 31, 2018, was $1 million.
+Answer to sq4: The initial balance of uncertain tax positions at January 1, 2018, as a percentage is 100%.
+Answer to sq5: The percentage decline in uncertain tax positions from January 1, 2018, to December 31, 2018, is ($1 / $280) × 100% ≈ 0.36%.
+
+**Final Answer:**
+0.36%",0.35%
+4,Table_798,what was the percent of the increase in the company recorded a liability for interest and penalties from 2017 to 2018,"Here is the decomposition and answer:
+
+**Decomposition**
+
+sq1. What was the total additions based on tax positions related to the current year in 2017? (independent)
+sq2. What was the total additions based on tax positions related to the current year in 2018? (independent)
+sq3. What is the difference between the total additions in 2018 and 2017? (depends on sq1, sq2)
+sq4. How do we express the difference as a percentage increase? (depends on sq3)
+
+**Answers**
+
+Answer to sq1: The total additions based on tax positions related to the current year in 2017 is $25 million.
+Answer to sq2: The total additions based on tax positions related to the current year in 2018 is $18 million.
+Answer to sq3: The difference between the total additions in 2018 and 2017 is -$7 million.
+Answer to sq4: The percentage increase is (-$7 / $25) * 100% = -28%.
+
+**Final Answer**
+
+-28%",40%
+0,Table_266,what was the ratio of the company contribution to the us qualified and non-qualified pension benefits for 2015 compared to 2014,"Here is the decomposition of the question into subquestions, answers, and the final answer:
+
+**Decomposition:**
+
+1. What was the company's contribution to its U.S. and international pension plans in 2015?
+2. What was the U.S. qualified and non-qualified pension benefits payment in 2015?
+3. What was the company's contribution to its U.S. and international pension plans in 2014?
+4. What is the ratio of the company contribution in 2015 to the U.S. qualified and non-qualified pension benefits payment in 2015?
+5. How do we express the ratio of the company contribution in 2015 to the company contribution in 2014?
+
+**Answers:**
+
+1. The company's contribution to its U.S. and international pension plans in 2015 was $264 million.
+2. There is no U.S. qualified and non-qualified pension benefits payment in 2015, as the table only provides the benefits payments from 2016 onwards. We can use the 2016 benefit payment as a proxy, which is $987 million.
+3. The company's contribution to its U.S. and international pension plans in 2014 was $210 million.
+4. The ratio of the company contribution in 2015 to the U.S. qualified and non-qualified pension benefits payment in 2015 (using the 2016 proxy) is $264 million / $987 million = 0.267 (or 26.7%).
+5. We express the ratio as a decimal value or a percentage.
+
+**Final Answer:** 
+0.267 or 26.7%",1.26
+1,Table_811,what was the percentage cumulative total shareholder return on masco common stock for the five year period ended 2017?,"Here is the decomposition and answer to the question:
+
+**Decomposition:**
+
+1. What was the initial investment in Masco common stock on December 31, 2012? (independent)
+2. What was the value of the investment in Masco common stock on December 31, 2017? (independent)
+3. What is the cumulative total shareholder return on Masco common stock for the five-year period ended 2017? (depends on sq1, sq2)
+4. How do we express the cumulative total shareholder return as a percentage? (depends on sq3)
+
+**Answers:**
+
+1. The initial investment in Masco common stock on December 31, 2012, was $100.
+2. The value of the investment in Masco common stock on December 31, 2017, was $318.46.
+3. The cumulative total shareholder return on Masco common stock for the five-year period ended 2017 is $218.46 ($318.46 - $100).
+4. We express the cumulative total shareholder return as a percentage by dividing the return by the initial investment and multiplying by 100. In this case, the percentage return is ($218.46 / $100) x 100 = 218.46%.
+
+**Final Answer:** 
+
+218.46%",218.46%
+2,Table_553,what is the amount of interest applied to the annual long-term debt maturities in 2018?,"Here is the decomposition of the question into subquestions, answers, and the final answer:
+
+**Decomposition**
+
+1. What is the annual long-term debt maturity in 2018? (independent)
+2. What is the implicit interest rate mentioned in the context? (independent)
+3. What is the amount of interest applied to the annual long-term debt maturity in 2018? (depends on sq1, sq2)
+
+**Answers**
+
+1. The annual long-term debt maturity in 2018 is $760,000.
+2. The implicit interest rate mentioned in the context is 7.458%.
+3. The amount of interest applied to the annual long-term debt maturity in 2018 is $55,138 (calculated by multiplying the debt maturity by the implicit interest rate: $760,000 x 7.458%).
+
+**Final Answer**
+
+55,138",566808000
+3,Table_152,"what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 due in 2007 is attributable to total debt repayments?","Here is the decomposition, answers, and final answer:
+
+**Decomposition**
+
+sq1. What is the total contractual obligation for future payments under existing debt and lease commitments and purchase obligations at December 31, 2006, due in 2007? (independent)
+sq2. What is the total debt repayment due in 2007? (independent)
+sq3. What percentage of the total contractual obligation in 2007 is attributable to total debt repayment? (depends on sq1 and sq2)
+
+**Answers**
+
+sq1. The total contractual obligation for future payments under existing debt and lease commitments and purchase obligations at December 31, 2006, due in 2007, is $3165 million.
+sq2. The total debt repayment due in 2007 is $692 million.
+sq3. The percentage of the total contractual obligation in 2007 attributable to total debt repayment is ($692 / $3165) x 100% ≈ 21.83%.
+
+**Final Answer**
+
+21.83%",22%
+4,Table_442,what was the percent of the change of the expected volatility from 2008 to 2009,"Here is the decomposition of the question into subquestions, answers, and final answer:
+
+**Decomposition:**
+
+sq1. What was the expected volatility in 2008?
+sq2. What was the expected volatility in 2009?
+sq3. What is the change in expected volatility from 2008 to 2009?
+sq4. What is the percentage change of the expected volatility from 2008 to 2009?
+
+**Answers:**
+
+Answer to sq1: The expected volatility in 2008 was 28.2%.
+Answer to sq2: The expected volatility in 2009 was 39.2%.
+Answer to sq3: The change in expected volatility from 2008 to 2009 is 39.2% - 28.2% = 11%.
+Answer to sq4: The percentage change of the expected volatility from 2008 to 2009 is (11% / 28.2%) * 100% = 39%.
+
+**Final Answer:**
+39%",39%

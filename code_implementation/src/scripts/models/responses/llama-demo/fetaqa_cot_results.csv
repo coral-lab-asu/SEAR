@@ -1,0 +1,57 @@
+index,table_id,question,response,answer
+0,totto_source/train_json/example-1598.json,Were any NR times set in the Women's 800 metre freestyle final?,"reason: ""To determine if any NR (National Record) times were set in the Women's 800 metre freestyle final, we need to look at the 'Notes' column for 'NR' values. We can see that Yana Klochkova from Ukraine set an NR time of 8:22.66, and Flavia Rigamonti from Switzerland set an NR time of 8:25.91. Therefore, the answer is yes, two NR times were set in the Women's 800 metre freestyle final.""
+
+answer: ""Yes, two NR times were set: Yana Klochkova from Ukraine with a time of 8:22.66, and Flavia Rigamonti from Switzerland with a time of 8:25.91.""",Yana Klochkova of Ukraine and Flavia Rigamonti of Switzerland both set NR times of 8:22.66 and 8:25.91 respectively.
+1,totto_source/train_json/example-13794.json,"In the 2005 Pengkalan Pasir by-election, who were the top two candidates and how many votes did each candidate receive?","Here is the answer and reasoning:
+
+Answer: [""Hanafi Mamat with 7,422 votes"", ""Hanifa Ahmad with 7,288 votes""]
+
+Reasoning: ""To determine the top two candidates in the 2005 Pengkalan Pasir by-election and the number of votes each received, we need to examine the rows with the 'Candidate' and 'Votes' column values. The relevant rows are: Hanafi Mamat (BN) - 7,422 votes and Hanifa Ahmad (PAS) - 7,288 votes. These two candidates received the most votes, with Hanafi Mamat being the top candidate and Hanifa Ahmad being the second. Therefore, the answer is Hanafi Mamat with 7,422 votes and Hanifa Ahmad with 7,288 votes.""","In the 2005 Pengkalan Pasir by-election, Hanafi got 7,422 votes and Hanifa got 7,288 votes."
+2,totto_source/train_json/example-2755.json,What roles did Moore appear in in 1962?,"Here's the answer with reasoning:
+
+Reasoning: ""To determine the roles Joanna Moore appeared in in 1962, we need to look at the rows with the year '1962' and extract the 'Role' column values. The relevant rows are: 1962: Walk on the Wild Side: Miss Precious - 1962: Follow That Dream: Alisha Claypoole. Therefore, the roles Joanna Moore appeared in in 1962 are Miss Precious and Alisha Claypoole.""
+
+Answer: [""Miss Precious"", ""Alisha Claypoole""]","In 1962, Moore appeared as Miss Precious, in Walk on the Wild Side followed by Follow That Dream."
+3,totto_source/train_json/example-13717.json,When and in which club and league did Kazunari Okayama start his career?,"Reasoning:
+
+To determine when and in which club and league Kazunari Okayama started his career, we need to look at the earliest entry in the table. The earliest entry is the 1997 season, where Kazunari Okayama played for Yokohama Marinos in the J1 League.
+
+Answer:
+
+[""1997"", ""Yokohama Marinos"", ""J1 League""]",Kazunari Okayama joined J1 League club Yokohama Marinos (later Yokohama F. Marinos) in 1997.
+4,totto_source/dev_json/example-319.json,Did Joshua Jackson ever star in the Simpsons?,"Here's the answer and reasoning:
+
+Answer: Yes
+
+Reasoning: To determine if Joshua Jackson ever starred in The Simpsons, we need to look at the rows in the table that mention The Simpsons. The relevant row is: 2000 | The Simpsons | Jesse Grass | Voice; Episode: ""Lisa the Tree Hugger"". This row indicates that Joshua Jackson had a voice role in an episode of The Simpsons titled ""Lisa the Tree Hugger"" in 2000. Therefore, Joshua Jackson did star in The Simpsons, albeit in a voice role.","In 2000, Joshua Jackson starred in The Simpsons, voicing the character of Jesse Grass in the episode ""Lisa the Tree Hugger""."
+0,totto_source/dev_json/example-1803.json,Which competitions did Fabrizio Donato win gold medal?,"Here is the answer and reasoning:
+
+**Answer:** [""2001 Mediterranean Games"", ""2009 European Indoor Championships"", ""2012 European Championships""]
+
+**Reasoning:** To determine which competitions Fabrizio Donato won a gold medal, we need to look at the ""Position"" column in the table. We are only interested in the rows where the ""Position"" is ""1st"". The relevant rows are:
+
+* 2001 Mediterranean Games: 1st
+* 2009 European Indoor Championships: 1st
+* 2012 European Championships: 1st
+
+Therefore, Fabrizio Donato won gold medals in these three competitions.","Fabrizio Donato won gold medals at the 2001 Mediterranean Games with a record of 17.05 metres and the 2009 European Indoor Championships, a championship record of 17.59 metres."
+1,totto_source/train_json/example-13130.json,How did Mark Boswell perform in Olympic Games?,"Here is the answer with reasoning:
+
+**Answer:** Mark Boswell performed twice in the Olympic Games, finishing 6th in 2000 with a height of 2.32m and 7th in 2004 with a height of 2.29m.
+
+**Reasoning:** To determine how Mark Boswell performed in the Olympic Games, we need to look at the rows with the ""Olympic Games"" competition. The relevant rows are: 2000: Olympic Games: 6th, 2.32m and 2004: Olympic Games: 7th, 2.29m. Therefore, Mark Boswell performed twice in the Olympic Games, finishing 6th in 2000 and 7th in 2004.",Mark Boswell's Olympic achievements in competition were 7th place at the 2004 Summer Olympics and 6th place at the 2000 Summer Olympics.
+2,totto_source/train_json/example-13348.json,By what majority did Mason win the seat for the Liberal party in the 1918 Wansbeck by-election?,"Here's the answer and reasoning:
+
+Reason: ""To determine the majority by which Mason won the seat for the Liberal party in the 1918 Wansbeck by-election, we need to look at the 'Majority' column in the table. The relevant row is the 'Majority' row, which shows that Mason won by a majority of 547 votes, which is 5.0% of the total votes. Therefore, Mason won the seat by a majority of 547 votes.""
+
+Answer: 547","In the 1918 Wansbeck by-election, Mason won the seat for the Liberal party with a majority of 547 votes over Edwards."
+3,totto_source/dev_json/example-676.json,Who did Sasha Clements star in two episodes of Life with Boys?,"Reasoning:
+To determine who Sasha Clements starred in two episodes of Life with Boys, we need to look at the row with the title 'Life with Boys' and extract the 'Role' column value. The relevant row is: 2012: Life with Boys: Emma Therefore, Sasha Clements starred in two episodes of Life with Boys as Emma.
+
+Answer: [""Emma""]","In 2012, Sasha Clements starred as Emma in two episodes of Life with Boys."
+4,totto_source/dev_json/example-991.json,What were the first four signings in the 1981-82 Port Vale F.C. season?,"Here is the answer with reasoning:
+
+Reasoning: 
+""To determine the first four signings in the 1981-82 Port Vale F.C. season, we need to look at the 'Date from' column and extract the 'Name' column values in the order of the earliest dates. The relevant rows are: 1981: Ray Deakin - June 1981: Ernie Moss - August 1981: Jimmy Greenhoff - August 1981: Geoff Hunter. Therefore, the first four signings in the 1981-82 Port Vale F.C. season are Ray Deakin, Ernie Moss, Jimmy Greenhoff, and Geoff Hunter.""
+
+Answer: [""Ray Deakin"", ""Ernie Moss"", ""Jimmy Greenhoff"", ""Geoff Hunter""]","For the 1981–82 Port Vale F.C. season, new signings were: defender Ray Deakin from Everton, midfielder Geoff Hunter from Crewe Alexandra, forward Ernie Moss from Chesterfield for £12,000 and Jimmy Greenhoff from the Toronto Blizzard."

@@ -1,0 +1,288 @@
+#### Context/Background:
+
+Steps for Meta Reasoning:
+Each section has multiple approaches, you do not have to use all the approaches. 
+Understand their use-cases and then pick minimal relevant steps to create your own optimal approach to answer the question.  
+
+Problem Understanding:
+- Determine the objective: Identify the goal or desired outcome of the reasoning process.
+- Understand the problem: Comprehend the nature and scope of the problem.
+
+Reasoning Process:
+- Step-by-step reasoning: Approach the problem logically, ensuring clarity at each step or stage.
+- Extract relevant information: Gather all necessary data and details pertinent to the problem, by extracting relevant rows, columns and textual information.
+- Decomposition of problem into sub-problems: Break down the main question into smaller and more manageable sub questions.
+- Individually answer each sub-problem with reasoning: Apply logical steps to solve each sub question separately.
+- Write a single Python program for solving the problem: Create a detailed unified Python script with comments describing the steps and stages.
+- Individually write a Python program for each sub-problem: Develop separate Python scripts for each sub-problem, ensuring modularity and clarity.
+
+Answer:
+- Summarize findings: Combine the results from each step or sub question to give the final answer as Final Answer: [Answer].
+- Combine Python code: If necessary, integrate the individual Python scripts into a cohesive program at the end. Print the final answer as Final Answer: [Answer], end your code with a comment "#Done".
+
+If the problem is simple enough, use approaches like chain of thought to solve the problem, especially when it is just a simple look up.
+
+#### Goals / Desired Outcome:
+
+The goal is to accurately answer the question using a logical and optimal reasoning process. The desired output should be a well-explained paragraph summarizing the findings, along with any necessary Python code blocks to perform calculations or data extraction.
+
+#### Specific Requirements:
+
+1. The response must include a step-by-step reasoning process.
+2. Extract relevant information from the given table.
+3. If needed, provide Python code for calculations.
+4. Summarize findings clearly and concisely in a paragraph.
+5. Final answer should be presented in a specific format: "Final Answer: [Answer]".
+
+#### Tone / Style:
+
+The tone should be formal and instructional, aiming to provide clear and logical explanations.
+
+#### Example:
+
+**Table Title:** Player Statistics  
+**Table Subtitle:** Career highlights of players
+
+**Table:**
+
+No | Player         | Position | Career     | Date honored
+-- | -------------  | -------- | ---------- | -------------
+7  | Keith Tkachuk  | C        | 1992-2001  | December 23, 2011
+9  | Bobby Hull     | LW       | 1972-1980  | February 19, 1989
+19 | Shane Doan     | RW       | 1996-2017  | February 24, 2019
+
+**More context:**
+- Keith Tkachuk (USA) is an American former professional ice hockey player who played in the NHL in an 18-year career with the Winnipeg Jets, Phoenix Coyotes, St. Louis Blues, and Atlanta Thrashers, retiring in 2010. He is considered one of the greatest U.S.-born players in NHL history.
+- Bobby Hull (CAN) is a Canadian former ice hockey player who is regarded as one of the greatest players of all time, known for his blonde hair and legendary skating speed.
+- Shane Doan (CAN) is a Canadian former professional ice hockey forward who spent the entirety of his NHL career with the Winnipeg Jets/Arizona Coyotes franchise, retiring in 2017. He was the longest-serving NHL captain at the time of his retirement.
+
+**Question:** Arizona Coyotes player number 19 played in how many NHL seasons?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Identify how many NHL seasons the Arizona Coyotes player number 19 played.
+2. Understand the Problem: This requires extracting the relevant row from the table based on the player number and calculating the number of seasons from the career span.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Player number 19: Shane Doan, Career: 1996-2017
+
+4. Python Code:
+```python
+# Extract the row with player number 19
+player_number = 19
+
+# List of players
+players = [
+    dict(No=7, Player='Keith Tkachuk', Position='C', Career='1992-2001', Date_honored='December 23, 2011'),
+    dict(No=9, Player='Bobby Hull', Position='LW', Career='1972-1980', Date_honored='February 19, 1989'),
+    dict(No=19, Player='Shane Doan', Position='RW', Career='1996-2017', Date_honored='February 24, 2019')
+]
+
+# Find the player with number 19
+player = next(p for p in players if p['No'] == player_number)
+
+# Extract the career span from the player
+career_span = player['Career']
+
+# Calculate the number of seasons
+start_year, end_year = map(int, career_span.split('-'))
+number_of_seasons = end_year - start_year + 1
+
+print(number_of_seasons)
+#DONE
+```
+
+**Final Answer:** Shane Doan played in the NHL for 21 seasons.
+
+---
+
+**Table Title:** Mile Record Progression  
+**Table Subtitle:** List of athletes and their record-breaking mile times
+
+**Table:**
+
+Time | Athlete              | Date       | Place
+---- | -------------------- | ---------- | -----------------------------
+3:55.8 | Abel Kiviat (USA)  | 1912-06-08 | Cambridge, Massachusetts, USA
+3:54.7 | John Zander (SWE)  | 1917-08-05 | Stockholm, Sweden
+3:41.8+ | John Landy (AUS)  | 1954-06-21 | Turku, Finland
+
+**More context:**
+- Paavo Nurmi (FIN) was a Finnish long-distance runner, known as the "Flying Finn," who set 22 official world records.
+- Gunder Hägg (SWE) was a Swedish runner who set multiple world records in the 1940s.
+- Otto Peltzer (GER) was a German middle-distance runner who set world records in the 1920s.
+- John Landy (AUS) was an Australian middle-distance runner and the second man to break the four-minute mile barrier.
+- Luigi Beccali (ITA) was the first Italian to win an Olympic gold medal in running.
+
+**Question:** Which athlete set the mile record on 1954-06-21, and where did this event take place?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Identify the athlete who set the mile record on 1954-06-21 and the location of the event.
+2. Understand the Problem: This requires extracting the relevant row from the table based on the date and finding the corresponding athlete and location.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Record on 1954-06-21: John Landy (AUS) with a time of 3:41.8+ in Turku, Finland.
+
+4. Python Code:
+```python
+# Extract the row with the date '1954-06-21'
+record_date = '1954-06-21'
+
+# List of records
+records = [
+    dict(Time='3:55.8', Athlete='Abel Kiviat (USA)', Date='1912-06-08', Place='Cambridge, Massachusetts, USA'),
+    dict(Time='3:54.7', Athlete='John Zander (SWE)', Date='1917-08-05', Place='Stockholm, Sweden'),
+    dict(Time='3:41.8+', Athlete='John Landy (AUS)', Date='1954-06-21', Place='Turku, Finland')
+]
+
+# Find the record on '1954-06-21'
+record = next(r for r in records if r['Date'] == record_date)
+
+# Extract the athlete and place from the record
+athlete = record['Athlete']
+place = record['Place']
+
+print("Athlete: ", athlete, "Place: ", place)
+#DONE
+```
+
+**Final Answer:** John Landy set the mile record on 1954-06-21 in Turku, Finland.
+
+---
+
+**Table Title:** Ice Cream Sales  
+**Table Subtitle:** Sales data for different ice cream flavors
+
+**Table:**
+
+Flavor   | Sales
+-------- | -----
+Vanilla  | 1500
+Chocolate| 1200
+Strawberry | 900
+
+**More context:**
+- The ice cream sales data was collected over the summer season.
+- Vanilla has been the most popular flavor for several years.
+- Chocolate and Strawberry flavors also have a consistent customer base.
+
+**Question:** What is the total sales of all ice cream flavors?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Calculate the total sales of all ice cream flavors.
+2. Understand the Problem: This requires summing up the sales of all listed flavors.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Vanilla: 1500
+   - Chocolate: 1200
+   - Strawberry: 900
+
+4. Chain of Thought:
+   - Total sales = 1500 + 1200 + 900 = 3600
+
+**Final Answer:** The total sales of all ice cream flavors is 3600.
+
+---
+
+**Table Title:** Student Grades  
+**Table Subtitle:** Grades of students in a mathematics exam
+
+**Table:**
+
+Student  | Grade
+
+
+-------- | -----
+Alice    | 85
+Bob      | 92
+Charlie  | 78
+
+**More context:**
+- The mathematics exam was conducted at the end of the semester.
+- Alice, Bob, and Charlie are part of the same class.
+- The average grade is used to evaluate the overall performance of the class.
+
+**Question:** What is the average grade of the students?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Calculate the average grade of the students.
+2. Understand the Problem: This requires calculating the mean of the grades listed.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Alice: 85
+   - Bob: 92
+   - Charlie: 78
+
+4. Python Code:
+```python
+# List of grades
+grades = [85, 92, 78]
+
+# Calculate the average grade
+average_grade = sum(grades) / len(grades)
+
+print(average_grade)
+#DONE
+```
+
+**Final Answer:** The average grade of the students is 85.
+
+---
+
+**Table Title:** Employee Salaries  
+**Table Subtitle:** Monthly salaries of employees in a company
+
+**Table:**
+
+Employee | Salary
+-------- | ------
+John     | 3000
+Jane     | 3500
+Doe      | 4000
+
+**More context:**
+- The company conducts an annual salary review for all employees.
+- John, Jane, and Doe are part of the management team.
+- The total salary expenditure is calculated for budgeting purposes.
+
+**Question:** What is the total salary expenditure for the company?
+
+**Optimal Approach:**
+
+**Problem Understanding:**
+1. Determine the Objective: Calculate the total salary expenditure for the company.
+2. Understand the Problem: This requires summing up the salaries of all listed employees.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - John: 3000
+   - Jane: 3500
+   - Doe: 4000
+
+4. Chain of Thought:
+   - Total salary expenditure = 3000 + 3500 + 4000 = 10500
+
+**Final Answer:** The total salary expenditure for the company is 10500.
+
+---
+
+Your task: Answer the question(s) using the optimal approach provided above, referring to the table context given. 
+If there are multiple questions, answer each of them in the order of the questions asked.
+
+Table:
+{context}
+
+Question(s): {question}
+
+Optimal Approach:

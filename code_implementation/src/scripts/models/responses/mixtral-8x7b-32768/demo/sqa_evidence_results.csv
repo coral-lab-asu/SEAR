@@ -1,0 +1,171 @@
+index,table_id,question,response,answer
+0,table_csv/203_544.csv,"['who did the chicago bears draft in 2000?', 'of the players drafted by the chicago bears in 2000, which attended the same college?']","To answer these questions, we first need to extract the rows corresponding to the players drafted by the Chicago Bears in 2000. From the table, we can see that the following players were drafted by the Bears in the 2000 NFL draft:
+
+1. Round 1, Pick 9: Brian Urlacher, S, New Mexico
+2. Round 3, Pick 69: Dez White, WR, Georgia Tech
+3. Round 7, Pick 223: James Cotton, DE, Ohio State
+
+Now, we can proceed to answer the questions based on the extracted rows.
+
+Question 1: who did the chicago bears draft in 2000?
+Answer 1: |
+['Brian Urlacher (New Mexico)', 'Dez White (Georgia Tech)', 'James Cotton (Ohio State)']
+
+Question 2: of the players drafted by the chicago bears in 2000, which attended the same college?
+Answer 2: |
+['Dez White (Georgia Tech)', 'James Cotton (Ohio State)']
+
+Reasoning:
+Brian Urlacher attended the University of New Mexico, while Dez White and James Cotton both attended different colleges (Georgia Tech and Ohio State, respectively). Therefore, only Dez White and James Cotton are from the same college among the players drafted by the Chicago Bears in 2000.","[""['Brian Urlacher', 'Mike Brown', 'Dez White', 'Dustin Lyman', 'Reggie Austin', 'Frank Murphy', 'Paul Edinger', 'James Cotton', 'Michael Green']"", ""['Dustin Lyman', 'Reggie Austin']""]"
+1,table_csv/204_531.csv,"['who are the drivers of the 1998 cart season?', 'of these, which competed in the 1998 cart season?', 'now, which team uses a lola chassis?']","For the question: ['who are the drivers of the 1998 cart season?', 'of these, which competed in the 1998 cart season?']
+
+Evidence: The entire table consists of the drivers of the 1998 CART season.
+
+Answer: The drivers of the 1998 CART season are:
+['Alex Zanardi', 'Jimmy Vasser', 'Al Unser, Jr.', 'Andre Ribeiro', 'Gil de Ferran', 'Michael Andretti', 'Christian Fittipaldi', 'Bobby Rahal', 'Bryan Herta', 'JJ Lehto', 'Richie Hearn', 'Hideshi Matsuda', 'Roberto Moreno', 'Domenico Schiattarella', 'Helio Castroneves', 'Mauricio Gugelmin', 'Mark Blundell', 'Michel Jourdain, Jr.', 'Dennis Vitolo', 'Adrian Fernandez', 'Scott Pruett', 'Tony Kanaan', 'Hiro Matsushita', 'Robby Gordon', 'Paul Tracy', 'Dario Franchitti', 'Patrick Carpentier', 'Greg Moore', 'Alex Barron', 'P. J. Jones', 'Vincenzo Sospiri', 'Arnd Meier']
+
+For the question: 'now, which team uses a lola chassis?'
+
+Evidence: From the table, only one team, Davis Racing, uses the Lola T98/00 chassis.
+
+Answer: The team that uses a Lola chassis in the 1998 CART season is Davis Racing.","[""['Alex Zanardi', 'Jimmy Vasser', 'Al Unser, Jr.', 'Andre Ribeiro', 'Gil de Ferran', 'Michael Andretti', 'Christian Fittipaldi  Roberto Moreno', 'Bobby Rahal', 'Bryan Herta', 'JJ Lehto', 'Richie Hearn', 'Hideshi Matsuda', 'Roberto Moreno  Domenico Schiattarella', 'Helio Castroneves', 'Mauricio Gugelmin', 'Mark Blundell', 'Michel Jourdain, Jr.', 'Dennis Vitolo  Gualter Salles', 'Scott Pruett', 'Adrian Fernandez', 'Tony Kanaan', 'Hiro Matsushita  Robby Gordon', 'Max Papis', 'Paul Tracy', 'Dario Franchitti', 'Patrick Carpentier', 'Greg Moore', 'Alex Barron', 'P. J. Jones  Vincenzo Sospiri', 'Arnd Meier']"", ""['Chip Ganassi Racing', 'Chip Ganassi Racing', 'Marlboro Team Penske', 'Marlboro Team Penske', 'Walker Racing', 'Newman-Haas Racing', 'Newman-Haas Racing', 'Team Rahal', 'Team Rahal', 'Hogan Racing', 'Della Penna Motorsports', 'Della Penna Motorsports', 'Project Indy', 'Bettenhausen Racing', 'PacWest Racing Group', 'PacWest Racing Group', 'Payton/Coyne Racing', 'Payton/Coyne Racing', 'Patrick Racing', 'Patrick Racing', 'Tasman Motorsports Group', 'Arciero-Wells Racing', 'Arciero-Wells Racing', 'Team KOOL Green', 'Team KOOL Green', 'Forsythe Racing', 'Forsythe Racing', 'All American Racing', 'All American Racing', 'Davis Racing']"", ""['Davis Racing']""]"
+2,table_csv/204_989.csv,"['which schools scored higher than 700 in 2008?', 'what was the highest listed number in 2007?', 'and how many students were enrolled at each in 2007 and 2008?', 'what were their scores in 2008?', 'highest number in 2008 and 2007?', 'what school scored 818 in 2008?', 'who had 818, the most listed numbers before 2009?']","For the question 'which schools scored higher than 700 in 2008?', the relevant rows are:
+Francisco Bravo Medical Magnet High School - 818
+Marc and Eva Stern Math and Science School - 792
+Oscar De La Hoya Animo Charter High School - 726
+James A. Garfield High School - 597
+Abraham Lincoln High School - 609
+Woodrow Wilson High School - 585
+Theodore Roosevelt High School - 551
+
+The answer is: ['Francisco Bravo Medical Magnet High School', 'Marc and Eva Stern Math and Science School', 'Oscar De La Hoya Animo Charter High School', 'James A. Garfield High School', 'Abraham Lincoln High School', 'Woodrow Wilson High School', 'Theodore Roosevelt High School']
+
+For the question 'what was the highest listed number in 2007?', the relevant row is:
+Francisco Bravo Medical Magnet High School - 807
+
+The answer is: ['807']
+
+For the question 'and how many students were enrolled at each in 2007 and 2008?', the relevant rows and columns are:
+School | 2007 | 2008
+Francisco Bravo Medical Magnet High School | 807 | 818
+Marc and Eva Stern Math and Science School | 718 | 792
+Oscar De La Hoya Animo Charter High School | 662 | 726
+James A. Garfield High School | 553 | 597
+Abraham Lincoln High School | 594 | 609
+Woodrow Wilson High School | 582 | 585
+Theodore Roosevelt High School | 557 | 551
+
+The answer is:
+Francisco Bravo Medical Magnet High School - 807 (2007), 818 (2008)
+Marc and Eva Stern Math and Science School - 718 (2007), 792 (2008)
+Oscar De La Hoya Animo Charter High School - 662 (2007), 726 (2008)
+James A. Garfield High School - 553 (2007), 597 (2008)
+Abraham Lincoln High School - 594 (2007), 609 (2008)
+Woodrow Wilson High School - 582 (2007), 585 (2008)
+Theodore Roosevelt High School - 557 (2007), 551 (2008)
+
+For the question 'what were their scores in 2008?', the relevant rows and columns are:
+School | 2008
+Francisco Bravo Medical Magnet High School | 818
+Marc and Eva Stern Math and Science School | 792
+Oscar De La Hoya Animo Charter High School | 726
+James A. Garfield High School | 597
+Abraham Lincoln High School | 609
+Woodrow Wilson High School | 585
+Theodore Roosevelt High School | 551
+
+The answer is:
+Francisco Bravo Medical Magnet High School - 818
+Marc and Eva Stern Math and Science School - 792
+Oscar De La Hoya Animo Charter High School - 726
+James A. Garfield High School - 597
+Abraham Lincoln High School - 609
+Woodrow Wilson High School - 585
+Theodore Roosevelt High School - 551
+
+For the question 'highest number in 2008 and 2007?', the relevant rows are:
+Francisco Bravo Medical Magnet High School - 818 (2008), 807 (2007)
+
+The answer is: ['Francisco Bravo Medical Magnet High School', '818 (2008)', '807 (2007)']
+
+For the question 'what school scored 818 in 2008?', the relevant row is:
+Francisco Bravo Medical Magnet High School - 818
+
+The answer is: ['Francisco Bravo Medical Magnet High School']
+
+For the question 'who had 818, the most listed numbers before 2009?', the relevant row is:
+Francisco Bravo Medical Magnet High School - 818
+
+The answer is: ['Francisco Bravo Medical Magnet High School']","[""['Francisco Bravo Medical Magnet High School', 'Marc and Eva Stern Math and Science School', 'Oscar De La Hoya Animo Charter High School']"", ""['807']"", ""['807', '818', '718', '792', '662', '726', '553', '597', '594', '609', '582', '585', '557', '551', '457', '516', '', '502']"", ""['818', '792', '726', '597', '609', '585', '551', '516', '502']"", ""['818']"", ""['Francisco Bravo Medical Magnet High School']"", ""['Francisco Bravo Medical Magnet High School']""]"
+3,table_csv/203_360.csv,"['what are all of the times?', 'what is the fastest time for lm2x lightweight double scull boat?', 'what was the time?', 'which time was the shortest?', 'of these, which competed in 2012?', 'what was their rowing time?', 'which had the least amount of time?', 'what was the time?']","Let's extract the relevant rows and provide answers for each of the questions.
+
+1. what are all of the times?
+
+Evidence:
+M1x Single sculls | 6:33.35 | Mahe Drysdale | New Zealand | 2009 |  | Poznan, Poland
+M2- Coxless pairs | 6:08.50 | Hamish Bond Eric Murray | New Zealand | 2012 | Summer Olympics | Eton Dorney, England
+M2+ Coxed pairs | 6:42.16 | Igor Boraska Tihomir Frankovic Milan Razov (coxswain) | Croatia | 1994 |  | Indianapolis, United States
+M2x Double sculls | 6:03.25 | Adrien Hardy Jean-Baptiste Macquet | France | 2006 |  | Poznan, Poland
+M4- Coxless four | 5:37.86 | Andrew Triggs-Hodge Tom James Pete Reed Alex Gregory | Great Britain | 2012 |  | Lucerne, Switzerland
+M4+ Coxed four | 5:58.96 | Matthias Ungemach Armin Eichholz Armin Weyrauch Bahne Rabe Joerg Dederding (coxswain) | Germany | 1991 |  | Vienna, Austria
+M4x Quad sculls | 5:33.15 | Vladislav Ryabcev Alexey Svirin Nikita Morgachev Sergei Fedorovtsev | Russia | 2012 |  | Lucerne,Switzerland
+M8+ Eight | 5:19.35 | Gabriel Bergen Douglas Csima Robert Gibson Conlin McCabe Malcolm Howard Andrew Byrnes Jeremiah Brown Will Crothers Brian Price (coxswain) | Canada | 2012 |  | Lucerne, Switzerland
+LM1x Lightweight single sculls | 6:46.93 | Jeremie Azou | France | 2011 |  | Amsterdam, Netherlands
+LM2- Lightweight coxless pairs | 6:26.21 | Tony O'Connor Neville Maxwell | Ireland | 1994 |  | Paris, France
+LM2x Lightweight double sculls | 6:10.02 | Mads Rasmussen Rasmus Quist | Denmark | 2007 |  | Amsterdam, Netherlands
+LM4- Lightweight coxless four | 5:45.60 | Thomas Poulsen Thomas Ebert Eskild Ebbesen Victor Feddersen | Denmark | 1999 |  | Lucerne, Switzerland
+LM4x Lightweight quad sculls | 5:45.18 | Francesco Esposito Massimo Lana Michelangelo Crispi Massimo Guglielmi | Italy | 1992 |  | Montreal, Canada
+LM8+ Lightweight eight | 5:30.24 | Klaus Altena Christian Dahlke Thomas Melges Bernhard Stomporowski Michael Kobor Uwe Maerz Michael Buchheit Kai von Warburg Olaf Kaska (coxswain) | Germany | 1992 |  | Montreal, Canada
+
+Answer: ['6:33.35', '6:08.50', '6:42.16', '6:03.25', '5:37.86', '5:58.96', '5:33.15', '5:19.35', '6:46.93', '6:26.21', '6:10.02', '5:45.60', '5:45.18', '5:30.24']
+
+2. what is the fastest time for lm2x lightweight double scull boat?
+
+Answer: '6:10.02' (row 11)
+
+3. what was the time? (not specific enough, will answer the fastest time)
+
+Answer: '6:10.02' (row 11, LM2x Lightweight double sculls)
+
+4. which time was the shortest?
+
+Answer: '5:19.35' (row 7, M8+ Eight)
+
+5. of these, which competed in 2012?
+
+Answer:
+- M2- Coxless pairs (row 2)
+- M4- Coxless four (row 5)
+- M4x Quad sculls (row 6)
+- M8+ Eight (row 8)
+- LM1x Lightweight single sculls (row 10)
+- LM2x Lightweight double sculls (row 11)
+
+Evidence: All rows with '2012' in the 'Date' or 'Meet' column.
+
+6. what was their rowing time?
+
+Answer:
+- M2- Coxless pairs: 6:08.50
+- M4- Coxless four: 5:37.86
+- M4x Quad sculls: 5:33.15
+- M8+ Eight: 5:19.35
+- LM1x Lightweight single sculls: 6:46.93
+- LM2x Lightweight double sculls: 6:10.02
+
+7. which had the least amount of time?
+
+Answer: The M8+ Eight team had the least amount of time with '5:19.35' (row 8)
+
+8. what was the time?
+
+Question is not specific; will assume asking for the fastest time.
+
+Answer: '5:19.35' (row 8, M8+ Eight)","[""['6:33.35', '6:08.50', '6:42.16', '6:03.25', '5:37.86', '5:58.96', '5:33.15', '5:19.35', '6:46.93', '6:26.21', '6:10.02', '5:45.60', '5:45.18', '5:30.24']"", ""['6:10.02']"", ""['5:19.35']"", ""['5:19.35']"", ""['New Zealand', 'Great Britain', 'Russia', 'Canada']"", ""['6:10.02']"", ""['Canada']"", ""['5:19.35']""]"
+4,table_csv/203_666.csv,['what are the different nationalities of all the people who immigrated to france in 2009?'],"To answer this question, we first need to identify the row in the table that corresponds to the immigration to France in 2009. However, there is no such row in the table. The table lists the number of naturalizations by origin, not the number of immigrants by destination. Therefore, we cannot answer this question based on the given table.
+
+answer: |
+  The question cannot be answered based on the given table.
+
+reasoning: |
+  The table does not provide information about the number of immigrants to France or any other specific country by year. It only lists the number of naturalizations by origin and year.","[""['Africa', 'Maghreb', 'Sub-Saharan Africa', 'Other Africa', 'Asia', 'South-East Asia', 'East Asia', 'South Asia', 'Other Asia', 'Europe (not including CIS )', 'CIS', 'CIS (Europe)', 'CIS (Asia)', 'America', 'North America', 'South and Central America', 'Oceania', 'Others']""]"

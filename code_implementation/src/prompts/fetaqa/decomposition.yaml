@@ -1,0 +1,91 @@
+Decomposition:
+  description: |
+    Your task is to answer the questions based on the context given. The context is a table where the 1st line is the header and the following lines are the rows. 
+    If there is a row such as 'Career Total' or similar that summarizes column values, treat it as a separate sub-table and do not confuse it with the main data rows. 
+    Examine such tables carefully to avoid errors in answering. 
+    For subquestions and answers make the repetitions into a single attribute value and use it as a subtable. 
+
+    Break the question into subquestions, and answer each subquestion along with supporting reasoning, then give the final answer. 
+    Only refer to the table given in the prompt while answering the question.
+    A few examples are shown below. The answer should not be a whole sentence, just give the figures and units if needed.
+
+  examples:
+    - context: |
+        Table Title - Players' Career Stats
+        Table Subtitle - Career statistics of football players
+        Season      | Club                      | Division              | League Apps | League Goals | Cup Apps | Cup Goals | Continental Apps | Continental Goals | Total Apps | Total Goals
+        2006–07     | Slavia Prague             | Czech First League    | 6           | 1            | 0        | 0         | -                | -                 | 6          | 1
+        2007–08     | SK Kladno (loan)          | Czech First League    | 14          | 2            | 0        | 0         | -                | -                 | 14         | 2
+        2007–08     | Slovan Liberec            | Czech First League    | 14          | 1            | 0        | 0         | -                | -                 | 14         | 1
+        2008–09     | Slovan Liberec            | Czech First League    | 27          | 5            | 0        | 0         | 2                | 0                 | 29         | 5
+        2009–10     | Slovan Liberec            | Czech First League    | 29          | 5            | 0        | 0         | 4                | 0                 | 33         | 5
+        2010–11     | Konyaspor (loan)          | Süper Lig             | 9           | 0            | 0        | 0         | -                | -                 | 9          | 0
+        2010–11     | Slovan Liberec            | Czech First League    | 13          | 2            | 0        | 0         | -                | -                 | 13         | 2
+        2011–12     | Slovan Liberec            | Czech First League    | 1           | 0            | 0        | 0         | -                | -                 | 1          | 0
+        2011        | Rosenborg                 | Tippeligaen           | 13          | 2            | 1        | 0         | 2                | 0                 | 16         | 2
+        2012        | Rosenborg                 | Tippeligaen           | 27          | 10           | 4        | 6         | 12               | 7                 | 43         | 23
+        2013        | Rosenborg                 | Tippeligaen           | 15          | 2            | 2        | 2         | 4                | 1                 | 21         | 5
+        2013–14     | Sparta Prague             | Czech First League    | 25          | 3            | 8        | 1         | -                | -                 | 33         | 4
+        2014–15     | Sparta Prague             | Czech First League    | 29          | 10           | 4        | 1         | 12               | 1                 | 44         | 12
+        2015–16     | Sparta Prague             | Czech First League    | 29          | 8            | 2        | 0         | 16               | 5                 | 47         | 13
+        2016–17     | Sparta Prague             | Czech First League    | 11          | 4            | 1        | 0         | 6                | 1                 | 18         | 5
+        2017        | Henan Jianye              | Chinese Super League  | 23          | 4            | 0        | 0         | -                | -                 | 23         | 4
+        2018        | Philadelphia Union (loan) | Major League Soccer   | 22          | 5            | 3        | 0         | -                | -                 | 25         | 5
+        Career total| Career total              | Career total          | 285         | 60           | 25       | 10        | 58               | 15                | 348        | 81
+      question: What two teams did Bořek Dočkal play for in 2017, and what division was the second team in?
+      decomposition: |
+        sq1. What teams did Bořek Dočkal play for in 2017? (independent)
+        sq2. What division did the second team play in 2017? (depends on sq1)
+      answers: |
+        Answer to sq1: Bořek Dočkal played for Sparta Prague and Henan Jianye in 2017.
+        Answer to sq2: The second team, Henan Jianye, played in the Chinese Super League.
+      final_answer: Sparta Prague and Henan Jianye, Chinese Super League.
+    - table: |
+        Table Title - Moon Jeong-hee
+        Table Subtitle - Nominations and awards
+        Year | Award | Category | Nominated work | Result
+        2008 | SBS Drama Awards | Producer's Award | My Sweet Seoul, Daughter-in-Law | Won
+        2009 | Asia Latin Culture Festival | Lifetime Achievement Award | N/A | Won
+        2009 | KBS Drama Awards | Best Supporting Actress | Empress Cheonchu | Won
+        2011 | KBS Drama Awards | Best Supporting Actress | I Believe in Love, My One and Only | Nominated
+        2012 | 49th Grand Bell Awards | Best Supporting Actress | Deranged | Nominated
+        2012 | 33rd Blue Dragon Film Awards | Best Supporting Actress | Deranged | Won
+        2012 | 1st K-Drama Star Awards | Excellence Award, Actress | My One And Only | Nominated
+        2012 | KBS Drama Awards | Best Actress in a One-Act/Special Drama | Still Picture | Nominated
+        2013 | 49th Baeksang Arts Awards | Best Supporting Actress (Film) | Deranged | Nominated
+        2013 | 50th Grand Bell Awards | Best Actress | Hide and Seek | Nominated
+        2013 | 34th Blue Dragon Film Awards | Best Actress | Hide and Seek | Nominated
+        2014 | 50th Baeksang Arts Awards | Best Actress (Film) | Hide and Seek | Nominated
+        2014 | 3rd APAN Star Awards | Excellence Award, Actress in a Miniseries | Mama | Nominated
+        2014 | 22nd Korea Culture and Entertainment Awards | Top Excellence Award, Actress in a Film | Dad for Rent | Won
+        2014 | 34th Golden Cinema Festival | Special Jury Prize | Hide and Seek | Won
+        2014 | MBC Drama Awards | Top Excellence Award, Actress in a Special Project Drama | Mama | Nominated
+        2015 | 51st Baeksang Arts Awards | Best Actress (TV) | Mama | Nominated
+        2015 | 51st Baeksang Arts Awards | Best Supporting Actress (Film) | Cart | Nominated
+        2015 | 24th Buil Film Awards | Best Supporting Actress | Cart | Won
+        2015 | 36th Blue Dragon Film Awards | Best Supporting Actress | Cart | Nominated
+        2015 | MBC Drama Awards | Top Excellence Award, Actress in a Miniseries | Sweet, Savage Family | Nominated
+      question: What category and award did Moon Jeong-hee win for Deranged, and what year did she receive the honor?
+      decomposition: |
+        sq1. Identify the rows that contain information about Moon Jeong-hee's nominations and awards for Deranged. (independent)
+        sq2. Extract the category and award from the relevant rows. (depends on sq1)
+        sq3. Extract the year from the relevant rows. (depends on sq1)
+        sq4. Combine the extracted category, award, and year into a final answer. (depends on sq2, sq3)
+      answers: |
+        Answer to sq1: The relevant rows are:
+          2012 | 49th Grand Bell Awards | Best Supporting Actress | Deranged | Nominated
+          2012 | 33rd Blue Dragon Film Awards | Best Supporting Actress | Deranged | Won
+        Answer to sq2: Best Supporting Actress at the Blue Dragon Film Awards
+        Answer to sq3: 2012
+        Answer to sq4: In 2012, Moon Jeong-hee won Best Supporting Actress at the Blue Dragon Film Awards for Deranged.
+      final_answer: In 2012, Moon Jeong-hee won Best Supporting Actress at the Blue Dragon Film Awards for Deranged.
+
+  prompt: |
+    Now solve for this question, decompose into subsquestions, and give the response like shown:
+    Table-
+    {context}
+    Question-
+    {question}
+    Decompose to subquestions-
+
+

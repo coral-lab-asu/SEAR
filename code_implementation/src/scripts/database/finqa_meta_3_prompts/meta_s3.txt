@@ -1,0 +1,125 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Table Pretext:
+2 0 1 9 a n n u a l r e p o r t1 6 performance graph the following chart presents a comparison for the five-year period ended june 30 , 2019 , of the market performance of the company 2019s common stock with the s&p 500 index and an index of peer companies selected by the company .historic stock price performance is not necessarily indicative of future stock price performance .comparison of 5 year cumulative total return among jack henry & associates , inc. , the s&p 500 index , and a peer group the following information depicts a line graph with the following values:
+
+
+Table: 
+ | 2014 | 2015 | 2016 | 2017 | 2018 | 2019
+jkhy | 100.00 | 110.51 | 151.12 | 182.15 | 231.36 | 240.29
+2019 peer group | 100.00 | 126.23 | 142.94 | 166.15 | 224.73 | 281.09
+2018 peer group | 100.00 | 127.40 | 151.16 | 177.26 | 228.97 | 286.22
+s&p 500 | 100.00 | 107.42 | 111.71 | 131.70 | 150.64 | 166.33
+
+Question: was the five year total return of the 2019 peer group greater than the 2018 peer group?
+
+Detailed Steps:
+Identify Objective :
+The goal is to determine whether the five-year total return of the 2019 peer group was greater than that of the 2018 peer group by comparing their cumulative total returns from 2014 to 2019.  
+Evidence Extraction:  
+Extract total return values for both peer groups from the table.  
+2019 Peer Group: Start = 100.00, End = 281.09  
+2018 Peer Group: Start = 100.00, End = 286.22  
+Step-by-Step Reasoning: 
+Compute the total return for each peer group over the five-year period using:  
+```yaml
+Total Return = ((End Value - Start Value) / Start Value) * 100
+```
+  
+Python Code Generation:
+Write a Python script to extract values, compute percentage increase, and determine which group had the higher total return.
+
+Answer && Reasoning:
+Identify Objective:  
+The goal is to determine whether the five-year total return of the 2019 peer group was greater than that of the 2018 peer group by comparing their cumulative total returns from 2014 to 2019.  
+Evidence Extraction:  
+2019 Peer Group: Start Value (2014) = 100.00, End Value (2019) = 281.09  
+2018 Peer Group: Start Value (2014) = 100.00, End Value (2019) = 286.22  
+Python Code Generation:  
+```python
+# Formula: Total Return = ((End Value - Start Value) / Start Value) * 100
+
+start_2019, end_2019 = 100.00, 281.09
+start_2018, end_2018 = 100.00, 286.22
+
+total_return_2019 = ((end_2019 - start_2019) / start_2019) * 100
+total_return_2018 = ((end_2018 - start_2018) / start_2018) * 100
+
+print(f"Total Return 2019 Peer Group: {total_return_2019:.2f}%")
+print(f"Total Return 2018 Peer Group: {total_return_2018:.2f}%")
+print(f"Was 2019 Peer Group's total return greater? {total_return_2019 > total_return_2018}")
+```
+Final Answer: No
+
+Example2:
+Table Pretext:
+Some operating leases require payment of property taxes , insurance , and maintenance costs in addition to the rent payments .contingent and escalation rent in excess of minimum rent payments and sublease income netted in rent expense were insignificant .noncancelable future lease commitments are : in millions operating leases capital leases .
+
+Table: 
+in millions | operating leases | capital leases
+fiscal 2019 | $ 137.4 | $ 0.3
+fiscal 2020 | 115.7 | 0.2
+fiscal 2021 | 92.3 | -
+fiscal 2022 | 70.9 | -
+fiscal 2023 | 51.8 | -
+after fiscal 2023 | 91.2 | -
+total noncancelable future lease commitments | $ 559.3 | $ 0.5
+less : interest |  | -0.2 ( 0.2 )
+present value of obligations under capital leases |  | $ 0.3
+
+Question: what portion of the total noncancelable future lease commitments are due in fiscal year 2019?
+
+Detailed Steps:
+Identify Objective:  
+Determine the portion of total noncancelable future lease commitments that are due in fiscal year 2019.  
+Evidence Extraction:  
+- Extract the total noncancelable future lease commitments: **$559.3 million**.  
+- Extract the lease commitments for fiscal year 2019 under **operating leases**: **$137.4 million**.  
+Step-by-Step Reasoning:  
+- Compute the portion of the total lease commitments attributed to fiscal year 2019 using:  
+  ```yaml
+  Portion = (Fiscal Year 2019 Lease Commitment / Total Lease Commitments) * 100
+  ```
+- Ensure the extracted values match the relevant lease type (operating leases).  
+Python Code Generation:  
+Generate a Python script to:  
+1. Extract values for total lease commitments and fiscal year 2019 lease commitments.  
+2. Compute the percentage contribution of fiscal year 2019 lease commitments to the total commitments.
+
+Answer && Reasoning:  
+Identify Objective: Determine the portion of total noncancelable future lease commitments that are due in fiscal year 2019.  
+Evidence Extraction:  
+Total noncancelable future lease commitments: $559.3 million  
+Fiscal year 2019 lease commitments: $137.4 million  
+Python Code Generation:  
+```python
+# Given data (in millions)
+total_lease_commitments, fiscal_2019_commitment = 559.3, 137.4
+
+# Compute the portion using the formula:
+# Portion (%) = (Fiscal Year 2019 Lease Commitment / Total Lease Commitments) * 100
+portion_2019 = (fiscal_2019_commitment / total_lease_commitments) * 100
+
+# Output result
+print(f"Total Lease Commitments: ${total_lease_commitments}M")
+print(f"2019 Lease Commitments: ${fiscal_2019_commitment}M")
+print(f"Portion of 2019 Commitments: {portion_2019:.2f}%")
+```
+Final Answer: 24.57%
+
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

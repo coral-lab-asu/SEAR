@@ -1,0 +1,118 @@
+def get_s2_prompt(table, question, crucial_steps, text):
+    return f"""
+
+Your task is to comprehend the crucial steps for a given table and question, making each step more detailed and ensuring they effectively lead to the correct answer. 
+
+Few Examples are given below with detailed steps by elaborating from the crucial steps. Interpret the examples and understand the task to comprehend the crucial steps according to the specific table, text and question to reach the answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+  Model            | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+  Škoda Octavia    | 233322 | 270274 | 309951 | 344857 | 317335 | 349746 | 387200 | 409360 | 359600 |
+  Škoda Fabia      | 236698 | 243982 | 232890 | 246561 | 264173 | 229045 | 266800 | 255025 | 202000 |
+  Škoda Superb     | 22091  | 20989  | 20530  | 25645  | 44548  | 98873  | 116700 | 106847 | 94400  |
+  Škoda Roomster   |       | 14422  | 66661  | 57467  | 47152  | 32332  | 36000  | 39249  | 33300  |
+  Škoda Yeti       |       |       |       |       | 11018  | 52604  | 70300  | 90952  | 82400  |
+  Škoda Rapid      |       |       |       |       |       |       | 1700   | 9292   | 103800 |
+  Škoda Citigo     |       |       |       |       |       |       | 509    | 36687  | 45200  |
+
+Question: How many Skoda cars were sold in 2010?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction:Extract relevant rows, columns, and text.
+Python Code Generation: Generate single Python code to sum the extracted values.
+
+Detailed Steps:
+
+Identify Objective: Determine that the goal is to find the total number of Škoda cars sold in 2010.
+Evidence Extraction: Extract the relevant data (the 2010 column) for all models listed in the table.
+Python Code Generation: Generate Python code to sum the extracted values for the year 2010.
+
+Example2:
+Table:
+Title : total domestic business r&d and software r&d expenditures: 2006 and 2016
+|	year and industry	|	total business r&d	|	software r&d	|	
+|	2006	|		|		|	
+|	all industries	|	247669	|	48299	|	
+|	manufacturing	|	171814	|	10720	|	
+|	nonmanufacturing	|	75855	|	37579	|	
+|	2016	|		|		|	
+|	all industries	|	374685	|	120824	|	
+|	manufacturing	|	250553	|	35984	|	
+|	nonmanufacturing	|	124132	|	84840	|	
+|	2006-16 annual growth rate (%)a	|		|		|	
+|	all industries	|	4.2	|	9.6	|	
+|	manufacturing	|	3.8	|	12.9	|	
+|	nonmanufacturing	|	5	|	8.5	|	
+
+Question: how many million dollars did for-profit businesses perform in software r&d in 2016?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Direct Answer Path: Use evidence extraction to answer directly from the table.
+
+Detailed Steps:
+
+Identify Objective: Understand that the question asks for the amount of money (in million dollars) that for-profit businesses spent on software R&D in 2016.
+Evidence Extraction: Identify the row labeled "2016" and the column labeled "software r&d" in the table. Focus specifically on the "software r&d" value for all industries, as this represents the total amount spent on software R&D by for-profit businesses in 2016.
+Direct Answer Path: Answer directly from the table the extracted value from the intersection of the 2016 row and the software R&D column is the answer to the question. Since the question is about for-profit businesses and the table represents industry expenditures, this value can be directly used as the answer.
+
+Example3:
+Tables:
+Table_0
+  Benefit Plan	|	2017	|	2016	|	2015	|	
+  Pension Plan	|	$3,856	|	$3,979	|	$2,732	|	
+  Health Plan	|	11426	|	11530	|	8736	|	
+  Other plans	|	1463	|	1583	|	5716	|	
+  Total plan contributions	|	$16,745	|	$17,092	|	$17,184	|	
+
+ Table_1
+  |		|	2018	|	2019	|	2020	|	2021	|	2022	|	Thereafter	|	Total	|	
+  |	Property mortgages and other loans	|	$153,593	|	$42,289	|	$703,018	|	$11,656	|	$208,003	|	$1,656,623	|	$2,775,182	|	
+  |	MRA facilities	|	90809	|	—	|	—	|	—	|	—	|	—	|	90809	|	
+  |	Revolving credit facility	|	—	|	—	|	—	|	—	|	—	|	40000	|	40000	|	
+  |	Unsecured term loans	|	—	|	—	|	—	|	—	|	—	|	1500000	|	1500000	|	
+  |	Senior unsecured notes	|	250000	|	—	|	250000	|	—	|	800000	|	100000	|	1400000	|	
+  |	Trust preferred securities	|	—	|	—	|	—	|	—	|	—	|	100000	|	100000	|	
+  |	Capital lease	|	2387	|	2411	|	2620	|	2794	|	2794	|	819894	|	832900	|	
+  |	Ground leases	|	31049	|	31066	|	31436	|	31628	|	29472	|	703254	|	857905	|
+
+
+Question: What is the sum of Ground leases of 2020, Health Plan of 2016, and Property mortgages and other loans of Thereafter ?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text from both tables.
+Python Code Generation: Generate a single Python script to sum the extracted values.
+
+Detailed Steps:
+
+Identify Objective: The task is to find the sum of three values: Ground leases from 2020, the Health Plan from 2016, and Property mortgages and other loans from the "Thereafter" column.
+Evidence Extraction: 
+Table 0 Extraction: Locate the row labeled "Health Plan" in Table 0. Extract the value from the 2016 column corresponding to the Health Plan row.
+Table 1 Extraction: Locate the row labeled "Ground leases" in Table 1. Extract the value from the 2020 column corresponding to Ground leases. Locate the row labeled "Property mortgages and other loans" in Table 1. Extract the value from the "Thereafter" column corresponding to Property mortgages and other loans.
+Data Aggregation or Calculation: Since the task involves summing the three extracted values,
+1.  Ground leases value from 2020
+2.  Health Plan value from 2016
+3.  Property mortgages and other loans value from Thereafter
+
+generate a Python code to sum these values, ensure that the extracted values are in a format that allows for numeric summation (removing dollar signs and commas if necessary).
+
+YourTask:
+Comprehend the Crucial steps to Detailed Steps that are essential for solving the task for the provided table, text (if available) and question. Important - Do not answer the Question.
+
+Tables: 
+{table}
+
+Question: {question}
+
+{crucial_steps}
+
+Detailed Steps:
+
+
+"""

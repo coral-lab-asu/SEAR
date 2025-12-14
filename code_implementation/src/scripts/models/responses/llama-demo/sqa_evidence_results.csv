@@ -1,0 +1,196 @@
+index,table_id,question,response,answer
+0,table_csv/204_656.csv,"['in which years were the events held?', 'of those, which one was in 2009?', 'and which community division won in 2009?']","Here's the answer with reasoning separated by &&:
+
+The events were held in the following years:
+[2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001] &&
+The years are extracted from the ""Year"" column in the table, which lists all the years in which the events were held.
+
+The event in 2009 was held in:
+Queensland &&
+The row with the year 2009 is extracted, and the State/Territory Men's Division column shows that the event was held in Queensland.
+
+The Community Division that won in 2009 was:
+Tangentyere &&
+The row with the year 2009 is extracted, and the Community Division column shows that Tangentyere won in that year.","[""['2012', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001']"", ""['Tangentyere']"", ""['Tangentyere']""]"
+1,table_csv/203_159.csv,"['what is the population for each of those districts in 1998?', 'what is the population for each of those districts in 2008?', 'what is the population for blue hill in 2008?', 'what is the population for sandy bay in 2008?']","I'll be happy to help.
+
+Here are the answers to the questions:
+
+**What is the population for each of those districts in 1998?**
+&&
+The relevant rows are all the rows in the table.
+The population for each district in 1998 is extracted from the 'Pop. 1998' column.
+The answers are:
+Alarm Forest: 289
+Blue Hill: 177
+Half Tree Hollow: 1,140
+Jamestown: 884
+Levelwood: 376
+Longwood: 960
+Sandy Bay: 254
+Saint Paul's: 908
+Royal Mail Ship St. Helena: 149
+Jamestown Harbour: 20
+&&
+
+**What is the population for each of those districts in 2008?**
+&&
+The relevant rows are all the rows in the table.
+The population for each district in 2008 is extracted from the 'Pop. 2008' column.
+The answers are:
+Alarm Forest: 276
+Blue Hill: 153
+Half Tree Hollow: 901
+Jamestown: 714
+Levelwood: 316
+Longwood: 715
+Sandy Bay: 205
+Saint Paul's: 795
+Royal Mail Ship St. Helena: 171
+Jamestown Harbour: 9
+&&
+
+**What is the population for Blue Hill in 2008?**
+&&
+The relevant row is:
+2 | Blue Hill | 36.5 | 14.1 | 177 | 153 | 4.2
+The population for Blue Hill in 2008 is extracted from the 'Pop. 2008' column.
+The answer is: 153
+&&
+
+**What is the population for Sandy Bay in 2008?**
+&&
+The relevant row is:
+7 | Sandy Bay | 15.3 | 5.9 | 254 | 205 | 13.4
+The population for Sandy Bay in 2008 is extracted from the 'Pop. 2008' column.
+The answer is: 205
+&&","[""['289', '177', '1,140', '884', '376', '960', '254', '908', '149', '20']"", ""['276', '153', '901', '714', '316', '715', '205', '795', '171', '9']"", ""['153']"", ""['205']""]"
+2,table_csv/203_659.csv,"['who came in first at the 2003 grand prix of monterey?', ""what was patrick carpenter's time during the 2003 grand prix of monterey?"", ""how fast did the team team player's complete the 2003 grand prix of monterey?"", ""what was patrick carpentier's winning time at the 2003 grand prix of monterey?""]","Here are the answers with reasoning separated by && :
+
+- who came in first at the 2003 grand prix of monterey? &&
+The relevant row is: 
+1 | 32 | Patrick Carpentier | Team Player's | 87 | 1:48:11.023 | 1 | 22 &&
+Patrick Carpentier came in first at the 2003 Grand Prix of Monterey.
+
+- what was patrick carpenter's time during the 2003 grand prix of monterey? &&
+The relevant row is: 
+1 | 32 | Patrick Carpentier | Team Player's | 87 | 1:48:11.023 | 1 | 22 &&
+Patrick Carpenter's time during the 2003 Grand Prix of Monterey was 1:48:11.023.
+
+- how fast did the team team player's complete the 2003 grand prix of monterey? &&
+The relevant row is: 
+1 | 32 | Patrick Carpentier | Team Player's | 87 | 1:48:11.023 | 1 | 22 &&
+The time it took Team Player's to complete the 2003 Grand Prix of Monterey is 1:48:11.023.
+
+- what was patrick carpentier's winning time at the 2003 grand prix of monterey? &&
+The relevant row is: 
+1 | 32 | Patrick Carpentier | Team Player's | 87 | 1:48:11.023 | 1 | 22 &&
+Patrick Carpentier's winning time at the 2003 Grand Prix of Monterey was 1:48:11.023.","[""['Patrick Carpentier']"", ""['1:48:11.023']"", ""['1:48:11.023']"", ""['1:48:11.023']""]"
+3,table_csv/203_284.csv,['what were the regular season finishes for the baltimore americans?'],"Here is the answer:
+
+Answer: ['6th', '2nd', '2nd, American', '4th, American', '5th, American', '2nd(t)', '3rd', '5th', '5th', '3rd', '4th', '1st', '4th', '4th', 'Withdrew after 3 games'] &&
+Reasoning: The question asks for the regular season finishes for the Baltimore Americans. The relevant information is in the 'Reg. Season' column. The extracted regular season finishes are: 6th, 2nd, 2nd, American, 4th, American, 5th, American, 2nd(t), 3rd, 5th, 5th, 3rd, 4th, 4th, 1st, and 'Withdrew after 3 games'.","[""['6th', '2nd', '2nd, American', '4th, American', '5th, American', '2nd(t)', '3rd', '5th', '5th', '3rd', '4th', '1st', '4th', '4th', 'Withdrew after 3 games']""]"
+4,table_csv/204_447.csv,"['what kind of surface did they play on september 13, 2010?', 'what tournament was played on may 27, 2013?']","Here are the answers with reasoning separated by &&:
+
+1. what kind of surface did they play on september 13, 2010?
+Evidence: 
+1. | September 13, 2010 | Ecuador F2 | Hard | Roberto Quiroz | Peter Aarts  Christopher Racz | 6-4, 6-4
+Reasoning: 
+The surface on which they played on September 13, 2010, is extracted from the row with the corresponding date. The relevant information is in the 'Surface' column, which is 'Hard'. 
+Answer: 
+['Hard']
+
+2. what tournament was played on may 27, 2013?
+Evidence: 
+10. | May 27, 2013 | Argentina F8 | Clay | Sergio Galdos | Daniel Dutra da Silva  Pablo Galdon | 6-0, 7-5
+Reasoning: 
+The tournament played on May 27, 2013, is extracted from the row with the corresponding date. The relevant information is in the 'Tournament' column, which is 'Argentina F8'. 
+Answer: 
+['Argentina F8']","[""['Hard']"", ""['Argentina F8']""]"
+0,table_csv/203_64.csv,['what was the lowest total number of medals won per country in the 2004 summer paralympics?'],"Evidence: 
+The row containing the information about the lowest total number of medals won per country in the 2004 summer paralympics.
+Here is the relevant row:
+10 | Japan | 17 | 16 | 20 | 53
+
+Reasoning: 
+To find the lowest total number of medals won per country in the 2004 summer paralympics, we can look at the ""Total"" column and find the smallest value. In this case, the relevant row is Japan with a total of 53 medals.
+
+Answer: 
+['53']
+
+Explanation: 
+The answer is a list containing a single element, which is the lowest total number of medals won per country in the 2004 summer paralympics, which is 53.","[""['53']""]"
+1,table_csv/203_849.csv,"['of those, which are 19 years of age?']","Here is the answer:
+
+Evidence:
+3 | Com. Dom. EU | Sandra Elisabeth Tavares Ruiz | 19 | 1.80 | Newark
+9 | La Romana | Alina Charlin Espinal Luna | 19 | 1.81 | La Romana
+18 | Santo Domingo | Yisney Lina Lagrange Mendez | 19 | 1.82 | Pedro Brand
+
+Reasoning:
+&&
+The question asks for the contestants who are 19 years of age. We can find the answer by looking at the ""Age"" column and filtering out the contestants with an age of 19. The relevant rows are:
+Com. Dom. EU - Sandra Elisabeth Tavares Ruiz with an age of 19
+La Romana - Alina Charlin Espinal Luna with an age of 19
+Santo Domingo - Yisney Lina Lagrange Mendez with an age of 19
+So, the contestants who are 19 years of age are Com. Dom. EU, La Romana, Santo Domingo.
+
+Answer:
+[""Com. Dom. EU"", ""La Romana"", ""Santo Domingo""]","[""['Sandra Elisabeth Tavares Ruiz', 'Alina Charlin Espinal Luna', 'Yisney Lina Lagrange Mendez']""]"
+2,table_csv/203_722.csv,"['who was the opponent in 2008?', 'where did his play in 2008?']","Here is the answer:
+
+Answer: ['Moldova', 'Sheriff Stadium, Tiraspol, Moldova'] &&
+Reasoning: 
+The question asks for the opponent and venue in 2008. 
+The relevant row is: 
+1 | 2008-5-28 | Sheriff Stadium, Tiraspol, Moldova | Moldova | 0-1 | 2-2 | Friendly match
+From this row, we can extract the opponent and venue as Moldova and Sheriff Stadium, Tiraspol, Moldova respectively.","[""['Moldova']"", ""['Sheriff Stadium, Tiraspol, Moldova']""]"
+3,table_csv/204_46.csv,['what are the official titles of the 2007 bwf super series?'],"Here is the answer:
+
+Malaysia Super Series && The row containing this information is ""1 | Malaysia Super Series | Stadium Badminton Kuala Lumpur | Kuala Lumpur | January 16 | January 21 | 200,000 | Report"" && The official title ""Malaysia Super Series"" is extracted from the ""Official title"" column.
+
+Korea Open Super Series && The row containing this information is ""2 | Korea Open Super Series | Seoul National University Gymnasium | Seoul | January 23 | January 28 | 300,000 | Report"" && The official title ""Korea Open Super Series"" is extracted from the ""Official title"" column.
+
+All England Super Series && The row containing this information is ""3 | All England Super Series | National Indoor Arena | Birmingham | March 6 | March 11 | 200,000 | Report"" && The official title ""All England Super Series"" is extracted from the ""Official title"" column.
+
+Swiss Open Super Series && The row containing this information is ""4 | Swiss Open Super Series | St. Jakobshalle | Basel | March 12 | March 18 | 200,000 | Report"" && The official title ""Swiss Open Super Series"" is extracted from the ""Official title"" column.
+
+Singapore Super Series && The row containing this information is ""5 | Singapore Super Series | Singapore Indoor Stadium | Singapore | May 1 | May 6 | 200,000 | Report"" && The official title ""Singapore Super Series"" is extracted from the ""Official title"" column.
+
+Indonesia Super Series && The row containing this information is ""6 | Indonesia Super Series | Bung Karno Stadium | Jakarta | May 7 | May 13 | 250,000 | Report"" && The official title ""Indonesia Super Series"" is extracted from the ""Official title"" column.
+
+China Masters Super Series && The row containing this information is ""7 | China Masters Super Series | Sichuan Provincial Gymnasium | Chengdu | July 10 | July 15 | 250,000 | Report"" && The official title ""China Masters Super Series"" is extracted from the ""Official title"" column.
+
+Japan Super Series && The row containing this information is ""8 | Japan Super Series | Tokyo Metropolitan Gymnasium | Tokyo | September 11 | September 16 | 200,000 | Report"" && The official title ""Japan Super Series"" is extracted from the ""Official title"" column.
+
+Denmark Super Series && The row containing this information is ""9 | Denmark Super Series | Arena Fyn | Odense | October 23 | October 28 | 200,000 | Report"" && The official title ""Denmark Super Series"" is extracted from the ""Official title"" column.
+
+French Super Series && The row containing this information is ""10 | French Super Series | Stade Pierre de Coubertin | Paris | October 30 | November 4 | 200,000 | Report"" && The official title ""French Super Series"" is extracted from the ""Official title"" column.
+
+China Open Super Series && The row containing this information is ""11 | China Open Super Series | Tianhe Gymnasium | Guangzhou | November 20 | November 25 | 250,000 | Report"" && The official title ""China Open Super Series"" is extracted from the ""Official title"" column.
+
+Hong Kong Super Series && The row containing this information is ""12 | Hong Kong Super Series | Ma On Shan Sports Centre Queen Elizabeth Stadium | Ma On Shan Wan Chai | November 26 | December 2 | 200,000 | Report"" && The official title ""Hong Kong Super Series"" is extracted from the ""Official title"" column.
+
+Super Series Finals && The row containing this information is ""13 | Super Series Finals | Cancelled | Cancelled | Cancelled | Cancelled | 500,000 | Report"" && The official title ""Super Series Finals"" is extracted from the ""Official title"" column.
+
+Answer: [""Malaysia Super Series"", ""Korea Open Super Series"", ""All England Super Series"", ""Swiss Open Super Series"", ""Singapore Super Series"", ""Indonesia Super Series"", ""China Masters Super Series"", ""Japan Super Series"", ""Denmark Super Series"", ""French Super Series"", ""China Open Super Series"", ""Hong Kong Super Series"", ""Super Series Finals""]","[""['Malaysia Super Series', 'Korea Open Super Series', 'All England Super Series', 'Swiss Open Super Series', 'Singapore Super Series', 'Indonesia Super Series', 'China Masters Super Series', 'Japan Super Series', 'Denmark Super Series', 'French Super Series', 'China Open Super Series', 'Hong Kong Super Series', 'Super Series Finals']""]"
+4,table_csv/203_351.csv,['how many countries did not earn a gold medal at the 1960 summer olympics?'],"Here is the answer:
+
+Evidence: 
+The rows containing information about countries that did not earn a gold medal.
+Here are the relevant rows:
+5 | Switzerland (SUI) | 0 | 2 | 1 | 3
+6 | United States (USA) | 0 | 1 | 0 | 1
+7 | Great Britain (GBR) | 0 | 0 | 1 | 1
+7 | France (FRA) | 0 | 0 | 1 | 1
+
+Reasoning: 
+The countries that did not earn a gold medal are extracted from the rows with a 'Gold' column value of 0. 
+The relevant information is in the 'Nation' column for each country in those rows. 
+The extracted countries are:
+Switzerland (SUI)
+United States (USA)
+Great Britain (GBR)
+France (FRA)
+
+Answer: && [""Switzerland (SUI)"", ""United States (USA)"", ""Great Britain (GBR)"", ""France (FRA)""]","[""['4']""]"

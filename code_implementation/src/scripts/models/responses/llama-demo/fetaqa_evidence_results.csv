@@ -1,0 +1,99 @@
+index,table_id,question,response,answer
+0,totto_source/train_json/example-4629.json,What were the highlights of Molly Seidel career in 2018 in the event that was held in Scotland?,"Here are the evidence and answer:
+
+evidence: |
+  The relevant rows contain information about Molly Seidel's achievements in 2018:
+  Year | Competition | Venue | Position | Event | Notes
+  2018 | Great Edinburgh International Cross Country | Edinburgh, Scotland | 3rd place | 6 km | 21:04
+  2018 | Great Edinburgh International Cross Country | Edinburgh, Scotland | Team USA 3rd place | 6 km | 81 points
+
+answer: |
+  In 2018, the highlights of Molly Seidel's career were a 3rd place finish in the 6 km event and a Team USA 3rd place finish at the Great Edinburgh International Cross Country in Scotland.","Molly Seidel represented the Team USA at the 2018 Great Edinburgh International Cross Country in Scotland, where she led the team to 3rd place by finishing third in the 6 km in a time of 21:04."
+1,totto_source/train_json/example-64.json,What films did Jim Siedow play a role in between 1977 to 1986?,"Here is the answer:
+
+Evidence:
+The relevant rows contain information about Jim Siedow's filmography between 1977 to 1986:
+Year | Title | Role | Notes
+1977 | Red Alert | Howard Ives | -
+1986 | The Texas Chainsaw Massacre 2 | Drayton Sawyer, the Cook | -
+
+Answer:
+Between 1977 to 1986, Jim Siedow played a role in the films ""Red Alert"" and ""The Texas Chainsaw Massacre 2"".","Jim Siedow played in the 1977 movie Red Alert as Howard Ives and in 1980 movie Hotwire and as Drayton Sawyer, in The Texas Chainsaw Massacre 2, the sequel to The Texas Chain Saw Massacre"
+2,totto_source/train_json/example-877.json,What did Roberto Ravaglia do in 1986?,"Evidence:
+The relevant row contains information about Roberto Ravaglia's achievement in 1986:
+Season | Series | Position | Car | Team
+1986 | European Touring Car Championship | 1st | BMW 635 CSi | Schnitzer Motorsport
+
+Answer:
+In 1986, Roberto Ravaglia won the European Touring Car Championship driving a BMW 635 CSi for Schnitzer Motorsport.",Roberto Ravaglia returned in 1986 in a BMW 635 Schnitzer for Goold Motorsport.
+3,totto_source/train_json/example-13743.json,How many times did Bryan robson play for Manchester United and what were his total goals scored?,"Here is the answer:
+
+Evidence:
+The relevant row contains information about Bryan Robson's career statistics at Manchester United:
+Club | Season | League | Apps | Goals | ... 
+Manchester United | Total | Total | 345 | 74 | ...
+
+Answer:
+Bryan Robson played 345 times for Manchester United and scored a total of 74 goals.",Bryan Robson played 461 times for Manchester United and scored 99 goals.
+4,totto_source/train_json/example-13987.json,"In the 1929 Tour De France, how many stages did the course consist of and what was the total course distance?","Here is the answer:
+
+Evidence:
+The relevant row contains information about the total course distance and number of stages:
+```
+  - | Total | Total | 5,286 km (3,285 mi) | 5,286 km (3,285 mi) | 5,286 km (3,285 mi) | 5,286 km (3,285 mi) | 5,286 km (3,285 mi)
+```
+And the stage information is present in all the previous rows, which shows that there are 22 stages in total.
+
+Answer:
+The 1929 Tour de France consisted of 22 stages, and the total course distance was 5,286 km (3,285 mi).","The 1929 Tour de France consisted of 22 stages and over 5,286 km (3,285 mi) total distance."
+0,totto_source/train_json/example-6708.json,What Sony TV projects was Aparshakti Khurana involved with in 2017?,"Here is the answer:
+
+evidence: |
+  The relevant rows contain information about Aparshakti Khurana's Sony TV projects in 2017:
+  Year | Show | Role | Channel | Notes
+  2014 | Box Cricket League | Commentator | Sony TV | -
+  2017 | Super Night with Tubelight | Host | Sony TV | -
+
+answer: |
+  In 2017, Aparshakti Khurana was involved with two Sony TV projects: Box Cricket League as a commentator and Super Night with Tubelight as a host.","Aparshakti Khurana hosted Super Night with Tubelight, which was aired in 2017 on Sony TV."
+1,totto_source/train_json/example-4529.json,How many penalty minutes did Flick get with Missisauga in 2010 and 2011?,"Here is the answer:
+
+Evidence:
+The relevant rows contain information about Rob Flick's penalty minutes with Mississauga St. Michael's Majors:
+- | - | - | Regular season | Regular season | Regular season | Regular season | Regular season | Playoffs | Playoffs | Playoffs | Playoffs | Playoffs | - | -
+Season | Team | League | - | GP | G | A | Pts | PIM | - | GP | G | A | Pts | PIM
+2009–10 | Mississauga St. Michael's Majors | OHL | - | 65 | 15 | 19 | 34 | 157 | - | 16 | 2 | 2 | 4 | 44
+2010–11 | Mississauga St. Michael's Majors | OHL | - | 68 | 27 | 30 | 57 | 167 | - | 20 | 8 | 8 | 16 | 34
+
+Answer:
+In 2010, Rob Flick got 157 penalty minutes with Mississauga, and in 2011, he got 167 penalty minutes.","In 2010 and 2011, Flick had 157 and 167 penalty minutes respectively with Mississauga."
+2,totto_source/dev_json/example-2163.json,How many appearances did Mark Letestu make in 2007-08?,"To answer this question, I will extract the relevant rows from the table that correspond to the 2007-08 season.
+
+Evidence:
+```
+  2007–08 | Wilkes-Barre/Scranton Penguins | AHL | - | 52 | 6 | 12 | 18 | 28 | - | 13 | 0 | 3 | 3 | 0
+  2007–08 | Wheeling Nailers | ECHL | - | 6 | 1 | 2 | 3 | 4 | - | — | — | — | — | —
+```
+Answer:
+Mark Letestu made 52 appearances for Wilkes-Barre/Scranton Penguins in the AHL and 6 appearances for Wheeling Nailers in the ECHL in the 2007-08 season, for a total of 58 appearances.",In 2007–08 Mark Letestu appeared in 52 games with Wilkes-Barre/Scranton of the AHL and six games with the Wheeling Nailers of the ECHL.
+3,totto_source/dev_json/example-1839.json,Was Heredia still playing in Segunda División B in the 2007-08 season?,"Here is the answer with evidence:
+
+Evidence:
+The relevant rows contain information about Alberto Heredia Ceballos' playing history:
+Club | Season | Division | Apps | Goals | Apps | Goals | Apps | Goals | Apps | Goals
+Marbella | 2007–08 | Segunda División B | 11 | 0 | – | – | 11 | 0 | - | -
+Burgos | 2007–08 | Segunda División B | 15 | 1 | – | – | 15 | 1 | - | -
+
+Answer:
+Yes, in the 2007-08 season, Heredia was still playing in Segunda División B for both Marbella and Burgos.","In the 2007–08 season, Heredia continued in Segunda División B and represented Marbella and Burgos."
+4,totto_source/train_json/example-449.json,How much did the total forfeitures change from 2005 to 2010?,"Here's the answer with evidence:
+
+**Evidence:**
+The relevant rows contain information about the total forfeitures in 2005 and 2010:
+```
+Year | Total forfeitures | Notes
+2005 | $1.25 billion | -
+2010 | $2.50 billion | -
+```
+**Answer:**
+The total forfeitures increased by $1.25 billion, from $1.25 billion in 2005 to $2.50 billion in 2010.","From 2005 to 2010, the forfeitures went from $1.25 billion to $2.50 billion."

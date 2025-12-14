@@ -1,0 +1,34 @@
+Evaluate the Model Response given the Gold Answer. Respond only with 'Yes', 'No'
+
+Here are three examples:
+
+Example 1:
+Question: What is the boiling point of water at sea level?
+Model Response: Water boils at 100 degrees Fahrenheit at sea level.
+Gold Answer: The boiling point of water at sea level is 100 degrees Celsius (212 degrees Fahrenheit).
+Evaluation: No
+
+Example 2:
+Question: List the top 3 most populous countries in the world.
+Model Response: ["India", "United States", "China"]
+Gold Answer: ["China", "India", "United States"]
+Evaluation: Yes
+
+Example 3:
+Question: What was the percentage decrease in company profits from 2021 to 2022?
+Model Response: The company's profits decreased by 0.15 from 2021 to 2022.
+Gold Answer: The percentage decrease in company profits from 2021 to 2022 was -15%.
+Evaluation: Yes
+
+Example 4:
+Question: What is the capital of Australia?
+Model Response: The capital of Australia is Sydney.
+Gold Answer: The capital of Australia is Canberra.
+Evaluation: No
+
+Now evaluate the following:
+
+Question: {question}
+Model Response: {response}
+Gold Answer: {answer}
+Is the Model Response Correct? (Yes/No)

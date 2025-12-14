@@ -1,0 +1,173 @@
+Guidelines:
+    Your task is to analyze table-derived events, construct a coherent temporal narrative, and then use that narrative to answer a specific temporal question.
+    The table events are provided as methods within a Python class.
+    You need to implement the get_narrative() function to generate a clear, concise, and temporally accurate story based on the events.
+    Then, implement the get_answer() function by extracting the final temporal answer directly from your generated narrative.
+    Crucially, the 'get_narrative()' should help you explicitly understand the temporal sequence before formulating the final answer.
+    Ensure your narrative and final answer are strictly grounded in the provided event descriptions.
+    ONLY generate the content for the get_narrative() and get_answer() methods within the class.
+    Do NOT generate anything else (no additional class definitions, comments outside the methods, or introductory/concluding remarks).
+    Your response MUST end with 'END'.
+
+---(Example 1:) ---
+Table:
+Title | Year | Role | Notes
+Wilmot | 1999 | Wilmot Tanner | Main role
+Where the Heart Is | 2000–06 | Luke Kirkwall | 68 episodes
+Casualty | 2002 | Mark Booth | "Only The Lonely"
+Barking! | 2004 | Ryan | "The Big Sausage"
+Doctors | 2006 | Gary | "Positively Blooming"
+Casualty | 2006 | Jude Becket | "Sons & Lovers"
+Inspector George Gently | 2007 | Billy Lister | "Gently Go Man"
+The Chase | 2007 | Liam Higgins | 9 episodes
+The Royal | 2007 | Bobby Horrocks | "Starting Over"
+Robin Hood | 2007 | Luke Scarlett | "The Angel of Death"
+Echo Beach | 2008 | Brae Marrack | Main role
+Moving Wallpaper | 2008 | Himself | 3 episodes
+Moving Wallpaper: The Mole | 2008 | Himself | Webisode; Episode 1.4
+Doctor Who | 2008 | Ross Jenkins | "The Sontaran Stratagem", "The Poison Sky"
+Demons | 2009 | Luke Rutherford-Van Helsing | Main role
+Trinity | 2009 | Lord Dorian Gaudain | Main role
+Dark Relic | 2010 | Paul | Television film
+The Promise | 2011 | Sergeant Leonard Matthews | Miniseries
+Magic City | 2012–13 | Danny Evans | Main role
+Witches of East End | 2014 | Frederick Beauchamp | Main role; Season 2
+Stonemouth | 2015 | Stewart Gilmour | Main role
+The Art of More | 2015–16 | Graham Connor | Main role
+Ordeal by Innocence | 2018 | Mickey Argyll | BBC Television film (Replacing Ed Westwick)
+
+Question : "What roles did Christian Cooke play in 2007?"
+player = "Christian Cooke"
+target_year = "2007"
+
+--------------------Python code for Class----------------------------------------------
+class PlayerRolesTimeline:
+"""
+Analyzes a player's career timeline to identify roles played in specific years.
+Query: What roles did Christian Cooke play in 2007?
+"""
+
+def event_inspector_george_gently_2007(self):
+    return "Christian Cooke played Billy Lister in Inspector George Gently in 2007."
+def event_the_chase_2007(self):
+    return "Christian Cooke played Liam Higgins in The Chase in 2007."
+def event_the_royal_2007(self):
+    return "Christian Cooke played Bobby Horrocks in The Royal in 2007."
+def event_robin_hood_2007(self):
+    return "Christian Cooke played Luke Scarlett in Robin Hood in 2007."
+—-----------------------Narrative—-------------------------------------------------------
+Let's think of a narrative to link aforementioned events in the correct temporal order.
+def get_narrative(self):
+    return "In 2007, Christian Cooke took on several television roles. He played Billy Lister in Inspector George Gently. Concurrently, he was Liam Higgins in The Chase, Bobby Horrocks in The Royal, and Luke Scarlett in Robin Hood."
+—----------------------Answer Generation from Narative—-----------------------------------
+def get_answer(self):
+    return ["In 2007 Christian Cooke played as Billy Lister in Inspector George Gently, Liam Higgins in The Chase, Bobby Horrocks in The Royal and Luke Scarlett in Robin Hood."]
+-------------------------Answer for the above question---------------
+--END--
+
+--- (Example 2) ---
+Table:
+Title | Year | Role | Notes
+Wilmot | 1999 | Wilmot Tanner | Main role
+Where the Heart Is | 2000–06 | Luke Kirkwall | 68 episodes
+Casualty | 2002 | Mark Booth | "Only The Lonely"
+Barking! | 2004 | Ryan | "The Big Sausage"
+Doctors | 2006 | Gary | "Positively Blooming"
+Casualty | 2006 | Jude Becket | "Sons & Lovers"
+Inspector George Gently | 2007 | Billy Lister | "Gently Go Man"
+The Chase | 2007 | Liam Higgins | 9 episodes
+The Royal | 2007 | Bobby Horrocks | "Starting Over"
+Robin Hood | 2007 | Luke Scarlett | "The Angel of Death"
+Echo Beach | 2008 | Brae Marrack | Main role
+Moving Wallpaper | 2008 | Himself | 3 episodes
+Moving Wallpaper: The Mole | 2008 | Himself | Webisode; Episode 1.4
+Doctor Who | 2008 | Ross Jenkins | "The Sontaran Stratagem", "The Poison Sky"
+Demons | 2009 | Luke Rutherford-Van Helsing | Main role
+Trinity | 2009 | Lord Dorian Gaudain | Main role
+Dark Relic | 2010 | Paul | Television film
+The Promise | 2011 | Sergeant Leonard Matthews | Miniseries
+Magic City | 2012–13 | Danny Evans | Main role
+Witches of East End | 2014 | Frederick Beauchamp | Main role; Season 2
+Stonemouth | 2015 | Stewart Gilmour | Main role
+The Art of More | 2015–16 | Graham Connor | Main role
+Ordeal by Innocence | 2018 | Mickey Argyll | BBC Television film (Replacing Ed Westwick)
+
+Question : "What roles did Christian Cooke play in 2009?"
+player = "Christian Cooke"
+target_year = "2009"
+
+--------------------Python code for Class----------------------------------------------
+class PlayerRolesTimeline:
+"""
+Analyzes a player's career timeline to identify roles played in specific years.
+Query: What roles did Christian Cooke play in 2009?
+"""
+
+def event_wilmot_1999(self):
+    return "Christian Cooke played Wilmot Tanner in Wilmot in 1999."
+def event_where_the_heart_is_2000_06(self):
+    return "Christian Cooke played Luke Kirkwall in Where the Heart Is from 2000 to 2006."
+def event_casualty_2002(self):
+    return "Christian Cooke played Mark Booth in Casualty in 2002."
+def event_barking_2004(self):
+    return "Christian Cooke played Ryan in Barking! in 2004."
+def event_doctors_2006(self):
+    return "Christian Cooke played Gary in Doctors in 2006."
+def event_casualty_2006(self):
+    return "Christian Cooke played Jude Becket in Casualty in 2006."
+def event_inspector_george_gently_2007(self):
+    return "Christian Cooke played Billy Lister in Inspector George Gently in 2007."
+def event_the_chase_2007(self):
+    return "Christian Cooke played Liam Higgins in The Chase in 2007."
+def event_the_royal_2007(self):
+    return "Christian Cooke played Bobby Horrocks in The Royal in 2007."
+def event_robin_hood_2007(self):
+    return "Christian Cooke played Luke Scarlett in Robin Hood in 2007."
+def event_echo_beach_2008(self):
+    return "Christian Cooke played Brae Marrack in Echo Beach in 2008."
+def event_moving_wallpaper_2008(self):
+    return "Christian Cooke played Himself in Moving Wallpaper in 2008."
+def event_moving_wallpaper_the_mole_2008(self):
+    return "Christian Cooke played Himself in Moving Wallpaper: The Mole (Webisode) in 2008."
+def event_doctor_who_2008(self):
+    return "Christian Cooke played Ross Jenkins in Doctor Who in 2008."
+def event_demons_2009(self):
+    return "Christian Cooke played Luke Rutherford-Van Helsing in Demons in 2009."
+def event_trinity_2009(self):
+    return "Christian Cooke played Lord Dorian Gaudain in Trinity in 2009."
+def event_dark_relic_2010(self):
+    return "Christian Cooke played Paul in Dark Relic in 2010."
+def event_the_promise_2011(self):
+    return "Christian Cooke played Sergeant Leonard Matthews in The Promise in 2011."
+def event_magic_city_2012_13(self):
+    return "Christian Cooke played Danny Evans in Magic City from 2012 to 2013."
+def event_witches_of_east_end_2014(self):
+    return "Christian Cooke played Frederick Beauchamp in Witches of East End in 2014."
+def event_stonemouth_2015(self):
+    return "Christian Cooke played Stewart Gilmour in Stonemouth in 2015."
+def event_the_art_of_more_2015_16(self):
+    return "Christian Cooke played Graham Connor in The Art of More from 2015 to 2016."
+def event_ordeal_by_innocence_2018(self):
+    return "Christian Cooke played Mickey Argyll in Ordeal by Innocence in 2018."
+
+--- Narrative-of-Thought Generation ---
+Let's think of a narrative to link the aforementioned events in the correct temporal order,
+specifically focusing on Christian Cooke's roles in the year 2009.
+The narrative should be simple, concise, and factual.
+def get_narrative(self):
+    return “Christian Cooke's career includes playing various roles over time. In 2009, he played Luke Rutherford-Van Helsing in Demons. He also played Lord Dorian Gaudain in Trinity during the same year."
+--- Answer Generation (derived from Narrative) ---
+Based on the recounted narrative and the query: "What roles did Christian Cooke play in 2009”?
+def get_answer(self):
+    return ["In 2009, Christian Cooke played Luke Rutherford-Van Helsing in Demons" and "Lord Dorian Gaudain in Trinity"]
+-------------------Answer for the above question-------------------
+END
+
+Your Task:
+Your task is to analyze table-derived events, extract the target temporal detail and entity from the question , then write pyhton code for the class, construct a coherent temporal narrative, and then use that narrative to answer a specific temporal question.
+You need to implement the get_narrative() function to generate a clear, concise, and temporally accurate story based on the events.
+
+Table: 
+{table}
+
+Question: {question}

@@ -1,0 +1,79 @@
+index,table_id,question,response,answer
+0,totto_source/dev_json/example-2205.json,What TV shows was Shagun Sharma seen in 2019?,"Subquestions:
+sq1. What TV shows did Shagun Sharma appear in during 2019? (independent)
+
+Answer to sq1: The relevant rows are:
+2019 | Laal Ishq | Pernia | &TV
+2019 | Vikram Betaal Ki Rahasya Gatha | Rukmani/Kashi | &TV
+2019 | Shaadi Ke Siyape | Dua | &TV
+
+Final answer: Shagun Sharma was seen in Laal Ishq, Vikram Betaal Ki Rahasya Gatha, and Shaadi Ke Siyape in 2019.","In 2019, Shagun Sharma played in the roles as Pernia in Laal Ishq, Vikram Betaal Ki Rahasya Gatha as Rukmani/Kashi and Shaadi Ke Siyape as Dua."
+1,totto_source/train_json/example-7854.json,What were the voting results of the 1975 North Vietnamese legislative election with regards to seats?,"sq1. How many seats did each party win in the 1975 North Vietnamese legislative election?
+
+Answer to sq1: The Vietnamese Fatherland Front won 100.0% of the seats, which is 424 seats.
+
+sq2. What was the total number of seats in the 1975 North Vietnamese legislative election?
+
+Answer to sq2: There were 424 seats in total in the 1975 North Vietnamese legislative election.
+
+Final answer: The Vietnamese Fatherland Front won all 424 seats in the 1975 North Vietnamese legislative election.","In the 1975 North Vietnamese legislative election, the Vietnamese Fatherland Front won all 424 seats."
+2,totto_source/dev_json/example-560.json,What roles did Christian Cooke play in 2009?,"sq1. Identify the rows that contain information about Christian Cooke's roles in 2009. (independent)
+Answer to sq1: The relevant rows are:
+- Demons | 2009 | Luke Rutherford-Van Helsing | Main role
+- Trinity | 2009 | Lord Dorian Gaudain | Main role
+
+sq2. Extract the role and notes from the relevant rows. (depends on sq1)
+Answer to sq2: In 2009, Christian Cooke played Luke Rutherford-Van Helsing in Demons and Lord Dorian Gaudain in Trinity.
+
+Final answer: In 2009, Christian Cooke played Luke Rutherford-Van Helsing in Demons and Lord Dorian Gaudain in Trinity.","During 2009, Christian Cooke played the lead role of Luke Rutherford in Demons & Lord Dorian Gaudain in Trinity."
+0,totto_source/train_json/example-5.json,How many times has Ekaterina Bushueva won the Women's World Draughts-64 Championship?,"To answer the question, we need to find the row in the table for the 2003-04 season and print the team and league.
+
+Python code:
+
+```python
+# Define the table including the header
+table = [
+  [""Season"", ""Team"", ""League"", ""GP"", ""G"", ""A"", ""Pts"", ""PIM""],
+  [""1998-99"", ""Moose Jaw Warriors"", ""WHL"", ""2"", ""0"", ""0"", ""0"", ""0""],
+  [""1999-00"", ""Moose Jaw Warriors"", ""WHL"", ""55"", ""0"", ""5"", ""5"", ""62""],
+  [""2000-01"", ""Moose Jaw Warriors"", ""WHL"", ""65"", ""4"", ""11"", ""15"", ""157""],
+  [""2001-02"", ""Moose Jaw Warriors"", ""WHL"", ""56"", ""7"", ""10"", ""17"", ""102""],
+  [""2002-03"", ""Moose Jaw Warriors"", ""WHL"", ""65"", ""3"", ""8"", ""11"", ""199""],
+  [""2003-04"", ""Las Vegas Wranglers"", ""ECHL"", ""35"", ""2"", ""11"", ""13"", ""63""],
+  [""2003-04"", ""Lowell Lock Monsters"", ""AHL"", ""26"", ""0"", ""0"", ""0"", ""34""],
+  [""2004-05"", ""Las Vegas Wranglers"", ""ECHL"", ""72"", ""5"", ""16"", ""21"", ""138""],
+  [""2005-06"", ""South Carolina Stingrays"", ""ECHL"", ""35"", ""3"", ""13"", ""16"", ""20""],
+  [""2005-06"", ""Hershey Bears"", ""AHL"", ""37"", ""0"", ""4"", ""4"", ""77""],
+  [""2006-07"", ""Hershey Bears"", ""AHL"", ""44"", ""4"", ""6"", ""10"", ""95""],
+  [""2006-07"", ""Reading Royals"", ""ECHL"", ""6"", ""0"", ""3"", ""3"", ""8""],
+  [""2007-08"", ""Wilkes-Barre/Scranton Penguins"", ""AHL"", ""80"", ""2"", ""15"", ""17"", ""141""],
+  [""2008-09"", ""Wilkes-Barre/Scranton Penguins"", ""AHL"", ""80"", ""3"", ""11"", ""14"", ""143""],
+  [""2009-10"", ""Wilkes-Barre/Scranton Penguins"", ""AHL"", ""71"", ""5"", ""6"", ""11"", ""121""],
+  [""2009-10"", ""Pittsburgh Penguins"", ""NHL"", ""9"", ""0"", ""2"", ""2"", ""17""],
+  [""2010-11"", ""Pittsburgh Penguins"", ""NHL"", ""63"", ""3"", ""7"", ""10"", ""123""],
+  [""2011-12"", ""Pittsburgh Penguins"", ""NHL"", ""73"", ""4"", ""13"", ""17"", ""56""],
+  [""2012-13"", ""Rosenborg IHK"", ""GET"", ""15"", ""1"", ""8"", ""9"", ""43""],
+  [""2012-13"", ""Pittsburgh Penguins"", ""NHL"", ""42"", ""0"", ""6"", ""6"", ""54""],
+  [""2013-14"", ""Pittsburgh Penguins"", ""NHL"", ""56"", ""6"", ""6"", ""12"", ""58""],
+  [""2014-15"", ""Calgary Flames"", ""NHL"", ""76"", ""2"", ""9"", ""11"", ""53""],
+  [""2015-16"", ""Calgary Flames"", ""NHL"", ""69"", ""3"", ""9"", ""12"", ""54""],
+  [""2016-17"", ""Calgary Flames"", ""NHL"", ""81"", ""4"", ""12"", ""16"", ""85""],
+  [""2017-18"", ""Vegas Golden Knights"", ""NHL"", ""79"", ""5"", ""18"", ""23"", ""24""],
+  [""2018-19"", ""Vegas Golden Knights"", ""NHL"", ""74"", ""2"", ""10"", ""12"", ""18""],
+  [""NHL totals"", ""NHL totals"", ""NHL totals"", ""622"", ""29"", ""92"", ""121"", ""542""]
+]
+
+# Find the row for the 2003-04 season
+row_2003_04 = next(filter(lambda x: x[0] == ""2003-04"", table))
+
+# Save the result in the ans variable
+ans = (row_2003_04[1], row_2003_04[2])
+
+# Print the ans
+print(ans)
+```
+
+Output:
+```python
+('Las Vegas Wranglers', 'ECHL')
+```",Ekaterina Bushueva has won the Women's World Draughts-64 Championship two times.

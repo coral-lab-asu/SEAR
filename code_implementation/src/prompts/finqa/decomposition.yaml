@@ -1,0 +1,48 @@
+Decomposition:
+  description: |
+    Your task is to answer the questions based on the context given. The context is a table where the 1st line is the header and the following lines are the rows. Break the question into subquestions, and answer each subquestion along with supporting reasoning, then give the final answer. A few examples are shown below. The answer should not be a whole sentence, just give the figures and units if needed.
+  examples:
+    - context: |
+        Table Pre-text: The following table shows the authorized and issued common stock for the years ending December 31, 2017, and December 31, 2016, in thousands.
+        ( in thousands ) | december 31 , 2017 | december 31 , 2016
+        class a common stock authorized | 1000000 | 1000000
+        class a common stock issued and outstanding | 339235 | 338240
+        class b-1 common stock authorized issued and outstanding | 0.6 | 0.6
+        class b-2 common stock authorized issued and outstanding | 0.8 | 0.8
+        class b-3 common stock authorized issued and outstanding | 1.3 | 1.3
+        class b-4 common stock authorized issued and outstanding | 0.4 | 0.4
+      question: what was the increase in class a common stock issued and outstanding between years , in thousands?
+      decomposition: |
+        sq1. What was the value of Class A common stock issued and outstanding for December 31, 2017? (independent)
+        sq2. What was the value of Class A common stock issued and outstanding for December 31, 2016? (independent)
+        sq3. What is the difference between the values for December 31, 2017, and December 31, 2016, for Class A common stock? (depends on sq1, sq2)
+        sq4. How do we express the difference in thousands? (depends on sq3)
+      answers: |
+        Answer to sq1: The value for December 31, 2017, for Class A common stock issued and outstanding is 339,235 (in thousands).
+        Answer to sq2: The value for December 31, 2016, for Class A common stock issued and outstanding is 338,240 (in thousands).
+        Answer to sq3: The difference between the values for December 31, 2017, and December 31, 2016, for Class A common stock is 995 (in thousands).
+        Answer to sq4: We express the difference in thousands by simply stating the difference value followed by "thousand". In this case, the difference is 995 thousand.
+      final_answer: 995
+    - context: |
+        Table Pre-text: The following table presents financial data, including total capital and other key metrics, for the years ending December 31, 2008, and December 31, 2007, in millions.
+        december 31 ( in millions ) | 2008 | 2007
+        total tier 1capital ( a ) | $ 136104 | $ 88746
+        total tier 2 capital | 48616 | 43496
+        total capital | $ 184720 | $ 132242
+        risk-weighted assets | $ 1244659 | $ 1051879
+        total adjusted average assets | 1966895 | 1473541
+      question: what was the total capital in 2008?
+      decomposition: |
+        sq1. What was the value of total capital in 2008? (independent)
+        sq2. How do we express the value of total capital in millions? (depends on sq1)
+      answers: |
+        Answer to sq1: The value of total capital in 2008 was $184,720 million.
+        Answer to sq2: We express the value of total capital in millions by stating the value followed by "million". In this case, the value is $184,720 million.
+      final_answer: 184720
+  prompt: |
+    Now solve for this question, decompose into subsquestions, and give the answer in a format with these attributes : decomposition, answers, and final_answer.
+    context-
+    {context}
+    Question-
+    {question}
+    Decompose to subquestions-

@@ -1,0 +1,112 @@
+index,table_id,question,response,answer
+0,table_csv/204_80.csv,['what were the attendances in 1987?'],"Reasoning:
+To answer this question, we need to look at the ""Attendance"" column in the table, which lists the attendance figures for each game played in 1987. 
+
+Answer:
+The attendances in 1987 were:
+56,940, 61,667, 10,708, 25,867, 20,296, 47,972, 63,498, 45,249, 40,718, 34,611, 43,820, 46,489, 63,834, 75,053, and 20,370.","[""['56,940', '61,667', '10,708', '25,867', '20,296', '47,972', '63,498', '45,249', '40,718', '34,611', '43,820', '46,489', '63,834', '75,053', '20,370']""]"
+1,table_csv/203_373.csv,"[""who were the top five divers at the 1984 summer olympics women's 2 metre springboard?""]","Reasoning:
+To determine the top five divers at the 1984 Summer Olympics women's 2 metre springboard, we need to look at the ""Final Points"" column and sort the divers in descending order of their final points. The top five divers will be those with the highest final points.
+
+Answer:
+[""Kelly McCormick (USA)"", ""Christina Seufert (USA)"", ""Sylvie Bernier (CAN)"", ""Li Yihua (CHN)"", ""Li Qiaoxian (CHN)""]","[""['Sylvie Bernier (CAN)', 'Kelly McCormick (USA)', 'Christina Seufert (USA)', 'Li Yihua (CHN)', 'Li Qiaoxian (CHN)']""]"
+2,table_csv/202_175.csv,"['now, which church name differs from its parish name?']","Here is the answer with reasoning:
+
+**Question:** Which church name differs from its parish name?
+
+**Reasoning:** To find the church name that differs from its parish name, we need to compare the ""Parish"" column with the ""Church name"" column. We can scan the table and look for instances where the parish name and church name are not identical. In this case, we find one instance: ""Levanger"" parish with ""Bamberg Church"" name. The parish name and church name do not match.
+
+**Answer:** [""Bamberg Church""]","[""['Bamberg Church']""]"
+3,table_csv/204_619.csv,"['what year did heywood h. davis finish?', 'of those, which years did they start?', 'who started in 1961?', 'of these clerks, who finished in 1959?', 'who else finished in 1959?', 'which clerks started in 1961?', 'who else finished in that year?', ""which clerk's school (year) is minnesota (1956)?""]","Here are the answers and reasoning for each question:
+
+**Question 1: What year did Heywood H. Davis finish?**
+Reasoning: Look at the ""Finished"" column to find the answer.
+Answer: 1959
+
+**Question 2: Of those, which years did they start?**
+Reasoning: Since Heywood H. Davis finished in 1959, look at the ""Started"" column for the same row to find the answer.
+Answer: 1958
+
+**Question 3: Who started in 1961?**
+Reasoning: Look at the ""Started"" column to find the answer.
+Answer: D. Lawrence Gunnels
+
+**Question 4: Of these clerks, who finished in 1959?**
+Reasoning: Look at the ""Finished"" column to find the answer.
+Answer: William C. Canby, Jr. and Heywood H. Davis
+
+**Question 5: Who else finished in 1959?**
+Reasoning: Look at the ""Finished"" column to find the answer.
+Answer: Patrick F. McCartan
+
+**Question 6: Which clerks started in 1961?**
+Reasoning: Look at the ""Started"" column to find the answer.
+Answer: D. Lawrence Gunnels
+
+**Question 7: Who else finished in that year?**
+Reasoning: Since the question is asking about the same year as D. Lawrence Gunnels started (1962), look at the ""Finished"" column to find the answer.
+Answer: None (there is no other clerk who finished in 1962)
+
+**Question 8: Which clerk's school (year) is Minnesota (1956)?**
+Reasoning: Look at the ""School (year)"" column to find the answer.
+Answer: William C. Canby, Jr.","[""['1959']"", ""['1957', '1957', '1958', '1958', '1959', '1959', '1961']"", ""['D. Lawrence Gunnels']"", ""['William C. Canby, Jr.', 'Heywood H. Davis']"", ""['William C. Canby, Jr.']"", ""['D. Lawrence Gunnels']"", ""['William C. Canby, Jr.']"", ""['William C. Canby, Jr.']""]"
+4,table_csv/203_64.csv,['which nations competed in the 2004 summer paralympics?'],"Reasoning:
+The question asks for the nations that competed in the 2004 Summer Paralympics. Since the table does not provide information about the year of the Paralympics, we cannot determine which nations competed in the 2004 Summer Paralympics specifically. However, we can assume that the table provides information about the nations that competed in some Summer Paralympics, and we can provide an answer based on that.
+
+Answer:
+All the nations listed in the table, which are:
+
+[""China"", ""Great Britain"", ""Canada"", ""United States"", ""Australia"", ""Ukraine"", ""Spain"", ""Germany"", ""France"", ""Japan""]","[""['China', 'Great Britain', 'Canada', 'United States', 'Australia', 'Ukraine', 'Spain', 'Germany', 'France', 'Japan']""]"
+0,table_csv/203_64.csv,['what countries competed in the 2004 summer paralympics?'],"Reasoning:
+The question asks for the countries that competed in the 2004 Summer Paralympics. Since the table provides the medal counts for each country, we can infer that all the countries listed in the table participated in the 2004 Summer Paralympics.
+
+Answer:
+[""China"", ""Great Britain"", ""Canada"", ""United States"", ""Australia"", ""Ukraine"", ""Spain"", ""Germany"", ""France"", ""Japan""]","[""['China', 'Great Britain', 'Canada', 'United States', 'Australia', 'Ukraine', 'Spain', 'Germany', 'France', 'Japan']""]"
+1,table_csv/203_588.csv,['what are all of the time periods?'],"Reasoning:
+To answer this question, we can simply look at the ""Period"" column in the table, which lists all the time periods.
+
+Answer:
+The answer is a list of all the time periods mentioned in the table:
+
+[""1950-1955"", ""1955-1960"", ""1960-1965"", ""1965-1970"", ""1970-1975"", ""1975-1980"", ""1980-1985"", ""1985-1990"", ""1990-1995"", ""1995-2000"", ""2000-2005"", ""2005-2010""]","[""['1950-1955', '1955-1960', '1960-1965', '1965-1970', '1970-1975', '1975-1980', '1980-1985', '1985-1990', '1990-1995', '1995-2000', '2000-2005', '2005-2010']""]"
+2,table_csv/204_304.csv,['who competed in the 2011 european team championships super league?'],"Here is the answer:
+
+**Reasoning:**
+The question asks us to identify who competed in the 2011 European Team Championships Super League. The table provides a list of athletes who participated in the event, along with their nationalities and performances. Since the question does not specify any particular criteria or requirement, we can simply list out all the athletes who participated in the event.
+
+**Answer:**
+The athletes who competed in the 2011 European Team Championships Super League are:
+
+[""Adam Kszczot"", ""Jeff Lastennet"", ""Gareth Warburton"", ""Mario Scapini"", ""Anis Ananenka"", ""Oleh Kayafa"", ""Joni Jaako"", ""Robin Schembera"", ""Ivan Tukhtachev"", ""Antonio Manuel Reina"", ""Antonio Rodrigues"", ""Milan Kocourek""]","[""['Adam Kszczot', 'Jeff Lastennet', 'Gareth Warburton', 'Mario Scapini', 'Anis Ananenka', 'Oleh Kayafa', 'Joni Jaako', 'Robin Schembera', 'Ivan Tukhtachev', 'Antonio Manuel Reina', 'Antonio Rodrigues', 'Milan Kocourek']""]"
+3,table_csv/204_216.csv,['which countries participated in speed skating at the 1972 winter olympics?'],"Here is the answer with reasoning:
+
+**Question:** Which countries participated in speed skating at the 1972 Winter Olympics?
+
+**Reasoning:** To find the countries that participated in speed skating at the 1972 Winter Olympics, we can look at the table which lists the countries and their medals in the competition. All countries listed in the table participated in the event. Therefore, the countries that participated are all the ones mentioned in the table.
+
+**Answer:** [""Netherlands (NED)"", ""United States (USA)"", ""West Germany (FRG)"", ""Norway (NOR)"", ""Soviet Union (URS)"", ""Sweden (SWE)""]","[""['Netherlands (NED)', 'United States (USA)', 'West Germany (FRG)', 'Norway (NOR)', 'Soviet Union (URS)', 'Sweden (SWE)']""]"
+4,table_csv/203_659.csv,"['who came in first at the 2003 grand prix of monterey?', ""what was patrick carpenter's time during the 2003 grand prix of monterey?"", ""how fast did the team team player's complete the 2003 grand prix of monterey?"", ""what was patrick carpentier's winning time at the 2003 grand prix of monterey?""]","Here are the answers with reasoning:
+
+**Question 1: Who came in first at the 2003 Grand Prix of Monterey?**
+
+Reasoning: We need to look at the ""Pos"" column to find the winner of the race. The row with ""Pos"" equal to 1 corresponds to the winner.
+
+Answer: Patrick Carpentier
+
+**Question 2: What was Patrick Carpentier's time during the 2003 Grand Prix of Monterey?**
+
+Reasoning: We need to look at the ""Time/Retired"" column for the row corresponding to Patrick Carpentier.
+
+Answer: 1:48:11.023
+
+**Question 3: How fast did the team Team Player's complete the 2003 Grand Prix of Monterey?**
+
+Reasoning: This question is a bit ambiguous, as we don't have a specific ""speed"" column. However, we can assume that the question is asking about the time taken by the team to complete the race. Since Patrick Carpentier was driving for Team Player's, we can look at his time.
+
+Answer: 1:48:11.023
+
+**Question 4: What was Patrick Carpentier's winning time at the 2003 Grand Prix of Monterey?**
+
+Reasoning: Same as Question 2.
+
+Answer: 1:48:11.023","[""['Patrick Carpentier']"", ""['1:48:11.023']"", ""['1:48:11.023']"", ""['1:48:11.023']""]"

@@ -1,0 +1,121 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Context:
+### Škoda Car Sales from 2005 to 2013
+
+| Model           | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+|-----------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Škoda Octavia   | 233,322 | 270,274 | 309,951 | 344,857 | 317,335 | 349,746 | 387,200 | 409,360 | 359,600 |
+| Škoda Fabia     | 236,698 | 243,982 | 232,890 | 246,561 | 264,173 | 229,045 | 266,800 | 255,025 | 202,000 |
+| Škoda Superb    | 22,091  | 20,989  | 20,530  | 25,645  | 44,548  | 98,873  | 116,700 | 106,847 | 94,400  |
+| Škoda Roomster  |         | 14,422  | 66,661  | 57,467  | 47,152  | 32,332  | 36,000  | 39,249  | 33,300  |
+| Škoda Yeti      |         |         |         |         | 11,018  | 52,604  | 70,300  | 90,952  | 82,400  |
+| Škoda Rapid     |         |         |         |         |         |         | 1,700   | 9,292   | 103,800 |
+| Škoda Citigo    |         |         |         |         |         |         | 509     | 36,687  | 45,200  |
+
+
+Question: How many Skoda cars were sold in 2010?
+
+Crucial Steps Selected:
+
+Identify Objective: Define the goal.
+Evidence Extraction:Extract relevant rows, columns, and text.
+Python Code Generation: Generate single Python code to sum the extracted values.
+
+Example2:
+
+Context:
+
+### Total Domestic Business R&D and Software R&D Expenditures: 2006 and 2016
+
+| Year and Industry     | Total Business R&D (in million $) | Software R&D (in million $) |
+|-----------------------|-----------------------------------|-----------------------------|
+| **2006**              |                                   |                             |
+| All industries        | 247,669                           | 48,299                      |
+| Manufacturing         | 171,814                           | 10,720                      |
+| Nonmanufacturing       | 75,855                            | 37,579                      |
+| **2016**              |                                   |                             |
+| All industries        | 374,685                           | 120,824                     |
+| Manufacturing         | 250,553                           | 35,984                      |
+| Nonmanufacturing       | 124,132                           | 84,840                      |
+| **2006-16 Annual Growth Rate (%)** |                        |                             |
+| All industries        | 4.2%                              | 9.6%                        |
+| Manufacturing         | 3.8%                              | 12.9%                       |
+| Nonmanufacturing       | 5.0%                              | 8.5%                        |
+
+Question: how many million dollars did for-profit businesses perform in software r&d in 2016?
+
+Crucial Steps Selected:
+
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Direct Answer Path: Use evidence extraction to answer directly from the table.
+
+Example3:
+
+Context:
+
+### Table 0: Benefit Plan Contributions (2015-2017)
+
+| Benefit Plan            | 2017   | 2016   | 2015   |
+|-------------------------|--------|--------|--------|
+| Pension Plan            | $3,856 | $3,979 | $2,732 |
+| Health Plan             | 11,426 | 11,530 | 8,736  |
+| Other Plans             | 1,463  | 1,583  | 5,716  |
+| **Total Plan Contributions** | $16,745 | $17,092 | $17,184 |
+
+---
+
+### Table 1: Loan and Financial Obligations by Year
+
+|                          | 2018    | 2019    | 2020    | 2021    | 2022    | Thereafter | Total       |
+|--------------------------|---------|---------|---------|---------|---------|------------|-------------|
+| Property Mortgages and Other Loans | $153,593 | $42,289  | $703,018 | $11,656  | $208,003 | $1,656,623  | $2,775,182  |
+| MRA Facilities           | $90,809 | —       | —       | —       | —       | —          | $90,809     |
+| Revolving Credit Facility | —       | —       | —       | —       | —       | $40,000    | $40,000     |
+| Unsecured Term Loans     | —       | —       | —       | —       | —       | $1,500,000 | $1,500,000  |
+| Senior Unsecured Notes   | $250,000 | —       | $250,000 | —       | $800,000 | $100,000  | $1,400,000  |
+| Trust Preferred Securities | —       | —       | —       | —       | —       | $100,000  | $100,000    |
+| Capital Lease            | $2,387  | $2,411  | $2,620  | $2,794  | $2,794  | $819,894   | $832,900    |
+| Ground Leases            | $31,049 | $31,066 | $31,436 | $31,628 | $29,472 | $703,254   | $857,905    |
+
+Question: What is the sum of Ground leases of 2020, Health Plan of 2016, and Property mortgages and other loans of Thereafter ?
+
+Crucial Steps Selected:
+
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text from both tables.
+Python Code Generation: Generate a single Python script to sum the extracted values.
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, text (if available) and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+
+Tables: 
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:

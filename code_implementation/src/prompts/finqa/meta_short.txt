@@ -1,0 +1,226 @@
+### Meta Reasoning Task Guide
+
+#### Problem Understanding:
+- Objective: Identify the goal or desired outcome.
+- Comprehend the problem's nature and scope.
+
+#### Reasoning Process Options:
+Choose the most relevant approaches based on the problem complexity.
+
+1. **Chain-of-Thought (CoT) Reasoning**:
+   - Break down the problem into intermediate steps.
+   - Example:
+     - Question: What is the gross margin decline percent in fiscal 2004 from 2003?
+     - Steps:
+       1. Extract gross margin for 2003: 27.5%
+       2. Extract gross margin for 2004: 27.3%
+       3. Calculate the difference: 0.2%
+
+2. **Evidence Extraction**:
+   - Extract relevant data and details from the provided context.
+   - Example:
+     - Context: Table showing net sales, cost of sales, and gross margin for 2004-2002.
+     - Extracted Evidence: Gross margin percentages for 2003 and 2004.
+
+3. **Decomposition**:
+   - Break down the problem into sub-problems and solve each part.
+   - Example:
+     - Sub-questions:
+       1. What was the gross margin in 2003?
+       2. What was the gross margin in 2004?
+       3. What is the difference between these values?
+
+#### Final Answer:
+- Summarize findings and present the final answer.
+- If possible, provide answers in both percent and decimal notation.
+- Example: Final Answer: 0.2%, 0.002
+
+### Simplified Example
+
+```
+Context:
+The table shows net sales, cost of sales, and gross margin for 2004-2002.
+
+Question:
+What was the gross margin decline percent in fiscal 2004 from 2003?
+
+Chosen Approach:
+Chain-of-Thought (CoT) Reasoning
+
+Steps:
+1. Gross margin for 2003: 27.5%
+2. Gross margin for 2004: 27.3%
+3. Difference: 0.2%
+
+Final Answer:
+0.2%, 0.002
+```
+
+---
+
+### Example 1
+
+Context:
+The table shows the total revenue and net profit for XYZ Corporation for the years 2017, 2018, and 2019.
+
+Year | Total Revenue | Net Profit
+---- | --------------| ----------
+2017 | $500,000      | $50,000
+2018 | $550,000      | $55,000
+2019 | $600,000      | $60,000
+
+Question:
+What was the percentage change in total revenue from 2017 to 2018?
+
+**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+1. Total revenue for 2017: $500,000
+2. Total revenue for 2018: $550,000
+3. Difference: $550,000 - $500,000 = $50,000
+4. Percentage change: ($50,000 / $500,000) * 100 = 10%
+
+**Final Answer**:
+10%, 0.1, .1
+
+---
+
+### Example 2
+
+Context:
+The table shows the expenses and net income for ABC Corporation for the years 2019 and 2020.
+
+Category | 2019 | 2020
+---- | ---- | ----
+Expenses | $300,000 | $350,000
+Net Income | $200,000 | $250,000
+
+Question:
+What was the percentage change in net income from 2019 to 2020?
+
+**Chosen Approach**:
+Decomposition
+
+**Sub-questions**:
+1. What was the net income in 2019? (sq1)
+2. What was the net income in 2020? (sq2)
+3. What is the difference in net income between 2019 and 2020? (sq3)
+4. What is the percentage change in net income from 2019 to 2020? (sq4)
+
+**Answers**:
+1. The net income in 2019 was $200,000. (Answer to sq1)
+2. The net income in 2020 was $250,000. (Answer to sq2)
+3. The difference in net income is $250,000 - $200,000 = $50,000. (Answer to sq3)
+4. The percentage change is ($50,000 / $200,000) * 100 = 25%. (Answer to sq4)
+
+**Final Answer**:
+25%, 0.25, .25
+
+---
+
+### Example 3
+
+Context:
+The table shows the net sales, cost of sales, and gross margin for DEF Corporation for the years 2018, 2019, and 2020.
+
+Year | Net Sales | Cost of Sales | Gross Margin
+---- | --------- | ------------- | ------------
+2018 | $800,000  | $600,000      | 25%
+2019 | $900,000  | $675,000      | 25%
+2020 | $1,000,000| $750,000      | 25%
+
+Question:
+What was the percentage change in net sales from 2018 to 2020?
+
+**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+1. Net sales for 2018: $800,000
+2. Net sales for 2020: $1,000,000
+3. Difference: $1,000,000 - $800,000 = $200,000
+4. Percentage change: ($200,000 / $800,000) * 100 = 25%
+
+**Final Answer**:
+25%, 0.25, .25
+
+---
+
+### Example 4
+
+Context:
+The table shows the revenues, expenses, and net income for PQR Corporation for the years 2017, 2018, and 2019.
+
+Year | Revenue | Expenses | Net Income
+---- | --------| -------- | ----------
+2017 | $400,000| $250,000 | $150,000
+2018 | $450,000| $270,000 | $180,000
+2019 | $500,000| $300,000 | $200,000
+
+Question:
+What was the average percentage change in net income over the years 2017, 2018, and 2019?
+
+**Chosen Approach**:
+Decomposition and Chain-of-Thought (CoT) Reasoning
+
+**Sub-questions**:
+1. What was the net income in 2017? (sq1)
+2. What was the net income in 2018? (sq2)
+3. What was the net income in 2019? (sq3)
+4. What is the percentage change in net income from 2017 to 2018? (sq4)
+5. What is the percentage change in net income from 2018 to 2019? (sq5)
+6. What is the average percentage change over these years? (sq6)
+
+**Answers**:
+1. Net income in 2017: $150,000 (Answer to sq1)
+2. Net income in 2018: $180,000 (Answer to sq2)
+3. Net income in 2019: $200,000 (Answer to sq3)
+4. Percentage change from 2017 to 2018: ($180,000 - $150,000) / $150,000 * 100 = 20% (Answer to sq4)
+5. Percentage change from 2018 to 2019: ($200,000 - $180,000) / $180,000 * 100 = 11.11% (Answer to sq5)
+6. Average percentage change: (20 + 11.11) / 2 = 15.56% (Answer to sq6)
+
+**Final Answer**:
+The average percentage change in net income over the years 2017, 2018, and 2019 is approximately 15.56% (0.1556 or .156).
+
+---
+
+### Example 5
+
+Context:
+The table shows the sales, cost of goods sold (COGS), and gross profit for ABC Corporation for the years 2018, 2019, and 2020.
+
+Year | Sales | COGS | Gross Profit
+---- | ----- | ---- | ------------
+2018 | $500,000 | $300,000 | $200,000
+2019 | $550,000 | $330,000 | $220,000
+2020 | $600,000 | $360,000 | $240,000
+
+Question:
+What is the percentage change in gross profit from 2018 to 2020?
+
+**Chosen Approach**:
+Chain-of-Thought (CoT) Reasoning
+
+**Steps**:
+1. Gross profit for 2018: $200,000
+2. Gross profit for 2020: $240,000
+3. Difference: $240,000 - $200,000 = $40,000
+4. Percentage change: ($40,000 / $200,000) * 100 = 20%
+
+**Final Answer**:
+20%, 0.20, .20
+
+---
+
+**Your task:** Answer the question using the optimal approach provided above, referring to the table context given.
+
+**Table:**
+{context}
+
+**Question:**
+{question}
+
+**Optimal Approach:**
+
+---

@@ -1,0 +1,1768 @@
+,question,meta_response,meta_f1_score,approach_classes,decomposition_response,decomposition_f1_score,cot_response,cot_f1_score,answer
+0,"In the 86th United States Congress, What date was the end of Richard M. Simpson's service, and who was his successor?","**Problem Understanding:**
+1. Determine the Objective: Identify the date Richard M. Simpson's service ended and who his successor was in the 86th United States Congress.
+
+2. Understand the Problem: This requires locating the row corresponding to Richard M. Simpson in the table and extracting the relevant information about his service termination date and successor.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Locate the row for Richard M. Simpson in the table.
+   - Extract the ""Date of successor's formal installation"" and ""Successor"" columns from that row.
+   -  The date of Richard M. Simpson's service ending is the ""Date of successor's formal installation"" date, which is April 26, 1960.
+   - His successor is Douglas H. Elliott (R).
+
+**Answer:**
+Richard M. Simpson's service in the 86th United States Congress ended on April 26, 1960. His successor was Douglas H. Elliott (R).
+
+**Final Answer:** Richard M. Simpson's service ended on April 26, 1960, and his successor was Douglas H. Elliott (R). 
+",35.8974358974359,"extract, cot","  decomposition: |
+    sq1. Identify the row that contains information about Richard M. Simpson. (independent)
+    sq2. Extract the Date of successor's formal installation from the identified row. (depends on sq1)
+    sq3. Extract the Successor from the identified row. (depends on sq1)
+  answers: |
+    Answer to sq1: The relevant row is: Pennsylvania 18th | Richard M. Simpson (R) | Died January 7, 1960 | Douglas H. Elliott (R) | April 26, 1960
+    Answer to sq2: April 26, 1960
+    Answer to sq3: Douglas H. Elliott
+  final_answer: April 26, 1960, Douglas H. Elliott. 
+",31.57894736842105,"Reasoning: To determine the end of Richard M. Simpson's service and his successor, we need to locate his row in the table and extract the relevant information. The row for Richard M. Simpson indicates he died on January 7, 1960, and his successor was Douglas H. Elliott. 
+
+Answer: [""January 7, 1960"", ""Douglas H. Elliott""] 
+",31.57894736842105,"In the 86th United States Congress, Richard M. Simpson (R) served until January 7, 1960 and was succeeded by Douglas H. Elliott (R) on April 26, 1960, who served until June 19, 1960."
+1,Who finished 2nd at the 2014 Commonwealth games and what time did they achieve?,"**Problem Understanding:**
+1. Determine the Objective: Identify the athlete who finished second in the 100m race at the 2014 Commonwealth Games and their corresponding time.
+
+2. Understand the Problem: This requires locating the relevant information from the table, focusing on the 2014 Commonwealth Games and the 100m event.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   -  The table shows that Adam Gemili finished 2nd in the 100m event at the 2014 Commonwealth Games with a time of 10.10 seconds.
+
+4. Answer:
+   -  Adam Gemili finished second at the 2014 Commonwealth Games in the 100m event, achieving a time of 10.10 seconds. 
+
+**Final Answer:** Adam Gemili finished second at the 2014 Commonwealth Games in the 100m event, achieving a time of 10.10 seconds. 
+",31.57894736842105,"extract, cot","```json
+  decomposition: |
+    sq1. What was the time achieved in the 2014 Commonwealth Games 100m race? (independent)
+    sq2. What was the position of Adam Gemili in the 2014 Commonwealth Games 100m race? (independent)
+  answers: |
+    Answer to sq1: 10.10
+    Answer to sq2: 2nd
+  final_answer: Adam Gemili, 10.10
+```",22.22222222222222,"Reasoning: To find who finished 2nd at the 2014 Commonwealth games and their time, we need to look at the rows where the ""Competition"" column is ""Commonwealth Games"" and the ""Year"" column is ""2014"". There are two such rows, one for the 100m event and one for the 4 x 100m relay. The ""Position"" and ""Notes"" columns provide the relevant information.
+
+Answer: [""Adam Gemili"", ""10.10""] 
+",22.22222222222222,"In the 2014 Commonwealth Games, Gemili finished the 100m in second position with a time of 10.10 seconds."
+2,Was is the latest IETF standards documentation and when was it released?,"**Problem Understanding:**
+1. Determine the Objective: Identify the latest IETF standards documentation for the Trivial File Transfer Protocol and its release date.
+
+2. Understand the Problem: This requires extracting relevant information from the table, specifically the ""RFC Number"" and ""Published"" columns.
+
+**Reasoning Process:**
+3. Extract Relevant Information: The table lists RFC numbers and their respective publication dates. We need to find the highest RFC number to identify the latest documentation.
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the RFC number with the highest value.
+   - Extract the corresponding ""Published"" date for that RFC.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - The highest RFC number listed is RFC 7440.
+   - RFC 7440 was published in January 2015.
+
+**Answer:**
+The latest IETF standards documentation for the Trivial File Transfer Protocol is RFC 7440, published in January 2015.
+
+**Final Answer:** The latest IETF standards documentation for the Trivial File Transfer Protocol is RFC 7440, published in January 2015. 
+",57.14285714285715,"extract, decompose, cot","```json
+{
+  ""subquestions"": [
+    {
+      ""sq1"": ""What is the latest IETF standards documentation?"",
+      ""reasoning"": ""The question asks for the latest IETF standards documentation, which is the RFC with the highest RFC Number."",
+      ""answer"": ""RFC 7440""
+    },
+    {
+      ""sq2"": ""When was RFC 7440 released?"",
+      ""reasoning"": ""The question asks when the latest IETF standards documentation was released, which corresponds to the Published date of RFC 7440."",
+      ""answer"": ""Jan 2015""
+    }
+  ],
+  ""final_answer"": ""RFC 7440, Jan 2015""
+}
+```",42.85714285714285,"Reasoning: To find the latest IETF standards documentation for TFTP, we need to examine the ""Published"" column and identify the most recent date.  Looking at the table, the latest published date is ""Jan 2015"". 
+
+Answer: [""RFC 7440"", ""Jan 2015""] 
+",42.85714285714285,The TFTP Windowsize Option (RFC 7440) was published in January 2015.
+3,What awards did Amber Kuo receive for starring in the film The Year of Happiness and Love?,"**Problem Understanding:**
+1. Determine the Objective: Identify the awards Amber Kuo received for her role in the film ""The Year of Happiness and Love"".
+
+2. Understand the Problem: This requires examining the table and finding the row(s) corresponding to the film ""The Year of Happiness and Love"" and identifying any awards listed.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Locate the row corresponding to ""The Year of Happiness and Love"".
+   - This row shows that Amber Kuo received a nomination for the ""Best Actress"" award at the 45th Golden Bell Awards.
+
+4. Answer: 
+   - Amber Kuo was nominated for the Best Actress award at the 45th Golden Bell Awards for her performance in ""The Year of Happiness and Love"".
+
+**Final Answer:** Amber Kuo received a nomination for the Best Actress award at the 45th Golden Bell Awards for her performance in ""The Year of Happiness and Love"". 
+",45.16129032258065,"extract, cot","decomposition: |
+    sq1. Identify the row that contains information about Amber Kuo's nominations and awards for The Year of Happiness and Love. (independent)
+    sq2. Extract the award and result from the relevant row. (depends on sq1)
+  answers: |
+    Answer to sq1: The relevant row is:
+      2010 | 45th Golden Bell Awards | Best Actress | The Year of Happiness and Love | Nominated
+    Answer to sq2: Amber Kuo was nominated for Best Actress at the 45th Golden Bell Awards.
+  final_answer: Amber Kuo was nominated for Best Actress at the 45th Golden Bell Awards. 
+",29.629629629629637,"Reasoning: To determine what awards Amber Kuo received for her role in ""The Year of Happiness and Love"", we need to look for the row with that nominated work.  The row with ""The Year of Happiness and Love"" in the ""Nominated work"" column is for the 45th Golden Bell Awards. The ""Result"" column shows that Amber Kuo was nominated for Best Actress.  She did not win this award.
+
+Answer: None.  Amber Kuo was only nominated for the Golden Bell Awards, she did not win an award for her role in ""The Year of Happiness and Love"". 
+",0.0,Amber Kuo was nominated in 2010 for Best Actress at the 45th Golden Bell Awards for her role in The Happy Times of That Year.
+4,"When Gerry Fitt (Independent) lost his Members of Parliament seat, and who won it?","**Problem Understanding:**
+
+1. **Determine the Objective:**  Identify the year when Gerry Fitt (Independent) lost his seat in the Belfast West constituency and determine who won the seat in that election.
+
+2. **Understand the Problem:** This requires extracting information from the table about the elections Gerry Fitt (Independent) participated in and identifying the election where he lost, along with the winner.
+
+**Reasoning Process:**
+
+3. **Extract Relevant Information:**
+    - Gerry Fitt (Independent) was elected in 1979.
+    - Gerry Fitt (Independent) was not re-elected in the subsequent election in 1983.
+    - Gerry Adams (Sinn Féin) won the 1983 election.
+
+4. **Decompose the Problem into Sub-Problems:**
+    - Find the year when Gerry Fitt (Independent) lost his seat.
+    - Identify the winner of the election where he lost.
+
+5. **Individually Answer Each Sub-Problems with Reasoning:**
+    - Gerry Fitt (Independent) lost his seat in the 1983 election.
+    - Gerry Adams (Sinn Féin) won the seat in the 1983 election.
+
+**Answer:**
+Gerry Fitt (Independent) lost his seat in the 1983 election. The winner of that election was Gerry Adams (Sinn Féin).
+
+**Final Answer:** Gerry Fitt (Independent) lost his seat in the 1983 election. The winner of that election was Gerry Adams (Sinn Féin). 
+",40.0,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""When did Gerry Fitt (Independent) lose his seat?"",
+  ""sq2"": ""Who won the seat after Gerry Fitt lost it?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""1983"",
+  ""Answer to sq2"": ""Gerry Adams""
+ },
+ ""final_answer"": ""1983, Gerry Adams""
+}
+```",26.08695652173913,"Reasoning:  To determine when Gerry Fitt (Independent) lost his seat and who won it, we need to look at the table and find the rows where Gerry Fitt was the Member and the party was Independent. The relevant row is ""1979 | Gerry Fitt | Independent"".  The next row indicates that Gerry Adams of Sinn Féin won the seat.
+
+Answer: [""1979"", ""Gerry Adams""] 
+",17.39130434782609,"Gerry Fitt an independent, lost his Members of Parliament seat in 1983 and was won by Gerry Adams of Sinn Féin."
+5,"Did Kipsubai Koskei win a medal at any events in the African Championships, and if so what was his time and was it record-breaking?","**Problem Understanding:**
+1. Determine the Objective: Identify if Kipsubai Koskei won a medal at any African Championships events, along with his winning time and if it was a record-breaking time.
+
+2. Understand the Problem: This requires extracting relevant information from the table about Kipsubai Koskei's performances at the African Championships and analyzing the ""Position"" and ""Notes"" columns for medal wins and record-breaking performances.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - African Championships in 1984:
+     - 3rd in 5000 m with a time of 13:42.05
+     - 1st in 10,000 m with a time of 28:11.70 CR (CR indicates Championship Record)
+   - African Championships in 1985:
+     - 2nd in 10,000 m with a time of 28:26.63
+
+4. Decompose the Problem into Sub-Problems:
+   - Determine if Kipsubai Koskei won any medals at the African Championships.
+   - If so, identify the event, his winning time, and if it was a record-breaking time.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Kipsubai Koskei won a medal at the African Championships in 1984.
+   - He won the 10,000 m with a time of 28:11.70, which was a Championship Record.
+
+**Answer:** Kipsubai Koskei won a medal at the 1984 African Championships in the 10,000 m with a time of 28:11.70, which was a Championship Record.
+
+**Final Answer:** Kipsubai Koskei won a medal at the 1984 African Championships in the 10,000 m with a time of 28:11.70, which was a Championship Record. 
+",24.0,"extract, decompose, cot","  decomposition: |
+    sq1. Did Kipsubai Koskei win a medal at the African Championships? (independent)
+    sq2. If so, what event did he win a medal in and what was his time? (depends on sq1)
+    sq3. If he won a medal, was his time record-breaking? (depends on sq2)
+  answers: |
+    Answer to sq1: Yes, Kipsubai Koskei won a medal at the African Championships.
+    Answer to sq2: He won the 5000 m race in 13:42.05 and the 10,000 m race in 28:11.70.
+    Answer to sq3: His 10,000 m time of 28:11.70 was a championship record. 
+  final_answer: Yes, 5000m - 13:42.05, 10,000m - 28:11.70 (CR) 
+",7.4074074074074066,"Reasoning: To determine if Kipsubai Koskei won a medal at any events in the African Championships, we need to look at the rows where 'Competition' is 'African Championships'. There are two such rows:
+- 1984 | African Championships | Rabat, Morocco | 3rd | 5000 m | 13:42.05
+- 1984 | African Championships | Rabat, Morocco | 1st | 10,000 m | 28:11.70 CR
+- 1985 | African Championships | Cairo, Egypt | 2nd | 10,000 m | 28:26.63
+
+These rows show that Kipsubai Koskei won medals at both African Championships.
+- In 1984, he won 3rd place in the 5000m with a time of 13:42.05, and 1st place in the 10,000m with a time of 28:11.70. 
+- In 1985, he won 2nd place in the 10,000m with a time of 28:26.63.
+
+The 'Notes' column indicates that the 1st place 10,000m finish in 1984 was a Championship Record (CR). 
+
+Answer: [""Yes"", ""13:42.05"", ""28:11.70"", ""Yes"", ""28:26.63"", ""No""] 
+",7.4074074074074066,"Kipsubai Koskei got a gold medal in the 10,000 metres at the African Championships, which he won in a championship record time of 28:11.70 minutes."
+6,"What was Clarence Stasavich's final career record, and when and where did he achieve it?","**Problem Understanding:**
+1. **Determine the Objective:** Identify Clarence Stasavich's final career coaching record, including the year and team he was coaching at the time.
+
+2. **Understand the Problem:** This involves extracting relevant information from the table, specifically the final ""Total"" row and the corresponding team associated with that record.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - The table's final row (""Total"") indicates Clarence Stasavich's overall career record: 171 wins, 64 losses, and 7 ties.
+   - The same row shows that this record was achieved across all his coaching stints, encompassing both his time at Lenoir–Rhyne and East Carolina.
+
+4. **Answer:**
+   - Clarence Stasavich's final career record was 171–64–7.
+   - This record encompasses his time at both Lenoir–Rhyne and East Carolina. 
+
+**Final Answer:** Clarence Stasavich's final career record was 171–64–7, achieved over his coaching stints at both Lenoir–Rhyne and East Carolina. 
+",28.57142857142857,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What is Clarence Stasavich's final career record?"",
+  ""sq2"": ""When and where did Clarence Stasavich achieve his final career record?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""171-64-7"",
+  ""Answer to sq2"": ""1969, East Carolina""
+ },
+ ""final_answer"": ""171-64-7, 1969, East Carolina""
+}
+```",23.52941176470588,"Reasoning: To determine Clarence Stasavich's final career record, we need to look at the final row of the table, which summarizes his total wins, losses, and ties. This row states ""Total: | Total: | 171–64–7 | - | - | -"". Therefore, his final career record was 171-64-7.
+
+Answer: [""171-64-7"", ""Total:""] 
+",6.25,"Clarence Stasavich served as the head football coach at Lenoir–Rhyne from 1946 to 1961 and at East Carolina College from 1963 to 1969, compiling a career college football coaching record of 171–64–7."
+7,Which athletes got times of 2:14.67 and 2:14.01 at the Men's 200 metre breaststroke at the 2000 Summer Olympics and which countries do they represent?,"**Problem Understanding:**
+1. Determine the Objective: Identify the athletes who achieved times of 2:14.67 and 2:14.01 in the men's 200-meter breaststroke at the 2000 Summer Olympics, along with their respective countries.
+
+2. Understand the Problem: This requires extracting relevant information from the table based on the given times and identifying the corresponding athletes and their nationalities.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   -  2:14.67: Norbert Rózsa (Hungary)
+   - 2:14.01: Morgan Knabe (Canada)
+
+**Answer:**
+- The athlete who achieved a time of 2:14.67 is Norbert Rózsa, representing Hungary.
+- The athlete who achieved a time of 2:14.01 is Morgan Knabe, representing Canada.
+
+**Final Answer:** Norbert Rózsa from Hungary achieved a time of 2:14.67, and Morgan Knabe from Canada achieved a time of 2:14.01 in the Men's 200-meter breaststroke at the 2000 Summer Olympics.
+",33.333333333333336,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Who swam a time of 2:14.67 at the Men's 200 metre breaststroke at the 2000 Summer Olympics?"",
+  ""sq2"": ""What country does that athlete represent?"",
+  ""sq3"": ""Who swam a time of 2:14.01 at the Men's 200 metre breaststroke at the 2000 Summer Olympics?"",
+  ""sq4"": ""What country does that athlete represent?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""Norbert Rózsa"",
+  ""Answer to sq2"": ""Hungary"",
+  ""Answer to sq3"": ""Morgan Knabe"",
+  ""Answer to sq4"": ""Canada""
+ },
+ ""final_answer"": ""Norbert Rózsa, Hungary; Morgan Knabe, Canada""
+}
+```",30.769230769230766,"Reasoning: To determine the athletes who got times of 2:14.67 and 2:14.01, we need to examine the table and find the rows with those times and extract the athlete's name and nationality. The table shows that Norbert Rózsa from Hungary had a time of 2:14.67, while Morgan Knabe from Canada achieved a time of 2:14.01. 
+
+Answer: [""Norbert Rózsa"", ""Hungary"", ""Morgan Knabe"", ""Canada""] 
+",30.769230769230766,Hungary's Norbert Rózsa finished the Men's 200 metre breaststroke at the 2000 Summer Olympics in 2:14.67 and Canada's Morgan Knabe in 2:14.01.
+8,What is the 'Present Value' for two years at the 10% rate?,"**Problem Understanding:**
+1. Determine the Objective: Calculate the 'Present Value' for the first two years using a 10% discount rate.
+
+2. Understand the Problem: This requires extracting specific information from the table and performing a calculation using the provided data.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Year 1 'Discounted OPR': 68.2
+   - Year 2 'Discounted OPR': 86.8
+   - Year 1 'Discounted R': 54.5
+   - Year 2 'Discounted R': 29.8
+
+4. Decompose the Problem into Sub-Problems:
+   - Sum the 'Discounted OPR' values for Year 1 and Year 2.
+   - Sum the 'Discounted R' values for Year 1 and Year 2.
+   - Add the two sums together to obtain the total 'Present Value'.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Sum of 'Discounted OPR' for Year 1 and Year 2: 68.2 + 86.8 = 155
+   - Sum of 'Discounted R' for Year 1 and Year 2: 54.5 + 29.8 = 84.3
+   - Total 'Present Value' for two years: 155 + 84.3 = 239.3
+
+**Python Code for Solution:**
+```python
+# Data
+present_value_year_1 = 68.2 + 54.5
+present_value_year_2 = 86.8 + 29.8
+present_value_total = present_value_year_1 + present_value_year_2
+
+# Output the result
+print(""The total 'Present Value' for two years is:"", present_value_total)
+```
+
+**Final Answer:** The 'Present Value' for two years at the 10% rate is 239.3. 
+",47.05882352941176,"extract, decompose, python, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Identify the column representing the 'Discounted OPR' for two years."",
+  ""sq2"": ""Extract the value from the 'Discounted OPR' column for year 2."",
+  ""sq3"": ""Identify the column representing the 'Discounted R' for two years."",
+  ""sq4"": ""Extract the value from the 'Discounted R' column for year 2."",
+  ""sq5"": ""Sum the values obtained in sq2 and sq4.""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""The 'Discounted OPR' column represents the discounted operating profit for each year."",
+  ""Answer to sq2"": ""The discounted operating profit for year 2 is 86.8."",
+  ""Answer to sq3"": ""The 'Discounted R' column represents the discounted royalty for each year."",
+  ""Answer to sq4"": ""The discounted royalty for year 2 is 29.8."",
+  ""Answer to sq5"": ""86.8 + 29.8 = 116.6.""
+ },
+ ""final_answer"": ""116.6""
+}
+```",0.0,"Reasoning: To determine the 'Present Value' for two years at the 10% rate, we need to sum the discounted OPR and discounted R values for years 1 and 2. The Discounted OPR for year 1 is 68.2 and for year 2 is 86.8. The Discounted R for year 1 is 54.5 and for year 2 is 29.8. 
+
+Answer: 239.3 
+",0.0,$0.8264 is the PV for two years at the 10% rate.
+9,"Who did Dane Cook play in ""The Mystery Men"" in 1999, and what else did she appear in that year?","**Problem Understanding:**
+1. Determine the Objective: Identify the character Dane Cook played in the film ""The Mystery Men"" in 1999 and find other roles he played that same year. 
+
+2. Understand the Problem: This requires extracting specific information from the table for the year 1999.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - ""The Mystery Men"" in 1999: Dane Cook played ""The Waffler.""
+   - Other films in 1999:
+     - ""Spiral"": David
+     - ""Simon Sez"": Nick Miranda
+
+4. Decompose the Problem into Sub-Problems:
+   - Find the role Dane Cook played in ""The Mystery Men.""
+   - Identify other films Dane Cook appeared in that year.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Dane Cook played ""The Waffler"" in ""The Mystery Men"" in 1999.
+   - He also appeared in ""Spiral"" as ""David"" and ""Simon Sez"" as ""Nick Miranda"" in 1999.
+
+**Answer:** In ""The Mystery Men"" (1999), Dane Cook played ""The Waffler."" He also appeared in two other films that year: ""Spiral"" as ""David"" and ""Simon Sez"" as ""Nick Miranda.""
+
+**Final Answer:** Dane Cook played ""The Waffler"" in ""The Mystery Men"" in 1999. He also appeared in ""Spiral"" as ""David"" and ""Simon Sez"" as ""Nick Miranda"" that same year. 
+",36.36363636363637,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What role did Dane Cook play in \""The Mystery Men\"" in 1999?"",
+  ""sq2"": ""What other movies did Dane Cook appear in during 1999?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""The Waffler"",
+  ""Answer to sq2"": ""Flypaper, Buddy, Spiral, Simon Sez""
+ },
+ ""final_answer"": ""The Waffler, Flypaper, Buddy, Spiral, Simon Sez""
+}
+```",31.57894736842105,"Reasoning: To find the role Dane Cook played in ""The Mystery Men"" in 1999 and other appearances that year, we need to examine the table rows for the year 1999.  
+   Looking at the table, we find the following entries for 1999:
+   - Title:  ""Spiral"", Role:  ""David""
+   - Title:  ""Simon Sez"", Role:  ""Nick Miranda""
+   - Title:  ""Mystery Men"", Role:  ""The Waffler""
+  Therefore, Dane Cook played the role of ""The Waffler"" in ""The Mystery Men"" and also appeared in ""Spiral"" and ""Simon Sez"" in 1999.
+
+Answer: [""The Waffler"", ""Spiral"", ""Simon Sez""] 
+",35.29411764705882,"In 1999, Cook appeared in the Mystery Men as ""The Waffler"" and in Simon Sez."
+10,When has Stewart appeared in The Tempest?,"**Problem Understanding:**
+1. Determine the Objective: Identify the years in which Patrick Stewart appeared in the play ""The Tempest"".
+
+2. Understand the Problem: This requires extracting relevant information from the table by searching for the play title ""The Tempest"" and identifying the corresponding years.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - ""The Tempest"" in 1995:  For the New York Shakespeare Festival, with the production later transferring to Broadway
+   - ""The Tempest"" in 2006: At the Royal Shakespeare Theatre and then the Novello Theatre
+
+**Answer:** Patrick Stewart appeared in ""The Tempest"" in 1995 and 2006.
+
+**Final Answer:** Patrick Stewart appeared in ""The Tempest"" in 1995 and 2006. 
+",17.39130434782609,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Identify all rows in the table with the title 'The Tempest'.""
+ },
+ ""answers"": {
+  ""sq1"": ""The table contains two rows with the title 'The Tempest':\n1995 | The Tempest | Prospero | For the New York Shakespeare Festival, with the production later transferring to Broadway\n2006 | The Tempest | Prospero | At the Royal Shakespeare Theatre and then the Novello Theatre""
+ },
+ ""final_answer"": ""1995 and 2006""
+}
+```",9.090909090909092,"Reasoning: To find when Stewart appeared in The Tempest, we need to look for the rows where ""The Tempest"" is mentioned in the ""Title"" column.  The table contains two rows with ""The Tempest"" in the ""Title"" column. The years listed for these rows are 1995 and 2006.
+
+Answer: [""1995"", ""2006""] 
+",9.090909090909092,"Stewart's role was Prospero in Shakespeare's The Tempest, on Broadway in 1995 and reprised in The Tempest as part of the Royal Shakespeare."
+11,"How successful was the group Destiny's Child during the year 2001, compared to the other years of their careers?","**Problem Understanding:**
+
+1. Determine the Objective: Identify the level of success Destiny's Child had in 2001 compared to other years in their career based on their Grammy nominations and awards.
+
+2. Understand the Problem: This requires analyzing the table data for the year 2001 and comparing it to the other years, focusing on the number of nominations and awards received.
+
+**Reasoning Process:**
+
+3. Extract Relevant Information:
+    - **2001:** Destiny's Child received 5 nominations and 2 wins.
+    - **Other years:**
+        - 2000: 2 nominations and 0 wins
+        - 2002: 2 nominations and 1 win
+        - 2005: 1 nomination and 0 wins
+        - 2006: 4 nominations and 0 wins
+
+4. Decompose the Problem into Sub-Problems:
+    - Calculate the number of nominations in 2001 and other years.
+    - Calculate the number of wins in 2001 and other years.
+    - Compare the success rate (wins/nominations) in 2001 and other years.
+
+5. Individually Answer Each Sub-Problem with Reasoning:
+    - **Nominations:** 2001 had 5 nominations, while other years had a combined 11 nominations (2+2+1+4).
+    - **Wins:** 2001 had 2 wins, while other years had a combined 1 win (0+1+0+0).
+    - **Success Rate:** 2001 had a success rate of 2/5 = 40%. Other years had a combined success rate of 1/11 = 9%.
+
+**Answer:**
+Destiny's Child was significantly more successful in 2001 compared to other years in their career. They received the most nominations in 2001 with 5 nominations, leading to a 40% success rate, compared to other years with 11 nominations and a 9% success rate. 
+
+**Final Answer:** Destiny's Child had their most successful year at the Grammys in 2001, where they received the most nominations and had a significantly higher success rate than other years. 
+",14.814814814814817,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""How many awards did Destiny's Child win in 2001?"",
+  ""sq2"": ""How many awards did Destiny's Child win in other years (excluding 2001)?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""2"",
+  ""Answer to sq2"": ""1""
+ },
+ ""final_answer"": ""Destiny's Child won 2 awards in 2001, which is more than the 1 award they won in all other years combined.""
+}
+```",0.0,"Reasoning: To assess Destiny's Child's success in 2001 compared to other years, we need to analyze their Grammy nominations and wins in 2001 and compare them to the other years in the table.  
+
+In 2001, Destiny's Child received five nominations, resulting in two wins for ""Say My Name.""  This is their most successful year in terms of both nominations and awards. 
+
+Answer: 2001 was Destiny's Child's most successful year in terms of Grammy awards, with five nominations and two wins. They won two awards in 2001, compared to one in 2002. In other years, they had fewer nominations and wins. 
+",0.0,"In 2001, Destiny's Child won two Grammy awards for ""Say My Name"": Best R&B Performance by a Duo or Group and Best R&B Song."
+12,"When, where, and how did Linda Stahl win her second gold medal?","**Problem Understanding:**
+1. Determine the Objective: Identify the year, venue, and outcome (performance) of Linda Stahl's second gold medal win.
+
+2. Understand the Problem: We need to examine the table and locate the entry that corresponds to Linda Stahl's second gold medal win.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+    -  Linda Stahl won gold medals in 2007 at the European U23 Championships in Debrecen, Hungary, and in 2010 at the European Championships in Barcelona, Spain.
+    -  The question asks about the second gold medal.
+
+4. Answer:
+    - Linda Stahl's second gold medal was won at the 2010 European Championships in Barcelona, Spain. 
+
+**Final Answer:** Linda Stahl won her second gold medal at the 2010 European Championships in Barcelona, Spain. She achieved a score of 66.81m. 
+",40.0,"extract, cot","```json
+  decomposition: |
+    sq1. Identify all rows where Linda Stahl won a gold medal. (independent)
+    sq2. Identify the row corresponding to her second gold medal. (depends on sq1)
+    sq3. Extract the year from the relevant row. (depends on sq2)
+    sq4. Extract the venue from the relevant row. (depends on sq2)
+    sq5. Extract the position and notes from the relevant row. (depends on sq2)
+    sq6. Combine the extracted year, venue, position and notes into a final answer. (depends on sq3, sq4, sq5)
+  answers: |
+    Answer to sq1: Linda Stahl won gold medals in 2007 at the European U23 Championships and in 2010 at the European Championships.
+    Answer to sq2: The second gold medal was won in 2010.
+    Answer to sq3: 2010
+    Answer to sq4: Barcelona, Spain
+    Answer to sq5: 1st, 66.81 m
+    Answer to sq6: Linda Stahl won her second gold medal in 2010 at the European Championships in Barcelona, Spain. She placed 1st with a throw of 66.81m.
+  final_answer: 2010, Barcelona, Spain, 1st, 66.81 m
+```",30.769230769230766,"Reasoning: To determine when, where, and how Linda Stahl won her second gold medal, we need to look for her gold medal wins in the table. Her first gold medal was at the 2007 European U23 Championships in Debrecen, Hungary with a throw of 62.17 m. Her second gold medal was at the 2010 European Championships in Barcelona, Spain with a throw of 66.81 m.
+
+Answer: [""2010"", ""Barcelona, Spain"", ""66.81 m""] 
+",32.00000000000001,"Linda Stahl won gold for her second time at the 2010 European Championships in Barcelona, Spain for a throw of 66.81 metres."
+13,Which people served as representative of the Pennsylvania 9 district during which dates?,"**Problem Understanding:**
+1. Determine the Objective: Identify the individuals who served as representatives of Pennsylvania's 9th district during their terms.
+
+2. Understand the Problem: This requires extracting information from the table specifically for the Pennsylvania 9th district, focusing on the individuals who filled the seat and their respective service dates.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - David Bard (DR): Served until March 12, 1815.
+   - Thomas Burnside (DR): Served from December 11, 1815, to April 1816.
+   - William P. Maclay (DR): Served from December 3, 1816, onward.
+
+4. Answer:
+   - David Bard served as the representative of Pennsylvania's 9th district until his death on March 12, 1815.
+   - Thomas Burnside filled the vacancy from December 11, 1815, until his resignation in April 1816.
+   - William P. Maclay took over the position from December 3, 1816, continuing until the end of the 14th Congress.
+
+**Final Answer:** David Bard served as the representative of Pennsylvania's 9th district until March 12, 1815. Thomas Burnside served from December 11, 1815, to April 1816. William P. Maclay served from December 3, 1816, to the end of the 14th Congress. 
+",67.85714285714285,"extract, cot","```json
+{
+ ""subquestions"": [
+  {
+   ""sq1"": ""Identify the rows for Pennsylvania 9 district."",
+   ""reasoning"": ""To find the representatives of the Pennsylvania 9 district, we need to locate the rows in the table corresponding to this district."",
+   ""answer"": ""The following rows correspond to Pennsylvania 9 district:\n- Pennsylvania 9 | David Bard (DR) | Died March 12, 1815 | Thomas Burnside (DR) | December 11, 1815\n- Pennsylvania 9 | Thomas Burnside (DR) | Resigned April, 1816 | William P. Maclay (DR) | December 3, 1816""
+  },
+  {
+   ""sq2"": ""Extract the names of the representatives and their respective service dates from the identified rows."",
+   ""reasoning"": ""We need to extract the names of the representatives and their service dates from the rows identified in the previous step."",
+   ""answer"": ""Representative | Dates\nDavid Bard | Until March 12, 1815\nThomas Burnside | December 11, 1815 to April, 1816\nWilliam P. Maclay | December 3, 1816 onwards""
+  }
+ ],
+ ""final_answer"": ""David Bard served until March 12, 1815, Thomas Burnside served from December 11, 1815 to April, 1816, and William P. Maclay served from December 3, 1816 onwards.""
+}
+```",33.333333333333336,"Reasoning: To determine the representatives of the Pennsylvania 9 district and their corresponding dates, we need to look at the table rows that correspond to the Pennsylvania 9 district. There are two rows with Pennsylvania 9, therefore, we need to examine both of them: 
+- Row 1: Pennsylvania 9 | David Bard (DR) | Died March 12, 1815 | Thomas Burnside (DR) | December 11, 1815
+- Row 2: Pennsylvania 9 | Thomas Burnside (DR) | Resigned April, 1816 | William P. Maclay (DR) | December 3, 1816
+The first row indicates David Bard was the representative from March 12, 1815 to December 11, 1815, and the second row indicates Thomas Burnside was the representative from December 11, 1815 to April, 1816, and William P. Maclay was the representative from April, 1816 to December 3, 1816. 
+Answer: [""David Bard"" : [""March 12, 1815"" , ""December 11, 1815""], ""Thomas Burnside"" : [""December 11, 1815"" , ""April, 1816""], ""William P. Maclay"" : [""April, 1816"", ""December 3, 1816""]] 
+",59.01639344262295,"David Bard (DR) served as representative until March 12, 1815, and was replaced by Thomas Burnside (DR) from December 11, 1815, until April, 1816 and later by William P. Maclay (DR), starting December 3, 1816."
+14,How many years did Whitey Baccus coach for SMU and what was his coaching record?,"**Problem Understanding:**
+1. Determine the Objective: Identify the number of years Whitey Baccus coached for SMU and his overall coaching record.
+
+2. Understand the Problem: This requires extracting specific information from the table.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   -  The table presents Whitey Baccus's coaching record for SMU, separated into two periods: 1938–1942 and 1945–1947.
+   -  To find the total number of years, count the number of seasons listed: 1938–39, 1939–40, 1940–41, 1941–42, 1945–46, and 1946–47, resulting in a total of 6 seasons.
+   -  Whitey Baccus's overall coaching record is presented at the bottom of the table: 55-71 (.437).
+
+4. Answer:
+   -  Whitey Baccus coached SMU for 6 seasons.
+   -  His overall coaching record was 55-71 (.437).
+
+**Final Answer:** Whitey Baccus coached SMU for 6 seasons and his overall coaching record was 55-71 (.437). 
+",30.769230769230766,"extract, cot","```json
+{
+ ""subquestions"": [
+  {
+   ""sq1"": ""How many years did Whitey Baccus coach for SMU?"",
+   ""reasoning"": ""To answer this, we need to count the number of seasons listed for Whitey Baccus' time coaching SMU."",
+   ""answer"": ""9""
+  },
+  {
+   ""sq2"": ""What was Whitey Baccus' coaching record for SMU?"",
+   ""reasoning"": ""The table provides a summary of his coaching record for SMU in the 'Total' row."",
+   ""answer"": ""55-71 (.437)""
+  }
+ ],
+ ""final_answer"": ""9 years, 55-71 (.437)""
+}
+```",0.0,"Reasoning: To find how many years Whitey Baccus coached for SMU and his record, we need to look at the table's ""Season"" and ""Overall"" columns.  The table lists the years he coached for SMU separately, with ""Overall"" column values for each year.  Adding up the total number of seasons and his overall win-loss record provides the answer.
+
+Answer: [""8"", ""55-71""] 
+",0.0,"Whitey Baccus was a coach to SMU for six seasons (1938–42, 1945–47), finishing with an overall record of 55–71 (.437)."
+15,What positions did Canada Jacques Villeneuve and Germany Heinz-Harald Frentzen take and with what time?,"**Problem Understanding:**
+
+1. **Determine the Objective:** Identify the qualifying positions and times achieved by Canada Jacques Villeneuve and Germany Heinz-Harald Frentzen in the 1997 Australian Grand Prix. 
+
+2. **Understand the Problem:** This requires extracting specific data from the table, focusing on the rows corresponding to the named drivers and their associated positions and times. 
+
+**Reasoning Process:**
+
+3. **Extract Relevant Information:**
+   - Canada Jacques Villeneuve: 
+      - Position: 1st
+      - Time: 1:29.369 
+   - Germany Heinz-Harald Frentzen:
+      - Position: 2nd
+      - Time: 1:31.123
+
+**Answer:**
+
+Canada Jacques Villeneuve qualified in 1st place with a time of 1:29.369. Germany Heinz-Harald Frentzen qualified in 2nd place with a time of 1:31.123.
+
+**Final Answer:** Canada Jacques Villeneuve qualified in 1st place with a time of 1:29.369. Germany Heinz-Harald Frentzen qualified in 2nd place with a time of 1:31.123. 
+",40.0,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What was Canada Jacques Villeneuve's position and time?"",
+  ""sq2"": ""What was Germany Heinz-Harald Frentzen's position and time?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""1st, 1:29.369"",
+  ""Answer to sq2"": ""2nd, 1:31.123""
+ },
+ ""final_answer"": ""1st, 1:29.369; 2nd, 1:31.123""
+}
+```",10.526315789473683,"Reasoning: To determine the positions and times of Canada Jacques Villeneuve and Germany Heinz-Harald Frentzen, we need to look at the table and find their respective rows. The table lists the position, driver, and time for each participant.
+
+Answer:  [""1st - 1:29.369"", ""2nd - 1:31.123""] 
+",10.526315789473683,"Canadian Jacques Villeneuve took pole position after a lap of 1:29.369, while Heinz-Harald Frentzen managed a 1:31.121."
+16,For how many years and total appearances did Keith Bebbington represent the Oldham Athletic club?,"**Problem Understanding:**
+1. Determine the Objective: Identify the number of years and total appearances Keith Bebbington played for Oldham Athletic.
+
+2. Understand the Problem: This involves extracting relevant information from the table about Keith Bebbington's time with Oldham Athletic, specifically the number of seasons and total appearances.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Seasons: From the ""Season"" column, we can see Keith Bebbington played for Oldham Athletic for 6 seasons, starting from 1966–67 and ending with 1971–72.
+   - Total Appearances: The ""Total"" column under ""Oldham Athletic"" provides the total appearances for each season. Summing these values (42 + 39 + 44 + 40 + 46 + 44) gives us a total of 255 appearances for Oldham Athletic.
+
+**Answer:**
+Keith Bebbington represented Oldham Athletic for 6 years and a total of 255 appearances.
+
+**Final Answer:** Keith Bebbington represented Oldham Athletic for 6 years and a total of 255 appearances. 
+",37.5,"extract, cot","```json
+  {
+    ""sq1"": ""How many seasons did Keith Bebbington play for Oldham Athletic?"",
+    ""sq2"": ""How many total appearances did Keith Bebbington make for Oldham Athletic?"",
+    ""Answer to sq1"": ""6"",
+    ""Answer to sq2"": ""255"",
+    ""final_answer"": ""6, 255""
+  }
+```",14.285714285714285,"Reasoning: To find the number of years and appearances Keith Bebbington represented Oldham Athletic, we need to look at the sub-table for Oldham Athletic and extract the 'Season' and 'Total Apps' values from the 'Total' row. The relevant row is: 'Total: Total: 237: 39: 10: 6: 8: 1: 255: 46'. Therefore, Keith Bebbington represented Oldham Athletic for 6 years and appeared in a total of 255 matches.
+
+Answer: [""6 years"", ""255""] 
+",26.666666666666668,Keith Bebbington made 237 appearances in six years with the Oldham Athletic club.
+17,In which year did Grete Waitz win the New York City Marathon?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the year in which Grete Waitz won the New York City Marathon.
+2. **Understand the Problem:** This requires extracting relevant information from the table, specifically focusing on the ""New York City Marathon"" events and identifying the year where she achieved a ""1st"" position.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:** The table contains several entries for the New York City Marathon, occurring in the years:
+   - 1978: 1st position
+   - 1979: 1st position
+   - 1980: 1st position
+   - 1982: 1st position
+   - 1983: 1st position
+   - 1984: 1st position
+   - 1985: 1st position
+   - 1986: 1st position
+   - 1988: 1st position
+   - 1990: 4th position
+
+4. **Decompose the Problem into Sub-Problems:**
+   - Identify all years with New York City Marathon entries.
+   - Determine the year where Grete Waitz achieved a ""1st"" position in the New York City Marathon.
+
+5. **Individually Answer Each Sub-Problems with Reasoning:**
+   - Grete Waitz won the New York City Marathon in the following years: 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1986, and 1988. 
+
+**Final Answer:** Grete Waitz won the New York City Marathon in 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1986, and 1988. 
+",7.692307692307692,"extract, decompose, cot","  decomposition: |
+    sq1. Identify the rows that correspond to Grete Waitz winning the New York City Marathon. (independent)
+    sq2. Extract the year from the relevant rows. (depends on sq1)
+  answers: |
+    Answer to sq1: Grete Waitz won the New York City Marathon in the following years:
+      1978 | New York City Marathon | New York City, USA | 1st | Marathon | 2:32:30
+      1979 | New York City Marathon | New York City, USA | 1st | Marathon | 2:27:33
+      1980 | New York City Marathon | New York City, USA | 1st | Marathon | 2:25:41
+      1982 | New York City Marathon | New York City, USA | 1st | Marathon | 2:27:14
+      1983 | New York City Marathon | New York City, USA | 1st | Marathon | 2:27:00
+      1984 | New York City Marathon | New York City, USA | 1st | Marathon | 2:29:30
+      1985 | New York City Marathon | New York City, USA | 1st | Marathon | 2:28:34
+      1986 | New York City Marathon | New York City, USA | 1st | Marathon | 2:28:06
+      1988 | New York City Marathon | New York City, USA | 1st | Marathon | 2:28:07
+      1990 | New York City Marathon | New York, United States | 4th | Marathon | 2:34:34
+    Answer to sq2: Grete Waitz won the New York City Marathon in the years 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1986, 1988, and 1990.
+  final_answer: 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1986, 1988, 1990. 
+",7.407407407407408,"Reasoning: To determine in which year Grete Waitz won the New York City Marathon, we need to locate the rows that mention ""New York City Marathon"" and identify the years in which she won. The table shows Grete Waitz winning the New York City Marathon in 1978, 1979, 1980, 1982, 1983, 1984, 1985, 1986, 1988, and 1990.  Therefore, Grete Waitz won the New York City Marathon in multiple years.
+
+Answer: [""1978"", ""1979"", ""1980"", ""1982"", ""1983"", ""1984"", ""1985"", ""1986"", ""1988"", ""1990""] 
+",7.407407407407408,"In 1978, Grete Waitz took part in the New York City Marathon where she ran and won the race."
+18,Which 2 competitors had times closest to each other?,"**Problem Understanding:**
+1. Determine the Objective: Identify the two competitors whose finishing times were closest to one another.
+
+2. Understand the Problem: This requires extracting the finishing times for each competitor and comparing them to find the pair with the smallest difference.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Ranomi Kromowidjojo (Netherlands): 24.05
+   - Aliaksandra Herasimenia (Belarus): 24.28
+   - Marleen Veldhuis (Netherlands): 24.39
+   - Britta Steffen (Germany): 24.46
+   - Francesca Halsall (Great Britain): 24.47
+   - Therese Alshammar (Sweden): 24.61
+   - Jessica Hardy (United States): 24.62
+   - Arianna Vanderpool-Wallace (Bahamas): 24.69
+
+4. Decompose the Problem into Sub-Problems:
+   - Calculate the time differences between each pair of competitors.
+   - Identify the pair with the smallest time difference.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Calculate the time differences between each pair. 
+   - The smallest time difference is 0.01 seconds between Britta Steffen (Germany) and Francesca Halsall (Great Britain).
+
+**Final Answer:** Britta Steffen (Germany) and Francesca Halsall (Great Britain) had the closest finishing times, differing by just 0.01 seconds. 
+",32.25806451612904,"extract, decompose, cot","```json
+  decomposition: |
+    sq1. Identify the two closest times. (independent)
+    sq2. Identify the competitors associated with those times. (depends on sq1)
+  answers: |
+    Answer to sq1: The two closest times are 24.46 and 24.47.
+    Answer to sq2: Britta Steffen and Francesca Halsall.
+  final_answer: Britta Steffen and Francesca Halsall.
+```",26.66666666666667,"Reasoning: To find the two competitors with the closest times, we need to look at the ""Time"" column and find the smallest difference between any two times. Looking at the table, we can see that the following two times are closest: 
+- Francesca Halsall (Great Britain) - 24.47
+- Britta Steffen (Germany) - 24.46
+
+Answer: [""Francesca Halsall"", ""Britta Steffen""] 
+",26.66666666666667,"Britta Steffen from Germany beat Francesca Halsall from Great Britain by 0.01, and Therese Alshammar from Sweden also beat Jessica Hardy from the United States by 0.01."
+19,What did Sallis play after playing the role of Wallace 4 times?,"**Problem Understanding:**
+1. Determine the Objective: Identify the role Peter Sallis played after his fourth appearance as Wallace.
+2. Understand the Problem: This involves counting the number of times Sallis played Wallace and then finding the role he played after the fourth instance.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Sallis played Wallace in:
+      - ""A Grand Day Out"" (1989)
+      - ""The Wrong Trousers"" (1993)
+      - ""A Close Shave"" (1995)
+      - ""A Matter of Loaf and Death"" (2008)
+
+4. Decompose the Problem into Sub-Problems:
+   - Determine the order of Wallace roles chronologically.
+   - Identify the role following the fourth appearance as Wallace.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Chronologically, the roles are: ""A Grand Day Out"" (1989), ""The Wrong Trousers"" (1993), ""A Close Shave"" (1995), ""A Matter of Loaf and Death"" (2008).
+   - The role after the fourth appearance as Wallace is Cyril in ""Kingdom"" (2009).
+
+**Answer:**
+After his fourth appearance as Wallace, Peter Sallis played Cyril in ""Kingdom"" in 2009. 
+
+**Final Answer:** Cyril in ""Kingdom"" (2009). 
+",40.0,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What were the titles of the TV series and movies in which Peter Sallis played the role of Wallace?"",
+  ""sq2"": ""How many times did Sallis play Wallace?"",
+  ""sq3"": ""What did Sallis play after the fourth appearance as Wallace?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""A Grand Day Out, The Wrong Trousers, A Close Shave, A Matter of Loaf and Death"",
+  ""Answer to sq2"": ""4"",
+  ""Answer to sq3"": ""Wallace and Gromit's World of Invention""
+ },
+ ""final_answer"": ""Wallace and Gromit's World of Invention""
+}
+```",18.181818181818183,"Reasoning: To determine what Sallis played after playing Wallace 4 times, we need to find the roles he played after his 4th appearance as Wallace. Sallis played Wallace in: 1989: A Grand Day Out, 1993: The Wrong Trousers, 1995: A Close Shave, and 2008: A Matter of Loaf and Death. The next role he played after that was in 2009: Kingdom.
+Answer: Cyril 
+",11.76470588235294,"In 2009, Sallis played Cyril in Kingdom after voicing Wallace in 1989, 1993, 1995, and 2008."
+20,What roles has Sam Palladio portray from the year 2011 to 2015?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the roles Sam Palladio has portrayed in films from the year 2011 to 2015.
+
+2. **Understand the Problem:** This requires extracting the relevant information from the table for the years 2011, 2013, and 2015.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - **2011:** Calvin in ""7 Lives""
+   - **2013:** Shecky in ""Runner Runner""
+   - **2015:** Roland (voice) in ""Strange Magic""
+
+4. **Answer:**
+   - Sam Palladio played the role of Calvin in the film ""7 Lives"" in 2011.
+   - In 2013, he played the role of Shecky in ""Runner Runner"".
+   - In 2015, he voiced the character Roland in ""Strange Magic"".
+
+**Final Answer:** Sam Palladio portrayed the roles of Calvin in ""7 Lives"" (2011), Shecky in ""Runner Runner"" (2013), and voiced the character Roland in ""Strange Magic"" (2015). 
+",18.181818181818183,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What roles has Sam Palladio played in the year 2011?"",
+  ""sq2"": ""What roles has Sam Palladio played in the year 2013?"",
+  ""sq3"": ""What roles has Sam Palladio played in the year 2015?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""Calvin"",
+  ""Answer to sq2"": ""Shecky"",
+  ""Answer to sq3"": ""Roland (voice)""
+ },
+ ""final_answer"": ""Calvin, Shecky, Roland (voice)""
+}
+```",16.666666666666664,"Reasoning: To determine the roles Sam Palladio played from 2011 to 2015, we need to examine the rows with those years and extract the 'Role' column values. The relevant rows are:
+- 2011: 7 Lives: Calvin
+- 2013: Runner Runner: Shecky
+- 2015: Strange Magic: Roland (voice)
+
+Answer: [""Calvin"", ""Shecky"", ""Roland (voice)""] 
+",16.666666666666664,"Sam Palladio played Calvin in the film 7 Lives (2011), as Shecky in the Runner, Runner (2013), and as Roland in the film Strange Magic (2015)."
+21,What were the two achievements of Daisuke Matsunaga during the years 2012 and 2014?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the two achievements of Daisuke Matsunaga during the years 2012 and 2014.
+2. **Understand the Problem:** This requires extracting information from the table for the years 2012 and 2014, specifically focusing on his positions and the events he competed in.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - **2012:**
+      -  2nd place in the 10,000 m walk at the Asian Junior Championships in Colombo, Sri Lanka.
+   - **2014:**
+      - 2nd place in the 10 km walk (junior) at the World Race Walking Cup in Taicang, China.
+      - 1st place in the 10,000 m walk at the World Junior Championships in Eugene, United States, setting a Championship Record (CR).
+
+4. **Answer:**
+   - Daisuke Matsunaga achieved a 2nd place finish in the 10,000 m walk at the Asian Junior Championships in 2012.
+   - He also achieved a 2nd place finish in the 10 km walk (junior) and a 1st place finish (setting a Championship Record) in the 10,000 m walk at the World Junior Championships in 2014. 
+
+**Final Answer:** In 2012, Daisuke Matsunaga achieved a 2nd place finish in the 10,000 m walk at the Asian Junior Championships. In 2014, he achieved a 2nd place finish in the 10 km walk (junior) and a 1st place finish (setting a Championship Record) in the 10,000 m walk at the World Junior Championships. 
+",30.18867924528302,"extract, cot","```json
+  decomposition: |
+    sq1. What achievement did Daisuke Matsunaga have in 2012? (independent)
+    sq2. What achievements did Daisuke Matsunaga have in 2014? (independent)
+  answers: |
+    Answer to sq1: Daisuke Matsunaga achieved 2nd place at the Asian Junior Championships in Colombo, Sri Lanka, in the 10,000 m walk with a time of 45:03.01.
+    Answer to sq2: Daisuke Matsunaga achieved 2nd place at the World Race Walking Cup in Taicang, China, in the 10 km walk (junior) with a time of 39:45. He also achieved 5th place in the Junior team with 23 points. He also achieved 1st place at the World Junior Championships in Eugene, United States, in the 10,000 m walk with a time of 39:27.19.
+  final_answer: Daisuke Matsunaga achieved 2nd place in the 10,000 m walk at the Asian Junior Championships in 2012 and 2nd place in the 10 km walk (junior) at the World Race Walking Cup in 2014.
+```",5.555555555555555,"Reasoning - To determine the two achievements of Daisuke Matsunaga in 2012 and 2014, we need to examine the table rows corresponding to those years. We then need to extract the ""Competition"" and ""Position"" details for the given years.
+
+Answer - 
+- 2012: Asian Junior Championships, 2nd place in 10,000 m walk 
+- 2014: World Race Walking Cup, 2nd place in 10 km walk (junior) 
+",10.256410256410255,"Daisuke Matsunaga made his first impact at the 2012 Asian Junior Athletics Championships, taking a silver, then won the 2014 World Junior Championships in a championship record of 39:27.19 minutes."
+22,"What are Diane Modahl achievements in the year 1986,1989,1993 and 1994?","**Problem Understanding:**
+1. Determine the Objective: Identify Diane Modahl's achievements in the years 1986, 1989, 1993, and 1994.
+2. Understand the Problem: This requires extracting information from the table for the specified years.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - 1986:
+     - Commonwealth Games, Edinburgh, United Kingdom: 2nd, 800m, 2:01.12 (Representing England)
+     - European Championships, Stuttgart, Germany: 11th (sf), 800m, 2:00.84 (Representing Great Britain)
+   - 1989:
+     - Grand Prix Final, Fontvieille, Monaco: 3rd, 800m, 2:00.83 (Representing Great Britain)
+   - 1993:
+     - World Championships, Stuttgart, Germany: 4th, 800m, 1:59.42 (Representing Great Britain)
+   - 1994:
+     - European Cup, Birmingham, United Kingdom: 1st, 800m, 2:02.81 (Representing Great Britain)
+     - Goodwill Games, Saint Petersburg, Russia: 4th, 800m, 1:59.85 (Representing Great Britain)
+     - European Championships, Helsinki, Finland: 14th (sf), 800m, 2:02.18 (Representing Great Britain)
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the competition and its position for each year.
+   - Determine the event and time (if available) for each achievement.
+   - Indicate the country she represented.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - In 1986, Diane Modahl achieved 2nd place in the 800m at the Commonwealth Games in Edinburgh, United Kingdom, with a time of 2:01.12, representing England. She also finished 11th in the semi-finals of the 800m at the European Championships in Stuttgart, Germany, with a time of 2:00.84, representing Great Britain.
+   - In 1989, she achieved 3rd place in the 800m at the Grand Prix Final in Fontvieille, Monaco, with a time of 2:00.83, representing Great Britain.
+   - In 1993, she finished 4th in the 800m at the World Championships in Stuttgart, Germany, with a time of 1:59.42, representing Great Britain.
+   - In 1994, Diane Modahl achieved 1st place in the 800m at the European Cup in Birmingham, United Kingdom, with a time of 2:02.81, representing Great Britain. She also achieved 4th place in the 800m at the Goodwill Games in Saint Petersburg, Russia, with a time of 1:59.85, representing Great Britain. Finally, she finished 14th in the semi-finals of the 800m at the European Championships in Helsinki, Finland, with a time of 2:02.18, representing Great Britain.
+
+**Answer:** 
+In 1986, Diane Modahl achieved 2nd place in the 800m at the Commonwealth Games in Edinburgh, United Kingdom, with a time of 2:01.12, representing England. She also finished 11th in the semi-finals of the 800m at the European Championships in Stuttgart, Germany, with a time of 2:00.84, representing Great Britain. In 1989, she achieved 3rd place in the 800m at the Grand Prix Final in Fontvieille, Monaco, with a time of 2:00.83, representing Great Britain. In 1993, she finished 4th in the 800m at the World Championships in Stuttgart, Germany, with a time of 1:59.42, representing Great Britain. In 1994, Diane Modahl achieved 1st place in the 800m at the European Cup in Birmingham, United Kingdom, with a time of 2:02.81, representing Great Britain. She also achieved 4th place in the 800m at the Goodwill Games in Saint Petersburg, Russia, with a time of 1:59.85, representing Great Britain. Finally, she finished 14th in the semi-finals of the 800m at the European Championships in Helsinki, Finland, with a time of 2:02.18, representing Great Britain.
+
+**Final Answer:** In 1986, Diane Modahl achieved 2nd place in the 800m at the Commonwealth Games in Edinburgh, United Kingdom, with a time of 2:01.12, representing England. She also finished 11th in the semi-finals of the 800m at the European Championships in Stuttgart, Germany, with a time of 2:00.84, representing Great Britain. In 1989, she achieved 3rd place in the 800m at the Grand Prix Final in Fontvieille, Monaco, with a time of 2:00.83, representing Great Britain. In 1993, she finished 4th in the 800m at the World Championships in Stuttgart, Germany, with a time of 1:59.42, representing Great Britain. In 1994, Diane Modahl achieved 1st place in the 800m at the European Cup in Birmingham, United Kingdom, with a time of 2:02.81, representing Great Britain. She also achieved 4th place in the 800m at the Goodwill Games in Saint Petersburg, Russia, with a time of 1:59.85, representing Great Britain. Finally, she finished 14th in the semi-finals of the 800m at the European Championships in Helsinki, Finland, with a time of 2:02.18, representing Great Britain. 
+",45.6140350877193,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What are Diane Modahl's achievements in 1986?"",
+  ""sq2"": ""What are Diane Modahl's achievements in 1989?"",
+  ""sq3"": ""What are Diane Modahl's achievements in 1993?"",
+  ""sq4"": ""What are Diane Modahl's achievements in 1994?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""In 1986, Diane Modahl finished 2nd in the 800m at the Commonwealth Games in Edinburgh, UK with a time of 2:01.12, and finished 11th in the 800m semifinals at the European Championships in Stuttgart, Germany with a time of 2:00.84."",
+  ""Answer to sq2"": ""In 1989, Diane Modahl finished 3rd in the 800m at the Grand Prix Final in Fontvieille, Monaco with a time of 2:00.83."",
+  ""Answer to sq3"": ""In 1993, Diane Modahl finished 4th in the 800m at the World Championships in Stuttgart, Germany with a time of 1:59.42."",
+  ""Answer to sq4"": ""In 1994, Diane Modahl finished 1st in the 800m at the European Cup in Birmingham, UK with a time of 2:02.81, finished 4th in the 800m at the Goodwill Games in Saint Petersburg, Russia with a time of 1:59.85, and finished 14th in the 800m semifinals at the European Championships in Helsinki, Finland with a time of 2:02.18.""
+ }
+}
+```",31.57894736842105,"Reasoning: To find Diane Modahl's achievements in 1986, 1989, 1993, and 1994, we need to look at the rows corresponding to these years in the table. We are interested in the 'Competition', 'Position', and 'Event' columns to understand her achievements in each year. 
+
+Answer: 
+- **1986:**
+    - Commonwealth Games: 2nd, 800 m 
+    - European Championships: 11th (sf), 800 m
+- **1989:**
+    - Grand Prix Final: 3rd, 800 m
+- **1993:**
+    - World Championships: 4th, 800 m
+- **1994:**
+    - European Cup: 1st, 800 m
+    - Goodwill Games: 4th, 800 m
+    - European Championships: 14th (sf), 800 m 
+",36.36363636363637,"Diane Modahl finished second at the 1986 Commonwealth Games, third at the 1989 Grand Prix Final, fourth at the 1993 World Championships and won the European Cup in 1994, in the 800 m."
+23,"By whom, where and when did To Be get released first, and when and by whom was it released worldwide?","**Problem Understanding:**
+1. Determine the Objective:  Identify the initial release date, location, and label of ""To Be,"" and then determine the global release date and label.
+
+2. Understand the Problem: This requires extracting relevant information from the table based on release dates and the geographical regions mentioned. 
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - **Initial Release:** The earliest release date in the table is May 12, 1999 in Japan and Taiwan, both released on mini CD by Avex Trax.
+   - **Worldwide Release:** The table indicates that ""To Be"" was released as a digital download in September 2008 across numerous countries including Australia, New Zealand, the United Kingdom, Ireland, Germany, Spain, France, Italy, Taiwan, the United States, and Canada. All releases were through Avex Entertainment Inc.
+
+4. Decompose the Problem into Sub-Problems:
+   - Find the earliest release date, location, and label.
+   - Find the date and label for the global release.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - ""To Be"" was initially released in Japan and Taiwan on May 12, 1999, on mini CD, by Avex Trax.
+   - The song was released worldwide as a digital download in September 2008, through Avex Entertainment Inc.
+
+**Final Answer:** ""To Be"" was initially released on May 12, 1999, in Japan and Taiwan, as a mini CD by Avex Trax. It was released worldwide as a digital download in September 2008, through Avex Entertainment Inc. 
+",68.42105263157895,"extract, decompose, cot","```json
+  decomposition: |
+    sq1. Where and when was the first release of To Be? (independent)
+    sq2. Who released To Be in Japan? (depends on sq1)
+    sq3. When was To Be released worldwide? (independent)
+    sq4. Who released To Be worldwide? (depends on sq3)
+  answers: |
+    Answer to sq1: The first release of To Be was in Japan on May 12, 1999.
+    Answer to sq2: Avex Trax released To Be in Japan.
+    Answer to sq3: To Be was released worldwide in September 2008.
+    Answer to sq4: Avex Trax released To Be worldwide.
+  final_answer: Avex Trax released To Be in Japan on May 12, 1999. It was released worldwide in September 2008, also by Avex Trax.
+```",51.42857142857144,"Reasoning:  To find out when and where To Be was first released, we need to look at the ""Date"" and ""Region"" columns and identify the earliest release date. The earliest release date is May 12, 1999. To find out where the song was released first, we need to check the ""Region"" column for the corresponding row. The corresponding row shows the region as ""Japan"". Therefore, ""To Be"" was first released on May 12, 1999, in Japan. 
+
+To find out when and by whom the song was released worldwide, we need to check the ""Date"" column for the latest release date and the corresponding ""Region"" for the region. The latest date in the table is September 2008, and the corresponding ""Region"" is ""United States"". Therefore, ""To Be"" was released worldwide in September 2008 by Avex Entertainment Inc.
+
+Answer: [""Japan"", ""May 12, 1999"", ""September 2008"", ""Avex Entertainment Inc.""] 
+",52.94117647058824,"To Be (song) was released by Avex Trax in Japan and Taiwan on May 12, 1999, and through Avex Entertainment Inc. worldwide in September 2008."
+24,"When did Oswell join Newtown, and what was his final season with the club's record with in terms of appearances and goals?","**Problem Understanding:**
+1. Determine the Objective: Identify the season Oswell joined Newtown and his final season's statistics for appearances and goals.
+
+2. Understand the Problem: This requires extracting information from the table related to Oswell's time with Newtown, focusing on his first and last seasons with the club.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   -  Oswell joined Newtown in the 2014-15 season.
+   -  His final season with Newtown was 2016-17.
+   -  Oswell played 31 games and scored 22 goals in the 2016-17 season.
+
+4. Answer:
+   - Oswell joined Newtown in the 2014-15 season.
+   - In his final season with Newtown (2016-17), he played 31 games and scored 22 goals.
+
+**Final Answer:** Oswell joined Newtown in the 2014-15 season. His final season with Newtown was 2016-17, where he played 31 games and scored 22 goals. 
+",37.03703703703704,"extract, cot","```json
+{
+  ""decomposition"": {
+    ""sq1"": ""In what season did Oswell join Newtown?"",
+    ""sq2"": ""What were Oswell's total appearances and goals for Newtown in the 2016-17 season?""
+  },
+  ""answers"": {
+    ""sq1"": ""2014-15"",
+    ""sq2"": ""33 appearances, 23 goals""
+  },
+  ""final_answer"": ""2014-15, 33 appearances, 23 goals""
+}
+```",7.6923076923076925,"Reasoning: To determine when Oswell joined Newtown and his final season's record, we need to find the rows with the club ""Newtown"". The table shows Oswell joined Newtown in the 2014-15 season. His final season with Newtown was 2016-17, where he had 31 appearances and 22 goals in the Welsh Premier League and 2 appearances and 1 goal in the League Cup for a total of 33 appearances and 23 goals.
+
+Answer: [""2014-15"", ""33 appearances, 23 goals""] 
+",7.6923076923076925,"Jason Oswell joined Newtown of the Welsh Premier League in 2014, and in 2016-17 he scored 22 goals in 31 league games."
+25,Which years did Liza Hunter-Galvan run in the Olympics and what event did she run?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the years Liza Hunter-Galvan participated in the Olympic Games and the specific event she competed in.
+
+2. **Understand the Problem:** This requires extracting relevant information from the table, specifically focusing on rows where ""Competition"" is ""Olympic Games"".
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - Row 1: ""Olympic Games"" in 2004, ""Marathon""
+   - Row 3: ""Olympic Games"" in 2008, ""Marathon""
+
+4. **Answer:**
+   - Liza Hunter-Galvan competed in the Olympic Games in both 2004 and 2008.
+   - She participated in the marathon event in both years.
+
+**Final Answer:** Liza Hunter-Galvan ran in the Olympic Games in 2004 and 2008, competing in the marathon event both times. 
+",42.10526315789474,"extract, cot","```json
+  decomposition: |
+    sq1. Identify the rows in the table that correspond to the Olympics. (independent)
+    sq2. Extract the years from the identified rows. (depends on sq1)
+    sq3. Extract the event from the identified rows. (depends on sq1)
+  answers: |
+    Answer to sq1: The rows corresponding to the Olympics are:
+      2004 | Olympic Games | Athens, Greece | 51st | Marathon | 2:50:23
+      2008 | Olympic Games | Beijing, PR China | 35th | Marathon | 2:34:51
+    Answer to sq2: The years are 2004 and 2008.
+    Answer to sq3: The event is the Marathon.
+  final_answer: 2004 and 2008, Marathon.
+```",33.333333333333336,"Reasoning: To determine the years Liza Hunter-Galvan ran in the Olympics and what event she ran, we need to look at the rows with the competition ""Olympic Games"" and extract the ""Year"" and ""Event"" column values.  The relevant rows are: 2004: Olympic Games: Athens, Greece: 51st: Marathon - 2008: Olympic Games: Beijing, PR China: 35th: Marathon Therefore, Liza Hunter-Galvan ran in the Olympics in 2004 and 2008, and she ran the Marathon event.
+
+Answer: [""2004"", ""2008"", ""Marathon""] 
+",33.333333333333336,Liza Hunter-Galvan ran in the 2004 Athens Olympic Games and the 2008 Beijing Olympics in the Marathon event.
+26,How many times has Marsha Mason been nominated for the Academy Award for Best Actress and for what films?,"**Problem Understanding:**
+1. Determine the Objective: Identify the number of times Marsha Mason has been nominated for the Academy Award for Best Actress and the corresponding films for each nomination.
+
+2. Understand the Problem: This requires extracting relevant information from the table, specifically focusing on rows where ""Academy Awards"" and ""Best Actress in a Leading Role"" are mentioned.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - 1974: ""Cinderella Liberty""
+   - 1978: ""The Goodbye Girl""
+   - 1980: ""Chapter Two""
+   - 1982: ""Only When I Laugh""
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the number of nominations.
+   - Identify the film titles for each nomination.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Marsha Mason has been nominated for the Academy Award for Best Actress four times.
+   - The films she was nominated for are: ""Cinderella Liberty"" (1974), ""The Goodbye Girl"" (1978), ""Chapter Two"" (1980), and ""Only When I Laugh"" (1982).
+
+**Answer:** Marsha Mason has been nominated for the Academy Award for Best Actress four times. She was nominated for ""Cinderella Liberty"" in 1974, ""The Goodbye Girl"" in 1978, ""Chapter Two"" in 1980, and ""Only When I Laugh"" in 1982. 
+
+**Final Answer:** Marsha Mason has been nominated for the Academy Award for Best Actress four times, for ""Cinderella Liberty"" (1974), ""The Goodbye Girl"" (1978), ""Chapter Two"" (1980), and ""Only When I Laugh"" (1982). 
+",61.53846153846153,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What are the rows with information about Marsha Mason's nominations for the Academy Award for Best Actress?"",
+  ""sq2"": ""How many times was she nominated?"",
+  ""sq3"": ""For what films was she nominated?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""The relevant rows are:\n1974 | Academy Awards | Best Actress in a Leading Role | Cinderella Liberty | Nominated\n1978 | Academy Awards | Best Actress in a Leading Role | The Goodbye Girl | Nominated\n1980 | Academy Awards | Best Actress in a Leading Role | Chapter Two | Nominated\n1982 | Academy Awards | Best Actress in a Leading Role | Only When I Laugh | Nominated"",
+  ""Answer to sq2"": ""4"",
+  ""Answer to sq3"": ""Cinderella Liberty, The Goodbye Girl, Chapter Two, Only When I Laugh""
+ },
+ ""final_answer"": ""4 times. She was nominated for *Cinderella Liberty*, *The Goodbye Girl*, *Chapter Two*, and *Only When I Laugh*.""
+}
+```",57.89473684210525,"Reasoning: To determine the number of times Marsha Mason has been nominated for the Academy Award for Best Actress and for what films, we need to look at the table and identify all the rows where the 'Association' column is 'Academy Awards' and the 'Category' column is 'Best Actress in a Leading Role'. The relevant rows are: 
+- 1974 | Academy Awards | Best Actress in a Leading Role | Cinderella Liberty | Nominated
+- 1978 | Academy Awards | Best Actress in a Leading Role | The Goodbye Girl | Nominated
+- 1980 | Academy Awards | Best Actress in a Leading Role | Chapter Two | Nominated
+- 1982 | Academy Awards | Best Actress in a Leading Role | Only When I Laugh | Nominated
+
+Therefore, Marsha Mason has been nominated for the Academy Award for Best Actress 4 times, for the films 'Cinderella Liberty', 'The Goodbye Girl', 'Chapter Two', and 'Only When I Laugh'.
+
+Answer: [""4"", [""Cinderella Liberty"", ""The Goodbye Girl"", ""Chapter Two"", ""Only When I Laugh""]] 
+",57.89473684210525,"Marsha Mason was nominated four times for the Academy Award for Best Actress for her performances in Cinderella Liberty, The Goodbye Girl, Chapter Two and Only When I Laugh."
+27,When did Yvette Wilson have the role of Moesha?,"**Problem Understanding:**
+1. Determine the Objective: Identify the years Yvette Wilson played the role of Moesha.
+2. Understand the Problem: This requires extracting relevant information from the table, specifically the years associated with the role ""Moesha.""
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - ""Moesha"" role appears in two entries: 
+     - 1996–2000: ""Moesha"" - Andell Wilkerson - 105 episodes
+     - 1999–2004: ""The Parkers"" - Andell Wilkerson - 99 episodes
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the years associated with the role ""Moesha"".
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - The table indicates that Yvette Wilson played the role of Moesha in ""Moesha"" from 1996 to 2000, and in ""The Parkers"" from 1999 to 2004. 
+
+**Answer:** Yvette Wilson had the role of Moesha in the series ""Moesha"" from 1996 to 2000 and in the series ""The Parkers"" from 1999 to 2004. 
+
+**Final Answer:** Yvette Wilson had the role of Moesha from 1996 to 2000. 
+",21.052631578947366,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Identify the row corresponding to the character Moesha.""
+ },
+ ""answers"": {
+  ""sq1"": ""The row corresponding to Moesha is: 1996–2000 | Moesha | Andell Wilkerson | 105 episodes""
+ },
+ ""final_answer"": ""1996–2000""
+}
+```",0.0,"Reasoning:  To determine when Yvette Wilson had the role of Moesha, we need to locate the row in the table where the ""Role"" column displays ""Moesha"". This row is: ""1996–2000 | Moesha | Andell Wilkerson | 105 episodes"".
+
+Answer: 1996–2000 
+",0.0,Wilson appeared as Andell Wilkerson in Moesha from 1996 and in The Parkers from 1999 to 2004.
+28,"In the 2015 Tour De France, where and when did the course start and end, and how long was the course in terms of total distance and total stages?","**Problem Understanding:**
+1. Determine the Objective:  Identify the starting and ending locations of the 2015 Tour de France, as well as the total course distance and number of stages.
+
+2. Understand the Problem:  This requires extracting relevant information from the table, focusing on the first and last stages, as well as the total distance and number of stages.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Starting Location and Date: Utrecht (Netherlands), July 4th
+   - Ending Location and Date: Paris (Champs-Élysées), July 26th
+   - Total Distance: 3,360.3 km
+   - Total Stages: 21
+
+**Answer:**
+The 2015 Tour de France started in Utrecht, Netherlands on July 4th and ended in Paris, Champs-Élysées on July 26th. The total course distance was 3,360.3 km, and it was comprised of 21 stages.
+
+**Final Answer:** The 2015 Tour de France started in Utrecht, Netherlands on July 4th and ended in Paris, Champs-Élysées on July 26th. The total course distance was 3,360.3 km, and it was comprised of 21 stages. 
+",57.14285714285715,"extract, cot","```json
+{
+ ""subquestions"": [
+  {
+   ""sq1"": ""What was the starting point of the 2015 Tour De France?"",
+   ""reasoning"": ""The first stage of the tour will tell us where it starts.  "",
+   ""answer"": ""Utrecht (Netherlands)""
+  },
+  {
+   ""sq2"": ""What was the ending point of the 2015 Tour De France?"",
+   ""reasoning"": ""The last stage of the tour will tell us where it ends."",
+   ""answer"": ""Paris (Champs-Élysées)""
+  },
+  {
+   ""sq3"": ""What was the total distance of the 2015 Tour De France?"",
+   ""reasoning"": ""The total distance is mentioned in the last row of the table"",
+   ""answer"": ""3,360.3 km (2,088 mi)""
+  },
+  {
+   ""sq4"": ""How many stages were in the 2015 Tour De France?"",
+   ""reasoning"": ""The table lists 21 stages and one rest day, but the last row includes Total for all columns, including 'Stage'.  There were 21 stages in the tour"",
+   ""answer"": ""21 stages""
+  }
+ ],
+ ""final_answer"": ""Utrecht (Netherlands) and Paris (Champs-Élysées), 3,360.3 km (2,088 mi), 21 stages""
+}
+```",50.0,"Reasoning: To find the starting and ending locations and the total distance, we need to look at the 'Course' and 'Distance' columns. The first stage started in Utrecht (Netherlands) and the last stage finished in Paris (Champs-Élysées). The total distance is found in the 'Total' row, which is 3,360.3 km. The number of stages is found in the 'Stage' column, which is 21.
+
+Answer: [""Utrecht (Netherlands)"", ""Paris (Champs-Élysées)"", ""3,360.3 km"", ""21""] 
+",37.83783783783783,"The 3,360.3 km (2,088 mi) 2015 Tour de France race consisted of 21 stages, starting on 4 July in Utrecht, the Netherlands, and concluding on 26 July with the Champs-Élysées stage in Paris."
+29,How many times did Yelena Isinbayeva raise her world inner mark and did she clear those heights?,"**Problem Understanding:**
+1. Determine the Objective: Identify the number of times Yelena Isinbayeva raised her indoor world record and confirm if she cleared those heights.
+
+2. Understand the Problem: This requires extracting relevant information from the table, focusing on the indoor world record progression and confirming if the heights were cleared.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - The table shows Yelena Isinbayeva's progression in indoor world records.
+   - Each row represents a record-breaking performance, indicating a new indoor world record height was achieved.
+   - The heights listed in the table are the heights she cleared to set the records.
+
+4. Analyze the Data:
+   - The table lists 13 distinct heights, each representing a new indoor world record. 
+   - Each of these heights was cleared by Yelena Isinbayeva as indicated by the ""Performance"" column. 
+
+**Answer:**
+Yelena Isinbayeva raised her indoor world record 13 times, and she cleared all of those heights, as evidenced by the ""Performance"" column which lists the heights she cleared for each record.
+
+**Final Answer:** Yelena Isinbayeva raised her indoor world record 13 times, and she cleared all of those heights.
+",7.407407407407408,"extract, cot","```json
+{
+ ""sq1"": ""How many times did Yelena Isinbayeva raise her world indoor mark?"",
+ ""sq2"": ""Did she clear those heights?"",
+ ""answer_to_sq1"": ""13"",
+ ""answer_to_sq2"": ""Yes""
+}
+```",0.0,"Reasoning: To determine how many times Yelena Isinbayeva raised her world indoor mark and if she cleared those heights, we need to examine the table and count the number of times a new world indoor record was set. The table shows the progression of her world indoor records, so each row represents a new record being set. We can simply count the rows to determine the number of times the record was raised. The table lists 13 world indoor records set by Isinbayeva. Since each row represents a successful attempt, she cleared all the listed heights.
+
+Answer: [""13"", ""yes""] 
+",0.0,Yelena Isinbayeva raised her world indoor mark to 4.97 m and then raised it to 5.00 m and cleared that height as well.
+30,"How many total goals and appearances did Stuart Shaw rack up with Southport, and when did he play for the club?","**Problem Understanding:**
+1. Determine the Objective: Identify the total number of goals and appearances Stuart Shaw made while playing for Southport, along with the seasons he played for the club.
+
+2. Understand the Problem: This requires extracting relevant information from the table focusing on the ""Southport"" rows.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Seasons played: 1966-67, 1967-68, 1968-69
+   - Total Appearances: 67
+   - Total Goals: 6
+
+**Answer:**
+Stuart Shaw played for Southport during the 1966-67, 1967-68, and 1968-69 seasons. He made a total of 67 appearances and scored 6 goals for the club.
+
+**Final Answer:** Stuart Shaw played for Southport during the 1966-67, 1967-68, and 1968-69 seasons, making a total of 67 appearances and scoring 6 goals. 
+",52.17391304347825,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""How many appearances and goals did Stuart Shaw make for Southport?"",
+  ""sq2"": ""When did Stuart Shaw play for Southport?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""74 appearances and 6 goals"",
+  ""Answer to sq2"": ""1966-67, 1967-68, 1968-69""
+ },
+ ""final_answer"": ""74 appearances and 6 goals, 1966-67, 1967-68, 1968-69""
+}
+```",43.47826086956522,"Reasoning:  To determine the total goals and appearances Stuart Shaw had with Southport and the seasons he played for the club, we need to look at the rows for Southport. The table shows that Stuart Shaw played for Southport during the 1966-67, 1967-68, and 1968-69 seasons. The total goals for Southport are 6 and the total appearances are 74. 
+
+Answer: [""6 goals"", ""74 appearances"", ""1966–67"", ""1967–68"", ""1968–69""] 
+",43.47826086956522,"Shaw spent the 1966-67, 1967–68 and 1968–69 seasons with Southport, and scored six goals in 67 appearances."
+31,When and where was Dancing in the Rain released as a digital download? ,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the date and location where ""Dancing in the Rain"" was released as a digital download. 
+2. **Understand the Problem:** This requires extracting information from the table, specifically focusing on rows with the ""Digital download"" format.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - The table lists two digital download releases:
+      - Spain on February 18, 2014
+      - United Kingdom on March 18, 2014
+
+**Answer:** ""Dancing in the Rain"" was released as a digital download on February 18, 2014, in Spain and on March 18, 2014, in the United Kingdom.
+
+**Final Answer:** ""Dancing in the Rain"" was released as a digital download on February 18, 2014, in Spain and on March 18, 2014, in the United Kingdom. 
+",59.45945945945945,"extract, cot","```json
+  decomposition: |
+    sq1. Identify rows in the table where the format is ""Digital Download"" (independent)
+    sq2. Extract the country and date from the identified row(s) (depends on sq1)
+  answers: |
+    Answer to sq1: The table has two rows where the format is ""Digital Download"".
+    Answer to sq2: Spain - 18 February 2014, United Kingdom - 18 March 2014.
+  final_answer: Spain - 18 February 2014, United Kingdom - 18 March 2014.
+```",51.42857142857142,"Reasoning: To find out when and where ""Dancing in the Rain"" was released as a digital download, we need to look at the table rows where the ""Format"" column is ""Digital download"". There are two such rows:
+- Spain: 18 February 2014
+- United Kingdom: 18 March 2014
+
+Answer: [""Spain: 18 February 2014"", ""United Kingdom: 18 March 2014""] 
+",51.42857142857142,"Dancing in the Rain (song) was released in Spain on 18 February 2014, and in the United Kingdom on 18 March 2014 as a digital download through Roster Music."
+32,How long was a Communist Party of India (Marxist) candidate a Member of Legislative Assembly?,"**Problem Understanding:**
+1. Determine the Objective: Identify the total number of years that a Communist Party of India (Marxist) candidate served as a Member of Legislative Assembly (MLA) for the Canning Purba constituency.
+2. Understand the Problem: This involves extracting relevant information from the table, analyzing the time periods served by each MLA affiliated with the Communist Party of India (Marxist), and calculating the total duration.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Abdur Razzak Molla was the Communist Party of India (Marxist) MLA from 1977 to 2011. 
+4. Decompose the Problem into Sub-Problems:
+   - Determine the years of service for Abdur Razzak Molla.
+   - Calculate the total duration of his service.
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Abdur Razzak Molla served as MLA from 1977 to 2011, a total of 34 years.
+
+**Python Code for Solution:**
+```python
+# Data
+mla_data = {
+    ""Abdur Razzak Molla"": {
+        ""start_year"": 1977,
+        ""end_year"": 2011
+    }
+}
+
+# Calculate the total service duration
+total_years = mla_data[""Abdur Razzak Molla""][""end_year""] - mla_data[""Abdur Razzak Molla""][""start_year""] + 1
+
+# Output the result
+print(f""A Communist Party of India (Marxist) candidate served as MLA for a total of {total_years} years."")
+```
+
+**Final Answer:** A Communist Party of India (Marxist) candidate served as MLA for a total of 34 years. 
+#Done
+",38.70967741935484,"extract, decompose, python, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Who was the Communist Party of India (Marxist) candidate who served as a Member of Legislative Assembly?"",
+  ""sq2"": ""Identify the years during which the candidate served as an M.L.A."",
+  ""sq3"": ""Calculate the difference between the last year and the first year to find the total time served.""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""Abdur Razzak Molla"",
+  ""Answer to sq2"": ""1977, 1982, 1987, 1991, 1996, 2001, 2006, 2011"",
+  ""Answer to sq3"": ""2011 - 1977 = 34 years""
+ },
+ ""final_answer"": ""34 years""
+}
+```",0.0,"Reasoning: To determine how long a Communist Party of India (Marxist) candidate was a Member of Legislative Assembly, we need to find the years the Communist Party of India (Marxist) candidate served. From the table, we see that Abdur Razzak Molla was a Communist Party of India (Marxist) candidate and served as a Member of Legislative Assembly from 1977 to 2011. 
+
+Answer: 34 years 
+",0.0,Abdur Razzak Molla of the Communist Party of India (Marxist) has represented Canning Purba from 1977 to 2011.
+33,What network has Sumona Chakravarti appeared in the most shows for and over what years did she appear in those shows?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the network on which Sumona Chakravarti has appeared in the most shows and the years she appeared in those shows.
+2. **Understand the Problem:** This involves analyzing the table data to determine the network with the highest frequency of Sumona's appearances and the corresponding years.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**  
+    - **Sony Entertainment Television (India):** 
+        - Bade Achhe Lagte Hain (2011-14)
+        - Kahani Comedy Circus Ki (2012)
+        - The Kapil Sharma Show (2016-2017)
+        - The Kapil Sharma Show Season 2 (2018-Present)
+    - **Zee TV:** 
+        - Kasamh Se (2006)
+        - Jamai Raja (2015)
+    - **Star Plus:** 
+        - Kasturi (2007–2009)
+        - Sapno Se Bhare Naina (2010)
+    - **Bindass:** 
+        - Sun Yaar Chill Maar (2007)
+        - Yeh Hai Aashiqui (2014)
+    - **Life OK:** 
+        - Ek Thhi Naayka (2013)
+        - Savdhaan India (2014)
+    - **Star One:** 
+        - Horror Nights (2010)
+    - **Colors TV:** 
+        - Comedy Nights with Kapil (2013-16)
+        - Dev (2017)
+    - **NDTV Imagine:** 
+        - Neer Bhare Tere Naina Devi (2010)
+    - **SAB TV:** 
+        - Detective Doll (2007)
+    - **NDTV Good Times:** 
+        - Dubai Diaries (2016)
+        - Swiss Made Adventures (2016)
+    - **Sony TV:** 
+        - Family Time With Kapil Sharma (2018)
+
+4. **Decompose the Problem into Sub-Problems:**
+    - Identify the network with the most appearances.
+    - Determine the years corresponding to those appearances.
+
+5. **Individually Answer Each Sub-Problem with Reasoning:**
+    - The network with the most appearances is **Sony Entertainment Television (India)** with four shows. 
+    - The years of appearance on Sony Entertainment Television (India) are **2011-14, 2012, 2016-2017, and 2018-Present**.
+
+**Final Answer:** Sumona Chakravarti has appeared in the most shows on **Sony Entertainment Television (India)**, from **2011 to Present**.
+
+--- 
+",47.61904761904762,"extract, decompose, cot","  decomposition: |
+    sq1. Identify the networks Sumona Chakravarti has appeared on. (independent)
+    sq2. Count the number of shows on each network. (depends on sq1)
+    sq3. Identify the network with the most appearances. (depends on sq2)
+    sq4. Identify the years for the shows on the network with the most appearances. (depends on sq1, sq3)
+  answers: |
+    Answer to sq1: Sumona Chakravarti has appeared on Zee TV, SAB TV, Bindass, Star Plus, NDTV Imagine, Star One, Sony Entertainment Television (India), Life OK, Colors TV, NDTV Good Times, and Sony TV.
+    Answer to sq2:
+      - Zee TV: 2
+      - SAB TV: 1
+      - Bindass: 2
+      - Star Plus: 2
+      - NDTV Imagine: 1
+      - Star One: 1
+      - Sony Entertainment Television (India): 4
+      - Life OK: 2
+      - Colors TV: 2
+      - NDTV Good Times: 2
+      - Sony TV: 1
+    Answer to sq3: Sony Entertainment Television (India)
+    Answer to sq4: 2011-14, 2012, 2016-2017, 2018-Present.
+  final_answer: Sony Entertainment Television (India), 2011-14, 2012, 2016-2017, 2018-Present. 
+",36.36363636363637,"Reasoning: To determine the network with the most appearances and the corresponding years, we need to examine the 'Network' column and count occurrences while noting the corresponding 'Year' values.  
+
+Sony Entertainment Television (India) appears 4 times:
+- 2011: Khotey Sikkey
+- 2011-14: Bade Achhe Lagte Hain
+- 2012: Kahani Comedy Circus Ki
+- 2016-2017: The Kapil Sharma Show
+
+Star Plus appears 2 times:
+- 2007–2009: Kasturi
+- 2010: Sapno Se Bhare Naina
+
+Other networks appear only once.
+
+Therefore, Sony Entertainment Television (India) has the most appearances with 4 shows, spanning from 2011 to 2017.
+
+Answer: [""Sony Entertainment Television (India)"", ""2011-2017""] 
+",42.105263157894726,Sumona Chakravarti has appeared in 5 shows on Sony Entertainment Television (India) since 2011.
+34,How many times was Lizette Etsebeth a African champion and in which year did she get the titles?,"**Problem Understanding:**
+1. Determine the Objective: Identify the number of times Lizette Etsebeth was an African champion in the discus throw and the years in which she won.
+
+2. Understand the Problem: This requires extracting relevant information from the table for athlete Lizette Etsebeth.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+    - Lizette Etsebeth won the African championship in 1992 and 1993.
+
+4. Answer:
+    - Lizette Etsebeth was an African champion twice, in 1992 and 1993.
+
+**Final Answer:** Lizette Etsebeth was an African champion twice, in 1992 and 1993. 
+",27.27272727272728,"extract, cot","```json
+{
+ ""subquestions"": [
+  {
+   ""sq1"": ""How many times did Lizette Etsebeth win the African Championships in Athletics - Discus throw?"",
+   ""reason"": ""This is asking for the number of times Lizette Etsebeth won the competition.""
+  },
+  {
+   ""sq2"": ""In what years did Lizette Etsebeth win the African Championships in Athletics - Discus throw?"",
+   ""reason"": ""This is asking for the years Lizette Etsebeth won the competition.""
+  }
+ ],
+ ""answers"": [
+  {
+   ""Answer to sq1"": ""2"",
+   ""reason"": ""Lizette Etsebeth's name appears twice in the table, once for 1992 and once for 1993.""
+  },
+  {
+   ""Answer to sq2"": ""1992, 1993"",
+   ""reason"": ""Lizette Etsebeth's name appears in the table for the years 1992 and 1993.""
+  }
+ ],
+ ""final_answer"": ""Lizette Etsebeth won the African Championships in Athletics - Discus throw 2 times, in 1992 and 1993.""
+}
+```",19.04761904761905,"Reasoning: To determine how many times Lizette Etsebeth was an African champion and in which years, we need to look at the table and count the number of rows where her name appears in the ""Athlete"" column and extract the corresponding years from the ""Year"" column. 
+
+Answer: Lizette Etsebeth was an African champion twice, in 1992 and 1993. 
+",19.04761904761905,"Lizette Etsebeth was a two-time African champion, taking back-to-back titles at the African Championships in Athletics in 1992 and 1993."
+35,"How many albums did John S. Hall and King Missle release on Shimmy Disc label, what are they and what year did they release?","**Problem Understanding:**
+1. Determine the Objective: Identify the number of albums John S. Hall and King Missile released on the Shimmy Disc label, their titles, and their release years.
+
+2. Understand the Problem: This requires extracting relevant information from the table, specifically looking for albums released by John S. Hall and King Missile under the Shimmy Disc label.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - ""Fluting on the Hump"" released in 1987.
+   - ""They"" released in 1988.
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the albums released under the Shimmy Disc label.
+   - Determine the release year for each identified album.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - John S. Hall and King Missile released two albums on the Shimmy Disc label: ""Fluting on the Hump"" in 1987 and ""They"" in 1988.
+
+**Answer:**
+John S. Hall and King Missile released two albums on the Shimmy Disc label: ""Fluting on the Hump"" in 1987 and ""They"" in 1988.
+
+**Final Answer:** John S. Hall and King Missile released two albums on the Shimmy Disc label: ""Fluting on the Hump"" in 1987 and ""They"" in 1988. 
+",40.0,"extract, decompose, cot","```json
+  decomposition: |
+    sq1. Identify the rows where the record label is Shimmy Disc. (independent)
+    sq2. Extract the album names from the identified rows. (depends on sq1)
+    sq3. Extract the release years from the identified rows. (depends on sq1)
+    sq4. Count the number of identified albums. (depends on sq2)
+    sq5. Combine the count, album names, and release years into a final answer. (depends on sq2, sq3, sq4)
+  answers: |
+    Answer to sq1: The rows where the record label is Shimmy Disc are:
+      Fluting on the Hump | Shimmy Disc | 1987
+      They | Shimmy Disc | 1988
+    Answer to sq2: The album names are Fluting on the Hump and They.
+    Answer to sq3: The release years are 1987 and 1988.
+    Answer to sq4: There are two albums.
+    Answer to sq5: John S. Hall and King Missle released two albums on the Shimmy Disc label: Fluting on the Hump in 1987 and They in 1988.
+  final_answer: John S. Hall and King Missle released two albums on the Shimmy Disc label: Fluting on the Hump in 1987 and They in 1988. 
+```",33.333333333333336,"Reasoning: To find the albums released by John S. Hall and King Missle on the Shimmy Disc label, we need to examine the table. The table lists the albums, record labels, and release years. We should look for the rows where the ""Record Label"" column is ""Shimmy Disc"". 
+
+Answer: [""Fluting on the Hump"" released in 1987 and ""They"" released in 1988] 
+",9.523809523809524,"John S. Hall and King Missile released two albums on the Shimmy Disc label, 1987's Fluting on the Hump and 1988's They."
+36,"How many years did Dennis Butler spent six years with Rochdale, how many games did he play, how many goals did he score?","**Problem Understanding:**
+1. Determine the Objective: Identify the total number of years Dennis Butler played for Rochdale, the total number of games he played for Rochdale, and the total number of goals he scored for Rochdale.
+
+2. Understand the Problem: This requires extracting relevant information from the table for the club ""Rochdale"" to find the total number of seasons played, total games played, and total goals scored.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Seasons with Rochdale: 1967–68, 1968–69, 1969–70, 1970–71, 1971–72, 1972–73.
+
+4. Decompose the Problem into Sub-Problems:
+   - Count the number of seasons played for Rochdale.
+   - Sum up the number of games played in each season for Rochdale.
+   - Sum up the number of goals scored in each season for Rochdale.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   -  Dennis Butler played 6 seasons with Rochdale.
+   -  Dennis Butler played 156 games with Rochdale (summing the ""Apps"" column for Rochdale).
+   -  Dennis Butler scored 36 goals with Rochdale (summing the ""Goals"" column for Rochdale).
+
+**Answer:** Dennis Butler spent six years with Rochdale, playing a total of 156 games and scoring 36 goals.
+
+**Final Answer:** Dennis Butler spent six years with Rochdale, playing a total of 156 games and scoring 36 goals. 
+",57.14285714285715,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""How many seasons did Dennis Butler play for Rochdale?"",
+  ""sq2"": ""How many games did Dennis Butler play for Rochdale?"",
+  ""sq3"": ""How many goals did Dennis Butler score for Rochdale?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""6"",
+  ""Answer to sq2"": ""169"",
+  ""Answer to sq3"": ""39""
+ },
+ ""final_answer"": ""6, 169, 39""
+}
+```",11.11111111111111,"Reasoning: To find out how many years Dennis Butler spent with Rochdale, we need to count the number of seasons listed for Rochdale in the table. There are six seasons listed: 1967–68, 1968–69, 1969–70, 1970–71, 1971–72, and 1972–73. 
+To find out how many games he played and goals he scored for Rochdale, we need to look at the 'Total' columns for Rochdale. The table shows that he played 169 games and scored 39 goals for Rochdale.
+
+Answer: [""6"", ""169"", ""39""] 
+",11.11111111111111,"Dennis Butler spent six years with Rochdale playing 156 league games, and scoring 36 goals."
+37,Which roles and which year did George Finn play in LOL and Time Lapse?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the roles George Finn played in the films ""LOL"" and ""Time Lapse"" and the years these films were released.
+
+2. **Understand the Problem:** This involves extracting specific information from the table based on the given film titles.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - ""LOL"" was released in 2012, and George Finn played the role of Chad.
+   - ""Time Lapse"" was released in 2014, and George Finn played the role of Jasper.
+
+4. **Answer:**
+   - George Finn played the role of Chad in ""LOL"" in 2012.
+   - George Finn played the role of Jasper in ""Time Lapse"" in 2014.
+
+**Final Answer:** George Finn played the role of Chad in ""LOL"" in 2012 and the role of Jasper in ""Time Lapse"" in 2014. 
+",69.23076923076924,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Identify the rows in the table where George Finn played the roles of Chad and Jasper."",
+  ""sq2"": ""Extract the year from the rows where George Finn played Chad and Jasper.""
+ },
+ ""answers"": {
+  ""sq1"": ""The rows where George Finn played Chad and Jasper are:\n2012 | LOL | Chad | -\n2014 | Time Lapse | Jasper | -"",
+  ""sq2"": ""The year George Finn played Chad is 2012 and the year he played Jasper is 2014.""
+ },
+ ""final_answer"": ""Chad in 2012 and Jasper in 2014""
+}
+```",58.333333333333336,"Reasoning: To determine the roles and years George Finn played in LOL and Time Lapse, we need to find the rows corresponding to these films in the table and extract the ""Role"" and ""Year"" columns. 
+  * The row for ""LOL"" shows that George Finn played the role of ""Chad"" in 2012.
+  * The row for ""Time Lapse"" shows that George Finn played the role of ""Jasper"" in 2014. 
+
+Answer: [""Chad"", 2012, ""Jasper"", 2014] 
+",38.095238095238095,George Finn starred as Chad in LOL in 2012 and portrayed Jasper in Time Lapse in 2014.
+38,How many games did Jens Jeremies appear in during his 12 seasons and how many times did he score?,"**Problem Understanding:**
+1. Determine the Objective: Identify the total number of games Jens Jeremies played across his 12 seasons and the total number of goals he scored.
+
+2. Understand the Problem: This involves summing up the ""Apps"" (Appearances) and ""Goals"" columns for all seasons listed in the table. 
+
+**Reasoning Process:**
+3. Extract Relevant Information: We need to extract the ""Apps"" and ""Goals"" values for each season. 
+4. Decompose the Problem into Sub-Problems:
+   - Calculate the total appearances (Apps) across all seasons.
+   - Calculate the total goals scored across all seasons.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Total Appearances: Sum the ""Apps"" values for each season.
+   - Total Goals: Sum the ""Goals"" values for each season. 
+
+**Python Code for Solution:**
+```python
+# Data
+jeremies_data = {
+    'Dynamo Dresden': {
+        '1994–95': {'Apps': 10, 'Goals': 1},
+        'Total': {'Apps': 10, 'Goals': 1}
+    },
+    '1860 München': {
+        '1995–96': {'Apps': 29, 'Goals': 0},
+        '1996–97': {'Apps': 27, 'Goals': 2},
+        '1997–98': {'Apps': 22, 'Goals': 0},
+        'Total': {'Apps': 78, 'Goals': 2}
+    },
+    'Bayern Munich': {
+        '1998–99': {'Apps': 30, 'Goals': 1},
+        '1999–2000': {'Apps': 30, 'Goals': 3},
+        '2000–01': {'Apps': 21, 'Goals': 1},
+        '2001–02': {'Apps': 10, 'Goals': 0},
+        '2002–03': {'Apps': 29, 'Goals': 0},
+        '2003–04': {'Apps': 23, 'Goals': 1},
+        '2004–05': {'Apps': 7, 'Goals': 0},
+        '2005–06': {'Apps': 13, 'Goals': 0},
+        'Total': {'Apps': 163, 'Goals': 6}
+    }
+}
+
+# Calculate total appearances and goals
+total_apps = 0
+total_goals = 0
+
+# Iterate through each club and season
+for club in jeremies_data:
+    for season in jeremies_data[club]:
+        total_apps += jeremies_data[club][season]['Apps']
+        total_goals += jeremies_data[club][season]['Goals']
+
+# Output results
+print(f""Jens Jeremies appeared in {total_apps} games across his 12 seasons and scored {total_goals} goals."")
+```
+
+**Final Answer:** Jens Jeremies appeared in 344 games across his 12 seasons and scored 21 goals.
+",51.85185185185186,"extract, decompose, python, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""How many games did Jens Jeremies appear in during his career?"",
+  ""sq2"": ""How many goals did Jens Jeremies score during his career?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": 344,
+  ""Answer to sq2"": 21
+ }
+}
+```",0.0,"Reasoning: To determine the total number of games Jens Jeremies appeared in and scored during his 12 seasons, we need to sum the 'Apps' and 'Goals' columns from all the rows representing his time with different clubs, including the 'Career total' row. 
+Answer: [""344"", ""21""] 
+",0.0,"Jens Jeremies appeared in 251 German games during 12 seasons, scoring nine times."
+39,"What were the first two singles released from Jhené Aiko's album Sail Out, and what year did they come out?","**Problem Understanding:**
+1. Determine the Objective: Identify the first two singles released from Jhené Aiko's album ""Sail Out"" and the year they were released.
+
+2. Understand the Problem: This involves extracting information from the table, specifically focusing on singles from the ""Sail Out"" album and their release years.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+    - ""3:16am"" was released in 2012.
+    - ""Bed Peace"" was released in 2013.
+    - ""Comfort Inn Ending (Freestyle)"" was also released in 2013.
+
+4. Decompose the Problem into Sub-Problems:
+    - Identify all singles from the ""Sail Out"" album.
+    - Determine the release year for each single.
+    - Determine the first two singles released.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+    - The singles from the ""Sail Out"" album are ""3:16am,"" ""Bed Peace,"" and ""Comfort Inn Ending (Freestyle).""
+    - The release years are 2012 for ""3:16am,"" and 2013 for ""Bed Peace"" and ""Comfort Inn Ending (Freestyle).""
+    - ""3:16am"" was released first in 2012, followed by ""Bed Peace"" in 2013.
+
+**Answer:**
+The first two singles released from Jhené Aiko's album ""Sail Out"" were ""3:16am,"" which was released in 2012, and ""Bed Peace,"" which was released in 2013.
+
+**Final Answer:** The first two singles released from Jhené Aiko's album ""Sail Out"" were ""3:16am"" in 2012 and ""Bed Peace"" in 2013. 
+",38.095238095238095,"extract, decompose, cot","```json
+{
+  ""subquestions"": [
+    {
+      ""sq1"": ""Identify the rows that contain information about singles released from Jhené Aiko's album Sail Out."",
+      ""reasoning"": ""This will allow us to identify the relevant information to answer the question.""
+    },
+    {
+      ""sq2"": ""Extract the title and year of the first two singles from the identified rows."",
+      ""reasoning"": ""This will give us the specific titles and years of release.""
+    },
+    {
+      ""sq3"": ""Combine the extracted titles and years into a final answer."",
+      ""reasoning"": ""This will provide a clear and concise answer to the question.""
+    }
+  ],
+  ""answers"": [
+    {
+      ""sq1"": ""The relevant rows are:\n'3:16am' | 2012 | Topshelf Jr. | N/A | Sail Out | -\n'Terrorist Threats' | 2012 | APLUSFilmz | Ab-Soul and Danny Brown | Control System | -\n'Bed Peace' | 2013 | Topshelf Jr. | Childish Gambino | Sail Out | -\n'The Worst' | 2013 | Danny Williams | N/A | Sail Out | -\n'Comfort Inn Ending (Freestyle)' | 2014 | Topshelf Jr. | N/A | Sail Out | -"",
+      ""reasoning"": ""These rows contain all the singles released from Jhené Aiko's album Sail Out.""
+    },
+    {
+      ""sq2"": ""'3:16am' released in 2012\n'Terrorist Threats' released in 2012"",
+      ""reasoning"": ""These are the first two singles listed on the table that were released from Jhené Aiko's album Sail Out.""
+    },
+    {
+      ""sq3"": ""The first two singles released from Jhené Aiko's album Sail Out were '3:16am' and 'Terrorist Threats', both released in 2012."",
+      ""reasoning"": ""This combines the information from the previous subquestions to provide a complete answer.""
+    }
+  ],
+  ""final_answer"": ""'3:16am' and 'Terrorist Threats', 2012""
+}
+```",0.0,"Reasoning: To determine the first two singles released from Jhené Aiko's album Sail Out and the year they came out, we need to look at the rows with ""Sail Out"" listed under the ""Album"" column. The relevant rows are:
+* 3:16am | 2012 | Topshelf Jr. | N/A | Sail Out | -
+* Terrorist Threats | 2012 | APLUSFilmz | Ab-Soul and Danny Brown | Control System | -
+* Bed Peace | 2013 | Topshelf Jr. | Childish Gambino | Sail Out | -
+* The Worst | 2013 | Danny Williams | N/A | Sail Out | -
+* Comfort Inn Ending (Freestyle) | 2014 | Topshelf Jr. | N/A | Sail Out | -
+Since the question asks for the *first* two singles, we need to look at the ""Year"" column for the earliest years in which a song was released from the Sail Out album. Therefore, the first two singles released were ""3:16am"" and ""Terrorist Threats"" in the year 2012.
+
+Answer: [""3:16am"", ""2012"", ""Terrorist Threats"", ""2012""] 
+",0.0,"""Bed Peace"" and ""The Worst"" singles from Jhené Aiko's Sail Out were released in 2013."
+40,Where and when did the 20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun start and end?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the starting and ending locations and dates of Misia's ""20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun"".
+
+2. **Understand the Problem:** This requires extracting the first and last entries in the table to determine the tour's start and end points.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:** 
+   - The first entry in the table indicates the tour started on April 7, 2018, in Osaka, Japan, at Osaka-jō Hall.
+   - The last entry in the table indicates the tour ended on April 28, 2018, in Yokohama, Japan, at Yokohama Arena.
+
+4. **Answer:**
+   - The tour started on April 7, 2018, in Osaka, Japan, at Osaka-jō Hall.
+   - The tour ended on April 28, 2018, in Yokohama, Japan, at Yokohama Arena.
+
+**Final Answer:** The ""20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun"" started on April 7, 2018, in Osaka, Japan, at Osaka-jō Hall and ended on April 28, 2018, in Yokohama, Japan, at Yokohama Arena. 
+",43.63636363636364,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""Identify the start date of the tour."",
+  ""sq2"": ""Identify the start city and venue of the tour."",
+  ""sq3"": ""Identify the end date of the tour."",
+  ""sq4"": ""Identify the end city and venue of the tour.""
+ },
+ ""answers"": {
+  ""sq1"": ""April 7, 2018"",
+  ""sq2"": ""Osaka, Osaka-jō Hall"",
+  ""sq3"": ""April 28, 2018"",
+  ""sq4"": ""Yokohama, Yokohama Arena""
+ },
+ ""final_answer"": ""The 20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun started on April 7, 2018 at the Osaka-jō Hall in Osaka and ended on April 28, 2018 at the Yokohama Arena in Yokohama.""
+}
+```",25.53191489361702,"Reasoning: To determine the start and end of the 20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun, we need to look at the first and last dates in the table.  The first date is April 7, 2018, in Osaka, Japan, and the last date is April 28, 2018, in Yokohama, Japan. 
+
+Answer: [""Osaka, Japan on April 7, 2018"", ""Yokohama, Japan on April 28, 2018""] 
+",37.735849056603776,"The 20th Anniversary—The Super Tour of Misia: Girls Just Wanna Have Fun, comprised of four arena dates, began on April 7, 2018 at the Osaka-jō Hall in Osaka, and it concluded three weeks later on April 28, 2018, at Yokohama Arena in Yokohama."
+41,Who were the two athletes with the top two times?,"**Problem Understanding:**
+1. Determine the Objective: Identify the athletes who achieved the top two fastest times in the Women's 200 meters final at the 2015 World Championships in Athletics.
+
+2. Understand the Problem: This involves extracting the information from the table, specifically focusing on the athlete's names and corresponding times, and then identifying the top two times.
+
+**Reasoning Process:**
+3. Extract Relevant Information: 
+   - Dafne Schippers (NED) - 21.63 seconds
+   - Elaine Thompson (JAM) - 21.66 seconds
+
+4. Decompose the Problem into Sub-Problems:
+   - Identify the athletes and their respective times.
+   - Determine the two fastest times.
+
+5. Individually Answer Each Sub-Problems with Reasoning:
+   - Dafne Schippers (NED) achieved the fastest time with 21.63 seconds.
+   - Elaine Thompson (JAM) achieved the second fastest time with 21.66 seconds.
+
+**Answer:** The two athletes with the top two times were Dafne Schippers (NED) with 21.63 seconds and Elaine Thompson (JAM) with 21.66 seconds. 
+
+**Final Answer:** Dafne Schippers (NED) with 21.63 seconds and Elaine Thompson (JAM) with 21.66 seconds. 
+",30.0,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What was the time of the athlete that finished in 1st place?"",
+  ""sq2"": ""What was the time of the athlete that finished in 2nd place?"",
+  ""sq3"": ""What were the names of the athletes who finished 1st and 2nd place?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""21.63"",
+  ""Answer to sq2"": ""21.66"",
+  ""Answer to sq3"": ""Dafne Schippers, Elaine Thompson""
+ },
+ ""final_answer"": ""Dafne Schippers and Elaine Thompson""
+}
+```",23.52941176470588,"Reasoning:  To determine the two athletes with the top two times, we need to look at the 'Rank' and 'Name' columns in the table. The top two athletes are those with the ranks 1 and 2.
+Answer: [""Dafne Schippers"", ""Elaine Thompson""] 
+",23.52941176470588,Schippers with time of 21.63 and Thompson with 21.66 at the Women's 200 metres.
+42,"What two records does Mariette Van Heerden still hold for Zimbabwe, and when did she set them?","**Problem Understanding:**
+1. Determine the Objective: Identify the two records held by Mariette Van Heerden for Zimbabwe and the dates they were set.
+
+2. Understand the Problem: This requires extracting relevant information from the table about Mariette Van Heerden's records and their corresponding dates.
+
+**Reasoning Process:**
+3. Extract Relevant Information:
+   - Mariette Van Heerden holds two records:
+      - Shot put: 15.58 m on 20 January 1974
+      - Discus throw: 55.70 m on 25 March 1984
+
+**Answer:**
+Mariette Van Heerden still holds the records for shot put (15.58 m) and discus throw (55.70 m) in Zimbabwe. She set the shot put record on 20 January 1974 and the discus throw record on 25 March 1984.
+
+**Final Answer:** Mariette Van Heerden still holds the records for shot put (15.58 m) set on 20 January 1974 and discus throw (55.70 m) set on 25 March 1984 in Zimbabwe. 
+",26.666666666666668,"extract, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What events does Mariette Van Heerden hold records for in Zimbabwe?"",
+  ""sq2"": ""When did Mariette Van Heerden set the record for each event identified in sq1?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""Mariette Van Heerden holds records in the shot put and discus throw."",
+  ""Answer to sq2"": ""She set the shot put record on 20 January 1974 and the discus throw record on 25 March 1984.""
+ },
+ ""final_answer"": ""Shot put (20 January 1974) and Discus throw (25 March 1984)""
+}
+```",18.181818181818183,"Reasoning: To find the two records Mariette Van Heerden holds for Zimbabwe, we need to locate the rows that list her as the athlete. The table shows two records held by Mariette Van Heerden: Shot put (15.58 m) set on 20 January 1974 and Discus throw (55.70 m) set on 25 March 1984.
+
+Answer: [""Shot put (15.58 m)"", ""20 January 1974"", ""Discus throw (55.70 m)"", ""25 March 1984""] 
+",21.05263157894737,"Van Heerden is still the Zimbabwean record holder in women's shot put (15.58 metres, set on January 20, 1974) and women's discus (55.70 metres, set on March 25, 1984)."
+43,When did Yussuf Poulsen score his first international goal and in what game did it occur?,"**Problem Understanding:**
+1. **Determine the Objective:** Identify the date and game in which Yussuf Poulsen scored his first international goal.
+
+2. **Understand the Problem:** This requires extracting the relevant information from the table, specifically the first instance of a goal scored by Poulsen.
+
+**Reasoning Process:**
+3. **Extract Relevant Information:**
+   - The table lists all international goals scored by Yussuf Poulsen.
+   - We need to find the earliest date on which he scored a goal.
+
+4. **Decompose the Problem into Sub-Problems:**
+   - Find the earliest date in the table.
+   - Identify the opponent and competition associated with that date.
+
+5. **Individually Answer Each Sub-Problems with Reasoning:**
+   - The earliest date listed is June 13, 2015.
+   - On June 13, 2015, Yussuf Poulsen scored against Serbia in a UEFA Euro 2016 qualification match.
+
+**Answer:**
+Yussuf Poulsen's first international goal was scored on June 13, 2015, against Serbia in a UEFA Euro 2016 qualification match.
+
+**Final Answer:** Yussuf Poulsen's first international goal was scored on June 13, 2015, against Serbia in a UEFA Euro 2016 qualification match. 
+",44.44444444444444,"extract, decompose, cot","```json
+{
+ ""decomposition"": {
+  ""sq1"": ""What is the date of Yussuf Poulsen's first international goal?"",
+  ""sq2"": ""In what game did Yussuf Poulsen score his first international goal?""
+ },
+ ""answers"": {
+  ""Answer to sq1"": ""13 June 2015"",
+  ""Answer to sq2"": ""Denmark vs Serbia in a UEFA Euro 2016 qualification match""
+ },
+ ""final_answer"": ""13 June 2015, Denmark vs Serbia in a UEFA Euro 2016 qualification match""
+}
+```",36.36363636363637,"Reasoning: To find when Yussuf Poulsen scored his first international goal and what game it occurred in, we need to look at the table and find the first entry.  The table is ordered by the number column, which represents the order of the goals. The first goal, number 1, was scored on 13 June 2015, in a UEFA Euro 2016 qualification game against Serbia. 
+
+Answer: [""13 June 2015"", ""UEFA Euro 2016 qualification game against Serbia""] 
+",38.46153846153847,"On June 13th, 2015, Yussuf Poulsen scored his first international goal against Serbia in a 2–0 win."

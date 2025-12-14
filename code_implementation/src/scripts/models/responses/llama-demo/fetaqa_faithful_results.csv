@@ -1,0 +1,226 @@
+index,table_id,question,response,answer
+0,totto_source/dev_json/example-1260.json,What did Dylan Minnette play in 2010?,"Here is the Python code to answer the question:
+
+```
+# 1. Create a dictionary to store the year and role information (independent, support=[Year | Title | Role | Notes])
+year_role_info = {
+    2007: ['Game of Life', 'Billy'],
+    2007: ['Fred Claus', 'Orphanage kid'],
+    2008: ['Snow Buddies', 'Noah Framm'],
+    2008: ['The Clique', 'Todd Lyons'],
+    2010: ['Let Me In', 'Kenny'],
+    2013: ['Labor Day', '16-year-old Henry Wheeler'],
+    2013: ['Prisoners', 'Ralph Dover'],
+    2014: ['Alexander and the Terrible, Horrible, No Good, Very Bad Day', 'Anthony Cooper'],
+    2015: ['Goosebumps', 'Zach Cooper'],
+    2016: ['Don\'t Breathe', 'Alex'],
+    2017: ['The Disaster Artist', 'Guy On Cell Phone'],
+    2018: ['The Open House', 'Logan Wallace']
+}
+
+# 2. Get the role played by Dylan Minnette in 2010 (depends on 1, support=[])
+role_in_2010 = year_role_info[2010][1]
+
+# 3. Print the answer (depends on 2, support=[])
+print(""Dylan Minnette played"", role_in_2010, ""in 2010."")
+#DONE
+```
+
+This code creates a dictionary to store the year and role information, then uses this dictionary to retrieve the role played by Dylan Minnette in 2010, and finally prints the answer.","In 2010, Dylan Minnette played as Kenny in the film Let Me In."
+1,totto_source/train_json/example-1275.json,How did Caroline Chepkwony perform in competitions from 2001 to 2004?,"Here is the Python code with reasoning to answer the question:
+
+```
+# 1. What are the competitions Caroline Chepkwony participated in from 2001 to 2004?
+# We can see from the table that she participated in African Junior Championships in 2001, 
+# African Championships in 2004, but there are no other competitions in this time period.
+
+# 2. What were her positions in these competitions?
+# From the table, we can see that she came 2nd in the 5000 metres event in 2001 
+# and 3rd in the 800 metres event in 2004.
+
+# 3. How did Caroline Chepkwony perform in competitions from 2001 to 2004?
+# We can summarize her performance as follows:
+performance = ""Caroline Chepkwony came 2nd in the 5000 metres event in 2001 and 3rd in the 800 metres event in 2004.""
+
+print(performance)
+```
+
+This code simply prints out a summary of Caroline Chepkwony's performance in competitions from 2001 to 2004, based on the information provided in the table.",Caroline Chepkwony was the runner-up in 5000 meters at the African Junior Championships in 2001 and won the 800 metres bronze medal at the 2004 African Championships.
+2,totto_source/train_json/example-13592.json,How did Galen Rupp do in the 2018 Chicago Marathon?,"Here is the Python code with reasoning:
+```
+# 1. What was Galen Rupp's position in the 2018 Chicago Marathon? (independent, support=[2018 | Chicago Marathon | Chicago | 5th | Marathon | 2:06:21])
+galen_rupp_2018_chicago_position = ""5th""
+
+# 2. What was Galen Rupp's time in the 2018 Chicago Marathon? (independent, support=[2018 | Chicago Marathon | Chicago | 5th | Marathon | 2:06:21])
+galen_rupp_2018_chicago_time = ""2:06:21""
+
+# Print the answer
+print(""Galen Rupp finished in"", galen_rupp_2018_chicago_position, ""place with a time of"", galen_rupp_2018_chicago_time, ""in the 2018 Chicago Marathon."")
+```
+The reasoning is that we can directly extract the information from the table, where Galen Rupp's 2018 Chicago Marathon performance is listed as 5th place with a time of 2:06:21. We assign these values to Python variables and then print the answer in a sentence.",Rupp finished 5th at the 2018 Chicago Marathon with a time of 2:06:21.
+3,totto_source/train_json/example-3722.json,How did the membership change in the senate of the 79th United States Congress (Washington state)?,"Here is the Python code to answer the question:
+
+```
+# 1. How many senators were there from Washington state initially? (independent, support=[State (class) | Vacator | Reason for change | Successor | Date of successor's formal installation])
+initial_senators_from_washington = 1
+
+# 2. How many senators vacated their seats from Washington state? (independent, support=[State (class) | Vacator | Reason for change | Successor | Date of successor's formal installation])
+vacated_senators_from_washington = 1
+
+# 3. How many new senators were elected from Washington state? (independent, support=[State (class) | Vacator | Reason for change | Successor | Date of successor's formal installation])
+new_senators_from_washington = 1
+
+# 4. What is the change in membership in the senate of the 79th United States Congress from Washington state? (depends on 1, 2, and 3, support=[])
+membership_change = new_senators_from_washington - vacated_senators_from_washington
+
+ans = membership_change
+print(ans)
+```
+
+The output will be `0`, indicating that there was no net change in the membership of senators from Washington state in the 79th United States Congress.","Senator in the 79th United States Congress (Washington state), Monrad Wallgren (D), was until January 9, 1945 then Hugh Mitchell (D), from January 10, 1945 till December 25, 1946 and Harry P. Cain (R), from December 26, 1946."
+4,totto_source/dev_json/example-190.json,Did Talisa Soto reprise any role for films in her career?,"Here is the Python code to answer the question:
+
+```
+# 1. Create a dictionary to store the film titles and roles
+films = {}
+
+# 2. Iterate over the table rows
+for row in table_rows:
+    year, title, role, notes = row
+    # 3. Add the film title and role to the dictionary
+    films[title] = role
+
+# 4. Check if any role is repeated
+repeated_roles = [role for role in films.values() if list(films.values()).count(role) > 1]
+
+# 5. If there are repeated roles, print True, else print False
+if repeated_roles:
+    print(True)
+else:
+    print(False)
+```
+
+Reasoning:
+
+* We create a dictionary to store the film titles and roles.
+* We iterate over the table rows and add the film title and role to the dictionary.
+* We check if any role is repeated by counting the occurrences of each role in the dictionary values.
+* If there are repeated roles, we print True, else we print False.
+
+Note: This code assumes that the table rows are stored in a variable `table_rows` and that the rows are iterable. The code also assumes that the role is repeated if it appears exactly the same in different films.",Soto portrayed Princess Kitana in the 1995 film Mortal Kombat and reprised it with the 1997 sequel Mortal Kombat: Annihilation.
+0,totto_source/dev_json/example-1769.json,What year was Rosie Huntington-Whiteley most successful?,"Here is the Python code to answer the question:
+
+```
+# 1. Define a variable to count the number of wins for each year (independent, support=[Year | Award | Category | Nominated work | Result])
+wins_per_year = {}
+
+# 2. Iterate over each row in the table (independent, support=[Year | Award | Category | Nominated work | Result])
+for row in table:
+    year = row[0]
+    result = row[4]
+    
+    # 3. If the result is 'Won', increment the win count for the year (depends on 1 and 2, support=[])
+    if result == 'Won':
+        if year in wins_per_year:
+            wins_per_year[year] += 1
+        else:
+            wins_per_year[year] = 1
+
+# 4. Find the year with the most wins (depends on 2 and 3, support=[])
+most_successful_year = max(wins_per_year, key=wins_per_year.get)
+
+# 5. Print the most successful year (depends on 4, support=[])
+print(most_successful_year)
+# DONE
+```
+
+In this code, we first create an empty dictionary `wins_per_year` to store the number of wins for each year. Then, we iterate over each row in the table, and if the result is 'Won', we increment the win count for the year. Finally, we find the year with the most wins using the `max` function with a key function, and print the result.",In 2011 Rosie Huntington-Whiteley won 3 awards and was nominated for the Teen Choice Awards Choice Movie Actress: Summer award.
+1,totto_source/train_json/example-23.json,Which players did the Port Vale club sell in January 1949?,"Here is the Python code to answer the question:
+```
+# 1. Extract the players sold in January 1949 (independent, support=[Date from | Position | Nationality | Name | To | Fee | Ref., ...])
+january_1949_players = []
+
+for row in table_rows:
+    if row['Date from'] == 'January 1949':
+        january_1949_players.append(row['Name'])
+
+# 2. Print the players sold in January 1949 (depends on 1, support=[])
+ans = january_1949_players
+print(ans)
+#DONE
+```
+Here's the reasoning:
+
+* We need to extract the players sold in January 1949 from the table.
+* We loop through each row in the table and check if the 'Date from' column matches 'January 1949'.
+* If it does, we add the player's name to the `january_1949_players` list.
+* Finally, we print the list of players sold in January 1949.
+
+Note that `table_rows` is assumed to be a list of dictionaries, where each dictionary represents a row in the table, and the keys are the column headers.","In January the Port Vale club initiated a sale of players: Bill Pointon went to Queens Park Rangers for a club record five-figure fee, whilst Harry Hubbick was sold to Rochdale for around £1,000."
+2,totto_source/train_json/example-13758.json,"In 2011, in what productions and which roles did Christopher Simpson perform?","Here is the Python code to answer the question:
+
+```
+# 1. What are the productions and roles of Christopher Simpson in 2011? 
+# (support=[Year | Title | Role | Venue, all rows with Year 2011])
+year_2011_rows = [(2011, 'The Knowledge', 'Maz', 'Bush Theatre'), (2011, 'Little Platoons', 'Parvez', 'Bush Theatre')]
+
+# 2. Extract the productions and roles from the 2011 rows
+productions_2011 = [row[1] for row in year_2011_rows]
+roles_2011 = [row[2] for row in year_2011_rows]
+
+# 3. Print the answer
+print(""In 2011, Christopher Simpson performed in the following productions and roles:"")
+for production, role in zip(productions_2011, roles_2011):
+    print(f""{production}: {role}"")
+#DONE
+```
+
+This code first identifies the rows in the table that correspond to 2011. It then extracts the production titles and roles from these rows. Finally, it prints out the answer in a readable format.","In 2011, Christopher Simpson played the role of Maz in The Knowledge and the role of Parvez in Little Platoons, both at the Bush Theatre."
+3,totto_source/train_json/example-1235.json,What is the racial distribution of Pomona in 2010?,"Here is the Python code to answer the question with reasoning:
+```
+# 1. What is the percentage of White in 2010? (independent, support=[Demographic profile | 2010 | 1990 | 1970 | 1950, White | 48.0% | 57.0% | 85.8% | 99.2%])
+white_percent_2010 = 48.0
+
+# 2. What is the percentage of Non-Hispanic in 2010? (independent, support=[Demographic profile | 2010 | 1990 | 1970 | 1950, —Non-Hispanic | 12.5% | 28.2% | N/A | N/A])
+non_hispanic_percent_2010 = 12.5
+
+# 3. What is the percentage of Black or African American in 2010? (independent, support=[Demographic profile | 2010 | 1990 | 1970 | 1950, Black or African American | 7.3% | 14.4% | 12.2% | 0.6%])
+black_or_african_american_percent_2010 = 7.3
+
+# 4. What is the percentage of Hispanic or Latino in 2010? (independent, support=[Demographic profile | 2010 | 1990 | 1970 | 1950, Hispanic or Latino (of any race) | 70.5% | 51.3% | 15.4% | N/A])
+hispanic_or_latino_percent_2010 = 70.5
+
+# 5. What is the percentage of Asian in 2010? (independent, support=[Demographic profile | 2010 | 1990 | 1970 | 1950, Asian | 8.5% | 6.7% | 0.6% | 0.2%])
+asian_percent_2010 = 8.5
+
+# 6. What is the racial distribution of Pomona in 2010? (depends on 1, 2, 3, 4, and 5)
+ans = f""White: {white_percent_2010}%, Non-Hispanic: {non_hispanic_percent_2010}%, Black or African American: {black_or_african_american_percent_2010}%, Hispanic or Latino: {hispanic_or_latino_percent_2010}%, Asian: {asian_percent_2010}%""
+print(ans)
+#DONE
+```
+The code extracts the percentages of each racial group in 2010 from the table and stores them in separate variables. Then, it combines these percentages into a single string to answer the question.","Pomona has 48.0% of White, 12.5% Non-Hispanic, 7.3% of African American, 70.5% Hispanic or Latino, and 8.5% of Asian."
+4,totto_source/dev_json/example-1730.json,How did Barry Mynter's performance as head coach for Canisius Golden Griffins (Metro Atlantic Athletic Conference) change over time?,"Here is the breakdown of the question into subquestions and the Python code to answer the question:
+
+```
+# Define the years and corresponding records for Canisius Golden Griffins (Metro Atlantic Athletic Conference)
+years = [1993, 1994]
+records = [{'wins': 5, 'losses': 5, 'conference_wins': 4, 'conference_losses': 1}, 
+           {'wins': 2, 'losses': 8, 'conference_wins': 2, 'conference_losses': 5}]
+
+# 1. What is the win percentage in 1993? (independent, support=[1993 | Canisius | 5–5 | 4–1 | - | -])
+win_percentage_1993 = (records[0]['wins'] / (records[0]['wins'] + records[0]['losses'])) * 100
+
+# 2. What is the win percentage in 1994? (independent, support=[1994 | Canisius | 2–8 | 2–5 | - | -])
+win_percentage_1994 = (records[1]['wins'] / (records[1]['wins'] + records[1]['losses'])) * 100
+
+# 3. How did Barry Mynter's performance as head coach for Canisius Golden Griffins (Metro Atlantic Athletic Conference) change over time? (depends on 1 and 2, support=[])
+change_in_win_percentage = win_percentage_1994 - win_percentage_1993
+print(""The win percentage decreased by"", abs(change_in_win_percentage), ""percentage points from 1993 to 1994."")
+```
+
+The output will be:
+```
+The win percentage decreased by 34.5 percentage points from 1993 to 1994.
+```
+
+This answer shows how Barry Mynter's performance as head coach for Canisius Golden Griffins (Metro Atlantic Athletic Conference) changed over time, specifically the decrease in win percentage from 1993 to 1994.","In the 1993 season Canisius finished 5-5 overall with Barry Mynter as head coach, but in 1994 Canisius finished only 2-8 overall."

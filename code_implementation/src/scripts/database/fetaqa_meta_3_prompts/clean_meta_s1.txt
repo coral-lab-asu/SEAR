@@ -1,0 +1,102 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Context:
+The table shows the filmography of Aadarsh Balakrishna.
+
+Year | Title                | Role           | Director                | Notes
+---- | -------------------- | -------------- | -----------------------
+2007 | Happy Days           | Sanjay         | Sekhar Kammula          | Telugu Film
+2008 | Vinayakudu           | Ananth Naidu   | Sai Kiran Adivi         | Telugu Film
+2009 | Ride                 | Gaja           | Ramesh Varma            | Telugu Film
+2009 | Evaraina Epudaina    | Raja           | Marthand K Shankar      | Telugu Film
+2010 | Maro Charitra        | Maddy          | Ravi Yadav              | Telugu Film
+2010 | Maa Annayya Bangaram | -              | Jonnalagadda Srinivas   | Telugu Film
+2017 | PSV Garuda Vega      | -              | Praveen Sattaru         | Telugu Film
+2018 | Vijetha              | Kiran          | Rakesh Sashi            | Telugu Film
+2018 | Neevevaro            | Blind sculptor | Hari Nath               | Telugu Film
+
+Question:
+In what films did Aadarsh appear in 2008 and 2009 and who were the directors?
+
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text .
+Decomposition: Break down the question into sub-questions (identify films for each year separately, then retrieve directors).
+
+Example2:
+
+Context:
+### Final Results – Women's 400 Metres Hurdles  
+#### 1992 Summer Olympics  
+
+| Rank | Athlete                   | Country | Time  |
+|------|---------------------------|---------|-------|
+| 1    | Sally Gunnell             | GBR     | 53.23 |
+| 2    | Sandra Farmer-Patrick     | USA     | 53.69 |
+| 3    | Janeene Vickers           | USA     | 54.31 |
+| 4    | Tatyana Ledovskaya        | EUN     | 54.31 |
+| 5    | Vera Ordina               | EUN     | 54.83 |
+| 6    | Margarita Ponomaryova     | EUN     | 54.83 |
+| 7    | Deon Hemmings             | JAM     | 55.58 |
+| —    | Myrtle Bothma             | RSA     | DNF   |
+
+
+Question:
+Who received the silver and bronze medals for the women's 400 metres hurdles at the 1992 Summer Olympics?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text from the table.
+Decomposition: Break down the question into sub-questions (identify the silver medalist, then the bronze medalist).
+
+Example3:
+
+Context:
+### XYZ Corporation - Total Revenue and Net Profit  
+
+| Year | Total Revenue ($) | Net Profit ($) |
+|------|------------------|---------------|
+| 2017 | 500,000         | 50,000        |
+| 2018 | 550,000         | 55,000        |
+| 2019 | 600,000         | 60,000        |
+
+Question:
+What was the percentage change in total revenue from 2017 to 2018?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal of the question.
+Evidence Extraction: Extract relevant rows, columns, and text from the table.
+Python Code Generation: Opt to generate a script for calculating the percentage change in total revenue.
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, more context and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:

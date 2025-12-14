@@ -1,0 +1,34 @@
+index,table_id,question,response,answer
+0,totto_source/dev_json/example-2205.json,What TV shows was Shagun Sharma seen in 2019?,"Reasoning: To find the TV shows that Shagun Sharma was seen in during 2019, we need to look for rows in the table where the 'Year' column is equal to '2019'. In the provided table, there are two such rows. The first one is 'Laal Ishq' where Shagun Sharma played the role of 'Pernia'. The second one is 'Vikram Betaal Ki Rahasya Gatha' where she played both 'Rukmani' and 'Kashi' during 2019.
+
+Answer: [
+  ""Laal Ishq as Pernia"",
+  ""Vikram Betaal Ki Rahasya Gatha as Rukmani/Kashi""
+]","In 2019, Shagun Sharma played in the roles as Pernia in Laal Ishq, Vikram Betaal Ki Rahasya Gatha as Rukmani/Kashi and Shaadi Ke Siyape as Dua."
+1,totto_source/train_json/example-7854.json,What were the voting results of the 1975 North Vietnamese legislative election with regards to seats?,"Reasoning: To determine the voting results of the 1975 North Vietnamese legislative election with regards to seats, we need to look at the 'Seats' column values for the relevant parties. The table shows that the Vietnamese Fatherland Front won 100.0% of the votes and secured 424 out of 424 seats. The Invalid/blank votes do not have a specified number of seats associated with them.
+
+Answer: The Vietnamese Fatherland Front secured 100.0% of the seats (424 out of 424) in the 1975 North Vietnamese legislative election.","In the 1975 North Vietnamese legislative election, the Vietnamese Fatherland Front won all 424 seats."
+2,totto_source/dev_json/example-560.json,What roles did Christian Cooke play in 2009?,"Reasoning: To determine the roles Christian Cooke played in 2009, we need to look at the rows with the year 2009 and extract the 'Role' column values. The relevant rows are:
+2009 | Demons | Luke Rutherford-Van Helsing - 2009 | Trinity | Lord Dorian Gaudain
+Therefore, the roles Christian Cooke played in 2009 are Luke Rutherford-Van Helsing and Lord Dorian Gaudain.
+
+Answer: [""Luke Rutherford-Van Helsing"", ""Lord Dorian Gaudain""]","During 2009, Christian Cooke played the lead role of Luke Rutherford in Demons & Lord Dorian Gaudain in Trinity."
+0,totto_source/train_json/example-765.json,In what years was the member of the Legislative Assembly representing Chapra affiliated to the Communist Party of India?,"Reasoning: To determine the years when the member of the Legislative Assembly representing Chapra was affiliated to the Communist Party of India, we need to look at the rows where the Constituency is mentioned as Chapra and the Party Affiliation is the Communist Party of India. Based on the table, the relevant rows are: 1962: Chapra: Mohananda Haldar - Communist Party of India (Marxist). However, the Communist Party of India (Marxist) is a different party from the Communist Party of India. Therefore, based on the given table, the member of the Legislative Assembly representing Chapra was never affiliated to the Communist Party of India.
+
+Answer: The member of the Legislative Assembly representing Chapra was never affiliated to the Communist Party of India.",The Communist Party of India represented the Chapra constituency at the Legislative Assembly in 1971 and from 1977 to 2011.
+1,totto_source/train_json/example-13971.json,"When and in which clubs did Keita Isozaki first join the J1 and J2 Leagues, respectively?","Reasoning: To find out when and in which clubs Keita Isozaki first joined the J1 and J2 Leagues, we need to look for the earliest season he appeared in each league. According to the table, he first played in the J2 League in the year 2000 for Shonan Bellmare. He then made his debut in the J1 League in the year 2012 for Sagan Tosu.
+
+Answer: [""Keita Isozaki first joined the J2 League in 2000 for Shonan Bellmare, and he first joined the J1 League in 2012 for Sagan Tosu."" ]","In 1999, Keita Isozaki joined J1 League club Bellmare Hiratsuka, and he later joined J2 league as a member of Shonan Bellmare in 2000."
+2,totto_source/dev_json/example-1949.json,What did Rop achieve in 2002?,"Reasoning: To determine what Rodgers Rop achieved in 2002, we need to look at the rows with the year '2002' and extract the relevant information. There are two rows for 2002: one for the Boston Marathon and one for the New York City Marathon. The relevant details are:
+- Boston Marathon: 1st place
+- Time: 2:09:02
+- New York City Marathon: 1st place
+- Time: 2:08:07
+
+Answer: [""1st place at Boston Marathon with a time of 2:09:02"", ""1st place at New York City Marathon with a time of 2:08:07""]","In 2002, Rop won both the Boston Marathon and the New York Marathon."
+3,totto_source/train_json/example-13571.json,Who were the candidates in the 1910 Mid Glamorgan by-election and what was the majority number of votes?,"Reasoning: ""To determine the candidates in the 1910 Mid Glamorgan by-election and the majority number of votes, we need to look at the rows with the 'Party' column values set to 'Lib-Lab' and 'Labour'. The relevant rows are: Lib-Lab: Frederick William Gibbins, 8,920 votes - Labour: Vernon Hartshorn, 6,210 votes. The majority is calculated as the difference between the votes of the two candidates, which is 8,920 - 6,210 = 2,710. Therefore, the candidates in the 1910 Mid Glamorgan by-election were Frederick William Gibbins and Vernon Hartshorn, and the majority number of votes was 2,710.""
+
+Answer: ['Frederick William Gibbins', 'Vernon Hartshorn'], '2,710'","Gibbins held the seat for the Liberals with a majority of 2,710 against a Labour challenge from Vernon Hartshorn."
+4,totto_source/train_json/example-13739.json,"Who placed first and second, respectively, in the 2013 LPGA Championship and what were their scores?","Reasoning: To determine who placed first and second in the 2013 LPGA Championship and what their scores were, we need to look at the 'Place' column and find the players with the best scores. According to the table, Morgan Pressel of the United States placed first with a score of 138 (68-70=138, -6 under par). Chella Choi of South Korea and Inbee Park of South Korea are tied for second place with a score of 140 (67-73=140, -4 under par for Choi, and 72-68=140, -4 under par for Park).
+
+Answer: [""Morgan Pressel"", ""138 (68-70=138, -6 under par)""], [""Chella Choi"", ""140 (67-73=140, -4 under par)""], [""Inbee Park"", ""140 (72-68=140, -4 under par)""]",Pressel grabbed the lead with a 138 (−6) and Inbee Park tied for second place with Choi at 140 (−4).

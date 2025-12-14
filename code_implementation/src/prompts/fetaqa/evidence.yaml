@@ -1,0 +1,70 @@
+Evidence:
+  description: |
+    Your task is to answer the question based on the table. The 1st line of the table is a list of column headers.
+    The following lines are the rows, shown as list of cells of the table in that row.
+    First extract the relevant rows.
+    Then answer the question with evidence.
+    A few examples are given below along with the reasoning to arrive at the answer. Interpret them, then answer the question based on the table below the examples, and give evidence for your answer in the same format as the examples.
+    As there can be multiple answers, they are to be returned as a list, as shown in the examples.
+
+  examples:
+    - table: |
+        Table Title - Moon Jeong-hee's 
+        Table Subtitle - Awards and Nominations
+        Year | Award | Category | Nominated work | Result
+        2008 | SBS Drama Awards | Producer's Award | My Sweet Seoul, Daughter-in-Law | Won
+        2009 | Asia Latin Culture Festival | Lifetime Achievement Award | N/A | Won
+        2009 | KBS Drama Awards | Best Supporting Actress | Empress Cheonchu | Won
+        2011 | KBS Drama Awards | Best Supporting Actress | I Believe in Love, My One and Only | Nominated
+        2012 | 49th Grand Bell Awards | Best Supporting Actress | Deranged | Nominated
+        2012 | 33rd Blue Dragon Film Awards | Best Supporting Actress | Deranged | Won
+        2012 | 1st K-Drama Star Awards | Excellence Award, Actress | My One And Only | Nominated
+        2012 | KBS Drama Awards | Best Actress in a One-Act/Special Drama | Still Picture | Nominated
+        2013 | 49th Baeksang Arts Awards | Best Supporting Actress (Film) | Deranged | Nominated
+        2013 | 50th Grand Bell Awards | Best Actress | Hide and Seek | Nominated
+        2013 | 34th Blue Dragon Film Awards | Best Actress | Hide and Seek | Nominated
+        2014 | 50th Baeksang Arts Awards | Best Actress (Film) | Hide and Seek | Nominated
+        2014 | 3rd APAN Star Awards | Excellence Award, Actress in a Miniseries | Mama | Nominated
+        2014 | 22nd Korea Culture and Entertainment Awards | Top Excellence Award, Actress in a Film | Dad for Rent | Won
+        2014 | 34th Golden Cinema Festival | Special Jury Prize | Hide and Seek | Won
+        2014 | MBC Drama Awards | Top Excellence Award, Actress in a Special Project Drama | Mama | Nominated
+        2015 | 51st Baeksang Arts Awards | Best Actress (TV) | Mama | Nominated
+        2015 | 51st Baeksang Arts Awards | Best Supporting Actress (Film) | Cart | Nominated
+        2015 | 24th Buil Film Awards | Best Supporting Actress | Cart | Won
+        2015 | 36th Blue Dragon Film Awards | Best Supporting Actress | Cart | Nominated
+        2015 | MBC Drama Awards | Top Excellence Award, Actress in a Miniseries | Sweet, Savage Family | Nominated
+      question: What category and award did Moon Jeong-hee win for Deranged, and what year did she receive the honor?
+      evidence: |
+        The relevant row contains information about Moon Jeong-hee's win for Deranged:
+        Year | Award | Category | Nominated work | Result
+        2012 | 33rd Blue Dragon Film Awards | Best Supporting Actress | Deranged | Won
+      answer: |
+        In 2012, Moon Jeong-hee won Best Supporting Actress at the Blue Dragon Film Awards for Deranged.
+
+    - table: |
+        Table Title - Martina Steuk's Achievements
+        Table Subtitle - Achievements in various competitions
+        Year | Competition | Venue | Position | Event | Notes
+        1977 | European Junior Championships | Donetsk, Soviet Union | 1st | 800 m | 2:01.7
+        1980 | Olympic Games | Moscow, Soviet Union | 4th | 800 m | 1:56.3
+        1981 | European Cup | Zagreb, Yugoslavia | 1st | 800 m | 1:57.16
+        1981 | World Cup | Rome, Italy | 2nd | 800 m | 1:58.31
+        1981 | World Cup | Rome, Italy | 1st | 4 × 400 m relay | 3:20.62
+        1982 | European Indoor Championships | Milan, Italy | 2nd | 800 m | 2:01.07
+      question: What did Martina Steuk win at the 1981 European Cup and at the 1981 World Cup?
+      evidence: |
+        The relevant rows contain information about Martina Steuk's achievements in 1981:
+        Year | Competition | Venue | Position | Event | Notes
+        1981 | European Cup | Zagreb, Yugoslavia | 1st | 800 m | 1:57.16
+        1981 | World Cup | Rome, Italy | 2nd | 800 m | 1:58.31
+        1981 | World Cup | Rome, Italy | 1st | 4 × 400 m relay | 3:20.62
+      answer: |
+        In 1981, Martina Steuk won at the 1981 European Cup, and at the 1981 World Cup she won an 800 m silver and a gold in the 4 × 400 m relay.
+
+  prompt: |
+    Your task:
+    For the following table & question give the evidence and the answer.
+    Table -
+    {context}
+    Question - {question}
+    

@@ -1,0 +1,85 @@
+## **C.L.E.A.R.** 
+
+**High‑level goal**  
+ Answer the question by moving through the five ordered phases **Comprehend → Locate → Examine → Analyze → Resolve**, grounding every claim in the evidence rows of the table.
+
+### **1  Problem Input**
+
+Table:  
+{table}
+
+\[If extra textual context exists, paste it here; otherwise write “No additional context.”\]
+
+Question:  
+{question}
+
+### **2  C.L.E.A.R. Workflow Specification**
+
+| Phase | What you must do | Mandatory output tokens |
+| ----- | ----- | ----- |
+| **Comprehend** | Re‑state the task in your own words. Identify the exact temporal relations (e.g., “during 2019”, “before 20 years old”, “first‑then‑last”) required. | `Comprehend:` |
+| **Locate** | Extract **all** table rows and columns potentially relevant to the temporal constraints. Quote them verbatim; do *not* transform yet. | `Locate:` |
+| **Examine** | Break the original question into minimal sub‑questions that can each be solved with simple operations (filter, min/max, difference, count, etc.). List them in numbered order. | `Examine:` |
+| **Analyze** | Solve every sub‑question, showing arithmetic or logical steps. Reference the row snippets you located. | `Analyze:` |
+| **Resolve** | Synthesize a single, concise answer that directly addresses the question. End with a one‑sentence justification citing the key evidence. **Prepend** the line with `Final Answer:` exactly. | `Resolve:` \+ `Final Answer:` |
+
+**Formatting rules**
+
+* Begin each phase on a new line with the required token (e.g., `Locate:`).
+
+* Inside *Locate* and *Analyze*, quote rows in the compact form `Year | Col2 | …` so another agent can reproduce your steps.
+
+* Show any arithmetic in plain text (e.g., `60 − 20 − 15 = 25`).
+
+* **Do not** jump back to earlier phases once you move forward.
+
+### **3  Scoring & Termination (internal)**
+
+* Assign yourself a confidence score (0‑100) after **Resolve** — do **not** print it.
+
+* Stop immediately when *Resolve* is complete.
+
+### **4  Helpful Temporal Tips (concise)**
+
+1. Expand ranges like “2017–18” into separate years when filtering.
+
+2. Treat missing years as `null`; explain if you interpolate or ignore them.
+
+3. Maintain original year order when listing multiple answers.
+
+4. Use difference in *whole* years unless the table provides exact dates.
+
+### **5  Illustrative Mini‑Example *(optional – delete for production)***
+
+Table  
+Year | Title | Channel  
+2017–18 | Tu Aashiqui | Colors TV  
+2019 | Laal Ishq | \&TV  
+2019 | Vikram Betaal Ki Rahasya Gatha | \&TV
+
+Question  
+What TV shows was Shagun Sharma seen in 2019?  
+\-----------  
+Comprehend: Need titles where Year includes 2019\.  
+Locate: \[2019 | Laal Ishq | \&TV\], \[2019 | Vikram Betaal Ki Rahasya Gatha | \&TV\]  
+Examine: 1\) List every Title with Year \= 2019\.  
+Analyze: Titles found → Laal Ishq; Vikram Betaal Ki Rahasya Gatha.  
+Resolve:  
+Final Answer: Laal Ishq; Vikram Betaal Ki Rahasya Gatha (both aired in 2019\)
+
+*(Remove Section 5 before large‑scale inference to save tokens.)*
+
+### **6  Begin C.L.E.A.R. reasoning now**
+
+*(Leave this block unchanged in your template file – just paste the live table and question where indicated.)*  
+Table:  
+{table}
+
+\[If extra textual context exists, paste it here; otherwise write “No additional context.”\]
+
+Question:  
+{question}
+
+---
+
+--End--

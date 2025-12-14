@@ -1,0 +1,66 @@
+index,table_id,question,response,answer
+0,Table_511,what was the percentage change in the earnings from service operations increased from 2000 to 2001,"Here is the answer and reasoning:
+
+**Reason**: To find the percentage change in earnings from service operations from 2000 to 2001, we need to calculate the difference in earnings and then divide it by the starting earnings, multiplying by 100%. According to the text, earnings from service operations increased from $32.8 million in 2000 to $35.1 million in 2001. 
+
+**Calculation**: Percentage change = ((35.1 - 32.8) / 32.8) * 100% = 7.26%
+
+**Answer**: 7.26%",7%
+1,Table_394,what is the net income margin in the q1 of 2014?,"Here is the answer with reasoning:
+
+Reason: 'To find the net income margin in Q1 of 2014, we need to divide the net earnings (loss) by the sales and service revenues. 
+Net income margin = Net earnings (loss) ÷ Sales and service revenues 
+Net income margin = $90 ÷ $1594 
+Net income margin = 0.056 or 5.6%'
+
+Answer: 5.6%",5.6%
+2,Table_825,what portion of the total contingent acquisition payments is due in the next 12 months?,"Here is the answer with reasoning:
+
+Reason: To find the portion of the total contingent acquisition payments due in the next 12 months, we look at the column ""2018"" in the table, which represents the payments due in the next year. The total contingent acquisition payments due in 2018 are $79.0. To find the portion, we divide this value by the total contingent acquisition payments ($268.4) and multiply by 100%.
+
+Answer: 29.5%",29.4%
+3,Table_802,in 2016 what was the ratio of the us to the international qualified and non-qualified pension benefits,"Here is the answer with reasoning:
+
+Reason: To find the ratio of the US to the international qualified and non-qualified pension benefits in 2016, we compare their respective benefit payments: US: $987, International: $205. The ratio is calculated as: Ratio = US / International = 987 / 205 = 4.81.
+
+Answer: 4.81",4.8
+4,Table_846,at what price per share did awk repurchase its shares of common stock in 2017?,"Here is the answer and reasoning:
+
+**Reason**: The question asks about the price per share at which AWK repurchased its shares of common stock in 2017, but the provided context does not contain any information about share repurchases or prices per share. The context only discusses intangible asset amortization expense for the years ended December 31, 2018, 2017, and 2016, and estimated amortization expense for the next five years subsequent to December 31, 2018.
+
+**Answer**: Not possible to determine",77.1
+0,Table_351,what is the net change in the balance of employee separations liability during 2004?,"Here is the answer with reasoning:
+
+reason: To find the net change in the balance of employee separations liability during 2004, we need to subtract the ending balance from the starting balance and also consider the cash payments made. The starting balance is $2239, and the ending balance is $665. The cash payments made are $2397. Therefore, the net change is calculated as: Net Change = Ending Balance - Starting Balance + Cash Payments = $665 - $2239 + $2397 = -$877.
+
+answer: -$877",-1574
+1,Table_488,"for 2008 across the three categories , what were the average mount of liabilities in millions?","Here is the answer with reasoning:
+
+Reason: To find the average amount of liabilities in millions for 2008 across the three categories, we need to add up the liabilities for each category and divide by 3. The liabilities for each category are: Credit Card: $1824, Automobile: $250, and Mortgage: $319. Adding these up, we get: $1824 + $250 + $319 = $2393. Dividing by 3, we get: $2393 ÷ 3 = $797.67.
+
+Answer: 798",797.7
+2,Table_90,what was the total after-tax gains in millions for the sale so mastercard shares from 2006 to 2007?,"Here is the answer with reasoning:
+
+reason: 'The total after-tax gain for the sale of Mastercard shares is given in the table as $367 million. This is the after-tax total for 2007. There is no mention of any after-tax gain for 2006, so we cannot calculate a change from 2006 to 2007. The answer is simply the given value of $367 million.'
+
+answer: '$367 million'",445
+3,Table_938,what was the percentage net change in the accrued liability for unrecognized tax benefits from 2007 to 2008?,"Here is the answer with reasoning:
+
+**Reason**: To find the percentage net change in the accrued liability for unrecognized tax benefits from 2007 to 2008, we need to calculate the net change and then divide it by the starting value, multiplying by 100%. The net change is the difference between the balance at December 31, 2008 ($99) and the balance at December 31, 2007 ($110). The net change is -$11 (-$99 - $110). The percentage net change is then calculated as (-$11 / $110) * 100% ≈ -10%.
+
+**Answer**: -10%",-10%
+4,Table_679,what was the cumulative total stockholder return percentage for illumina inc . common stock for the four years end 2003?,"Here is the answer and reasoning:
+
+**Reasoning:** To find the cumulative total stockholder return percentage for Illumina Inc. common stock for the four years ending 2003, we need to find the percentage change from the initial investment value of $100 to the final value of $43.81.
+
+The percentage return is calculated as: ((Final Value - Initial Value) / Initial Value) * 100%
+
+In this case, the final value is $43.81, and the initial value is $100.00.
+
+So, the percentage return is: (($43.81 - $100.00) / $100.00) * 100% = -56.19%
+
+However, since the question asks for the cumulative total stockholder return percentage, we need to add 100% to the percentage return to get the cumulative total stockholder return percentage.
+
+Cumulative total stockholder return percentage = -56.19% + 100% = 43.81%
+
+**Answer:** 43.81%",-56.19%

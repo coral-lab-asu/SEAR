@@ -1,0 +1,95 @@
+index,table_id,question,response,answer
+0,totto_source/dev_json/example-2205.json,What TV shows was Shagun Sharma seen in 2019?,"Here is the Python code to answer the question:
+```python
+# 1. Initialize an empty list to store the TV shows in 2019 (independent, support=[])
+tv_shows_2019 = []
+
+# 2. Loop through each row in the table (independent, support=[Table Title - Shagun Sharma, Table Subtitle - Television, Year | Title | Role | Channel])
+for row in table:
+    # 3. Get the year from the row (depends on 2, support=[])
+    year = row[0]
+    
+    # 4. Check if the year is 2019 (depends on 3, support=[])
+    if year == 2019:
+        # 5. Get the title from the row (depends on 4, support=[])
+        title = row[1]
+        # 6. Append the title to the list of TV shows in 2019 (depends on 5, support=[])
+        tv_shows_2019.append(title)
+
+# 7. Print the list of TV shows in 2019 (dependent on 6, support=[])
+print(tv_shows_2019)
+```
+Explanation:
+
+1. Initialize an empty list to store the TV shows in 2019.
+2. Loop through each row in the table.
+3. Get the year from the row.
+4. Check if the year is 2019.
+5. If the year is 2019, get the title from the row.
+6. Append the title to the list of TV shows in 2019.
+7. Print the list of TV shows in 2019.
+
+The expected output of this code is:
+```css
+['Laal Ishq', 'Vikram Betaal Ki Rahasya Gatha', 'Shaadi Ke Siyape']
+```
+Note: The above code assumes that `table` is a list of lists representing the rows of the table, where each inner list contains the values of the columns for that row in the following order: Year, Title, Role, Channel. If the input data is in a different format, the code may need to be adapted accordingly.","In 2019, Shagun Sharma played in the roles as Pernia in Laal Ishq, Vikram Betaal Ki Rahasya Gatha as Rukmani/Kashi and Shaadi Ke Siyape as Dua."
+1,totto_source/train_json/example-7854.json,What were the voting results of the 1975 North Vietnamese legislative election with regards to seats?,"Here is the Python code to answer the question:
+
+```python
+# 1. How many seats did the Vietnamese Fatherland Front win? (independent, support=[Party | Votes | % | Seats])
+vff_seats = 424  # integer
+
+# 2. What was the total number of seats? (support=[Party | Votes | % | Seats])
+total_seats = 424  # integer
+
+# 3. What percentage of the seats did the Vietnamese Fatherland Front win? (dependent on 1 and 2, support=[Party | Votes | % | Seats])
+vff_seat_percentage = (vff_seats / total_seats) * 100
+
+# 4. What was the total number of votes? (independent, support=[Party | Votes | % | Seats])
+total_votes = 10667121  # integer
+
+# 5. What was the number of votes for the Vietnamese Fatherland Front? (independent, support=[Party | Votes | % | Seats])
+vff_votes = 10561314  # integer
+
+# 6. What was the percentage of the votes for the Vietnamese Fatherland Front? (dependent on 4 and 5, support=[Party | Votes | % | Seats])
+vff_vote_percentage = (vff_votes / total_votes) * 100
+
+# 7. Print out the results.
+print(""The Vietnamese Fatherland Front won"", vff_seats, ""seats, which is"", round(vff_seat_percentage, 1), ""percent of the total seats available. They received"", vff_votes, ""votes, which is"", round(vff_vote_percentage, 1), ""percent of the total votes."")
+```
+
+The output will be:
+
+The Vietnamese Fatherland Front won 424 seats, which is 100.0 percent of the total seats available. They received 10561314 votes, which is 98.9 percent of the total votes.
+
+The code first calculates the number of seats and votes won by the Vietnamese Fatherland Front and the total number of seats and votes. It then calculates the percentage of seats and votes won by the Vietnamese Fatherland Front. The results are then printed out in a readable format.","In the 1975 North Vietnamese legislative election, the Vietnamese Fatherland Front won all 424 seats."
+2,totto_source/dev_json/example-560.json,What roles did Christian Cooke play in 2009?,"Here is the Python code to answer the question:
+```python
+# Question: What roles did Christian Cooke play in 2009?
+
+# 1. Initialize an empty list to store the roles played in 2009 (independent, support=[])
+roles_in_2009 = []
+
+# 2. Loop through each row in the table (support=[Table Title - Christian Cooke, Table Subtitle - Television, Title | Year | Role | Notes])
+for row in table:
+    # 2.1. Extract the year from the row (support=[Year])
+    year = row[""Year""]
+    
+    # 2.2. Check if the year is 2009 (support=[Year])
+    if year == 2009:
+        # 2.2.1. Extract the role from the row (support=[Role])
+        role = row[""Role""]
+        
+        # 2.2.2. Add the role to the list of roles in 2009 (depends on 2.2.1, support=[])
+        roles_in_2009.append(role)
+
+# 3. Print the list of roles in 2009 (depends on 1 and 2, support=[])
+print(roles_in_2009)
+#DONE
+```
+In this code, we first initialize an empty list called `roles_in_2009` to store the roles that Christian Cooke played in 2009. Then, we loop through each row in the table. For each row, we extract the year and check if it is 2009. If it is, we extract the role from that row and add it to the `roles_in_2009` list. Finally, we print the list of roles in 2009.
+
+Note that we used the `table` variable to store the table, which is not defined in the code. You should replace it with the actual table data structure.
+
+Also, note that we assumed that the `table` data structure has a dictionary-like interface that allows you to extract the values for the ""Year"" and ""Role"" columns by using the column names as keys (i.e., `row[""Year""]` and `row[""Role""]`). You may need to adjust the code depending on the actual data structure of your table.","During 2009, Christian Cooke played the lead role of Luke Rutherford in Demons & Lord Dorian Gaudain in Trinity."

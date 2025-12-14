@@ -1,0 +1,104 @@
+prompt: |
+  Your task is to answer the questions based on the context given. The context is a table where the 1st line is the header and the following lines are the rows.
+  If there is a row such as 'Career Total' or similar that summarizes column values, treat it as a separate sub-table and do not confuse it with the main data rows.
+  Examine such tables carefully to avoid errors in answering.
+  Break the question into subquestions, and answer each subquestion along with supporting reasoning, then give the final answer.
+  Only refer to the table given in the prompt while answering the question.
+  A few examples are shown below. The answer should not be a whole sentence, just give the figures and units if needed.
+
+  Examples:
+
+  Exampl1:
+  Table: 
+    Table Title - Mile Record Progression
+    Table Subtitle - List of athletes and their record-breaking mile times
+    Time | Athlete | Date | Place
+    3:55.8 | Abel Kiviat (USA) | 1912-06-08 | Cambridge, Massachusetts, United States
+    3:54.7 | John Zander (SWE) | 1917-08-05 | Stockholm, Sweden
+    3:52.6 | Paavo Nurmi (FIN) | 1924-06-19 | Helsinki, Finland
+    3:51.0 | Otto Peltzer (GER) | 1926-09-11 | Berlin, Germany
+    3:49.2 | Jules Ladoumegue (FRA) | 1930-10-05 | Paris, France
+    3:49.2 | Luigi Beccali (ITA) | 1933-09-09 | Turin, Italy
+    3:49.0 | Luigi Beccali (ITA) | 1933-09-17 | Milan, Italy
+    3:48.8 | Bill Bonthron (USA) | 1934-06-30 | Milwaukee, United States
+    3:47.8 | Jack Lovelock (NZL) | 1936-08-06 | Berlin, Germany
+    3:47.6 | Gunder Hägg (SWE) | 1941-08-10 | Stockholm, Sweden
+    3:45.8 | Gunder Hägg (SWE) | 1942-07-17 | Stockholm, Sweden
+    3:45.0 | Arne Andersson (SWE) | 1943-08-17 | Gothenburg, Sweden
+    3:43.0 | Gunder Hägg (SWE) | 1944-07-07 | Gothenburg, Sweden
+    3:43.0 | Lennart Strand (SWE) | 1947-07-15 | Malmö, Sweden
+    3:43.0 | Werner Lueg (FRG) | 1952-06-29 | Berlin, Germany
+    3:42.8+ | Wes Santee (USA) | 1954-06-04 | Compton, United States
+    3:41.8+ | John Landy (AUS) | 1954-06-21 | Turku, Finland
+    3:40.8 | Sándor Iharos (HUN) | 1955-07-28 | Helsinki, Finland
+    3:40.8 | László Tábori (HUN) | 1955-09-06 | Oslo, Norway
+    3:40.8 | Gunnar Nielsen (DEN) | 1955-09-06 | Oslo, Norway
+  
+  More context:
+    Paavo Nurmi (FIN) was a Finnish long-distance runner, known as the "Flying Finn," who set 22 official world records.
+    Gunder Hägg (SWE) was a Swedish runner who set multiple world records in the 1940s.
+    Otto Peltzer (GER) was a German middle-distance runner who set world records in the 1920s.
+    John Landy (AUS) was an Australian middle-distance runner and the second man to break the four-minute mile barrier.
+    Luigi Beccali (ITA) was the first Italian to win an Olympic gold medal in running.
+  
+  Question: Which athlete set the mile record on 1954-06-21, and where is he from?
+  
+  Decomposition:
+    sq1. Identify the row with the date '1954-06-21'. (independent)
+    sq2. Extract the athlete's name from the identified row. (depends on sq1)
+    sq3. Extract the athlete's country from the identified row. (depends on sq1)
+    sq4. Combine the athlete's name and country into a final answer. (depends on sq2, sq3)
+  
+  Answers:
+    Answer to sq1: The relevant row is:
+      3:41.8+ | John Landy (AUS) | 1954-06-21 | Turku, Finland
+    Answer to sq2: John Landy
+    Answer to sq3: Australia
+    Answer to sq4: John Landy, Australia
+  
+  Final Answer: John Landy, Australia
+
+  Example 2:
+  Table:
+    No | Player | Position | Career | Date honored
+    7 | Keith Tkachuk | C | 1992-2001 | December 23, 2011
+    9 | Bobby Hull | LW | 1972-1980 | February 19, 1989
+    10 | Dale Hawerchuk | C | 1981-1990 | April 5, 2007
+    19 | Shane Doan | RW | 1996-2017 | February 24, 2019
+    25 | Thomas Steen | RW | 1981-1995 | May 6, 1995
+    27 | Teppo Numminen | D | 1988-2003 | January 30, 2010
+    97 | Jeremy Roenick | C | 1996-2001, 2006-2007 | February 9, 2012
+    99 | Wayne Gretzky | C | - | October 8, 2005
+  
+  More context:
+    Keith Tkachuk (USA) is an American former professional ice hockey player who played in the NHL in an 18-year career with the Winnipeg Jets, Phoenix Coyotes, St. Louis Blues, and Atlanta Thrashers, retiring in 2010.
+    Bobby Hull (CAN) is a Canadian former ice hockey player who is regarded as one of the greatest players of all time.
+    Shane Doan (CAN) is a Canadian former professional ice hockey forward who spent the entirety of his NHL career with the Winnipeg Jets/Arizona Coyotes franchise.
+    Wayne Gretzky (CAN) is a Canadian former professional ice hockey player and former head coach, known as "The Great One."
+  
+  Question: Arizona Coyotes player number 19 played in how many NHL seasons?
+  
+  Decomposition:
+    sq1. Identify the row with player number 19. (independent)
+    sq2. Extract the 'Career' column from the identified row. (depends on sq1)
+    sq3. Calculate the total number of NHL seasons from the 'Career' column. (depends on sq2)
+    sq4. Provide the total number of NHL seasons as the final answer. (depends on sq3)
+  
+  Answers:
+    Answer to sq1: The relevant row is:
+      19 | Shane Doan | RW | 1996-2017 | February 24, 2019
+    Answer to sq2: 1996-2017
+    Answer to sq3: 21 seasons
+    Answer to sq4: 21
+  
+  Final Answer: 21
+
+  Your task:
+  For the following table & question give the decomposition, answers, and the final answer.
+  Table:
+  {context}
+
+  Question:
+  {question}
+  
+  Decomposition:

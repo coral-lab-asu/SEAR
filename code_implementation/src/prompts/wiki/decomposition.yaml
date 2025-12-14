@@ -1,0 +1,98 @@
+prompt: |
+ Your task is to answer the question based on the provided Table. The tabular data is structured with the columns separated by pipes '|', first line denotes the header of the table with subsequent line describing the rows. 
+
+ First understand the table, then decompose the question into relevant subquestions. Individually answer each subquestion with reasoning and its dependencies. Then provide the final answer in the following format Final Answer : "Answer".
+ If the answer is numerical then provide a answer in decimal format.
+ Else provide the answer in simple string format.
+
+ Few examples are given below with subquestions and reasoning to arrive at the final answer, each example has its own table and question. Interpret them and follow the reasoning approach to answer the final question.
+ 
+ Examples:
+
+ Example 1:
+ Table : 
+ Year | Division | League | Regular Season | Playoffs | Open Cup
+ 2006 | 4 | USL PDL | 5th |  Northwest | Did not qualify | Did not qualify
+ 2007 | 4 | USL PDL | 2nd |  Northwest | Conference Semifinals | Did not qualify
+ 2008 | 4 | USL PDL | 1st |  Northwest | Conference Finals | Did not qualify
+ 2009 | 4 | USL PDL | 7th |  Northwest | Did not qualify | Did not qualify
+ 2010 | 4 | USL PDL | 3rd |  Northwest | Did not qualify | Did not qualify
+ 2011 | 4 | USL PDL | 8th |  Northwest | Did not qualify | Did not qualify
+ 2012 | 4 | USL PDL | 1st |  Northwest | Semifinals | Did not qualify
+ 2013 | 4 | USL PDL | 4th |  Northwest | Did not qualify | 2nd Round
+
+ Question : how many consecutive years did the seattle sounders not qualify for the open cup?
+ 
+ Subquestions : 
+ subquestion1 : Identify the Open Cup qualification for each year. (independent)
+ subquestion2 : Determine consecutive years without Open Cup qualification. (depends on subquestion1)
+ subquestion3 : Count the number of cosecutive years. (depends on subquestion2)
+
+ Now, lets answer each subquestions:
+ subquestion1: Identify the Open Cup qualification for each year.
+ Answer1: To determine the qualification for Open Cup for each year, we need to look at the "Open Cup" column. Qualification for each years are as follows:
+ years | Open Cup qualification
+ 2006 | Did not qualify
+ 2007 | Did not qualify
+ 2008 | Did not qualify
+ 2009 | Did not qualify
+ 2010 | Did not qualify
+ 2011 | Did not qualify
+ 2012 | Did not qualify
+ 2013 | 2nd Round
+
+ subquestion2: Determine consecutive years without Open Cup qualification.
+ Answer2: Years without Open Cup qualification are marked with "Did not qualify". Consecutive years for which Seattle Sounders did not qualify are 2006, 2007, 2008, 2009, 2010, 2011, 2012. 
+
+ subquestion3: Count the number of cosecutive years.
+ Answer: There are 7 consecutive years from 2006 to 2012, where the Seattle Sounder did not qualify for the Open Cup.
+
+ Final Answer: 7
+
+ Example 2:
+ Table : 
+ Model            | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+ Škoda Octavia    | 233322 | 270274 | 309951 | 344857 | 317335 | 349746 | 387200 | 409360 | 359600 |
+ Škoda Fabia      | 236698 | 243982 | 232890 | 246561 | 264173 | 229045 | 266800 | 255025 | 202000 |
+ Škoda Superb     | 22091  | 20989  | 20530  | 25645  | 44548  | 98873  | 116700 | 106847 | 94400  |
+ Škoda Roomster   |       | 14422  | 66661  | 57467  | 47152  | 32332  | 36000  | 39249  | 33300  |
+ Škoda Yeti       |       |       |       |       | 11018  | 52604  | 70300  | 90952  | 82400  |
+ Škoda Rapid      |       |       |       |       |       |       | 1700   | 9292   | 103800 |
+ Škoda Citigo     |       |       |       |       |       |       | 509    | 36687  | 45200  |
+
+ Question : How many Skoda cars were sold in year 2010?
+
+ Subquestions:
+ subquestion1: Identify the sales figure for each Skoda model in 2010. (independent)
+ subquestion2: Calculate the total number of Skoda cars sold in 2010. (depends on subquestion1)
+
+ Now, lets answer each subquestions.
+
+ subquestion1: Identify the sales figure for each Skoda model in 2010.
+ Answer1: For finding the sales figure for each Skoda model in year 2010, we need to look at the column "2010". Here are the sales figure for each model in 2010:
+ year | sales
+ Skoda Octavia | 349746
+ Skoda Fabia | 229045
+ Skoda Superb | 98873
+ Skoda Roomster | 32332
+ Skoda Yeti | 52604
+ Skoda Rapid | 0 (no sales data available)
+ Skoda Citigo | 0 (no sales data available)
+
+ subquestion2: Calculate the total number of Skoda cars sold in 2010.
+ Answer2: For calulating the total number of Skoda cars, we need to sum up the sales figure for all models.
+
+ Calculation:
+ Total = 349746 + 229045 + 98873 + 32332 + 52604 + 0 + 0 = 762,600
+
+ Final Answer : 762600
+
+ Your task : 
+ For the following question and table provide the subquestions and the final answer.
+
+ Table : 
+ {context}
+
+ Question : {question}
+ 
+ Subquestions: 

@@ -1,0 +1,123 @@
+You are responsible for delivering precise answers by strictly following the provided detailed steps. Each answer must be carefully reasoned, supported by clear explanations, and based on thorough analysis of the given table, text, and question.
+
+Few examples are given below. Interpret the examples and understand the task to answer the tabular question according to the specific table, text, question by following the detailed steps to answer efficiently.
+
+Examples:
+
+Example1:
+Table: 
+20. DIVIDENDS
+A regular dividend of 3 cents per share has been declared. This final dividend of 3 cents per share, partially franked to 2.6 cents per share, was announced to the market on 23 August 2019. The amount declared has not been recognised as a liability in the accounts of Hansen Technologies Ltd as at 30 June 2019.
+1. The final dividend paid of 4 cents per share, franked to 4 cents, comprised of an ordinary dividend of 3 cents per share, together with a special dividend of 1 cent per share.
+The above available amounts are based on the balance of the dividend franking account at year end adjusted for: • franking credits that will arise from the payment of any current tax liability; • franking debits that will arise from the payment of any dividends recognised as a liability at year end; • franking credits that will arise from the receipt of any dividends recognised as receivables at year end; and • franking credits that the entity may be prevented from distributing in subsequent years.
+
+| | 2019 | 2018 |
+| | $’000 | $’000 |
+| Dividends paid during the year (net of dividend re-investment) | | |
+| 4 cent per share final dividend paid 27 September 2018 – fully franked1 | 7,319 | |
+| 3 cent per share final dividend paid 30 September 2017 – fully franked | | 5,175 |
+| 3 cent per share interim dividend paid 29 March 2019 – fully franked | 5,318 | |
+| 3 cent per share interim dividend paid 29 March 2018 – fully franked | | 5,217 |
+| | 12,637 | 10,392 |
+| Proposed dividend not recognised at the end of the year | 5,922 | 7,865 |
+| Dividends franking account | | |
+| 30% franking credits, on a tax paid basis, are available to shareholders of Hansen Technologies Ltd for subsequent financial years | 1,586 | 3,125 |
+
+Question: What was the percentage change in franking credits between 2018 and 2019?
+
+Detailed Steps:
+Identify Objective: Determine the percentage change in franking credits between 2018 and 2019.  
+Evidence Extraction:  
+- Extract the franking credits for 2018: **$3,125,000**.  
+- Extract the franking credits for 2019: **$1,586,000**.  
+Step-by-Step Reasoning:  
+- Compute the percentage change using the formula:  
+   ```yaml
+   Percentage Change = ((New Value - Old Value) / Old Value) * 100
+   ```
+- Substitute the extracted values into the formula.  
+- Interpret the result to determine if the franking credits increased or decreased.  
+Python Code Generation:  
+Generate a Python script to:  
+- Extract values for franking credits in 2018 and 2019.  
+- Compute the percentage change using the formula.  
+- Output the computed percentage change.
+
+Answer && Reasoning:
+Identify Objective  
+The goal is to determine the percentage change in franking credits between 2018 and 2019.  
+Evidence Extraction  
+From the provided table:  
+Franking credits in 2018 = $3,125,000  
+Franking credits in 2019 = $1,586,000  
+These values represent the 30% franking credits on a tax-paid basis available to shareholders.  
+Python Code Generation  
+We confirm the computation using Python:  
+```python
+# Given values for franking credits in 2018 and 2019
+franking_credits_2018 = 3125  # in $'000
+franking_credits_2019 = 1586  # in $'000
+
+# Compute the percentage change using the formula:
+# Percentage Change = ((New Value - Old Value) / Old Value) * 100
+percentage_change = ((franking_credits_2019 - franking_credits_2018) / franking_credits_2018) * 100
+
+# Display the final answer
+print(f"Final Answer: {percentage_change:.2f}%")
+```
+Final Answer  
+The franking credits decreased by 49.25% from 2018 to 2019.
+
+Example2:
+Table:
+Uncertain Tax Positions
+As of fiscal year end 2019, we had total unrecognized income tax benefits of $542 million. If recognized in future years, $397 million of these currently unrecognized income tax benefits would impact income tax expense (benefit) and the effective tax rate. As of fiscal year end 2018, we had total unrecognized income tax benefits of $566 million. If recognized in future years, $467 million of these currently unrecognized income tax benefits would impact income tax expense (benefit) and the effective tax rate. The following table summarizes the activity related to unrecognized income tax benefits:
+We record accrued interest and penalties related to uncertain tax positions as part of income tax expense (benefit). As of fiscal year end 2019 and 2018, we had $42 million and $60 million, respectively, of accrued interest and penalties related to uncertain tax positions on the Consolidated Balance Sheets, recorded primarily in income taxes. During fiscal 2019, 2018, and 2017, we recognized income tax benefits of $14 million, expense of $5 million, and benefits of $5 million, respectively, related to interest and penalties on the Consolidated Statements of Operations.
+We file income tax returns on a unitary, consolidated, or stand-alone basis in multiple state and local jurisdictions, which generally have statutes of limitations ranging from 3 to 4 years. Various state and local income tax returns are currently in the process of examination or administrative appeal.
+Our non-U.S. subsidiaries file income tax returns in the countries in which they have operations. Generally, these countries have statutes of limitations ranging from 3 to 10 years. Various non-U.S. subsidiary income tax returns are currently in the process of examination by taxing authorities.
+
+
+| | | Fiscal | |
+| | 2019 | 2018 | 2017 |
+| | | (in millions) | |
+| Balance at beginning of fiscal year | $ 566 | $ 501 | $ 490 |
+| Additions related to prior years tax positions | 13 | 14 | 40 |
+| Reductions related to prior years tax positions | (101) | (11) | (9) |
+| Additions related to current year tax positions | 98 | 105 | 70 |
+| Settlements | (2) | (7) | (4) |
+| Reductions due to lapse of applicable statute of limitations | (32) | (36) | (86) |
+| Balance at end of fiscal year | $ 542 | $ 566 | $ 501 |
+
+
+Question: In which years are the total unrecognized income tax benefits calculated for?
+
+Detailed Steps:
+Identify Objective:  
+Determine the years for which total unrecognized income tax benefits are calculated.  
+Evidence Extraction:  
+Extract the relevant years mentioned in the table, which lists unrecognized income tax benefits for **2017, 2018, and 2019**.  
+Confirm the values under the **Balance at beginning of fiscal year** and **Balance at end of fiscal year** rows to verify these calculations span across multiple years.  
+Direct Answer Path:  
+Use the extracted values to confirm that total unrecognized income tax benefits are calculated for **fiscal years 2017, 2018, and 2019**.
+
+Answer && Reasoning:
+Identify Objective  
+Determine the years for which total unrecognized income tax benefits are calculated.  
+Evidence Extraction  
+From the provided table, unrecognized income tax benefits are recorded for 2017, 2018, and 2019. These years are explicitly mentioned in the **Balance at beginning of fiscal year** and **Balance at end of fiscal year** rows, confirming that calculations span these three fiscal years.  
+Direct Answer Path  
+By reviewing the table and ensuring that the unrecognized income tax benefits are recorded in each of these years, we can conclude that the calculations are based on the fiscal years 2017, 2018, and 2019.  
+Final Answer  
+2017, 2018, and 2019.
+
+Your Task:
+Answer the question based on provided tables and text (if available) by following the given detailed steps. Conclude with a final answer, in case of multiple answers, return a list of answers.
+
+Table:
+{table}
+
+Question: {question}
+
+{detailed_steps}
+
+Answer && Reasoning:

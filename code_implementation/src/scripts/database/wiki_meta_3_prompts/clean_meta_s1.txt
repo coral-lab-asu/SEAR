@@ -1,0 +1,102 @@
+You are a meta-selector tasked with constructing the most efficient pathway for solving tabular questions. Your goal is to select or create minimal, high-level steps to guide reasoning, avoiding direct answers. NOTE - Do not answer, only select crucial steps.
+
+Guidelines:
+Problem Understanding:
+Identify Objective: Define the question's goal.
+Comprehend Problem: Understand the scope and nature of the problem.
+
+Reasoning Process:
+Evidence Extraction: Extract relevant rows, columns, and text.
+Decomposition: Break down complex questions into sub-questions if necessary.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Opt to generate code (single or multiple scripts) if calculations are required.
+
+Optimization Tips:
+Direct Answer Path: Use evidence extraction to find the answer directly, when possible.
+Simplify: Break down complex questions into simpler components.
+Code Integration: Include Python code generation for essential calculations.
+
+Few examples are given below with their respective crucial steps selected from the meta-reasoning process. Each example contains its own table, text, and question. Interpret the problem and select only the most essential steps for reaching to answer.
+
+Examples:
+
+Example1:
+
+Table:
+### Škoda Car Sales (2005-2013)
+
+| Model           | 2005   | 2006   | 2007   | 2008   | 2009   | 2010   | 2011   | 2012   | 2013   |
+|----------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Škoda Octavia  | 233322 | 270274 | 309951 | 344857 | 317335 | 349746 | 387200 | 409360 | 359600 |
+| Škoda Fabia    | 236698 | 243982 | 232890 | 246561 | 264173 | 229045 | 266800 | 255025 | 202000 |
+| Škoda Superb   | 22091  | 20989  | 20530  | 25645  | 44548  | 98873  | 116700 | 106847 | 94400  |
+| Škoda Roomster |        | 14422  | 66661  | 57467  | 47152  | 32332  | 36000  | 39249  | 33300  |
+| Škoda Yeti     |        |        |        |        | 11018  | 52604  | 70300  | 90952  | 82400  |
+| Škoda Rapid    |        |        |        |        |        |        | 1700   | 9292   | 103800 |
+| Škoda Citigo   |        |        |        |        |        |        | 509    | 36687  | 45200  |
+
+Question: How many Skoda cars were sold in 2010?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction:Extract relevant rows, columns, and text.
+Python Code Generation: Generate single Python code to sum the extracted values.
+
+Example2:
+
+Table: 
+### Competition Results
+
+| Year | Competition                 | Venue    | Country  | Position   | Event           | Time    |
+|------|-----------------------------|---------|----------|------------|----------------|---------|
+| 2001 | World Youth Championships   | Debrecen | Hungary  | 2nd        | 400 m          | 47.12   |
+| 2001 | European Junior Championships | Grosseto | Italy  | 1st        | 4x400 m relay  | 3:06.12 |
+| 2005 | European U23 Championships  | Erfurt   | Germany  | 11th (sf)  | 400 m          | 46.62   |
+| 2005 | European U23 Championships  | Erfurt   | Germany  | 1st        | 4x400 m relay  | 3:04.41 |
+| 2005 | Universiade                 | Izmir    | Turkey   | 7th        | 400 m          | 46.89   |
+| 2005 | Universiade                 | Izmir    | Turkey   | 1st        | 4x400 m relay  | 3:02.57 |
+| 2006 | World Indoor Championships  | Moscow   | Russia   | 2nd (h)    | 4x400 m relay  | 3:06.10 |
+| 2007 | Universiade                 | Bangkok  | Thailand | 1st        | 4x400 m relay  | 3:02.05 |
+| 2008 | World Indoor Championships  | Valencia | Spain    | 4th        | 4x400 m relay  | 3:08.76 |
+
+
+Question: How long did it take the competition to finish the 4x400 meter relay at universiade in 2005?
+
+Crucial Steps Selected:
+Identify Objective: Define the goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Direct Answer Path: Use evidence extraction to answer directly from the table.
+
+Example3:
+
+Table:
+### USL PDL Team Performance (2006-2013)
+
+| Year | Division | League  | Regular Season | Conference | Playoffs           | Open Cup        |
+|------|---------|--------|----------------|------------|---------------------|-----------------|
+| 2006 | 4       | USL PDL | 5th            | Northwest  | Did not qualify     | Did not qualify |
+| 2007 | 4       | USL PDL | 2nd            | Northwest  | Conference Semifinals | Did not qualify |
+| 2008 | 4       | USL PDL | 1st            | Northwest  | Conference Finals   | Did not qualify |
+| 2009 | 4       | USL PDL | 7th            | Northwest  | Did not qualify     | Did not qualify |
+| 2010 | 4       | USL PDL | 3rd            | Northwest  | Did not qualify     | Did not qualify |
+| 2011 | 4       | USL PDL | 8th            | Northwest  | Did not qualify     | Did not qualify |
+| 2012 | 4       | USL PDL | 1st            | Northwest  | Semifinals          | Did not qualify |
+| 2013 | 4       | USL PDL | 4th            | Northwest  | Did not qualify     | 2nd Round       |
+
+Question: how many consecutive years did the seattle sounders not qualify for the open cup?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.
+Evidence Extraction: Extract relevant rows, columns, and text.
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.
+Python Code Generation: Generate a single Python script to compute the longest consecutive streak of "Did not qualify."
+
+Your Task:
+Select the Crucial steps that are essential for solving the task for the provided table, text (if available) and question, using the helpful tips. Important - Do not answer the Question, only select high level steps that are crucial for solving the tasks.
+
+Tables: 
+{table}
+
+Question: {question}
+
+Crucial Steps Selected:

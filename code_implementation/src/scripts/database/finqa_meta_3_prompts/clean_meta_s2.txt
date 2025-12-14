@@ -1,0 +1,95 @@
+Your task is to comprehend the crucial steps for a given table and question, making each step more detailed and ensuring they effectively lead to the correct answer. 
+
+Few Examples are given below with detailed steps by elaborating from the crucial steps. Interpret the examples and understand the task to comprehend the crucial steps according to the specific table, text and question to reach the answer efficiently.
+
+Examples:
+
+Example1:
+Table:
+### Comparison of 5-Year Cumulative Total Return  
+#### Jack Henry & Associates, Inc., S&P 500 Index, and Peer Groups (2014-2019)  
+
+| Year          | 2014   | 2015   | 2016   | 2017   | 2018   | 2019   |
+|--------------|--------|--------|--------|--------|--------|--------|
+| JKHY        | 100.00 | 110.51 | 151.12 | 182.15 | 231.36 | 240.29 |
+| 2019 Peer Group | 100.00 | 126.23 | 142.94 | 166.15 | 224.73 | 281.09 |
+| 2018 Peer Group | 100.00 | 127.40 | 151.16 | 177.26 | 228.97 | 286.22 |
+| S&P 500     | 100.00 | 107.42 | 111.71 | 131.70 | 150.64 | 166.33 |
+
+Question: was the five year total return of the 2019 peer group greater than the 2018 peer group?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Step-by-Step Reasoning: Apply logical steps to compute the five-year total return for both peer groups.  
+Python Code Generation: Generate a single Python script to compute and compare the five-year total return of the 2019 and 2018 peer groups.
+
+Detailed Steps:
+Identify Objective  
+The goal is to determine whether the five-year total return of the 2019 peer group was greater than that of the 2018 peer group by comparing their cumulative total returns from 2014 to 2019.  
+Evidence Extraction  
+Extract total return values for both peer groups from the table.  
+2019 Peer Group: Start = 100.00, End = 281.09  
+2018 Peer Group: Start = 100.00, End = 286.22  
+Step-by-Step Reasoning  
+Compute the total return for each peer group over the five-year period using:  
+```yaml
+Total Return = ((End Value - Start Value) / Start Value) * 100
+```
+Compare the results for both peer groups.  
+Python Code Generation  
+Write a Python script to extract values, compute percentage increase, and determine which group had the higher total return.
+
+Example2:
+Table:
+### Noncancelable Future Lease Commitments  
+#### (In Millions)  
+
+| Fiscal Year            | Operating Leases ($M) | Capital Leases ($M) |
+|------------------------|----------------------|----------------------|
+| Fiscal 2019           | 137.4                | 0.3                  |
+| Fiscal 2020           | 115.7                | 0.2                  |
+| Fiscal 2021           | 92.3                 | -                    |
+| Fiscal 2022           | 70.9                 | -                    |
+| Fiscal 2023           | 51.8                 | -                    |
+| After Fiscal 2023     | 91.2                 | -                    |
+| **Total Noncancelable Future Lease Commitments** | **559.3** | **0.5** |
+| Less: Interest        | -                    | -0.2 (0.2)           |
+| Present Value of Obligations Under Capital Leases | -        | 0.3                  |
+
+Question: what portion of the total noncancelable future lease commitments are due in fiscal year 2019?
+
+Crucial Steps Selected:
+Identify Objective: Define the question's goal.  
+Evidence Extraction: Extract relevant rows, columns, and text.  
+Step-by-Step Reasoning: Apply logical steps to solve sub-questions or the main problem.  
+Python Code Generation: Generate a single Python script to compute the portion of total noncancelable future lease commitments due in fiscal year 2019.
+
+Detailed Steps:
+Identify Objective:  
+Determine the portion of total noncancelable future lease commitments that are due in fiscal year 2019.  
+Evidence Extraction:  
+- Extract the total noncancelable future lease commitments: **$559.3 million**.  
+- Extract the lease commitments for fiscal year 2019 under **operating leases**: **$137.4 million**.  
+Step-by-Step Reasoning:  
+- Compute the portion of the total lease commitments attributed to fiscal year 2019 using:  
+  ```yaml
+  Portion = (Fiscal Year 2019 Lease Commitment / Total Lease Commitments) * 100
+  ```
+- Ensure the extracted values match the relevant lease type (operating leases).  
+Python Code Generation:  
+Generate a Python script to:  
+1. Extract values for total lease commitments and fiscal year 2019 lease commitments.  
+2. Compute the percentage contribution of fiscal year 2019 lease commitments to the total commitments.
+
+
+YourTask:
+Comprehend the Crucial steps to Detailed Steps that are essential for solving the task for the provided table, text (if available) and question. Important - Do not answer the Question.
+
+{table}
+
+Question: {question}
+
+{crucial_steps}
+
+Detailed Steps:

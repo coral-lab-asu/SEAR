@@ -1,0 +1,57 @@
+COT:
+  description: |
+    Provide reasoning and then answer the question based on the context. 
+    The context is a table where the 1st line is the header and the following lines are the rows.
+    If there is a row such as 'Career Total' or similar that summarizes column values, treat it as a separate sub-table and do not confuse it with the main data rows. 
+    Examine such tables carefully to avoid errors in answering. 
+    A few examples are given below along with the reasoning to arrive at the answer. 
+    Interpret them, then answer the question based on the table below the examples, and give reasoning for your answer in the same format as the examples.
+
+  examples:
+    - context: |
+        Table Title - Movies
+        Table Subtitle - Movies and their release dates
+        Year | Title | Role | Notes
+        1993 | Joey Breaker | Jeremy Breaker | -
+        1993 | Mr. Wonderful | ER Doctor | -
+        1994 | The Hardest Part | Derek | Short film
+        1995 | Jefferson in Paris | James Hemings | -
+        1996 | Courage Under Fire | Altameyer | -
+        1997 | Starship Troopers | Sugar Watkins | -
+        1997 | Tar | Tyrone | -
+        2000 | Punks | Marcus | -
+        2002 | Personal Velocity: Three Portraits | Vincent | -
+        2005 | The Great Wonderful | Clayton | Segment: "Emme's Story"
+        2008 | Sympathetic Details | Raymond | -
+        2009 | The People v. Leo Frank | Jim Conley | -
+        2009 | Did You Hear About the Morgans? | U.S. Marshal Lasky | -
+        2010 | Betrayed | Roger Waite | Short film
+        2011 | Stake Out: Atlantic Salmon | Rivers | Short film
+        2014 | Still Alice | Frederic Johnson | -
+        2015 | Police State | Officer Grady | -
+      question: What roles did Seth Gilliam have from 1996-1997?
+      reason: "To determine the roles Seth Gilliam had from 1996-1997, we need to look at the rows with the years '1996' and '1997' and extract the 'Role' column values. The relevant rows are: 1996: Courage Under Fire: Altameyer - 1997: Starship Troopers: Sugar Watkins - 1997: Tar: Tyrone Therefore, the roles Seth Gilliam had from 1996-1997 are Altameyer, Sugar Watkins, and Tyrone."
+      answer: ["Altameyer", "Sugar Watkins", "Tyrone"]
+
+    - context: |
+        Table Title - Prime Ministers of Kuwait
+        Table Subtitle - List of Prime Ministers of Kuwait with their terms of office
+        No. | Name (Birth–Death) | Portrait | Term of office | Term of office | Time in office
+        1 | Abdullah Al-Salim Al-Sabah (1895–1965) | - | 17 January 1962 | 26 January 1963 | 1 year, 9 days
+        2 | Sabah Al-Salim Al-Sabah (1913–1977) | - | 2 February 1963 | 27 November 1965 | 2 years, 298 days
+        3 | Jaber Al-Ahmad Al-Sabah (1924–2006) | - | 27 November 1965 | 8 February 1978 | 12 years, 72 days
+        4 | Saad Al-Salim Al-Sabah (1931–2008) | - | 8 February 1978 | 13 July 2003** | 25 years, 157 days
+        5 | Sabah Al-Ahmad Al-Jaber Al-Sabah (1929–) | - | 13 July 2003 | 30 January 2006 | 2 years, 199 days
+        6 | Nasser Al-Sabah (1939–) | - | 7 February 2006 | 28 November 2011 | 5 years, 294 days
+        7 | Jaber Al-Mubarak Al-Hamad Al-Sabah (1942–) | - | 30 November 2011 | Incumbent | 7 years, 27 days
+      question: How long did Saad Al-Salim Al-Sabah serve as the Prime Minister of Kuwait? Who took over his place?
+      reason: "To determine how long Saad Al-Salim Al-Sabah served as the Prime Minister of Kuwait and who took over his place, we need to look at his term of office and the next Prime Minister. Saad Al-Salim Al-Sabah served from 8 February 1978 to 13 July 2003, which is 25 years, 157 days. The next Prime Minister was Sabah Al-Ahmad Al-Jaber Al-Sabah. Therefore, Saad Al-Salim Al-Sabah served as Prime Minister for 25 years, 157 days, and was succeeded by Sabah Al-Ahmad Al-Jaber Al-Sabah."
+      answer: ["25 years, 157 days", "Sabah Al-Ahmad Al-Jaber Al-Sabah"]
+
+  prompt: |
+    For the following context & question give the answer and reasoning
+    Context -
+    {context}
+    Question - {question}
+    Reasoning -
+    Answer - 
