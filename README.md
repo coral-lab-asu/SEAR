@@ -11,7 +11,7 @@ This repository contains the project website showcasing our research on adaptive
 ## Resources
 
 - **Paper**: [ArXiv 2506.11246](https://arxiv.org/abs/2506.11246)
-- **Code Repository**: [TempTab-Recasting](https://github.com/kushagraDixit/TempTab-Recasting)
+- **Code Repository**: [TempTab-Recasting](https://github.com/coral-lab-asu/SEAR/tree/main/code_implementation)
 - **Dataset**: [Dataset Documentation](dataset/README.md) - 11,326+ questions across 9 benchmark datasets
 
 ## Repository Structure
